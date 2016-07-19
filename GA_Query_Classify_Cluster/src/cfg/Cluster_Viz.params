@@ -1,0 +1,9 @@
+parent.0		= OR.params
+
+eval.problem = query.Cluster_Viz
+pop.subpop.0.species.genome-size = 6
+
+evalthreads = 				4 
+breedthreads = 				4
+
+

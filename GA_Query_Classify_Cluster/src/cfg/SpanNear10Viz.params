@@ -1,0 +1,11 @@
+parent.0		= OR.params
+
+eval.problem = query.SpanNear10GViz
+#pop.subpop.0.species.genome-size = 8
+
+
+
+
+
+
+
