@@ -1,6 +1,6 @@
 package ecj;
 
-import lucene.IndexInfoStaticG
+import lucene.IndexInfo
 
 import org.apache.lucene.search.BooleanClause
 import org.apache.lucene.search.BooleanQuery

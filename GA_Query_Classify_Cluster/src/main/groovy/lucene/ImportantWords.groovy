@@ -43,7 +43,7 @@ public class ImportantWords {
 	private Set<String> stopSet = StopLists.getStopSet()
 
 	public static void main(String[] args){
-		IndexInfo.instance.setCategoryName("cor")
+		IndexInfo.instance.setCategoryName("gra")
 		IndexInfo.instance.setFilters()
 		def iw = new ImportantWords()
 		iw.getF1WordList(false, true)

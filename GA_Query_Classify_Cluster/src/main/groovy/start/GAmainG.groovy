@@ -1,17 +1,20 @@
 package start
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 import java.util.Formatter;
 
-import lucene.IndexInfoStaticG;
+import lucene.IndexInfo;
 import query.ClassifyQuery
-import ec.EvolutionState;
-import ec.Evolve;
-import ec.Fitness;
-import ec.util.ParameterDatabase
+import ec.EvolutionState
+//import ec.Evolve;
+//import ec.Fitness;
+//import ec.util.ParameterDatabase
+import ec.util.*
+import ec.*
 import ecj.GAFit;
-import ec.Fitness;
+//import ec.Fitness;
 
 class GAmainG extends Evolve {
 

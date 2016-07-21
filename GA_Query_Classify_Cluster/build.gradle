@@ -35,8 +35,8 @@ dependencies {
 //for some reason ecj23 not on maven
 //compile 'edu.gmu.cs:ecj:22'
 
-	//compile fileTree(dir: 'libs', include: ['*.jar'])
-	//compile files('lib/ecj23.jar')
+	compile fileTree(dir: 'lib', include: ['*.jar'])
+	//compile files('libs/ecj23.jar')
 
 	//testCompile 'junit:junit:4.12'
 }
