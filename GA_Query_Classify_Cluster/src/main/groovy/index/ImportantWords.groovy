@@ -36,7 +36,7 @@ public class ImportantWords {
 	private Terms terms = MultiFields.getTerms(indexReader, IndexInfo.FIELD_CONTENTS)
 	private TermsEnum termsEnum = terms.iterator();
 	private int maxDoc = indexReader.maxDoc();
-	private Set<String> stopSet = StopLists.getStopSet()
+	private Set<String> stopSet = StopListsJ.getStopSet()
 
 	public static void main(String[] args){
 		IndexInfo.instance.setCategoryName("gra")
