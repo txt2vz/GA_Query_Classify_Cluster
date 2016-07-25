@@ -6,7 +6,7 @@ import org.apache.lucene.search.IndexSearcher
 import org.apache.lucene.search.Query
 import org.apache.lucene.search.TotalHitCountCollector
 
-import query.ClassifyUtils
+import classify.ClassifyUtils
 import ec.EvolutionState
 import ec.simple.SimpleStatistics
 import index.IndexInfo;

@@ -29,7 +29,7 @@ class QueryReadable {
 		final String s0 = getQueryMinimal(query)
 	//	def s1 = s0.replaceAll("\\(", "");
 		def s1 = s0.replaceAll("10", "");
-		//query.toString(
+		//classify.query.toString(
 			//IndexInfoStaticG.FIELD_CONTENTS).replaceAll(Pattern.quote("+"), "");
 
 		if (s1 ==null || s1.length() <2) return;

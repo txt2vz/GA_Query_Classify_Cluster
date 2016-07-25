@@ -8,7 +8,7 @@ seed.3=time
 #seed.0=4357  
 evalthreads = 				4
 breedthreads = 				4
-eval.problem = query.OR
+eval.problem = classify.query.OR
 #eval.problem = query.AND_ORG
 #eval.problem = query.SpanFirstG
 

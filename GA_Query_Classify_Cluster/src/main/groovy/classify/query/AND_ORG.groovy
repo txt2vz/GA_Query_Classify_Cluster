@@ -1,4 +1,4 @@
-package query;
+package classify.query;
 
 import org.apache.lucene.index.Term
 import org.apache.lucene.search.BooleanClause
@@ -13,6 +13,7 @@ import ec.simple.SimpleFitness
 import ec.simple.SimpleProblemForm
 import ec.util.Parameter
 import ec.vector.IntegerVectorIndividual
+import classify.ClassifyUtils;
 import classify.GAFit;
 import groovy.transform.CompileStatic
 import index.ImportantWords

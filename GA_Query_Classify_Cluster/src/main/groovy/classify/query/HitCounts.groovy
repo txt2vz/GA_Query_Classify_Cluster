@@ -1,4 +1,4 @@
-package query;
+package classify.query;
 
 import org.apache.lucene.search.BooleanClause
 import org.apache.lucene.search.BooleanQuery

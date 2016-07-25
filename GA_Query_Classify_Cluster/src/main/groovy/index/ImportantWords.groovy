@@ -2,31 +2,26 @@ package index
 
 import org.apache.lucene.index.IndexReader
 import org.apache.lucene.index.MultiFields
-import org.apache.lucene.index.PostingsEnum
 import org.apache.lucene.index.Term
 import org.apache.lucene.index.Terms
 import org.apache.lucene.index.TermsEnum
 import org.apache.lucene.search.BooleanClause
 import org.apache.lucene.search.BooleanQuery
-import org.apache.lucene.search.DocIdSetIterator
 import org.apache.lucene.search.IndexSearcher
 import org.apache.lucene.search.Query
 import org.apache.lucene.search.TermQuery
 import org.apache.lucene.search.TotalHitCountCollector
-import org.apache.lucene.search.similarities.ClassicSimilarity
-import org.apache.lucene.search.similarities.TFIDFSimilarity
 import org.apache.lucene.search.spans.SpanFirstQuery
 import org.apache.lucene.search.spans.SpanTermQuery
 import org.apache.lucene.util.BytesRef
 
-import classify.ClassifyQuery
 import query.*
-//import wordTools.*
+import classify.ClassifyQuery
 
 /**
  * GAs return words by selecting form word lists provided by this
  * class. The words should be as far as possible in order of their likely
- * usefulness in query building
+ * usefulness in classify.query building
  * 
  * @author Laurie 
  */
@@ -54,7 +49,7 @@ public class ImportantWords {
 	}
 
 	/**
-	 * create a set of words based on F1 measure of the word as a query
+	 * create a set of words based on F1 measure of the word as a classify.query
 	 */
 	public String[] getF1WordList(boolean spanFirstQ, boolean positiveList)
 	throws IOException{

@@ -38,7 +38,7 @@ class QueryToJSON {
 		//"organization vga) (organization mode) (irq lines) (mode ok) (mode least) (one memory) (gateway ibm) (thanks ibm) (thanks graphics) (lines pc) (non one) (problems try) (data recently) (drive lines) (settings seagate) (2 graphics) (newsreader running) (graphics cards) (drive adaptec) (cards don't"
 			
 		//" atheist belief) (atheists host) (once bible) (thought ryan) (bible i3150101) (truth atheists) (mean particular) (truth institute) (god article) (host atheists) (may benedikt) (bu.edu jaeger) (saturn.wwc.edu ever) (jaeger proof) (i've i3150101) (life okcforum.osrhe.edu) (newsreader one) (little belief) (kmr4 article) (proof certainly)"
-		//	final String queryWithoutPlus = query.toString(
+		//	final String queryWithoutPlus = classify.query.toString(
 		//		IndexInfoStaticG.FIELD_CONTENTS).replaceAll(Pattern.quote("+"), "");
 		//
 

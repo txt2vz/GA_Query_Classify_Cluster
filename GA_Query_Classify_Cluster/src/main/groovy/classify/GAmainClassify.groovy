@@ -1,12 +1,11 @@
-package start
+package classify
 
 import index.IndexInfo
-import query.ClassifyUtils
-import classify.GAFit
+import classify.ClassifyUtils
 import ec.*
 import ec.util.*
 
-class GAmain extends Evolve {
+class GAmainClassify extends Evolve {
 
 	private final String parameterFilePath ='src/cfg/classify.params'
 	private int totPosMatchedTest = 0, totTest = 0, totNegMatchTest = 0;
@@ -14,7 +13,7 @@ class GAmain extends Evolve {
 	private double microF1AllRunsTotal = 0, macroF1AllRunsTotal = 0,
 	microBEPAllRunsTotal = 0;
 
-	public GAmain(){
+	public GAmainClassify(){
 		println "Start..."
 		EvolutionState state;
 
@@ -133,6 +132,6 @@ class GAmain extends Evolve {
 	}
 
 	static main (args){
-		new GAmain()
+		new GAmainClassify()
 	}
 }

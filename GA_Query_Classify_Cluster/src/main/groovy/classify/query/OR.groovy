@@ -1,4 +1,4 @@
-package query
+package classify.query
 
 import org.apache.lucene.index.Term
 import org.apache.lucene.search.BooleanClause
@@ -15,7 +15,8 @@ import ec.simple.SimpleProblemForm
 import ec.util.Parameter
 import ec.vector.IntegerVectorIndividual
 import index.ImportantWords
-import index.IndexInfo;
+import index.IndexInfo
+import classify.ClassifyUtils;
 import classify.GAFit;
 
 /**

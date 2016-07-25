@@ -6,7 +6,7 @@ import ec.simple.SimpleFitness
 import index.IndexInfo;
 
 /**
- * Store information about classification query and test/train values
+ * Store information about classification classify.query and test/train values
  * 
  * @author Laurie
  * 
