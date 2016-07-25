@@ -10,7 +10,7 @@ class GAmainCluster extends Evolve {
 
 	private final String parameterFilePath =  "src/cfg/Cluster.params"
 
-	final static int NUMBER_OF_JOBS = 1;
+	final static int NUMBER_OF_JOBS = 1; 
 
 	public GAmainCluster(){
 		EvolutionState state;

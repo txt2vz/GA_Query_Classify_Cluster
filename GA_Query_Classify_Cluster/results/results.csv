@@ -1,29 +1,6 @@
 category, job, f1train, f1test, bepTest, totPositiveTest, totNegativeTest, totTestDocsInCat, query
-0, 0, 0.782, 0.808, 0.814, 535, 70, 719, acquire takeover merger acquisition acquired stake undisclosed disclosed 
-1, 0, 0.562, 0.544, 0.687, 56, 94, 56, maize corn 
-2, 0, 0.762, 0.682, 0.688, 118, 39, 189, barrels refinery ecuador bbl exploration opec barrel gasoline 
+0, 0, 0.778, 0.827, 0.831, 554, 67, 719, stake takeover acquired undisclosed merger acquire transaction acquisition 
+1, 0, 0.562, 0.544, 0.687, 56, 94, 56, corn maize 
+2, 0, 0.749, 0.736, 0.739, 131, 36, 189, barrels refinery bpd exploration barrel opec crude 
 3, 0, 0.556, 0.549, 0.683, 70, 114, 71, wheat 
-4, 0, 0.935, 0.938, 0.939, 1059, 112, 1087, vs 4th dividend profit payout split qtr earnings 
-5, 0, 0.509, 0.542, 0.617, 109, 162, 131, fed rate bundesbank band 
-6, 0, 0.657, 0.641, 0.680, 151, 141, 179, monetary currencies dollar fed money 
-7, 0, 0.650, 0.626, 0.633, 62, 47, 89, tanker ships 4,000 ferry vessels hormuz vessel strike 
-8, 0, 0.602, 0.542, 0.657, 109, 176, 117, yeutter trade retaliation 
-9, 0, 0.642, 0.655, 0.736, 146, 151, 149, maize barley grain rice wheat corn crop cereals 
- 
-Run Number, 0, Micro F1: , 0.7657,  Macro F1: , 0.6528, Micro BEP:, 0.7762, Total Positive Matches , 2415, Total Negative Matches, 1106, Total Docs,  2787 
-,, Overall Micro F1 , Infinity,  Overall Macro F1, Infinity, Overall MicroBEP, Infinity 
- 
-0, 1, 0.782, 0.808, 0.814, 535, 70, 719, takeover undisclosed acquire acquired acquisition merger disclosed stake 
-1, 1, 0.562, 0.544, 0.687, 56, 94, 56, corn maize 
-2, 1, 0.752, 0.730, 0.733, 130, 37, 189, exploration barrel crude barrels refinery gasoline opec 
-3, 1, 0.556, 0.549, 0.683, 70, 114, 71, wheat 
-4, 1, 0.933, 0.935, 0.936, 1053, 112, 1087, dividend payout profit split 3rd vs earnings revs 
-5, 1, 0.506, 0.507, 0.563, 97, 155, 131, customer band rate bundesbank 
-6, 1, 0.646, 0.622, 0.665, 149, 151, 179, england currencies dollar monetary fed yen 
-7, 1, 0.654, 0.626, 0.633, 62, 47, 89, vessels vessel ships tanker warships ferry port seamen 
-8, 1, 0.602, 0.542, 0.657, 109, 176, 117, retaliation trade 
-9, 1, 0.641, 0.661, 0.742, 147, 149, 149, maize grain barley crop corn rice crops wheat 
- 
-Run Number, 1, Micro F1: , 0.7644,  Macro F1: , 0.6524, Micro BEP:, 0.7747, Total Positive Matches , 2408, Total Negative Matches, 1105, Total Docs,  2787 
-,, Overall Micro F1 , 1.5301,  Overall Macro F1, 1.3052, Overall MicroBEP, 1.5509 
- 
+4, 0, 0.934, 0.938, 0.939, 1058, 112, 1087, 3rd split earnings dividend qtr profit revs vs 

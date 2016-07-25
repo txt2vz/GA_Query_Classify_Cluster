@@ -6,7 +6,7 @@ import ec.*
 import ec.util.*
 
 class GAmainClassify extends Evolve {
-
+ 
 	private final String parameterFilePath ='src/cfg/classify.params'
 	private int totPosMatchedTest = 0, totTest = 0, totNegMatchTest = 0;
 	private final static int NUMBER_OF_CATEGORIES = 10 , NUMBER_OF_JOBS = 2;

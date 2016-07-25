@@ -68,8 +68,8 @@ class IndexInfo {
 				categoryNumber));
 		println "index infor catQ $catQ"
 
-		String pathToIndex = //"indexes/r10"
-				"indexes/20NG3SpaceHockeyChristian"
+		String pathToIndex = "indexes/r10"
+				//"indexes/20NG3SpaceHockeyChristian"
 
 		Path path = Paths.get(pathToIndex)
 		Directory directory = FSDirectory.open(path)

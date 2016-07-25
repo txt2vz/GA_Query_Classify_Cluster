@@ -171,9 +171,8 @@ public class ImportantWords {
 		
 					long indexDf = indexReader.docFreq(t);
 					int docCount = indexReader.numDocs()
-					TFIDFSimilarity tfidfSim 
-					//new DefaultSimilarity()	
-					                           //new ClassicSimilarity()
+					TFIDFSimilarity tfidfSim = new ClassicSimilarity()
+											   // new DefaultSimilarity()
 		
 					PostingsEnum docsEnum = termsEnum.postings(MultiFields.getTermDocsEnum(indexReader, IndexInfo.FIELD_CONTENTS, text ));
 					double tfidfTotal=0

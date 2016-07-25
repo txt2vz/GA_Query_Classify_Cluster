@@ -11,12 +11,9 @@ repositories {
 // In this section you declare the dependencies for your production and test code
 dependencies {
 
-	// The production code uses the SLF4J logging API at compile time
-	//compile 'org.slf4j:slf4j-api:1.7.18'
-	//compile 'commons-logging:commons-logging:1.2'
 
-	//compile 'org.codehaus.groovy:groovy-all:2.4.3'
-	compile 'org.codehaus.groovy:groovy-all:2.4.7'
+	compile 'org.codehaus.groovy:groovy-all:2.4.3'
+	//compile 'org.codehaus.groovy:groovy-all:2.4.7'
 
 	compile 'org.apache.lucene:lucene-core:6.1.0'
 	compile 'org.apache.lucene:lucene-analyzers-common:6.1.0'
@@ -25,22 +22,16 @@ dependencies {
 	//compile group: 'org.apache.lucene', name: 'lucene-codecs', version: '5.2.1'
 	//compile group: 'org.apache.lucene', name: 'lucene-codecs', version: '5.0.0'
 	
-	compile group: 'org.apache.lucene', name: 'lucene-queryparser', version: '6.1.0'
+	//compile group: 'org.apache.lucene', name: 'lucene-queryparser', version: '6.1.0'
 	
 //	compile 'org.apache.lucene:lucene-core:5.3.2'
-//	compile 'org.apache.lucene:lucene-analyzers-common:5.3.2'
-	
-	//compile group: 'org.apache.lucene', name: 'lucene-codecs', version: '6.1.0'
-	//compile group: 'org.apache.lucene', name: 'lucene-codecs', version: '5.0.0'
+//	compile 'org.apache.lucene:lucene-analyzers-common:5.3.2'	
+
 
 //for some reason ecj23 not on maven
 //compile 'edu.gmu.cs:ecj:22'
 
-	//pick up ecj jar file
+	//pick up ecj23 jar file
 	compile fileTree(dir: 'lib', include: ['*.jar'])
 	//compile files('libs/ecj23.jar')
-
-	//testCompile 'junit:junit:4.12'
 }
-
-
