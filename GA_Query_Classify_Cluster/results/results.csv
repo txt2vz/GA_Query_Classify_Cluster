@@ -1,6 +1,29 @@
 category, job, f1train, f1test, bepTest, totPositiveTest, totNegativeTest, totTestDocsInCat, query
-0, 0, 0.778, 0.827, 0.831, 554, 67, 719, stake takeover acquired undisclosed merger acquire transaction acquisition 
-1, 0, 0.562, 0.544, 0.687, 56, 94, 56, corn maize 
-2, 0, 0.749, 0.736, 0.739, 131, 36, 189, barrels refinery bpd exploration barrel opec crude 
+0, 0, 0.782, 0.808, 0.814, 535, 70, 719, acquired acquisition undisclosed merger stake takeover disclosed acquire 
+1, 0, 0.562, 0.544, 0.687, 56, 94, 56, maize corn 
+2, 0, 0.742, 0.720, 0.722, 130, 42, 189, refinery barrels drilling bpd bbl offshore barrel gasoline 
 3, 0, 0.556, 0.549, 0.683, 70, 114, 71, wheat 
-4, 0, 0.934, 0.938, 0.939, 1058, 112, 1087, 3rd split earnings dividend qtr profit revs vs 
+4, 0, 0.930, 0.918, 0.921, 1061, 163, 1087, split cts revs dividend profit vs earnings 
+5, 0, 0.503, 0.503, 0.563, 98, 161, 131, rate customer bundesbank bills 
+6, 0, 0.646, 0.622, 0.665, 149, 151, 179, monetary yen england currencies fed dollar 
+7, 0, 0.649, 0.670, 0.693, 73, 56, 89, vessel seamen tankers vessels ships port warships shipping 
+8, 0, 0.628, 0.570, 0.611, 90, 109, 117, deficit protectionism bilateral tariffs retaliation dumping protectionist surplus 
+9, 0, 0.637, 0.648, 0.717, 140, 143, 149, grain rice corn wheat soybeans barley crops crop 
+ 
+Run Number, 0, Micro F1: , 0.7635,  Macro F1: , 0.6551, Micro BEP:, 0.7736, Total Positive Matches , 2402, Total Negative Matches, 1103, Total Docs,  2787 
+,, Overall Micro F1 , Infinity,  Overall Macro F1, Infinity, Overall MicroBEP, Infinity 
+ 
+0, 1, 0.782, 0.817, 0.822, 548, 74, 719, sell takeover merger acquisition acquire stake undisclosed disclosed 
+1, 1, 0.562, 0.544, 0.687, 56, 94, 56, corn maize 
+2, 1, 0.743, 0.739, 0.740, 136, 43, 189, refinery crude drilling barrels bpd exploration opec 
+3, 1, 0.556, 0.549, 0.683, 70, 114, 71, wheat 
+4, 1, 0.933, 0.935, 0.936, 1053, 112, 1087, earnings 1st vs revs profit split oper dividend 
+5, 1, 0.517, 0.453, 0.467, 72, 115, 131, bundesbank discount prime bills lending customer 
+6, 1, 0.657, 0.623, 0.675, 154, 161, 179, dollar monetary money currencies yen fed 
+7, 1, 0.647, 0.624, 0.649, 69, 63, 89, shipping ships loading vessel tankers janeiro warships port 
+8, 1, 0.628, 0.568, 0.610, 90, 110, 117, retaliation protectionist unfair dumping surplus bilateral deficit gatt 
+9, 1, 0.640, 0.631, 0.700, 137, 148, 149, barley grain corn crop crops wheat cereals maize 
+ 
+Run Number, 1, Micro F1: , 0.7686,  Macro F1: , 0.6484, Micro BEP:, 0.7767, Total Positive Matches , 2385, Total Negative Matches, 1034, Total Docs,  2787 
+,, Overall Micro F1 , 1.5321,  Overall Macro F1, 1.3036, Overall MicroBEP, 1.5502 
+ 

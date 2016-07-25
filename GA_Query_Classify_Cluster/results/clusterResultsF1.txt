@@ -1,0 +1,33 @@
+  ***** Job: 0 Gen: 39 PopSize: 1024 Noclusters:3 pathToIndex: indexes/20NG3SpaceHockeyChristian **************************************************************** 
+ Cluster 0 searching for:  jesus  Found 201 hits:
+0 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\20867 cat number christian catName: christian
+1 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\20547 cat number christian catName: christian
+2 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\20503 cat number christian catName: christian
+3 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\20952 cat number christian catName: christian
+4 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\20857 cat number christian catName: christian
+categoryTotal is 599 for catQ categoryName:christian 
+f1: 0.48500000003978531250 recall: 0.3238731219 precision: 0.9651741294
+Purity: 0.9651741336 Job: 0 
+Cluster 1 searching for:  research pat program  Found 304 hits:
+0 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\60244 cat number space catName: space
+1 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\60172 cat number space catName: space
+2 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\60230 cat number space catName: space
+3 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\60925 cat number space catName: space
+4 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\61147 cat number space catName: space
+categoryTotal is 593 for catQ categoryName:space 
+f1: 0.45930880711811674987 recall: 0.3473861720 precision: 0.6776315789
+Purity: 0.6776315822 Job: 0 
+Cluster 2 searching for:  toronto pittsburgh games  Found 356 hits:
+0 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53728 cat number hockey catName: hockey
+1 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53652 cat number hockey catName: hockey
+2 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53731 cat number hockey catName: hockey
+3 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53687 cat number hockey catName: hockey
+4 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53982 cat number hockey catName: hockey
+categoryTotal is 600 for catQ categoryName:hockey 
+f1: 0.59414225939108208890 recall: 0.4733333333 precision: 0.7977528090
+Purity: 0.7977528192 Job: 0 
+f1list: [0.48500000003978531250, 0.45930880711811674987, 0.59414225939108208890] averagef1: :0.51281702218299471709
+PosHits: 761 NegHits: 100 PosScore: 2662.9715346097946 NegScore: 274.9842180609703 Fitness: 1261.7509563574044 
+TotalHits: 811 Total Docs: 1792
+************************************************ 
+ 

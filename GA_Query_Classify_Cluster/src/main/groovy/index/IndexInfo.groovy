@@ -50,6 +50,8 @@ class IndexInfo {
 	Query catTrainBQ, othersTrainBQ, catTestBQ, othersTestBQ;
 
 	int totalTrainDocsInCat, totalTestDocsInCat, totalOthersTrainDocs, totalTestDocs;
+	
+	String pathToIndex
 
 	public void setCatNumber(final int cn) {
 		categoryNumber = String.valueOf(cn);
@@ -68,7 +70,7 @@ class IndexInfo {
 				categoryNumber));
 		println "index infor catQ $catQ"
 
-		String pathToIndex = "indexes/r10"
+		pathToIndex = "indexes/r10"
 				//"indexes/20NG3SpaceHockeyChristian"
 
 		Path path = Paths.get(pathToIndex)
