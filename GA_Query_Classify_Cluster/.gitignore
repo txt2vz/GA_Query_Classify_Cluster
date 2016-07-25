@@ -1,15 +1,9 @@
 /.gradle/
 /bin/
-
 /build/
-
 .classpath
-/build
 .project
 .settings
-*.xlsx
-*.csv
 gradle.prefs
 /src/cfg/statDump/
-/results/
 .gradle

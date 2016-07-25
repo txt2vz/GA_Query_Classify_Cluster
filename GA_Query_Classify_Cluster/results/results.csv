@@ -1,0 +1,29 @@
+category, job, f1train, f1test, bepTest, totPositiveTest, totNegativeTest, totTestDocsInCat, query
+0, 0, 0.778, 0.827, 0.831, 554, 67, 719, undisclosed takeover acquired stake transaction merger acquire acquisition 
+1, 0, 0.562, 0.544, 0.687, 56, 94, 56, corn maize 
+2, 0, 0.748, 0.729, 0.734, 128, 34, 189, refinery gasoline exploration bpd crude barrels opec 
+3, 0, 0.556, 0.549, 0.683, 70, 114, 71, wheat 
+4, 0, 0.934, 0.935, 0.937, 1058, 117, 1087, dividend profit split payable earnings qtr vs div 
+5, 0, 0.509, 0.542, 0.617, 109, 162, 131, fed rate bundesbank band 
+6, 0, 0.657, 0.641, 0.680, 151, 141, 179, fed monetary money dollar currencies 
+7, 0, 0.651, 0.637, 0.645, 64, 48, 89, port tanker ships seamen warships vessels hormuz vessel 
+8, 0, 0.628, 0.549, 0.574, 81, 97, 117, statistics deficit protectionism tariffs dumping retaliation protectionist yeutter 
+9, 0, 0.640, 0.650, 0.731, 145, 152, 149, soybean cereals barley grain rice corn wheat maize 
+ 
+Run Number, 0, Micro F1: , 0.7757,  Macro F1: , 0.6604, Micro BEP:, 0.7844, Total Positive Matches , 2416, Total Negative Matches, 1026, Total Docs,  2787 
+,, Overall Micro F1 , Infinity,  Overall Macro F1, Infinity, Overall MicroBEP, Infinity 
+ 
+0, 1, 0.780, 0.809, 0.814, 537, 72, 719, acquire completes stake merger takeover undisclosed sell acquisition 
+1, 1, 0.562, 0.544, 0.687, 56, 94, 56, maize corn 
+2, 1, 0.754, 0.708, 0.717, 120, 30, 189, barrel opec bbl gasoline barrels exploration bpd 
+3, 1, 0.553, 0.545, 0.681, 70, 116, 71, feedgrains wheat 
+4, 1, 0.936, 0.938, 0.940, 1060, 112, 1087, payout profit dividend earnings qtr split vs revs 
+5, 1, 0.509, 0.542, 0.617, 109, 162, 131, bundesbank fed rate band 
+6, 1, 0.657, 0.623, 0.675, 154, 161, 179, currencies dollar intervene money yen fed monetary 
+7, 1, 0.655, 0.618, 0.621, 59, 43, 89, hormuz ships port tanker ferry seamen vessels vessel 
+8, 1, 0.602, 0.586, 0.680, 109, 146, 117, trade 
+9, 1, 0.642, 0.659, 0.741, 147, 150, 149, maize cereals barley crops wheat rice grain corn 
+ 
+Run Number, 1, Micro F1: , 0.7693,  Macro F1: , 0.6572, Micro BEP:, 0.7795, Total Positive Matches , 2421, Total Negative Matches, 1086, Total Docs,  2787 
+,, Overall Micro F1 , 1.5450,  Overall Macro F1, 1.3176, Overall MicroBEP, 1.5639 
+ 
