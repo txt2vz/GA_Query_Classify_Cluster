@@ -1,6 +1,4 @@
-package ecj;
-
-import lucene.IndexInfo
+package classify;
 
 import org.apache.lucene.search.BooleanClause
 import org.apache.lucene.search.BooleanQuery
@@ -8,9 +6,10 @@ import org.apache.lucene.search.IndexSearcher
 import org.apache.lucene.search.Query
 import org.apache.lucene.search.TotalHitCountCollector
 
-import query.ClassifyQuery
+import query.ClassifyUtils
 import ec.EvolutionState
 import ec.simple.SimpleStatistics
+import index.IndexInfo;
 
 public class ClassifyGAStatistics extends SimpleStatistics {
 
@@ -66,10 +65,10 @@ public class ClassifyGAStatistics extends SimpleStatistics {
 
 		gaFit.setTestValues(positiveMatchTest, negativeMatchTest);
 
-		gaFit.setF1Test(ClassifyQuery.f1(positiveMatchTest, negativeMatchTest,
+		gaFit.setF1Test(ClassifyUtils.f1(positiveMatchTest, negativeMatchTest,
 				IndexInfo.instance.totalTestDocsInCat));
 
-		gaFit.setBEPTest(ClassifyQuery.bep(positiveMatchTest, negativeMatchTest,
+		gaFit.setBEPTest(ClassifyUtils.bep(positiveMatchTest, negativeMatchTest,
 				IndexInfo.instance.totalTestDocsInCat));
 
 		println   "Fitness: " + gaFit.fitness() + "F1Test: " + gaFit.getF1Test() +

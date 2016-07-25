@@ -1,4 +1,4 @@
-package lucene
+package index
 
 import java.nio.file.Path
 import java.nio.file.Paths
@@ -51,7 +51,7 @@ class IndexInfo {
 
 	public void setCatNumber(final int cn) {
 		categoryNumber = String.valueOf(cn);
-		println " cat number set $cn"
+		println "Category number set: $categoryNumber"
 	}
 	public void setCatName(final String cn) {
 		categoryName = cn;

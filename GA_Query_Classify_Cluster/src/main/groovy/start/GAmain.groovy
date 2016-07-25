@@ -1,46 +1,28 @@
 package start
 
-import java.io.File;
-import java.io.IOException;
-import java.util.Date;
-import java.util.Formatter;
-
-import lucene.IndexInfo;
-import query.ClassifyQuery
-
-import ec.Evolve;
-//import ec.Fitness;
-//import ec.util.ParameterDatabase
-import ec.util.*
+import index.IndexInfo
+import query.ClassifyUtils
+import classify.GAFit
 import ec.*
-import ecj.GAFit;
-//import ec.Fitness;
+import ec.util.*
 
 class GAmain extends Evolve {
 
-	private final String parameterFilePath =
-	
-	'src/cfg/classify.params'
-
+	private final String parameterFilePath ='src/cfg/classify.params'
 	private int totPosMatchedTest = 0, totTest = 0, totNegMatchTest = 0;
-
 	private final static int NUMBER_OF_CATEGORIES = 10 , NUMBER_OF_JOBS = 2;
-
 	private double microF1AllRunsTotal = 0, macroF1AllRunsTotal = 0,
 	microBEPAllRunsTotal = 0;
-
-	FileWriter queryFileWriter = new FileWriter('results/queries.txt')
 
 	public GAmain(){
 		println "Start..."
 		EvolutionState state;
-		
+
 		Formatter bestResultsOut = new Formatter('results/results.csv');
 		final String fileHead = "category, job, f1train, f1test, bepTest, totPositiveTest, totNegativeTest, totTestDocsInCat, query" + '\n';
-        bestResultsOut.format("%s", fileHead);
+		bestResultsOut.format("%s", fileHead);
 
 		ParameterDatabase parameters = null;
-
 		final Date startRun = new Date();
 
 		NUMBER_OF_JOBS.times{job ->
@@ -48,7 +30,7 @@ class GAmain extends Evolve {
 
 			double macroF1 = 0;
 
-			NUMBER_OF_CATEGORIES.times{ categoryNumber ->			
+			NUMBER_OF_CATEGORIES.times{ categoryNumber ->
 
 				IndexInfo.instance.setCatNumber(categoryNumber)
 				//IndexInfo.instance.setCatName(cat)
@@ -97,15 +79,15 @@ class GAmain extends Evolve {
 						IndexInfo.instance.totalTestDocsInCat,
 						//cfit.getQuery(),
 						//cfit.getQueryMinimal());
-						cfit.getQueryString() ) 
+						cfit.getQueryString() )
 				bestResultsOut.flush();
 				println "Test F1 for cat $categoryNumber : $testF1 *******************************"
 				cleanup(state);
 			}
 
-			final double microF1 = ClassifyQuery.f1(totPosMatchedTest,
+			final double microF1 = ClassifyUtils.f1(totPosMatchedTest,
 					totNegMatchTest, totTest);
-			final double microBEP = ClassifyQuery.bep(totPosMatchedTest,
+			final double microBEP = ClassifyUtils.bep(totPosMatchedTest,
 					totNegMatchTest, totTest);
 
 			macroF1 = macroF1 / NUMBER_OF_CATEGORIES;
@@ -113,7 +95,7 @@ class GAmain extends Evolve {
 
 			bestResultsOut.format(" \n");
 			bestResultsOut.format("Run Number, %d", job);
-	
+
 			bestResultsOut
 					.format(", Micro F1: , %.4f,  Macro F1: , %.4f, Micro BEP:, %.4f, Total Positive Matches , %d, Total Negative Matches, %d, Total Docs,  %d \n",
 					microF1, macroF1, microBEP, totPosMatchedTest,
@@ -126,7 +108,7 @@ class GAmain extends Evolve {
 			final double microAverageF1AllRuns = microF1AllRunsTotal / (job);
 			final double microAverageBEPAllRuns = microBEPAllRunsTotal / (job);
 			final double macroAverageF1AllRuns = macroF1AllRunsTotal / (job);
-	
+
 			bestResultsOut
 					.format(",, Overall Micro F1 , %.4f,  Overall Macro F1, %.4f, Overall MicroBEP, %.4f",
 					microAverageF1AllRuns,
@@ -148,11 +130,9 @@ class GAmain extends Evolve {
 		def time= endRun.getTime() - startRun.getTime();
 		println "Total time taken: $time"
 		bestResultsOut.close();
-		queryFileWriter.flush()
-		queryFileWriter.close()
 	}
 
-	static main (args){		
+	static main (args){
 		new GAmain()
 	}
 }

@@ -8,11 +8,11 @@ seed.3=time
 #seed.0=4357  
 evalthreads = 				4
 breedthreads = 				4
-eval.problem = query.ORG
+eval.problem = query.OR
 #eval.problem = query.AND_ORG
 #eval.problem = query.SpanFirstG
 
-stat = ecj.ClassifyGAStatistics
+stat = classify.ClassifyGAStatistics
 #stat = ecj.ClusterGAStatistics
 stat.file = statDump/out.stat
 select.tournament.size = 5
@@ -25,7 +25,7 @@ pop.subpop.0 = ec.Subpopulation
 pop.subpop.0.size = 128
 pop.subpop.0.species = ec.vector.IntegerVectorSpecies
 pop.subpop.0.species.ind = ec.vector.IntegerVectorIndividual
-pop.subpop.0.species.fitness = ecj.GAFit
+pop.subpop.0.species.fitness = classify.GAFit
 
 pop.subpop.0.species.min-gene = -10
 pop.subpop.0.species.max-gene = 100

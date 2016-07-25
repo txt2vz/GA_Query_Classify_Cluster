@@ -1,4 +1,4 @@
-package lucene
+package index
 
 import org.apache.lucene.index.IndexReader
 import org.apache.lucene.index.MultiFields
@@ -19,6 +19,7 @@ import org.apache.lucene.search.spans.SpanFirstQuery
 import org.apache.lucene.search.spans.SpanTermQuery
 import org.apache.lucene.util.BytesRef
 
+import classify.ClassifyQuery
 import query.*
 //import wordTools.*
 

@@ -1,10 +1,9 @@
-package ecj;
-
-import lucene.IndexInfo
+package classify;
 
 import org.apache.lucene.search.Query
 
 import ec.simple.SimpleFitness
+import index.IndexInfo;
 
 /**
  * Store information about classification query and test/train values

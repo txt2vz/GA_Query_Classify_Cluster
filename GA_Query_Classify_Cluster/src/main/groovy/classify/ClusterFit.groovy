@@ -1,4 +1,4 @@
-package ecj;
+package classify;
 
 //import org.apache.lucene.search.Query
 import ec.simple.SimpleFitness

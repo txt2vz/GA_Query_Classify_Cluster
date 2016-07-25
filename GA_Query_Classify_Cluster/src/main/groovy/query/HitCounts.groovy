@@ -1,14 +1,14 @@
 package query;
 
-import lucene.IndexInfo
-
 import org.apache.lucene.search.BooleanClause
 import org.apache.lucene.search.BooleanQuery
 import org.apache.lucene.search.IndexSearcher
 import org.apache.lucene.search.Query
 import org.apache.lucene.search.TotalHitCountCollector
 
-trait MatchT {
+import index.IndexInfo;
+
+trait HitCounts {
 
 	public double getPositiveMatch(IndexSearcher searcher, Query q) {
 		

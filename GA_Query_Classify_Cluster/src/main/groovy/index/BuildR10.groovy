@@ -1,4 +1,4 @@
-  package lucene
+package index
 
 import groovy.io.FileType
 

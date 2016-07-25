@@ -1,6 +1,6 @@
-package lucene;
-public abstract class ClassifyQuery  {
+package query
 
+public class ClassifyUtils {
 
 	public static float precision(final int positiveMatch, final int negativeMatch) {
 		final int totalRetrieved = positiveMatch + negativeMatch;
@@ -21,8 +21,7 @@ public abstract class ClassifyQuery  {
 	/**
 	 * Fitness is based on the F1 measure which combines precision and recall
 	 */
-	public static float f1(final int positiveMatch, final int negativeMatch,
-			final int totalPositive) {
+	public static float f1(final int positiveMatch, final int negativeMatch, final int totalPositive) {
 
 		if (positiveMatch <= 0 || totalPositive <= 0) {
 			return 0;
@@ -37,8 +36,7 @@ public abstract class ClassifyQuery  {
 	/**
 	 * Break even point. Alternative (older) measure of classification accuracy
 	 */
-	public static float bep(int positiveMatch, int negativeMatch,
-			int totalPositive) {
+	public static float bep(int positiveMatch, int negativeMatch, int totalPositive) {
 
 		if (positiveMatch <= 0 || totalPositive <= 0) {
 			return 0;

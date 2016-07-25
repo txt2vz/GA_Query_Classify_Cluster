@@ -1,6 +1,8 @@
-package ecj
+package classify
 
 import groovy.json.JsonBuilder
+import index.IndexInfo;
+
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
@@ -10,8 +12,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.regex.Pattern
-
-import lucene.IndexInfo;
 
 import org.apache.lucene.index.Term
 import org.apache.lucene.search.BooleanQuery

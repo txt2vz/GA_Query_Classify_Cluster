@@ -1,8 +1,5 @@
 package query;
 
-import lucene.ImportantWords
-import lucene.IndexInfo
-
 import org.apache.lucene.index.Term
 import org.apache.lucene.search.BooleanClause
 import org.apache.lucene.search.BooleanQuery
@@ -16,8 +13,10 @@ import ec.simple.SimpleFitness
 import ec.simple.SimpleProblemForm
 import ec.util.Parameter
 import ec.vector.IntegerVectorIndividual
-import ecj.GAFit;
+import classify.GAFit;
 import groovy.transform.CompileStatic
+import index.ImportantWords
+import index.IndexInfo;;
 
 /**
  * To generate queries to perform binary text classification using GA string of
@@ -26,7 +25,7 @@ import groovy.transform.CompileStatic
  * @author Laurie
  */
 
-public class AND_ORG extends Problem implements SimpleProblemForm, MatchT {
+public class AND_ORG extends Problem implements SimpleProblemForm, HitCounts {
 
 	private String[] wordArray;
 	BooleanQuery query;
@@ -87,7 +86,7 @@ public class AND_ORG extends Problem implements SimpleProblemForm, MatchT {
 		int    positiveMatch = getPositiveMatch(searcher, query)
 		int negativeMatch = getNegativeMatch(searcher,query)
 
-		def F1train = ClassifyQuery.f1(positiveMatch, negativeMatch, IndexInfo.instance.totalTrainDocsInCat);
+		def F1train = ClassifyUtils.f1(positiveMatch, negativeMatch, IndexInfo.instance.totalTrainDocsInCat);
 
 		fitness.setTrainValues(positiveMatch, negativeMatch);
 		fitness.setF1Train(F1train);
