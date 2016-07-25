@@ -2,15 +2,19 @@ package index
 
 import org.apache.lucene.index.IndexReader
 import org.apache.lucene.index.MultiFields
+import org.apache.lucene.index.PostingsEnum
 import org.apache.lucene.index.Term
 import org.apache.lucene.index.Terms
 import org.apache.lucene.index.TermsEnum
 import org.apache.lucene.search.BooleanClause
 import org.apache.lucene.search.BooleanQuery
+import org.apache.lucene.search.DocIdSetIterator
 import org.apache.lucene.search.IndexSearcher
 import org.apache.lucene.search.Query
 import org.apache.lucene.search.TermQuery
 import org.apache.lucene.search.TotalHitCountCollector
+import org.apache.lucene.search.similarities.ClassicSimilarity
+import org.apache.lucene.search.similarities.TFIDFSimilarity
 import org.apache.lucene.search.spans.SpanFirstQuery
 import org.apache.lucene.search.spans.SpanTermQuery
 import org.apache.lucene.util.BytesRef
@@ -36,7 +40,7 @@ public class ImportantWords {
 	private Terms terms = MultiFields.getTerms(indexReader, IndexInfo.FIELD_CONTENTS)
 	private TermsEnum termsEnum = terms.iterator();
 	private int maxDoc = indexReader.maxDoc();
-	private Set<String> stopSet = StopLists.getStopSet()
+	private Set<String> stopSet = StopSet.getStopSetFromFile()
 
 	public static void main(String[] args){
 		IndexInfo.instance.setCategoryName("gra")
@@ -50,6 +54,7 @@ public class ImportantWords {
 
 	/**
 	 * create a set of words based on F1 measure of the word as a classify.query
+	 * create new for each category
 	 */
 	public String[] getF1WordList(boolean spanFirstQ, boolean positiveList)
 	throws IOException{
@@ -135,4 +140,58 @@ public class ImportantWords {
 
 		return wordList.toArray();
 	}
+	
+	public String[] getTFIDFWordList(){
+		
+				println "Important words terms.getDocCount: ${terms.getDocCount()}"
+		
+				def wordMap = [:]
+				BytesRef text;
+				while((text = termsEnum.next()) != null) {
+		
+					def word = text.utf8ToString()
+					Term t = new Term(IndexInfo.FIELD_CONTENTS, word);
+		
+					char c = word.charAt(0)
+					int df = indexSearcher.getIndexReader().docFreq(t)
+					def dfFraction = ((double) df/maxDoc)
+		
+					if (
+						df < 3
+					//	|| dfFraction > 0.3
+						||
+						stopSet.contains(t.text())
+					//	|| t.text().contains("'")
+						|| t.text().length()<2
+					//	|| !c.isLetter()
+						//|| dfFraction < 0.005
+					//	|| t.text().contains(".")
+					)
+						continue;
+		
+					long indexDf = indexReader.docFreq(t);
+					int docCount = indexReader.numDocs()
+					TFIDFSimilarity tfidfSim 
+					//new DefaultSimilarity()	
+					                           //new ClassicSimilarity()
+		
+					PostingsEnum docsEnum = termsEnum.postings(MultiFields.getTermDocsEnum(indexReader, IndexInfo.FIELD_CONTENTS, text ));
+					double tfidfTotal=0
+		
+					if (docsEnum != null) {
+						while (docsEnum.nextDoc() != DocIdSetIterator.NO_MORE_DOCS) {
+							double tfidf = tfidfSim.tf(docsEnum.freq()) * tfidfSim.idf(docCount, indexDf);
+							tfidfTotal +=tfidf
+						}
+					}
+					wordMap+= [(word) : tfidfTotal]
+				}
+		
+				wordMap= wordMap.sort{a, b -> a.value <=> b.value}
+				List wordList = wordMap.keySet().toList().take(MAX_WORDLIST_SIZE)
+		
+				println "tfidf map size: ${wordMap.size()}  wordlist size: ${wordList.size()}  wordlist: $wordList"
+		
+				return wordList.toArray();
+			}
 }

@@ -31,19 +31,21 @@ class IndexInfo {
 	public static final String FIELD_TEST_TRAIN = "test_train";
 	public static final String FIELD_CATEGORY_NUMBER = "categoryNumber";
 
+	int NUMBER_OF_CLUSTERS =  3
+
 	TermQuery trainQ = new TermQuery(new Term(
 	FIELD_TEST_TRAIN, "train"));
 
 	TermQuery testQ = new TermQuery(new Term(
 	FIELD_TEST_TRAIN, "test"));
 
-	IndexReader reader
+	IndexReader indexReader
 	IndexSearcher indexSearcher
 
 	String categoryNumber="0", categoryName="cru";
 
 	TermQuery catQ 	= new TermQuery(new Term(FIELD_CATEGORY_NUMBER,
-	categoryNumber))	
+	categoryNumber))
 
 	Query catTrainBQ, othersTrainBQ, catTestBQ, othersTestBQ;
 
@@ -61,18 +63,19 @@ class IndexInfo {
 		return String.valueOf(categoryNumber);
 	}
 
-	public void setFilters()  {	
+	public void setFilters()  {
 		catQ = new TermQuery(new Term(FIELD_CATEGORY_NUMBER,
 				categoryNumber));
 		println "index infor catQ $catQ"
 
-		String pathToIndex = "indexes/r10"
+		String pathToIndex = //"indexes/r10"
+				"indexes/20NG3SpaceHockeyChristian"
 
 		Path path = Paths.get(pathToIndex)
 		Directory directory = FSDirectory.open(path)
 
-		reader = DirectoryReader.open(directory)
-		indexSearcher = new IndexSearcher(reader);
+		indexReader = DirectoryReader.open(directory)
+		indexSearcher = new IndexSearcher(indexReader);
 
 		BooleanQuery.Builder bqb = new BooleanQuery.Builder()
 		bqb.add(catQ, BooleanClause.Occur.MUST)
