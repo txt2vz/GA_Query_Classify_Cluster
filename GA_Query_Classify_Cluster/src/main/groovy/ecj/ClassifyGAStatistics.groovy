@@ -10,7 +10,6 @@ import org.apache.lucene.search.TotalHitCountCollector
 
 import query.ClassifyQuery
 import ec.EvolutionState
-import ec.Fitness
 import ec.simple.SimpleStatistics
 
 public class ClassifyGAStatistics extends SimpleStatistics {
@@ -22,87 +21,63 @@ public class ClassifyGAStatistics extends SimpleStatistics {
 
 	public void postEvaluationStatistics(EvolutionState state) {
 		super.postEvaluationStatistics(state);
-		Fitness bestFitOfSubp = null, bestFitOfPop = null;
-		for (int subPop = 0; subPop < state.population.subpops.length; ++subPop) {
-			bestFitOfSubp = state.population.subpops[subPop].individuals[0].fitness;
-			for (int i = 1; i < state.population.subpops[subPop].individuals.length; ++i) {
-				Fitness fit = state.population.subpops[subPop].individuals[i].fitness;
-				if (fit.betterThan(bestFitOfSubp))
-					bestFitOfSubp = fit;
-			}
-			if (bestFitOfPop == null)
-				bestFitOfPop = bestFitOfSubp;
-			else if (bestFitOfSubp.betterThan(bestFitOfPop))
-				bestFitOfPop = bestFitOfSubp;
-		}
+		//		Fitness bestFitOfSubp = null, bestFitOfPop = null;
+		//		for (int subPop = 0; subPop < state.population.subpops.length; ++subPop) {
+		//			bestFitOfSubp = state.population.subpops[subPop].individuals[0].fitness;
+		//			for (int i = 1; i < state.population.subpops[subPop].individuals.length; ++i) {
+		//				Fitness fit = state.population.subpops[subPop].individuals[i].fitness;
+		//				if (fit.betterThan(bestFitOfSubp))
+		//					bestFitOfSubp = fit;
+		//			}
+		//			if (bestFitOfPop == null)
+		//				bestFitOfPop = bestFitOfSubp;
+		//			else if (bestFitOfSubp.betterThan(bestFitOfPop))
+		//				bestFitOfPop = bestFitOfSubp;
+		//		}
+		//
+		//		final GAFit cf = (GAFit) bestFitOfPop;
 
-		final GAFit cf = (GAFit) bestFitOfPop;
+		GAFit gaFit = (GAFit) state.population.subpops.collect {sbp ->
+			sbp.individuals.max() {ind ->
+				ind.fitness.fitness()}.fitness
+		}.max  {it.fitness()}
+
 
 		// get test results on best individual
-		try {
+		Query q = gaFit.getQuery()
+		IndexSearcher searcher = IndexInfo.instance.indexSearcher;
 
-			Query q = cf.getQuery()
-			IndexSearcher searcher = IndexInfoStaticG.instance.indexSearcher;
+		TotalHitCountCollector collector = new TotalHitCountCollector()
+		BooleanQuery.Builder bqb = new BooleanQuery.Builder()
 
-			TotalHitCountCollector collector = new TotalHitCountCollector();
-			BooleanQuery.Builder bqb = new BooleanQuery.Builder();
-			println "query in ga statistics is : " + q
+		bqb.add(q, BooleanClause.Occur.MUST);
+		bqb.add(IndexInfo.instance.catTestBQ, BooleanClause.Occur.FILTER);
 
-			bqb.add(q, BooleanClause.Occur.MUST);
+		searcher.search(bqb.build(), collector);
+		final int positiveMatchTest = collector.getTotalHits();
 
-			bqb.add(IndexInfoStaticG.instance.catTestBQ, BooleanClause.Occur.FILTER);
+		collector = new TotalHitCountCollector();
+		bqb = new BooleanQuery.Builder();
+		bqb.add(q, BooleanClause.Occur.MUST);
+		bqb.add(IndexInfo.instance.othersTestBQ, BooleanClause.Occur.FILTER);
+		searcher.search(bqb.build(), collector);
 
-			searcher.search(bqb.build(), collector);
-			final int positiveMatchTest = collector.getTotalHits();
-			// indexSearcher.search(q, filter0, collector
+		final int negativeMatchTest = collector.getTotalHits();
 
-			// searcher.search(cf.getQuery(),
-			// IndexInfoStaticG.instance.catTestF,
-			// collector);
+		gaFit.setTestValues(positiveMatchTest, negativeMatchTest);
 
-			collector = new TotalHitCountCollector();
-			bqb = new BooleanQuery.Builder();
-			bqb.add(q, BooleanClause.Occur.MUST);
-			bqb.add(IndexInfoStaticG.instance.othersTestBQ, BooleanClause.Occur.FILTER);
-			searcher.search(bqb.build(), collector);
+		gaFit.setF1Test(ClassifyQuery.f1(positiveMatchTest, negativeMatchTest,
+				IndexInfo.instance.totalTestDocsInCat));
 
-			//	searcher.search(cf.getQuery(), IndexInfoStaticG.instance.othersTestF, collector);
-			final int negativeMatchTest = collector.getTotalHits();
+		gaFit.setBEPTest(ClassifyQuery.bep(positiveMatchTest, negativeMatchTest,
+				IndexInfo.instance.totalTestDocsInCat));
 
-			cf.setTestValues(positiveMatchTest, negativeMatchTest);
+		println   "Fitness: " + gaFit.fitness() + "F1Test: " + gaFit.getF1Test() +
+				" F1Train: " + gaFit.getF1Train() + " positive match test: " + positiveMatchTest +
+				" negative match test: " + negativeMatchTest
 
-			cf.setF1Test(ClassifyQuery.f1(positiveMatchTest, negativeMatchTest,
-					IndexInfoStaticG.instance.totalTestDocsInCat));
-
-			cf.setBEPTest(ClassifyQuery.bep(positiveMatchTest, negativeMatchTest,
-					IndexInfoStaticG.instance.totalTestDocsInCat));
-
-			//BooleanQuery q = (BooleanQuery) cf.getQuery();
-
-			println  ( "Fitness: " + cf.fitness() + " FitnessToString: " + cf.fitnessToString() + "F1Test: "
-			//		+ cf.getF1Test() + " F1Train: "
-					// + " bepTest " + cf.getBEPTest()
-				//	+ cf.getF1Train() + " positive match test: " + positiveMatchTest + " negative match test: "
-			//		+ negativeMatchTest + " Total test: " + IndexInfoStaticG.instance.totalTestDocsInCat
-			//		+ " Total terms in query: " + cf.getNumberOfTerms() + " min should match "
-					//	+ q.getMinimumNumberShouldMatch()
-					// + " neutralHit " + cf.getNeutralHit() + '\n' +
-					+ '\n' + "cluster query sets map " + cf.getQMap()
-					+ '\n' + "cluster query list " + cf.qList
-
-					+ '\n' + "cluster totalPositiveScore " + cf.totalPositiveScore + " totalNegScore " + cf.totalNegativeScore
-					+ " totalPosHits " + cf.totalPosHits + " totalNegHits " + cf.totalNegHits
-					+ " duplicateCount "+ cf.duplicateCount
-					+ " treeCount "+ cf.tree
-					+ " noHitsCount "+ cf.noHitsCount
-                    + " coreClusterPenalty " + cf.coreClusterP)
-			//	+ " Query " + cf.getQuery().toString(IndexInfoStaticG.FIELD_CONTENTS) + '\n' + "Query min sorted: "
-			//			+ cf.getQueryMinimal()); // + '\n'
-			// + cf.getQueryJSONForViz() ) ;
-
-		} catch (IOException e) {
-
-			e.printStackTrace();
-		}
+		//println "Query: " + gaFit.getQuery()
+		//println "QueryMinimal: " + gaFit.getQueryMinimal()
+		println "QueryString: " + gaFit.getQueryString()
 	}
 }

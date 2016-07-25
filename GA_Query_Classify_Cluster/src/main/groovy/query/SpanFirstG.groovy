@@ -1,7 +1,7 @@
 package query;
 
 import lucene.ImportantWords
-import lucene.IndexInfoStaticG
+import lucene.IndexInfo
 
 import org.apache.lucene.index.Term
 import org.apache.lucene.search.BooleanClause
@@ -37,9 +37,9 @@ public class SpanFirstG extends Problem implements SimpleProblemForm, MatchT {
 
 		super.setup(state, base);
 
-		println("Total docs for cat  " + IndexInfoStaticG.instance.getCatnumberAsString() + " "
-				+ IndexInfoStaticG.instance.totalTrainDocsInCat + " Total test docs for cat "
-				+ IndexInfoStaticG.instance.totalTestDocsInCat);
+		println("Total docs for cat  " + IndexInfo.instance.getCatnumberAsString() + " "
+				+ IndexInfo.instance.totalTrainDocsInCat + " Total test docs for cat "
+				+ IndexInfo.instance.totalTestDocsInCat);
 
 		ImportantWords iw = new ImportantWords();
 		wordArray = iw.getF1WordList(false, true);
@@ -76,7 +76,7 @@ public class SpanFirstG extends Problem implements SimpleProblemForm, MatchT {
 			String word = wordArray[wordInd0];
 
 			SpanFirstQuery sfq = new SpanFirstQuery(new SpanTermQuery(new Term(
-					IndexInfoStaticG.FIELD_CONTENTS, word)),
+					IndexInfo.FIELD_CONTENTS, word)),
 					intVectorIndividual.genome[i + 1]);
 
 			bqb.add(sfq, BooleanClause.Occur.SHOULD);
@@ -85,11 +85,11 @@ public class SpanFirstG extends Problem implements SimpleProblemForm, MatchT {
 
 		query = bqb.build();
 
-		IndexSearcher searcher = IndexInfoStaticG.instance.indexSearcher;
+		IndexSearcher searcher = IndexInfo.instance.indexSearcher;
 		int positiveMatch = getPositiveMatch(searcher, query)
 		int negativeMatch = getNegativeMatch(searcher,query)
 
-		def F1train = ClassifyQuery.f1(positiveMatch, negativeMatch, IndexInfoStaticG.instance.totalTrainDocsInCat);
+		def F1train = ClassifyQuery.f1(positiveMatch, negativeMatch, IndexInfo.instance.totalTrainDocsInCat);
 
 		fitness.setTrainValues(positiveMatch, negativeMatch);
 		fitness.setF1Train(F1train);

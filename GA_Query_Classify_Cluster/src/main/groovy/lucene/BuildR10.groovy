@@ -92,7 +92,7 @@ class BuildR10 {
 	}
 
 	//index the doc adding fields for path, category, test/train and contents
-	def indexDocs(IndexWriter writer, File f, categoryNumber)
+	def indexDocs(IndexWriter writer, File f, int catNumber)
 	{
 
 		def doc = new Document()
@@ -105,26 +105,18 @@ class BuildR10 {
 		if (x<8) println "catName $catName"
 		x++
 
-
 		def n = catsFreq.get((catName)) ?: 0
 
 		catsFreq.put((catName), n + 1)
-		//if (docsSet.add (f.name ) && ! f.canonicalPath.contains("test")) {
-
-		//println "adding fname ${f.name} catname $catName name " + f.name +  "  path " + f.getCanonicalPath()
 
 		Field catNameField = new StringField(IndexInfo.FIELD_CATEGORY_NAME, catName, Field.Store.YES);
 		doc.add(catNameField)
-		//f.getParentFile().getName(), Field.Store.YES);
 
-		//doc.add(new TextField(IndexInfoStaticG.FIELD_CONTENTS, new BufferedReader(new InputStreamReader(fis, "UTF-8"))) );
-		doc.add(new TextField(IndexInfo.FIELD_CONTENTS, f.text,  Field.Store.YES)) ;
+		Field catNumberField = new StringField(IndexInfo.FIELD_CATEGORY_NUMBER, String.valueOf(catNumber), Field.Store.YES);
+		doc.add(catNumberField)
 
-		//	Field categoryField = new StringField(IndexInfo.FIELD_CATEGORY, categoryNumber.toString(), Field.Store.YES);
-		Field categoryField = new StringField(IndexInfo.FIELD_CATEGORY_NAME, catName, Field.Store.YES);  //for classic3 name is same as category
-		doc.add(categoryField)
+		doc.add(new TextField(IndexInfo.FIELD_CONTENTS, f.text,  Field.Store.YES))
 
-		//set test train field
 		String test_train
 		if ( f.canonicalPath.contains("test")) test_train="test" else test_train="train";
 
@@ -133,6 +125,7 @@ class BuildR10 {
 
 		writer.addDocument(doc);
 	}
+
 	def testBool(){
 
 		println "boolean test"
@@ -144,8 +137,8 @@ class BuildR10 {
 		q1.add(new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, "ship")), Occur.MUST);
 		q1.add(new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, "wheat")), Occur.MUST);
 		//finalQuery.add(q1.build(), Occur.MUST);
-		Query q =  q1.build()  //finalQuery.build();
-
+		Query q =  q1.build() 
+		
 		IndexSearcher searcher = new IndexSearcher(reader);
 		TopScoreDocCollector collector = TopScoreDocCollector.create(10);
 		searcher.search(q, collector);
@@ -157,7 +150,7 @@ class BuildR10 {
 			int docId = it.doc;
 			Document d = searcher.doc(docId);
 			println(d.get(IndexInfo.FIELD_TEST_TRAIN) + "\t" + d.get("path") + "\t category:" +
-					d.get(IndexInfo.FIELD_CATEGORY_NAME) );
+					d.get(IndexInfo.FIELD_CATEGORY_NAME) + " catNumber " + d.get(IndexInfo.FIELD_CATEGORY_NUMBER) );
 		}
 
 		reader.close();

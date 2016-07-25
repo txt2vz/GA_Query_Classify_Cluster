@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.TreeMap;
 import java.util.regex.Pattern
 
-import lucene.IndexInfoStaticG;
+import lucene.IndexInfo;
 
 import org.apache.lucene.index.Term
 import org.apache.lucene.search.BooleanQuery

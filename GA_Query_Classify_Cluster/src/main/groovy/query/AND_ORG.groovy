@@ -1,7 +1,7 @@
 package query;
 
 import lucene.ImportantWords
-import lucene.IndexInfoStaticG
+import lucene.IndexInfo
 
 import org.apache.lucene.index.Term
 import org.apache.lucene.search.BooleanClause
@@ -35,13 +35,13 @@ public class AND_ORG extends Problem implements SimpleProblemForm, MatchT {
 
 		super.setup(state, base);
 
-		println("Total docs for cat  " + IndexInfoStaticG.instance.getCatnumberAsString() + " "
-				+ IndexInfoStaticG.instance.totalTrainDocsInCat + " Total test docs for cat "
-				+ IndexInfoStaticG.instance.totalTestDocsInCat);
+		println("Total docs for cat  " + IndexInfo.instance.getCatnumberAsString() + " "
+				+ IndexInfo.instance.totalTrainDocsInCat + " Total test docs for cat "
+				+ IndexInfo.instance.totalTestDocsInCat);
 
 		ImportantWords iw = new ImportantWords();
-	//	wordArray = iw.getFreqWordList()
-		iw.getF1WordList(false, true);
+		//	wordArray = iw.getFreqWordList()
+		wordArray=	iw.getF1WordList(false, true);
 	}
 
 
@@ -73,8 +73,8 @@ public class AND_ORG extends Problem implements SimpleProblemForm, MatchT {
 			String word1 = wordArray[wordInd1];
 
 			BooleanQuery.Builder subbqb = new BooleanQuery.Builder();
-			subbqb.add(new TermQuery(new Term(IndexInfoStaticG.FIELD_CONTENTS, word0)), BooleanClause.Occur.MUST);
-			subbqb.add(new TermQuery(new Term(IndexInfoStaticG.FIELD_CONTENTS, word1)), BooleanClause.Occur.MUST);
+			subbqb.add(new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, word0)), BooleanClause.Occur.MUST);
+			subbqb.add(new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, word1)), BooleanClause.Occur.MUST);
 
 			BooleanQuery subq = subbqb.build();
 			bqb.add(subq, BooleanClause.Occur.SHOULD);
@@ -82,19 +82,19 @@ public class AND_ORG extends Problem implements SimpleProblemForm, MatchT {
 
 
 		query = bqb.build();
-		
-		IndexSearcher searcher = IndexInfoStaticG.instance.indexSearcher;
+
+		IndexSearcher searcher = IndexInfo.instance.indexSearcher;
 		int    positiveMatch = getPositiveMatch(searcher, query)
 		int negativeMatch = getNegativeMatch(searcher,query)
 
-		def F1train = ClassifyQuery.f1(positiveMatch, negativeMatch, IndexInfoStaticG.instance.totalTrainDocsInCat);
+		def F1train = ClassifyQuery.f1(positiveMatch, negativeMatch, IndexInfo.instance.totalTrainDocsInCat);
 
 		fitness.setTrainValues(positiveMatch, negativeMatch);
 		fitness.setF1Train(F1train);
-		fitness.setQuery(query);	
+		fitness.setQuery(query);
 
 		def rawfitness  = F1train
-		
+
 		((SimpleFitness) intVectorIndividual.fitness).setFitness(state, rawfitness, false);
 
 		ind.evaluated = true;

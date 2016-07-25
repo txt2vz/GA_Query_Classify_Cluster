@@ -1,10 +1,10 @@
 package ecj;
 
-import lucene.IndexInfoStaticG
+import lucene.IndexInfo
 
-import org.apache.lucene.search.Query;
+import org.apache.lucene.search.Query
 
-import ec.simple.SimpleFitness;
+import ec.simple.SimpleFitness
 
 /**
  * Store information about classification query and test/train values
@@ -16,53 +16,51 @@ import ec.simple.SimpleFitness;
 public class GAFit extends SimpleFitness {
 
 	private double f1train, f1Test, BEPTest, tree;
-
 	private int positiveMatchTrain, negativeMatchTrain;
-
 	private int positiveMatchTest, negativeMatchTest, numberOfTerms = 0;
-
 	private Query query;
-	
-	def qMap = [:]	
+
+	def qMap = [:]
 	def qList
 
 	private int neutralHit = -1;
-	
+
 	public void setBqbList (def bqbList){
 		qMap.clear()
 		bqbList.eachWithIndex  {q, index ->
 			qMap.put(index, q.build())
 			//qSet << q.build()
 		}
-	}	
-		
+	}
+
 	public String getQMap(){
 		return qMap.toString()
 	}
-	
+
 	def totalPositiveScore=0
 	def totalNegativeScore=0;
 	def totalPosHits=0
 	def totalNegHits=0
 	def duplicateCount=0;
 	def noHitsCount=0;
-	def coreClusterP=0
-	def tree=0;
 
 	public void setQuery(Query q) {
-		//println "setting query " + q
+
 		query = q;
 	}
 
-	public Query getQuery() {	
-		//println "in gafit query is " + query;
+	public Query getQuery() {
 		return query;
+	}
+
+	public String getQueryString(){
+		return query.toString(IndexInfo.FIELD_CONTENTS)
 	}
 
 	public String getQueryMinimal() {
 		return QueryReadable.getQueryMinimal(query);
 	}
-	
+
 	public String getQueryJSONForViz(){
 		return QueryReadable.getQueryJSONForViz(query);
 	}
@@ -83,7 +81,7 @@ public class GAFit extends SimpleFitness {
 	}
 
 	public double getF1Train() {
-	
+
 		return f1train;
 	}
 
@@ -131,34 +129,13 @@ public class GAFit extends SimpleFitness {
 		return  "F1train " + this.f1train +  " fitness: " + this.fitness();
 	}
 
-	// public void printFitnessForHumans(final EvolutionState state,
-	// final int log, final int verbosity) {
-	//
-	// super.printFitnessForHumans(state, log, verbosity);
-	// / super.printFitnessForHumans(state, 0, verbosity);
-	// //
-	// state.output.println(this.toString(state.generation), verbosity, log);
-	// state.output.println(this.toString(state.generation), verbosity, 0);
-	// }
-
 	public String toString(int gen) {
-		return "Gen: " + gen + //" SuperFite " + super.fitnessToString() + 
+		return "Gen: " + gen +
 				" F1: " + f1train + " Positive Match: "
-				+ positiveMatchTrain + " Negative Match: " + negativeMatchTrain
-				+ " Total positive Docs: "
-				+ IndexInfoStaticG.instance.totalTrainDocsInCat
-				// + " neutral Hit " + neutralHit
-				+ '\n' + "QueryString: "
-				+ query.toString(IndexInfoStaticG.FIELD_CONTENTS) + '\n';
-	}
-
-	public void setNeutralHits(int neutralHit) {
-		this.neutralHit = neutralHit;
-
-	}
-
-	public int getNeutralHit() {
-
-		return neutralHit;
+		+ positiveMatchTrain + " Negative Match: " + negativeMatchTrain
+		+ " Total positive Docs: "
+		+ IndexInfo.instance.totalTrainDocsInCat
+		+ '\n' + "QueryString: "
+		+ query.toString(IndexInfo.FIELD_CONTENTS) + '\n';
 	}
 }

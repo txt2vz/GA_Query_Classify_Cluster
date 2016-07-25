@@ -1,6 +1,5 @@
 package lucene
 
-import java.io.IOException;
 import java.nio.file.Path
 import java.nio.file.Paths
 
@@ -26,10 +25,11 @@ import query.*
 class IndexInfo {
 
 	// Lucene field names
-	public static final String FIELD_CATEGORY_NAME = "category";
+	public static final String FIELD_CATEGORY_NAME = "categoryName";
 	public static final String FIELD_CONTENTS = "contents";
 	public static final String FIELD_PATH = "path";
 	public static final String FIELD_TEST_TRAIN = "test_train";
+	public static final String FIELD_CATEGORY_NUMBER = "categoryNumber";
 
 	TermQuery trainQ = new TermQuery(new Term(
 	FIELD_TEST_TRAIN, "train"));
@@ -42,17 +42,18 @@ class IndexInfo {
 
 	String categoryNumber="0", categoryName="cru";
 
-	TermQuery catQ = new TermQuery(new Term(FIELD_CATEGORY_NAME,
-	categoryName));
+	TermQuery catQ 	= new TermQuery(new Term(FIELD_CATEGORY_NUMBER,
+	categoryNumber))	
 
 	Query catTrainBQ, othersTrainBQ, catTestBQ, othersTestBQ;
 
 	int totalTrainDocsInCat, totalTestDocsInCat, totalOthersTrainDocs, totalTestDocs;
 
 	public void setCatNumber(final int cn) {
-		categoryNumber = cn;
+		categoryNumber = String.valueOf(cn);
+		println " cat number set $cn"
 	}
-	public void setCategoryName(final String cn) {
+	public void setCatName(final String cn) {
 		categoryName = cn;
 	}
 
@@ -60,9 +61,10 @@ class IndexInfo {
 		return String.valueOf(categoryNumber);
 	}
 
-	public void setFilters()  {
-		catQ = new TermQuery(new Term(FIELD_CATEGORY_NAME,
-				categoryName));
+	public void setFilters()  {	
+		catQ = new TermQuery(new Term(FIELD_CATEGORY_NUMBER,
+				categoryNumber));
+		println "index infor catQ $catQ"
 
 		String pathToIndex = "indexes/r10"
 
@@ -71,13 +73,6 @@ class IndexInfo {
 
 		reader = DirectoryReader.open(directory)
 		indexSearcher = new IndexSearcher(reader);
-
-
-
-		//	catTrainBQ = new BooleanQuery();
-		//	othersTrainBQ = new BooleanQuery();
-		//	catTestBQ = new BooleanQuery();
-		//	othersTestBQ = new BooleanQuery();
 
 		BooleanQuery.Builder bqb = new BooleanQuery.Builder()
 		bqb.add(catQ, BooleanClause.Occur.MUST)

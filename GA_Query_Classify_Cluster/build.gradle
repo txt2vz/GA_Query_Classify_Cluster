@@ -1,4 +1,4 @@
-apply plugin: 'java'
+//apply plugin: 'java'
 apply plugin: 'groovy'
 
 // In this section you declare where to find the dependencies of your project
@@ -15,7 +15,8 @@ dependencies {
 	//compile 'org.slf4j:slf4j-api:1.7.18'
 	//compile 'commons-logging:commons-logging:1.2'
 
-	compile 'org.codehaus.groovy:groovy-all:2.4.3'
+	//compile 'org.codehaus.groovy:groovy-all:2.4.3'
+	compile 'org.codehaus.groovy:groovy-all:2.4.7'
 
 	compile 'org.apache.lucene:lucene-core:6.1.0'
 	compile 'org.apache.lucene:lucene-analyzers-common:6.1.0'
@@ -35,6 +36,7 @@ dependencies {
 //for some reason ecj23 not on maven
 //compile 'edu.gmu.cs:ecj:22'
 
+	//pick up ecj jar file
 	compile fileTree(dir: 'lib', include: ['*.jar'])
 	//compile files('libs/ecj23.jar')
 

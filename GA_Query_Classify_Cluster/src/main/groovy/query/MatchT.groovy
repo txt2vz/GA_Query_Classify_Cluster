@@ -1,6 +1,6 @@
 package query;
 
-import lucene.IndexInfoStaticG
+import lucene.IndexInfo
 
 import org.apache.lucene.search.BooleanClause
 import org.apache.lucene.search.BooleanQuery
@@ -16,7 +16,7 @@ trait MatchT {
 		BooleanQuery.Builder  bqb = new BooleanQuery.Builder();	
 		bqb = new BooleanQuery.Builder()
 		bqb.add(q, BooleanClause.Occur.MUST)
-		bqb.add(IndexInfoStaticG.instance.catTrainBQ, BooleanClause.Occur.FILTER)
+		bqb.add(IndexInfo.instance.catTrainBQ, BooleanClause.Occur.FILTER)
 		searcher.search(bqb.build(), collector);
 		return collector.getTotalHits();
 	}
@@ -26,7 +26,7 @@ trait MatchT {
 		TotalHitCountCollector collector = new TotalHitCountCollector();
 		BooleanQuery.Builder bqb = new BooleanQuery.Builder()
 		bqb.add(q, BooleanClause.Occur.MUST)
-		bqb.add(IndexInfoStaticG.instance.othersTrainBQ, BooleanClause.Occur.FILTER)
+		bqb.add(IndexInfo.instance.othersTrainBQ, BooleanClause.Occur.FILTER)
 		searcher.search(bqb.build(), collector);
 		return collector.getTotalHits();	
 	}

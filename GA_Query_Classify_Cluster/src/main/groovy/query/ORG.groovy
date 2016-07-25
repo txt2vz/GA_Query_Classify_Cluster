@@ -1,12 +1,13 @@
-package query;
+package query
 
 import lucene.ImportantWords
-import lucene.IndexInfoStaticG
+import lucene.IndexInfo
 
 import org.apache.lucene.index.Term
 import org.apache.lucene.search.BooleanClause
 import org.apache.lucene.search.BooleanQuery
 import org.apache.lucene.search.IndexSearcher
+import org.apache.lucene.search.Query
 import org.apache.lucene.search.TermQuery
 
 import ec.EvolutionState
@@ -28,15 +29,15 @@ import ecj.GAFit;
 public class ORG extends Problem implements SimpleProblemForm, MatchT {
 
 	private String[] wordArray;
-	BooleanQuery query;
+	Query query;
 
 	public void setup(final EvolutionState state, final Parameter base) {
 
 		super.setup(state, base);
 
-		println("Total docs for cat  " + IndexInfoStaticG.instance.getCatnumberAsString() + " "
-				+ IndexInfoStaticG.instance.totalTrainDocsInCat + " Total test docs for cat "
-				+ IndexInfoStaticG.instance.totalTestDocsInCat);
+		println("Total train docs in ORG for cat:  " + IndexInfo.instance.getCatnumberAsString() + " "
+				+ IndexInfo.instance.totalTrainDocsInCat + " Total test docs for cat "
+				+ IndexInfo.instance.totalTestDocsInCat);
 
 		ImportantWords iw = new ImportantWords();
 		wordArray = iw.getF1WordList(false, true);
@@ -50,44 +51,38 @@ public class ORG extends Problem implements SimpleProblemForm, MatchT {
 
 		GAFit fitness = (GAFit) ind.fitness;
 		BooleanQuery.Builder bqb = new BooleanQuery.Builder();
-
 		IntegerVectorIndividual intVectorIndividual = (IntegerVectorIndividual) ind;
+		
+		def genes =[] as Set
+		int duplicateCount=0;
 
-		// create query from Map
-		query = new BooleanQuery(true);
-		for (int i = 0; i < (intVectorIndividual.genome.length ); i = i + 1) {
+		intVectorIndividual.genome.each {gene ->
+			if (!genes.add(gene)) duplicateCount = duplicateCount + 1;
 
-			// any ints below 0 are ignored
-			int wordInd;
-			if (intVectorIndividual.genome[i] >= wordArray.length
-			|| intVectorIndividual.genome[i] < 0)
-				continue;
-			else
-				wordInd = intVectorIndividual.genome[i];
+			if (gene < wordArray.size() && gene >= 0){
+				String wrd = wordArray[gene]
 
-			final String word = wordArray[wordInd];
+				bqb.add(new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, wrd)), BooleanClause.Occur.SHOULD);
+			}
 
-			bqb.add(new TermQuery(new Term(IndexInfoStaticG.FIELD_CONTENTS, word)), BooleanClause.Occur.SHOULD);
+			query = bqb.build();
+
+			IndexSearcher searcher = IndexInfo.instance.indexSearcher;
+			int positiveMatch = getPositiveMatch(searcher, query)
+			int negativeMatch = getNegativeMatch(searcher, query)		
+
+			def F1train = ClassifyQuery.f1(positiveMatch, negativeMatch, IndexInfo.instance.totalTrainDocsInCat);
+
+			fitness.setTrainValues(positiveMatch, negativeMatch);
+			fitness.setF1Train(F1train);
+			fitness.setQuery(query);
+
+			float rawfitness = F1train / (duplicateCount +1);
+
+			((SimpleFitness) intVectorIndividual.fitness).setFitness(state,
+					rawfitness, false);
+
+			ind.evaluated = true;
 		}
-
-
-		query = bqb.build();
-
-		IndexSearcher searcher = IndexInfoStaticG.instance.indexSearcher;
-		int positiveMatch = getPositiveMatch(searcher, query)
-		int negativeMatch = getNegativeMatch(searcher,query)
-
-		def F1train = ClassifyQuery.f1(positiveMatch, negativeMatch, IndexInfoStaticG.instance.totalTrainDocsInCat);
-
-		fitness.setTrainValues(positiveMatch, negativeMatch);
-		fitness.setF1Train(F1train);
-		fitness.setQuery(query);
-
-		float rawfitness = F1train;
-
-		((SimpleFitness) intVectorIndividual.fitness).setFitness(state,
-				rawfitness, false);
-
-		ind.evaluated = true;
 	}
 }
