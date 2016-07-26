@@ -6,7 +6,7 @@ import org.apache.lucene.search.IndexSearcher
 import org.apache.lucene.search.Query
 import org.apache.lucene.search.TotalHitCountCollector
 
-import classify.ClassifyUtils
+import classify.Effectiveness
 import ec.EvolutionState
 import ec.simple.SimpleStatistics
 import index.IndexInfo;
@@ -65,10 +65,10 @@ public class ClassifyGAStatistics extends SimpleStatistics {
 
 		gaFit.setTestValues(positiveMatchTest, negativeMatchTest);
 
-		gaFit.setF1Test(ClassifyUtils.f1(positiveMatchTest, negativeMatchTest,
+		gaFit.setF1Test(Effectiveness.f1(positiveMatchTest, negativeMatchTest,
 				IndexInfo.instance.totalTestDocsInCat));
 
-		gaFit.setBEPTest(ClassifyUtils.bep(positiveMatchTest, negativeMatchTest,
+		gaFit.setBEPTest(Effectiveness.bep(positiveMatchTest, negativeMatchTest,
 				IndexInfo.instance.totalTestDocsInCat));
 
 		println   "Fitness: " + gaFit.fitness() + "F1Test: " + gaFit.getF1Test() +

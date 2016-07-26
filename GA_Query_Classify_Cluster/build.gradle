@@ -12,8 +12,8 @@ repositories {
 dependencies {
 
 
-	compile 'org.codehaus.groovy:groovy-all:2.4.3'
-	//compile 'org.codehaus.groovy:groovy-all:2.4.7'
+	//compile 'org.codehaus.groovy:groovy-all:2.4.3'
+	compile 'org.codehaus.groovy:groovy-all:2.4.7'
 
 	compile 'org.apache.lucene:lucene-core:6.1.0'
 	compile 'org.apache.lucene:lucene-analyzers-common:6.1.0'

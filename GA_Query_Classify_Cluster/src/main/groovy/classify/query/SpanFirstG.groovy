@@ -15,7 +15,7 @@ import ec.simple.SimpleFitness
 import ec.simple.SimpleProblemForm
 import ec.util.Parameter
 import ec.vector.IntegerVectorIndividual
-import classify.ClassifyUtils;
+import classify.Effectiveness;
 import classify.GAFit;
 import groovy.transform.CompileStatic
 import index.ImportantWords
@@ -89,7 +89,7 @@ public class SpanFirstG extends Problem implements SimpleProblemForm, HitCounts 
 		int positiveMatch = getPositiveMatch(searcher, query)
 		int negativeMatch = getNegativeMatch(searcher,query)
 
-		def F1train = ClassifyUtils.f1(positiveMatch, negativeMatch, IndexInfo.instance.totalTrainDocsInCat);
+		def F1train = Effectiveness.f1(positiveMatch, negativeMatch, IndexInfo.instance.totalTrainDocsInCat);
 
 		fitness.setTrainValues(positiveMatch, negativeMatch);
 		fitness.setF1Train(F1train);

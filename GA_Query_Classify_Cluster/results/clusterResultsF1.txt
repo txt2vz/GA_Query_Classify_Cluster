@@ -31,3 +31,36 @@ PosHits: 761 NegHits: 100 PosScore: 2662.9715346097946 NegScore: 274.98421806097
 TotalHits: 811 Total Docs: 1792
 ************************************************ 
  
+  ***** Job: 0 Gen: 39 PopSize: 1024 Noclusters:3 pathToIndex: indexes/20NG3SpaceHockeyChristian **************************************************************** 
+ Cluster 0 searching for:  27 bible sin  Found 292 hits:
+0 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\20574 cat number christian catName: christian
+1 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\21406 cat number christian catName: christian
+2 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\21351 cat number christian catName: christian
+3 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\21365 cat number christian catName: christian
+4 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\21409 cat number christian catName: christian
+categoryTotal is 599 for catQ categoryName:christian 
+f1: 0.49607182943139714894 recall: 0.3689482471 precision: 0.7568493151
+Purity: 0.7568493075 Job: 0 
+Cluster 1 searching for:  player hockey leafs  Found 319 hits:
+0 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53790 cat number hockey catName: hockey
+1 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\52638 cat number hockey catName: hockey
+2 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53702 cat number hockey catName: hockey
+3 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53874 cat number hockey catName: hockey
+4 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\52555 cat number hockey catName: hockey
+categoryTotal is 600 for catQ categoryName:hockey 
+f1: 0.68988030464491611618 recall: 0.5283333333 precision: 0.9937304075
+Purity: 0.9937303954 Job: 0 
+Cluster 2 searching for:  space henry nasa  Found 396 hits:
+0 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\60900 cat number space catName: space
+1 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\60806 cat number space catName: space
+2 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\61036 cat number space catName: space
+3 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\60153 cat number space catName: space
+4 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\61053 cat number space catName: space
+categoryTotal is 593 for catQ categoryName:space 
+f1: 0.75631951467381990572 recall: 0.6306913997 precision: 0.9444444444
+Purity: 0.9444444350 Job: 0 
+f1list: [0.49607182943139714894, 0.68988030464491611618, 0.75631951467381990572] averagef1: :0.64742388291671105695
+PosHits: 898 NegHits: 109 PosScore: 3477.5107335448265 NegScore: 293.12683165073395 Fitness: 1904.2039478812367 
+TotalHits: 952 Total Docs: 1792
+************************************************ 
+ 

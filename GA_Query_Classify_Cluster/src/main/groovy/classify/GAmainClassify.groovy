@@ -1,7 +1,7 @@
 package classify
 
 import index.IndexInfo
-import classify.ClassifyUtils
+import classify.Effectiveness
 import ec.*
 import ec.util.*
 
@@ -17,7 +17,7 @@ class GAmainClassify extends Evolve {
 		println "Start..."
 		EvolutionState state;
 
-		Formatter bestResultsOut = new Formatter('results/results.csv');
+		Formatter bestResultsOut = new Formatter('results/resultsClassify.csv');
 		final String fileHead = "category, job, f1train, f1test, bepTest, totPositiveTest, totNegativeTest, totTestDocsInCat, query" + '\n';
 		bestResultsOut.format("%s", fileHead);
 
@@ -84,9 +84,9 @@ class GAmainClassify extends Evolve {
 				cleanup(state);
 			}
 
-			final double microF1 = ClassifyUtils.f1(totPosMatchedTest,
+			final double microF1 = Effectiveness.f1(totPosMatchedTest,
 					totNegMatchTest, totTest);
-			final double microBEP = ClassifyUtils.bep(totPosMatchedTest,
+			final double microBEP = Effectiveness.bep(totPosMatchedTest,
 					totNegMatchTest, totTest);
 
 			macroF1 = macroF1 / NUMBER_OF_CATEGORIES;
