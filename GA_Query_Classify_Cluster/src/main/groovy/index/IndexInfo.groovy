@@ -50,8 +50,9 @@ class IndexInfo {
 	Query catTrainBQ, othersTrainBQ, catTestBQ, othersTestBQ;
 
 	int totalTrainDocsInCat, totalTestDocsInCat, totalOthersTrainDocs, totalTestDocs;
-	
-	String pathToIndex
+
+	String 	pathToIndex = "indexes/r10"
+	              //"indexes/20NG3SpaceHockeyChristian"
 
 	public void setCatNumber(final int cn) {
 		categoryNumber = String.valueOf(cn);
@@ -71,7 +72,7 @@ class IndexInfo {
 		println "index infor catQ $catQ"
 
 		pathToIndex = "indexes/r10"
-				//"indexes/20NG3SpaceHockeyChristian"
+		//"indexes/20NG3SpaceHockeyChristian"
 
 		Path path = Paths.get(pathToIndex)
 		Directory directory = FSDirectory.open(path)

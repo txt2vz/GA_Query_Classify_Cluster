@@ -1,35 +1,25 @@
-//apply plugin: 'java'
 apply plugin: 'groovy'
 
-// In this section you declare where to find the dependencies of your project
-repositories {
-	// Use 'jcenter' for resolving your dependencies.
-	// You can declare any Maven/Ivy/file repository here.
-	jcenter()
-}
+repositories { jcenter() }
 
-// In this section you declare the dependencies for your production and test code
 dependencies {
-
 
 	//compile 'org.codehaus.groovy:groovy-all:2.4.3'
 	compile 'org.codehaus.groovy:groovy-all:2.4.7'
 
 	compile 'org.apache.lucene:lucene-core:6.1.0'
 	compile 'org.apache.lucene:lucene-analyzers-common:6.1.0'
-	
+
 	// https://mvnrepository.com/artifact/org.apache.lucene/lucene-codecs
 	//compile group: 'org.apache.lucene', name: 'lucene-codecs', version: '5.2.1'
 	//compile group: 'org.apache.lucene', name: 'lucene-codecs', version: '5.0.0'
-	
 	//compile group: 'org.apache.lucene', name: 'lucene-queryparser', version: '6.1.0'
-	
-//	compile 'org.apache.lucene:lucene-core:5.3.2'
-//	compile 'org.apache.lucene:lucene-analyzers-common:5.3.2'	
+	//	compile 'org.apache.lucene:lucene-core:5.3.2'
+	//	compile 'org.apache.lucene:lucene-analyzers-common:5.3.2'
 
 
-//for some reason ecj23 not on maven
-//compile 'edu.gmu.cs:ecj:22'
+	//for some reason ecj23 not on maven
+	//compile 'edu.gmu.cs:ecj:22'
 
 	//pick up ecj23 jar file
 	compile fileTree(dir: 'lib', include: ['*.jar'])

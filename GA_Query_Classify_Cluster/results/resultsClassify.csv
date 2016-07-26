@@ -1,29 +1,29 @@
 category, job, f1train, f1test, bepTest, totPositiveTest, totNegativeTest, totTestDocsInCat, query
-0, 0, 0.782, 0.808, 0.814, 535, 70, 719, stake acquire merger acquired acquisition takeover undisclosed disclosed 
-1, 0, 0.561, 0.528, 0.679, 56, 100, 56, corn maize sorghum 
-2, 0, 0.747, 0.718, 0.720, 130, 43, 189, exploration barrel crude refinery ecuador barrels opec 
+0, 0, 0.782, 0.808, 0.814, 535, 70, 719, acquire merger undisclosed stake acquisition takeover disclosed acquired 
+1, 0, 0.562, 0.544, 0.687, 56, 94, 56, corn maize 
+2, 0, 0.762, 0.692, 0.702, 117, 32, 189, refinery barrels bbl gasoline opec exploration barrel 
 3, 0, 0.556, 0.549, 0.683, 70, 114, 71, wheat 
-4, 0, 0.936, 0.938, 0.940, 1060, 112, 1087, profit qtr payout split vs dividend earnings revs 
-5, 0, 0.509, 0.542, 0.617, 109, 162, 131, bundesbank rate band fed 
-6, 0, 0.657, 0.641, 0.680, 151, 141, 179, money dollar monetary currencies fed 
-7, 0, 0.655, 0.603, 0.616, 63, 57, 89, tankers port ferry vessels loading seamen shipping vessel 
+4, 0, 0.935, 0.938, 0.939, 1060, 114, 1087, split shr vs dividend payout profit earnings qtr 
+5, 0, 0.509, 0.542, 0.617, 109, 162, 131, fed rate band bundesbank 
+6, 0, 0.657, 0.641, 0.680, 151, 141, 179, dollar currencies monetary fed money 
+7, 0, 0.649, 0.629, 0.662, 72, 68, 89, vessel warships strike vessels tankers loading port shipping 
 8, 0, 0.602, 0.586, 0.680, 109, 146, 117, yeutter trade 
-9, 0, 0.642, 0.655, 0.736, 146, 151, 149, barley cereals rice corn crop wheat grain maize 
+9, 0, 0.638, 0.619, 0.686, 134, 150, 149, corn cereals barley wheat soybeans maize crop grain 
  
-Run Number, 0, Micro F1: , 0.7696,  Macro F1: , 0.6569, Micro BEP:, 0.7803, Total Positive Matches , 2429, Total Negative Matches, 1096, Total Docs,  2787 
+Run Number, 0, Micro F1: , 0.7671,  Macro F1: , 0.6548, Micro BEP:, 0.7772, Total Positive Matches , 2413, Total Negative Matches, 1091, Total Docs,  2787 
 ,, Overall Micro F1 , Infinity,  Overall Macro F1, Infinity, Overall MicroBEP, Infinity 
  
-0, 1, 0.770, 0.788, 0.800, 504, 57, 719, acquisition disclosed takeover merger undisclosed acquire stake 
-1, 1, 0.562, 0.544, 0.687, 56, 94, 56, corn maize 
-2, 1, 0.749, 0.733, 0.735, 132, 39, 189, opec exploration crude barrel bpd refinery barrels cubic 
+0, 1, 0.782, 0.819, 0.825, 539, 59, 719, acquisition transaction stake undisclosed merger takeover disclosed acquire 
+1, 1, 0.562, 0.544, 0.687, 56, 94, 56, maize corn 
+2, 1, 0.752, 0.728, 0.729, 143, 61, 189, gasoline barrel opec barrels crude exploration refinery iraq 
 3, 1, 0.556, 0.549, 0.683, 70, 114, 71, wheat 
-4, 1, 0.936, 0.938, 0.940, 1060, 112, 1087, split payout dividend qtr revs vs profit earnings 
-5, 1, 0.509, 0.542, 0.617, 109, 162, 131, band rate bundesbank fed 
-6, 1, 0.657, 0.641, 0.680, 151, 141, 179, currencies dollar fed monetary money 
-7, 1, 0.648, 0.615, 0.640, 68, 64, 89, vessels tankers loading shipping strike vessel ferry 4,000 
-8, 1, 0.619, 0.523, 0.556, 81, 112, 117, dumping tariffs goods retaliation unfair deficit bilateral protectionism 
-9, 1, 0.642, 0.655, 0.736, 146, 151, 149, grain maize corn crop barley cereals wheat rice 
+4, 1, 0.932, 0.935, 0.936, 1053, 112, 1087, split dividend vs profit revs earnings 1st 
+5, 1, 0.515, 0.454, 0.491, 82, 148, 131, discount customer lending bundesbank prime money 
+6, 1, 0.657, 0.641, 0.680, 151, 141, 179, money fed monetary currencies dollar 
+7, 1, 0.647, 0.655, 0.683, 73, 61, 89, 4,000 ferry warships strike shipping vessel tankers ships 
+8, 1, 0.602, 0.542, 0.657, 109, 176, 117, retaliation trade 
+9, 1, 0.640, 0.631, 0.700, 137, 148, 149, barley grain crop corn cereals wheat crops maize 
  
-Run Number, 1, Micro F1: , 0.7655,  Macro F1: , 0.6528, Micro BEP:, 0.7737, Total Positive Matches , 2377, Total Negative Matches, 1046, Total Docs,  2787 
-,, Overall Micro F1 , 1.5352,  Overall Macro F1, 1.3097, Overall MicroBEP, 1.5540 
+Run Number, 1, Micro F1: , 0.7643,  Macro F1: , 0.6498, Micro BEP:, 0.7750, Total Positive Matches , 2413, Total Negative Matches, 1114, Total Docs,  2787 
+,, Overall Micro F1 , 1.5315,  Overall Macro F1, 1.3046, Overall MicroBEP, 1.5522 
  
