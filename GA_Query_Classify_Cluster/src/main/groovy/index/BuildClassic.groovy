@@ -22,6 +22,15 @@ import org.apache.lucene.search.TotalHitCountCollector
 import org.apache.lucene.store.Directory
 import org.apache.lucene.store.FSDirectory
 
+/**
+ * From http://www.icmc.usp.br/CMS/Arquivos/arquivos_enviados/BIBLIOTECA_113_RT_395.pdf  
+*Classic4 collection [Research, 2010] are composed by 4 distinct collections: 
+*CACM (titles and abstracts from the journal Communications of the ACM), 
+*ISI (information retrieval papers), CRANFIELD (aeronautical system papers), and 
+*MEDLINE (medical journals). 
+ */
+
+
 class BuildClassic {
 	// Create Lucene index in this directory
 	def indexPath = 	"indexes/classic4"

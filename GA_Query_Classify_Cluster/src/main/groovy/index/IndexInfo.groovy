@@ -29,31 +29,26 @@ class IndexInfo {
 	public static final String FIELD_PATH = "path";
 	public static final String FIELD_TEST_TRAIN = "test_train";
 	public static final String FIELD_CATEGORY_NUMBER = "categoryNumber";
+	public static final int NUMBER_OF_CLUSTERS =  4
 
 	String 	pathToIndex =  //"indexes/r10"
-	                    //   "indexes/20NG3SpaceHockeyChristian"
-						   "indexes/classic4"
-	
-	int NUMBER_OF_CLUSTERS =  4
-	def categoryDocumentCount = [:] 
+	//   "indexes/20NG3SpaceHockeyChristian"
+	"indexes/classic4"
+
+	def categoryDocumentCount = [:]
+	IndexReader indexReader
+	IndexSearcher indexSearcher
+	String categoryNumber="0", categoryName="cru";
+	Query catTrainBQ, othersTrainBQ, catTestBQ, othersTestBQ;
+	int totalTrainDocsInCat, totalTestDocsInCat, totalOthersTrainDocs, totalTestDocs;
 
 	TermQuery trainQ = new TermQuery(new Term(
 	FIELD_TEST_TRAIN, "train"));
 	TermQuery testQ = new TermQuery(new Term(
 	FIELD_TEST_TRAIN, "test"));
 
-	IndexReader indexReader
-	IndexSearcher indexSearcher
-
-	String categoryNumber="0", categoryName="cru";
-
 	TermQuery catQ 	= new TermQuery(new Term(FIELD_CATEGORY_NUMBER,
 	categoryNumber))
-
-	Query catTrainBQ, othersTrainBQ, catTestBQ, othersTestBQ;
-
-	int totalTrainDocsInCat, totalTestDocsInCat, totalOthersTrainDocs, totalTestDocs;
-
 
 	public void setCatNumber(final int cn) {
 		categoryNumber = String.valueOf(cn);

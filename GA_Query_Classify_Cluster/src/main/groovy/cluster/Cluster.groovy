@@ -26,7 +26,7 @@ public class Cluster extends Problem implements CreateQueriesT, SimpleProblemFor
 
 	IndexSearcher searcher = IndexInfo.instance.indexSearcher;
 	private String[] wordArray;
-	final int NUMBER_OF_CLUSTERS =  IndexInfo.instance.NUMBER_OF_CLUSTERS   //IndexInfo.NUMBER_OF_CLUSTERS
+	final int NUMBER_OF_CLUSTERS =  IndexInfo.NUMBER_OF_CLUSTERS   
 	final int coreClusterSize=20
 
 	public void setup(final EvolutionState state, final Parameter base) {
