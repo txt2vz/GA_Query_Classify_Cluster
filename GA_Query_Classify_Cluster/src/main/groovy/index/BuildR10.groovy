@@ -40,8 +40,8 @@ class BuildR10 {
 	Directory directory = FSDirectory.open(path)
 	Analyzer analyzer = //new EnglishAnalyzer();
 	new StandardAnalyzer();
-	def catsFreq=[:]
-	def docsSet = [] as Set
+	def catsFreq=  [:]//IndexInfo.instance.categoryDocumentCount
+	//def docsSet = [] as Set
 	def x =0
 	IndexWriter writer
 
@@ -77,7 +77,6 @@ class BuildR10 {
 		println (end.getTime() - start.getTime() + " total milliseconds");
 		println "Total docs: " + writer.maxDoc()
 
-
 		IndexSearcher searcher = new IndexSearcher(writer.getReader());
 
 		TotalHitCountCollector thcollector  = new TotalHitCountCollector();
@@ -86,7 +85,7 @@ class BuildR10 {
 		def categoryTotal = thcollector.getTotalHits();
 		println "cateTotoal $categoryTotal"
 		println "catsFreq $catsFreq"
-
+	
 		writer.close()
 		println "End ***************************************************************"
 	}
@@ -94,7 +93,6 @@ class BuildR10 {
 	//index the doc adding fields for path, category, test/train and contents
 	def indexDocs(IndexWriter writer, File f, int catNumber)
 	{
-
 		def doc = new Document()
 
 		Field pathField = new StringField(IndexInfo.FIELD_PATH, f.getPath(), Field.Store.YES);
@@ -102,11 +100,11 @@ class BuildR10 {
 
 		def catName = f.getCanonicalPath().drop(41).take(3)
 
-		if (x<8) println "catName $catName"
+		if (x<4) println "catName $catName"
 		x++
-
+		
+		//keep count of documents in each category
 		def n = catsFreq.get((catName)) ?: 0
-
 		catsFreq.put((catName), n + 1)
 
 		Field catNameField = new StringField(IndexInfo.FIELD_CATEGORY_NAME, catName, Field.Store.YES);

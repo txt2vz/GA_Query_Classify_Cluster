@@ -1,5 +1,5 @@
 parent.0		= simple.params
-generations =	30       
+generations =	20       
 seed=time
 seed.0=time
 seed.1=time
@@ -25,7 +25,7 @@ pop.subpop.0 = ec.Subpopulation
 pop.subpop.0.size = 128
 pop.subpop.0.species = ec.vector.IntegerVectorSpecies
 pop.subpop.0.species.ind = ec.vector.IntegerVectorIndividual
-pop.subpop.0.species.fitness = classify.GAFit
+pop.subpop.0.species.fitness = classify.ClassifyFit
 
 pop.subpop.0.species.min-gene = -10
 pop.subpop.0.species.max-gene = 100

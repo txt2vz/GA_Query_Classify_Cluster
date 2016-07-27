@@ -16,7 +16,7 @@ import ec.simple.SimpleProblemForm
 import ec.util.Parameter
 import ec.vector.IntegerVectorIndividual
 import classify.Effectiveness;
-import classify.GAFit;
+import classify.ClassifyFit;
 import groovy.transform.CompileStatic
 import index.ImportantWords
 import index.IndexInfo;;
@@ -54,7 +54,7 @@ public class SpanFirstG extends Problem implements SimpleProblemForm, HitCounts 
 
 		BooleanQuery.Builder bqb = new BooleanQuery.Builder();
 
-		GAFit fitness = (GAFit) ind.fitness;
+		ClassifyFit fitness = (ClassifyFit) ind.fitness;
 
 		List words=[]
 		int tree=0

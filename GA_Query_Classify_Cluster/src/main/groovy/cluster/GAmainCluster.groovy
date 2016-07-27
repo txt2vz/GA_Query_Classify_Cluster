@@ -1,4 +1,4 @@
- package cluster
+package cluster
 
 import index.IndexInfo
 import ec.EvolutionState
@@ -8,9 +8,8 @@ import ec.util.ParameterDatabase
 
 class GAmainCluster extends Evolve {
 
-	private final String parameterFilePath =  "src/cfg/Cluster.params"
-
-	final static int NUMBER_OF_JOBS = 1; 
+	private final String parameterFilePath =  "src/cfg/cluster.params"
+	private final int NUMBER_OF_JOBS = 1; 
 
 	public GAmainCluster(){
 		EvolutionState state;
@@ -41,7 +40,7 @@ class GAmainCluster extends Evolve {
 					ind.fitness.fitness()
 				}.fitness
 			}.max  {it.fitness()}
-			println "pop size $popSize" 
+			println "Population size: $popSize" 
 			cfit.queryStats(job, state.generation, popSize)	
 
 			cleanup(state);

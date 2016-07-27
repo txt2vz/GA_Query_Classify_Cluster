@@ -1,0 +1,28 @@
+ parent.0 = ClusterSubpop.params
+#parent.0 = ClusterSinglePop.params
+#parent.0		= simple.params
+
+eval.problem = cluster.Cluster
+
+evalthreads = 4 
+breedthreads = 4
+generations =  40
+breed.elite.0 = 1
+
+//pop.subpops = 3
+pop.subpop.0.species.genome-size = 9
+pop.subpop.0.size = 512
+pop.subpop.0.species.min-gene.0 = -10
+pop.subpop.0.species.max-gene.0 = 200
+
+pop.subpop.1.species.genome-size = 9
+pop.subpop.1.size = 256
+pop.subpop.2.species.genome-size = 9
+pop.subpop.2.size = 256
+
+pop.subpop.0.species.min-gene = -10
+pop.subpop.0.species.max-gene = 200
+pop.subpop.1.species.min-gene = -10
+pop.subpop.1.species.max-gene = 200
+pop.subpop.2.species.min-gene = -10
+pop.subpop.2.species.max-gene = 200

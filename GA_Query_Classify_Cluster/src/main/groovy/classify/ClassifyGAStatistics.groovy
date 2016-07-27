@@ -34,9 +34,9 @@ public class ClassifyGAStatistics extends SimpleStatistics {
 		//				bestFitOfPop = bestFitOfSubp;
 		//		}
 		//
-		//		final GAFit cf = (GAFit) bestFitOfPop;
+		//		final ClassifyFit cf = (ClassifyFit) bestFitOfPop;
 
-		GAFit gaFit = (GAFit) state.population.subpops.collect {sbp ->
+		ClassifyFit gaFit = (ClassifyFit) state.population.subpops.collect {sbp ->
 			sbp.individuals.max() {ind ->
 				ind.fitness.fitness()}.fitness
 		}.max  {it.fitness()}

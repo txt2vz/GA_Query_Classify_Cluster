@@ -15,12 +15,11 @@ import org.apache.lucene.search.TotalHitCountCollector
 import org.apache.lucene.store.Directory
 import org.apache.lucene.store.FSDirectory
 
-import query.*
-
 /**
  * Singleton class to store index information.
  * Set the path to the lucene index here
  */
+
 @Singleton
 class IndexInfo {
 
@@ -31,11 +30,15 @@ class IndexInfo {
 	public static final String FIELD_TEST_TRAIN = "test_train";
 	public static final String FIELD_CATEGORY_NUMBER = "categoryNumber";
 
-	int NUMBER_OF_CLUSTERS =  3
+	String 	pathToIndex =  //"indexes/r10"
+	                    //   "indexes/20NG3SpaceHockeyChristian"
+						   "indexes/classic4"
+	
+	int NUMBER_OF_CLUSTERS =  4
+	def categoryDocumentCount = [:] 
 
 	TermQuery trainQ = new TermQuery(new Term(
 	FIELD_TEST_TRAIN, "train"));
-
 	TermQuery testQ = new TermQuery(new Term(
 	FIELD_TEST_TRAIN, "test"));
 
@@ -51,8 +54,6 @@ class IndexInfo {
 
 	int totalTrainDocsInCat, totalTestDocsInCat, totalOthersTrainDocs, totalTestDocs;
 
-	String 	pathToIndex = "indexes/r10"
-	              //"indexes/20NG3SpaceHockeyChristian"
 
 	public void setCatNumber(final int cn) {
 		categoryNumber = String.valueOf(cn);
@@ -70,9 +71,6 @@ class IndexInfo {
 		catQ = new TermQuery(new Term(FIELD_CATEGORY_NUMBER,
 				categoryNumber));
 		println "index infor catQ $catQ"
-
-		pathToIndex = "indexes/r10"
-		//"indexes/20NG3SpaceHockeyChristian"
 
 		Path path = Paths.get(pathToIndex)
 		Directory directory = FSDirectory.open(path)

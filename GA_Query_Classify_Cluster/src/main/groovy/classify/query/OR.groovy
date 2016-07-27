@@ -17,7 +17,7 @@ import ec.vector.IntegerVectorIndividual
 import index.ImportantWords
 import index.IndexInfo
 import classify.Effectiveness;
-import classify.GAFit;
+import classify.ClassifyFit;
 
 /**
  * To generate queries to perform binary text classification using GA string of
@@ -49,7 +49,7 @@ public class OR extends Problem implements SimpleProblemForm, HitCounts {
 		if (ind.evaluated)
 			return;
 
-		GAFit fitness = (GAFit) ind.fitness;
+		ClassifyFit fitness = (ClassifyFit) ind.fitness;
 		BooleanQuery.Builder bqb = new BooleanQuery.Builder();
 		IntegerVectorIndividual intVectorIndividual = (IntegerVectorIndividual) ind;
 		
