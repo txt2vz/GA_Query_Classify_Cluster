@@ -1,11 +1,11 @@
- parent.0 = ClusterSubpop.params
+ parent.0 = clusterSubpop.params
 #parent.0 = ClusterSinglePop.params
 #parent.0		= simple.params
 
 eval.problem = cluster.Cluster
 
-evalthreads = 4 
-breedthreads = 4
+evalthreads = 8 
+breedthreads = 8
 generations =  240
 breed.elite.0 = 1
 
