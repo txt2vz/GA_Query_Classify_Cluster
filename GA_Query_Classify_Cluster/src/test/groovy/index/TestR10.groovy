@@ -19,7 +19,7 @@ import spock.lang.*
 
 class TestR10 extends spock.lang.Specification {
 
-	def "total r10 docs"() {
+	def "total r10 docs for grain category"() {
 		given:
 		Path path = Paths.get("indexes/r10")
 		Directory directory = FSDirectory.open(path)
