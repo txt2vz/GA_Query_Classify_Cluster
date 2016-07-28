@@ -33,7 +33,8 @@ class IndexInfo {
 
 	String 	pathToIndex =  //"indexes/r10"
 	//   "indexes/20NG3SpaceHockeyChristian"
-	"indexes/classic4"
+	//"indexes/classic4"
+	"indexes/crisis4FireBombFloodShoot"
 
 	def categoryDocumentCount = [:]
 	IndexReader indexReader

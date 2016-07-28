@@ -223,3 +223,45 @@ PosHits: 4130 NegHits: 289 PosScore: 13302.74245506525 NegScore: 655.71182310581
 TotalHits: 4241 Total Docs: 7095
 ************************************************ 
  
+  ***** Job: 0 Gen: 239 PopSize: 1024 Noclusters:4 pathToIndex: indexes/crisis4FireBombFloodShoot **************************************************************** 
+ Cluster 0 searching for:  bigwet australia floods  Found 818 hits:
+0 path null cat number Queensland catName: Queensland
+1 path null cat number Queensland catName: Queensland
+2 path null cat number Queensland catName: Queensland
+3 path null cat number Queensland catName: Queensland
+4 path null cat number Queensland catName: Queensland
+categoryTotal is 1201 for catQ categoryName:Queensland 
+f1: 0.80931154034156493991 recall: 0.6802664446 precision: 0.9987775061
+Purity: 0.9987775163 Job: 0 
+Cluster 1 searching for:  shooting lax  Found 875 hits:
+0 path null cat number LA_airport catName: LA_airport
+1 path null cat number LA_airport catName: LA_airport
+2 path null cat number LA_airport catName: LA_airport
+3 path null cat number LA_airport catName: LA_airport
+4 path null cat number LA_airport catName: LA_airport
+categoryTotal is 1033 for catQ categoryName:LA_airport 
+f1: 0.91509433959654280333 recall: 0.8451113262 precision: 0.9977142857
+Purity: 0.9977142483 Job: 0 
+Cluster 2 searching for:  boston prayforboston  Found 705 hits:
+0 path null cat number Boston_bom catName: Boston_bom
+1 path null cat number Boston_bom catName: Boston_bom
+2 path null cat number Boston_bom catName: Boston_bom
+3 path null cat number Boston_bom catName: Boston_bom
+4 path null cat number Boston_bom catName: Boston_bom
+categoryTotal is 1001 for catQ categoryName:Boston_bom 
+f1: 0.82180539271987276133 recall: 0.7002997003 precision: 0.9943262411
+Purity: 0.9943262297 Job: 0 
+Cluster 3 searching for:  colorado highparkfire  Found 945 hits:
+0 path null cat number Colorado_w catName: Colorado_w
+1 path null cat number Colorado_w catName: Colorado_w
+2 path null cat number Colorado_w catName: Colorado_w
+3 path null cat number Colorado_w catName: Colorado_w
+4 path null cat number Colorado_w catName: Colorado_w
+categoryTotal is 1201 for catQ categoryName:Colorado_w 
+f1: 0.8807082945 recall: 0.7868442964 precision: 1
+Purity: 1.0000000395 Job: 0 
+f1list: [0.80931154034156493991, 0.91509433959654280333, 0.82180539271987276133, 0.8807082945] averagef1: :0.8567298917894951261425
+PosHits: 3333 NegHits: 10 PosScore: 7730.582351446152 NegScore: 22.51582908630371 Fitness: 6101.155557568147 
+TotalHits: 3338 Total Docs: 4436
+************************************************ 
+ 

@@ -43,8 +43,7 @@ class BuildClassic {
 	Directory directory = FSDirectory.open(path)
 	Analyzer analyzer = //new EnglishAnalyzer();  //with stemming
 	new StandardAnalyzer();
-	def catFreq=[:]
-	//def docsSet = [] as Set
+	def catFreq=[:]	
 
 	static main(args) {
 		def i = new BuildClassic()
