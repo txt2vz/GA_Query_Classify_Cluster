@@ -23,7 +23,7 @@ import org.apache.lucene.store.Directory
 import org.apache.lucene.store.FSDirectory
 import org.apache.lucene.codecs.*
 
-class BuildClusterIndexFromCSV {
+class BuildCrisisClusterIndexFromCSV {
 
 	// Create Lucene index in this directory
 	Path indexPath = Paths.get("indexes/crisis4FireBombFloodShoot")
@@ -33,7 +33,7 @@ class BuildClusterIndexFromCSV {
 	new StandardAnalyzer();
 
 	static main(args) {
-		def i = new BuildClusterIndexFromCSV()
+		def i = new BuildCrisisClusterIndexFromCSV()
 		i.buildIndex()
 	}
 
@@ -48,6 +48,8 @@ class BuildClusterIndexFromCSV {
 
 		Date start = new Date();
 		println("Indexing to directory '" + indexPath + "'...");
+		
+	//	println "docsPath $docsPath parent" + docsPath.getParent()
 
 		docsPath.toFile().eachFileRecurse {file ->
 
@@ -67,7 +69,7 @@ class BuildClusterIndexFromCSV {
 				writer.addDocument(doc);
 			}
 		}
-		println "Total docs: " + writer.maxDoc()
+		println "Total docs in index: " + writer.maxDoc()
 		writer.close()
 		println "done.."
 	}
