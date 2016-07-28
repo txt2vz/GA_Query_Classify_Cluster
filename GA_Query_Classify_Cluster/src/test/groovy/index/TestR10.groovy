@@ -1,3 +1,4 @@
+package index
 import index.IndexInfo
 
 import java.nio.file.Path
@@ -32,6 +33,7 @@ class TestR10 extends spock.lang.Specification {
 		final TermQuery catQ = new TermQuery(new Term(IndexInfo.FIELD_CATEGORY_NAME,	"gra"))
 		searcher.search(catQ, thcollector);
 		def categoryTotal = thcollector.getTotalHits();
+		writer.close()
 		
 		then:
 		categoryTotal == 582
