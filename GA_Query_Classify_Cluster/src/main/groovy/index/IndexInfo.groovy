@@ -29,7 +29,7 @@ class IndexInfo {
 	public static final String FIELD_PATH = "path";
 	public static final String FIELD_TEST_TRAIN = "test_train";
 	public static final String FIELD_CATEGORY_NUMBER = "categoryNumber";
-	public static final int NUMBER_OF_CLUSTERS =  4
+	public static final int NUMBER_OF_CLUSTERS =  4, NUMBER_OF_CATEGORIES = 10 
 
 	String 	pathToIndex =  //"indexes/r10"
 	//   "indexes/20NG3SpaceHockeyChristian"

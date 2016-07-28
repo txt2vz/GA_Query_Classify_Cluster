@@ -9,9 +9,8 @@ class GAmainClassify extends Evolve {
  
 	private final String parameterFilePath ='src/cfg/classify.params'
 	private int totPosMatchedTest = 0, totTest = 0, totNegMatchTest = 0;
-	private final static int NUMBER_OF_CATEGORIES = 10 , NUMBER_OF_JOBS = 2;
-	private double microF1AllRunsTotal = 0, macroF1AllRunsTotal = 0,
-	microBEPAllRunsTotal = 0;
+	private final static int NUMBER_OF_JOBS = 2;
+	private double microF1AllRunsTotal = 0, macroF1AllRunsTotal = 0, microBEPAllRunsTotal = 0;		
 
 	public GAmainClassify(){
 		println "Start..."
@@ -29,7 +28,7 @@ class GAmainClassify extends Evolve {
 
 			double macroF1 = 0;
 
-			NUMBER_OF_CATEGORIES.times{ categoryNumber ->
+			IndexInfo.NUMBER_OF_CATEGORIES.times{ categoryNumber ->
 
 				IndexInfo.instance.setCatNumber(categoryNumber)
 				//IndexInfo.instance.setCatName(cat)
@@ -89,7 +88,7 @@ class GAmainClassify extends Evolve {
 			final double microBEP = Effectiveness.bep(totPosMatchedTest,
 					totNegMatchTest, totTest);
 
-			macroF1 = macroF1 / NUMBER_OF_CATEGORIES;
+			macroF1 = macroF1 / IndexInfo.NUMBER_OF_CATEGORIES;
 			println "OVERALL: micro f1:  $microF1  macroF1: $macroF1 microBEP: $microBEP";
 
 			bestResultsOut.format(" \n");

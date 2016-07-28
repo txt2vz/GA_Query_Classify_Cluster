@@ -4,8 +4,8 @@
 
 eval.problem = cluster.Cluster
 
-evalthreads = 8 
-breedthreads = 8
+evalthreads = 4 
+breedthreads = 4
 generations =  240
 breed.elite.0 = 1
 

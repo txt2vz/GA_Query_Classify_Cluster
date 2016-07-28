@@ -265,3 +265,45 @@ PosHits: 3333 NegHits: 10 PosScore: 7730.582351446152 NegScore: 22.5158290863037
 TotalHits: 3338 Total Docs: 4436
 ************************************************ 
  
+  ***** Job: 0 Gen: 239 PopSize: 1024 Noclusters:4 pathToIndex: indexes/crisis4FireBombFloodShoot **************************************************************** 
+ Cluster 0 searching for:  highparkfire floods colorado  Found 1118 hits:
+0 path null cat number Colorado_w catName: Colorado_w
+1 path null cat number Colorado_w catName: Colorado_w
+2 path null cat number Colorado_w catName: Colorado_w
+3 path null cat number Colorado_w catName: Colorado_w
+4 path null cat number Colorado_w catName: Colorado_w
+categoryTotal is 1201 for catQ categoryName:Colorado_w 
+f1: 0.81586890904106177273 recall: 0.7876769359 precision: 0.8461538462
+Purity: 0.8461538624 Job: 0 
+Cluster 1 searching for:  qldfloods bigwet  Found 690 hits:
+0 path null cat number Queensland catName: Queensland
+1 path null cat number Queensland catName: Queensland
+2 path null cat number Queensland catName: Queensland
+3 path null cat number Queensland catName: Queensland
+4 path null cat number Queensland catName: Queensland
+categoryTotal is 1201 for catQ categoryName:Queensland 
+f1: 0.7297726071 recall: 0.5745212323 precision: 1
+Purity: 1.0000000260 Job: 0 
+Cluster 2 searching for:  shooting lax  Found 875 hits:
+0 path null cat number LA_airport catName: LA_airport
+1 path null cat number LA_airport catName: LA_airport
+2 path null cat number LA_airport catName: LA_airport
+3 path null cat number LA_airport catName: LA_airport
+4 path null cat number LA_airport catName: LA_airport
+categoryTotal is 1033 for catQ categoryName:LA_airport 
+f1: 0.91509433959654280333 recall: 0.8451113262 precision: 0.9977142857
+Purity: 0.9977142483 Job: 0 
+Cluster 3 searching for:  marathon bostonmarathon  Found 391 hits:
+0 path null cat number Boston_bom catName: Boston_bom
+1 path null cat number Boston_bom catName: Boston_bom
+2 path null cat number Boston_bom catName: Boston_bom
+3 path null cat number Boston_bom catName: Boston_bom
+4 path null cat number Boston_bom catName: Boston_bom
+categoryTotal is 1001 for catQ categoryName:Boston_bom 
+f1: 0.56034482756868146387 recall: 0.3896103896 precision: 0.9974424552
+Purity: 0.9974424720 Job: 0 
+f1list: [0.81586890904106177273, 0.7297726071, 0.91509433959654280333, 0.56034482756868146387] averagef1: :0.7552701708265715099825
+PosHits: 3044 NegHits: 30 PosScore: 7098.72094720602 NegScore: 83.96738958358765 Fitness: 5113.104403219344 
+TotalHits: 3059 Total Docs: 4436
+************************************************ 
+ 
