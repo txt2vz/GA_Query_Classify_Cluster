@@ -19,22 +19,52 @@ import org.apache.lucene.store.FSDirectory
 import spock.lang.*
 
 class TestR10 extends spock.lang.Specification {
+	Path path = Paths.get("indexes/r10")
+	Directory directory = FSDirectory.open(path)
+	DirectoryReader ireader = DirectoryReader.open(directory);
+	IndexSearcher isearcher = new IndexSearcher(ireader);
 
-	def "total r10 docs for grain category"() {
-		given:
-		Path path = Paths.get("indexes/r10")
-		Directory directory = FSDirectory.open(path)
-		DirectoryReader ireader = DirectoryReader.open(directory);
-		IndexSearcher isearcher = new IndexSearcher(ireader);	
 
-		when: 	
+	def "total r10 docs and grain category"() {
+		setup:
+
 		TotalHitCountCollector thcollector  = new TotalHitCountCollector();
 		final TermQuery catQ = new TermQuery(new Term(IndexInfo.FIELD_CATEGORY_NAME,	"gra"))
+
+		when:
 		isearcher.search(catQ, thcollector);
-		def categoryTotal = thcollector.getTotalHits();
+		def grainTotal = thcollector.getTotalHits();
+
 		ireader.close()
-		
+
 		then:
-		categoryTotal == 582
+
+		grainTotal == 582
+	}
+
+	def "total docs for test and train"() {
+		setup:
+
+		TotalHitCountCollector trainCollector  = new TotalHitCountCollector();
+		final TermQuery trainQ = new TermQuery(new Term(IndexInfo.FIELD_TEST_TRAIN,	"train"))
+		
+		TotalHitCountCollector testCollector  = new TotalHitCountCollector();
+		final TermQuery testQ = new TermQuery(new Term(IndexInfo.FIELD_TEST_TRAIN,	"test"))
+
+		when:
+		isearcher.search(trainQ, trainCollector);
+		def trainTotal = trainCollector.getTotalHits();
+
+		isearcher.search(testQ, testCollector);
+		def testTotal = testCollector.getTotalHits();
+
+		def totalDocs = ireader.maxDoc()
+		ireader.close()
+
+		then:
+		trainTotal == 7193
+		testTotal == 2787
+		totalDocs == 9980
+		totalDocs== trainTotal + testTotal
 	}
 }
