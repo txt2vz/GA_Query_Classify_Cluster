@@ -24,7 +24,6 @@ class TestR10 extends spock.lang.Specification {
 	DirectoryReader ireader = DirectoryReader.open(directory);
 	IndexSearcher isearcher = new IndexSearcher(ireader);
 
-
 	def "total r10 docs and grain category"() {
 		setup:
 
@@ -35,11 +34,11 @@ class TestR10 extends spock.lang.Specification {
 		isearcher.search(catQ, thcollector);
 		def grainTotal = thcollector.getTotalHits();
 
-		ireader.close()
-
 		then:
-
 		grainTotal == 582
+		
+		cleanup:
+		ireader.close()		
 	}
 
 	def "total docs for test and train"() {
@@ -59,12 +58,14 @@ class TestR10 extends spock.lang.Specification {
 		def testTotal = testCollector.getTotalHits();
 
 		def totalDocs = ireader.maxDoc()
-		ireader.close()
-
+		
 		then:
 		trainTotal == 7193
 		testTotal == 2787
 		totalDocs == 9980
 		totalDocs== trainTotal + testTotal
-	}
+		
+		cleanup:
+		ireader.close()
+	}		
 }
