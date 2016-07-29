@@ -6,6 +6,7 @@ import java.nio.file.Paths
 
 import org.apache.lucene.analysis.Analyzer
 import org.apache.lucene.analysis.standard.StandardAnalyzer
+import org.apache.lucene.index.DirectoryReader
 import org.apache.lucene.index.IndexWriter
 import org.apache.lucene.index.IndexWriterConfig
 import org.apache.lucene.index.Term
@@ -23,17 +24,15 @@ class TestR10 extends spock.lang.Specification {
 		given:
 		Path path = Paths.get("indexes/r10")
 		Directory directory = FSDirectory.open(path)
-		Analyzer analyzer =	new StandardAnalyzer();
-		IndexWriterConfig iwc = new IndexWriterConfig(analyzer);
-		def writer = new IndexWriter(directory, iwc);
+		DirectoryReader ireader = DirectoryReader.open(directory);
+		IndexSearcher isearcher = new IndexSearcher(ireader);	
 
-		when:
-		IndexSearcher searcher = new IndexSearcher(writer.getReader());
+		when: 	
 		TotalHitCountCollector thcollector  = new TotalHitCountCollector();
 		final TermQuery catQ = new TermQuery(new Term(IndexInfo.FIELD_CATEGORY_NAME,	"gra"))
-		searcher.search(catQ, thcollector);
+		isearcher.search(catQ, thcollector);
 		def categoryTotal = thcollector.getTotalHits();
-		writer.close()
+		ireader.close()
 		
 		then:
 		categoryTotal == 582
