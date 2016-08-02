@@ -63,7 +63,7 @@ class TestR10 extends spock.lang.Specification {
 		trainTotal == 7193
 		testTotal == 2787
 		totalDocs == 9980
-		totalDocs== trainTotal + testTotal
+		totalDocs == trainTotal + testTotal
 		
 		cleanup:
 		ireader.close()

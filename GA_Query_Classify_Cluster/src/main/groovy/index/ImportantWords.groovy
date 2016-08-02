@@ -35,21 +35,27 @@ public class ImportantWords {
 	public final static int SPAN_FIRST_MAX_END = 300;
 	private final static int MAX_WORDLIST_SIZE = 300;
 
-	private final IndexSearcher indexSearcher = IndexInfo.instance.indexSearcher;
-	private final IndexReader indexReader = indexSearcher.getIndexReader()
-	private Terms terms = MultiFields.getTerms(indexReader, IndexInfo.FIELD_CONTENTS)
-	private TermsEnum termsEnum = terms.iterator();
-	private int maxDoc = indexReader.maxDoc();
-	private Set<String> stopSet = StopSet.getStopSetFromFile()
+	private final IndexSearcher indexSearcher
+	private final IndexReader indexReader
+	private Terms terms
+	private TermsEnum termsEnum
+	private int maxDoc
+	private Set<String> stopSet
 
 	public static void main(String[] args){
-		IndexInfo.instance.setCategoryName("gra")
+		IndexInfo.instance.setCategoryName("cru")
 		IndexInfo.instance.setFilters()
 		def iw = new ImportantWords()
 		iw.getF1WordList(false, true)
 	}
 
 	public ImportantWords() throws IOException {
+		indexSearcher = IndexInfo.instance.indexSearcher;
+		indexReader = indexSearcher.getIndexReader()
+		terms = MultiFields.getTerms(indexReader, IndexInfo.FIELD_CONTENTS)
+		termsEnum = terms.iterator();
+		maxDoc = indexReader.maxDoc();
+		stopSet = StopSet.getStopSetFromFile()
 	}
 
 	/**
@@ -140,57 +146,57 @@ public class ImportantWords {
 
 		return wordList.toArray();
 	}
-	
+
 	public String[] getTFIDFWordList(){
-		
-				println "Important words terms.getDocCount: ${terms.getDocCount()}"
-		
-				def wordMap = [:]
-				BytesRef text;
-				while((text = termsEnum.next()) != null) {
-		
-					def word = text.utf8ToString()
-					Term t = new Term(IndexInfo.FIELD_CONTENTS, word);
-		
-					char c = word.charAt(0)
-					int df = indexSearcher.getIndexReader().docFreq(t)
-					def dfFraction = ((double) df/maxDoc)
-		
-					if (
-						df < 3
-					//	|| dfFraction > 0.3
-						||
-						stopSet.contains(t.text())
-					//	|| t.text().contains("'")
-						|| t.text().length()<2
-					//	|| !c.isLetter()
-						//|| dfFraction < 0.005
-					//	|| t.text().contains(".")
-					)
-						continue;
-		
-					long indexDf = indexReader.docFreq(t);
-					int docCount = indexReader.numDocs()
-					TFIDFSimilarity tfidfSim = new ClassicSimilarity()
-											   // new DefaultSimilarity()
-		
-					PostingsEnum docsEnum = termsEnum.postings(MultiFields.getTermDocsEnum(indexReader, IndexInfo.FIELD_CONTENTS, text ));
-					double tfidfTotal=0
-		
-					if (docsEnum != null) {
-						while (docsEnum.nextDoc() != DocIdSetIterator.NO_MORE_DOCS) {
-							double tfidf = tfidfSim.tf(docsEnum.freq()) * tfidfSim.idf(docCount, indexDf);
-							tfidfTotal +=tfidf
-						}
-					}
-					wordMap+= [(word) : tfidfTotal]
+
+		println "Important words terms.getDocCount: ${terms.getDocCount()}"
+
+		def wordMap = [:]
+		BytesRef text;
+		while((text = termsEnum.next()) != null) {
+
+			def word = text.utf8ToString()
+			Term t = new Term(IndexInfo.FIELD_CONTENTS, word);
+
+			char c = word.charAt(0)
+			int df = indexSearcher.getIndexReader().docFreq(t)
+			def dfFraction = ((double) df/maxDoc)
+
+			if (
+			df < 3
+			//	|| dfFraction > 0.3
+			||
+			stopSet.contains(t.text())
+			//	|| t.text().contains("'")
+			|| t.text().length()<2
+			//	|| !c.isLetter()
+			//|| dfFraction < 0.005
+			//	|| t.text().contains(".")
+			)
+				continue;
+
+			long indexDf = indexReader.docFreq(t);
+			int docCount = indexReader.numDocs()
+			TFIDFSimilarity tfidfSim = new ClassicSimilarity()
+			// new DefaultSimilarity()
+
+			PostingsEnum docsEnum = termsEnum.postings(MultiFields.getTermDocsEnum(indexReader, IndexInfo.FIELD_CONTENTS, text ));
+			double tfidfTotal=0
+
+			if (docsEnum != null) {
+				while (docsEnum.nextDoc() != DocIdSetIterator.NO_MORE_DOCS) {
+					double tfidf = tfidfSim.tf(docsEnum.freq()) * tfidfSim.idf(docCount, indexDf);
+					tfidfTotal +=tfidf
 				}
-		
-				wordMap= wordMap.sort{a, b -> a.value <=> b.value}
-				List wordList = wordMap.keySet().toList().take(MAX_WORDLIST_SIZE)
-		
-				println "tfidf map size: ${wordMap.size()}  wordlist size: ${wordList.size()}  wordlist: $wordList"
-		
-				return wordList.toArray();
 			}
+			wordMap+= [(word) : tfidfTotal]
+		}
+
+		wordMap= wordMap.sort{a, b -> a.value <=> b.value}
+		List wordList = wordMap.keySet().toList().take(MAX_WORDLIST_SIZE)
+
+		println "tfidf map size: ${wordMap.size()}  wordlist size: ${wordList.size()}  wordlist: $wordList"
+
+		return wordList.toArray();
+	}
 }
