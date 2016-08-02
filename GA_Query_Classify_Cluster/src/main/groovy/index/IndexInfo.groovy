@@ -32,12 +32,11 @@ class IndexInfo {
 	public static final int NUMBER_OF_CLUSTERS =  4, NUMBER_OF_CATEGORIES = 10
 
 	String 	pathToIndex =
-	'indexes/r10'
+	//'indexes/r10'
 	//   'indexes/20NG3SpaceHockeyChristian'
-	//'indexes/classic4'
+	'indexes/classic4'
 	//'indexes/crisis4FireBombFloodShoot'
 
-	def categoryDocumentCount = [:]
 	IndexReader indexReader
 	IndexSearcher indexSearcher
 	String categoryNumber='0', categoryName='cru';

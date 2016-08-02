@@ -391,3 +391,45 @@ PosHits: 8187 NegHits: 1150 PosScore: 27546.388311713934 NegScore: 3446.30417352
 TotalHits: 7508 Total Docs: 9980
 ************************************************ 
  
+  ***** Job: 0 Gen: 239 PopSize: 1024 Noclusters:4 pathToIndex: indexes/classic4 **************************************************************** 
+ Cluster 0 searching for:  library computer information  Found 1895 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cisi.000325 cat number cisi catName: cisi
+1 path C:\Users\Laurie\Dataset\classic\classic\cisi.001367 cat number cisi catName: cisi
+2 path C:\Users\Laurie\Dataset\classic\classic\cisi.000925 cat number cisi catName: cisi
+3 path C:\Users\Laurie\Dataset\classic\classic\cisi.000064 cat number cisi catName: cisi
+4 path C:\Users\Laurie\Dataset\classic\classic\cisi.001012 cat number cisi catName: cisi
+categoryTotal is 1460 for catQ categoryName:cisi 
+f1: 0.60923994041 recall: 0.7 precision: 0.5393139842
+Purity: 0.5393139990 Job: 0 
+Cluster 1 searching for:  patients cells  Found 442 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\med.000375 cat number med. catName: med.
+1 path C:\Users\Laurie\Dataset\classic\classic\med.000026 cat number med. catName: med.
+2 path C:\Users\Laurie\Dataset\classic\classic\med.000743 cat number med. catName: med.
+3 path C:\Users\Laurie\Dataset\classic\classic\med.000179 cat number med. catName: med.
+4 path C:\Users\Laurie\Dataset\classic\classic\med.000108 cat number med. catName: med.
+categoryTotal is 1033 for catQ categoryName:med. 
+f1: 0.57355932207221051422 recall: 0.4094869313 precision: 0.9570135747
+Purity: 0.9570135582 Job: 0 
+Cluster 2 searching for:  algorithm buckling  Found 1335 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cran.000957 cat number cran catName: cran
+1 path C:\Users\Laurie\Dataset\classic\classic\cran.000031 cat number cran catName: cran
+2 path C:\Users\Laurie\Dataset\classic\classic\cran.000400 cat number cran catName: cran
+3 path C:\Users\Laurie\Dataset\classic\classic\cran.000761 cat number cran catName: cran
+4 path C:\Users\Laurie\Dataset\classic\classic\cran.000885 cat number cran catName: cran
+categoryTotal is 3204 for catQ categoryName:cacm 
+f1: 0.52610707201730103806 recall: 0.3726591760 precision: 0.8943820225
+Purity: 0.8943820578 Job: 0 
+Cluster 3 searching for:  boundary mach  Found 708 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cran.001355 cat number cran catName: cran
+1 path C:\Users\Laurie\Dataset\classic\classic\cran.001381 cat number cran catName: cran
+2 path C:\Users\Laurie\Dataset\classic\classic\cran.000570 cat number cran catName: cran
+3 path C:\Users\Laurie\Dataset\classic\classic\cran.000996 cat number cran catName: cran
+4 path C:\Users\Laurie\Dataset\classic\classic\cran.000293 cat number cran catName: cran
+categoryTotal is 1398 for catQ categoryName:cran 
+f1: 0.64767331434804425289 recall: 0.4878397711 precision: 0.9632768362
+Purity: 0.9632768508 Job: 0 
+f1list: [0.60923994041, 0.57355932207221051422, 0.52610707201730103806, 0.64767331434804425289] averagef1: :0.5891449122118889512925
+PosHits: 4090 NegHits: 290 PosScore: 13538.934308588505 NegScore: 677.4751933813095 Fitness: 7869.02647950176 
+TotalHits: 4210 Total Docs: 7095
+************************************************ 
+ 
