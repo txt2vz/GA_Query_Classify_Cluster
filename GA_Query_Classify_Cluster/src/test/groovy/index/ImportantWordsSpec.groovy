@@ -4,7 +4,7 @@ class ImportantWordsSpec extends spock.lang.Specification {
 	
 	def "importantWords F1 oil"() {
 		setup:
-		IndexInfo.instance.setPathToIndex("indexes/r10")
+		IndexInfo.instance.setPathToIndex('indexes/r10')
 		IndexInfo.instance.setCatNumber(2)
 		IndexInfo.instance.setFilters()
 	
@@ -15,12 +15,11 @@ class ImportantWordsSpec extends spock.lang.Specification {
 
 		then:
 		oilList[0] == "oil"			
-	}
-	
+	}	
 	
 	def "ImportantWords 20News3 tfidf"	(){
 		setup:
-		IndexInfo.instance.setPathToIndex("indexes/20NG3SpaceHockeyChristian")
+		IndexInfo.instance.setPathToIndex('indexes/20NG3SpaceHockeyChristian')
 		IndexInfo.instance.setFilters()
 		
 			ImportantWords iw = new ImportantWords()
@@ -29,6 +28,8 @@ class ImportantWordsSpec extends spock.lang.Specification {
 			def tfidfList = iw.getTFIDFWordList()
 			
 			then:
-			tfidfList[0]=="space"		
+			tfidfList[0] == 'space'		
+			tfidfList[1] == 'god'
+			tfidfList[4] == 'hockey'
 	}
 }
