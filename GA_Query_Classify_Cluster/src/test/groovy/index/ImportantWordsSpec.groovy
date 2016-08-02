@@ -1,35 +1,35 @@
 package index
 
 class ImportantWordsSpec extends spock.lang.Specification {
-	
+
 	def "importantWords F1 oil"() {
 		setup:
 		IndexInfo.instance.setPathToIndex('indexes/r10')
 		IndexInfo.instance.setCatNumber(2)
 		IndexInfo.instance.setFilters()
-	
-		ImportantWords iw = new ImportantWords()		
+
+		ImportantWords iw = new ImportantWords()
 
 		when:
 		def oilList = iw.getF1WordList (false, true)
 
 		then:
-		oilList[0] == "oil"			
-	}	
-	
+		oilList[0] == "oil"
+	}
+
 	def "ImportantWords 20News3 tfidf"	(){
 		setup:
 		IndexInfo.instance.setPathToIndex('indexes/20NG3SpaceHockeyChristian')
 		IndexInfo.instance.setFilters()
-		
-			ImportantWords iw = new ImportantWords()
-			
-			when:
-			def tfidfList = iw.getTFIDFWordList()
-			
-			then:
-			tfidfList[0] == 'space'		
-			tfidfList[1] == 'god'
-			tfidfList[4] == 'hockey'
+
+		ImportantWords iw = new ImportantWords()
+
+		when:
+		def tfidfList = iw.getTFIDFWordList()
+
+		then:
+		tfidfList[0] == 'space'
+		tfidfList[1] == 'god'
+		tfidfList[4] == 'hockey'
 	}
 }
