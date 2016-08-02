@@ -13,14 +13,15 @@ import org.apache.lucene.search.IndexSearcher
 import org.apache.lucene.search.Query
 import org.apache.lucene.search.TermQuery
 import org.apache.lucene.search.TotalHitCountCollector
+import org.apache.lucene.search.similarities.BM25Similarity
 import org.apache.lucene.search.similarities.ClassicSimilarity
 import org.apache.lucene.search.similarities.TFIDFSimilarity
 import org.apache.lucene.search.spans.SpanFirstQuery
 import org.apache.lucene.search.spans.SpanTermQuery
 import org.apache.lucene.util.BytesRef
 
-import query.*
-import classify.ClassifyQuery
+//import query.*
+//import classify.Effectiveness
 
 /**
  * GAs return words by selecting form word lists provided by this
@@ -44,7 +45,7 @@ public class ImportantWords {
 
 	public static void main(String[] args){
 		IndexInfo.instance.setCategoryName("cru")
-		IndexInfo.instance.setFilters()
+		IndexInfo.instance.setIndex()
 		def iw = new ImportantWords()
 		iw.getF1WordList(false, true)
 	}
@@ -131,7 +132,7 @@ public class ImportantWords {
 			indexSearcher.search(bqb.build(), collector);
 			final int negativeHits = collector.getTotalHits();
 
-			def F1 = ClassifyQuery.f1(positiveHits, negativeHits,
+			def F1 = classify.Effectiveness.f1(positiveHits, negativeHits,
 					totalDocs);
 
 			if (F1 > 0.02) {
@@ -178,6 +179,7 @@ public class ImportantWords {
 			long indexDf = indexReader.docFreq(t);
 			int docCount = indexReader.numDocs()
 			TFIDFSimilarity tfidfSim = new ClassicSimilarity()
+			//new BM25Similarity()
 			// new DefaultSimilarity()
 
 			PostingsEnum docsEnum = termsEnum.postings(MultiFields.getTermDocsEnum(indexReader, IndexInfo.FIELD_CONTENTS, text ));

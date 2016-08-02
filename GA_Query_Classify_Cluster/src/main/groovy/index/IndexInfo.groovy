@@ -52,26 +52,13 @@ class IndexInfo {
 	TermQuery catQ 	= new TermQuery(new Term(FIELD_CATEGORY_NUMBER,
 	categoryNumber))
 
-	public void setCatNumber(final int cn) {
-		categoryNumber = String.valueOf(cn);
-		println "Category number set: $categoryNumber"
-	}
-	public void setCatName(final String cn) {
-		categoryName = cn;
-	}
-
-	public  String getCatnumberAsString() {
-		return String.valueOf(categoryNumber);
-	}
-
-	public void setFilters()  {
+	public void setIndex()  {
 		catQ = new TermQuery(new Term(FIELD_CATEGORY_NUMBER,
 				categoryNumber));
-		println "index infor catQ $catQ"
+		println "Index info catQ: $catQ"
 
 		Path path = Paths.get(pathToIndex)
 		Directory directory = FSDirectory.open(path)
-
 		indexReader = DirectoryReader.open(directory)
 		indexSearcher = new IndexSearcher(indexReader);
 
@@ -116,6 +103,6 @@ class IndexInfo {
 		totalTestDocs = collector.getTotalHits();
 
 		println "Total train docs: $totalTrain"
-		println "CategoryNumber $categoryNumber Total train in cat: $totalTrainDocsInCat  Total others tain: $totalOthersTrainDocs   Total test in cat : $totalTestDocsInCat  "
+		println "IndexInfo   CategoryNumber: $categoryNumber Total train in cat: $totalTrainDocsInCat  Total others tain: $totalOthersTrainDocs   Total test in cat : $totalTestDocsInCat  "
 	}
 }

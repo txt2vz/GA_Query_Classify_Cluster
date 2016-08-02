@@ -60,8 +60,8 @@ class IndexR10 {
 
 		Date start = new Date();
 		println("Indexing to directory '" + indexPath + "'...");
+		
 		def catNumber=0;
-
 		new File(docsPath).eachDir {
 			//	it.eachDir{
 			it.eachFileRecurse(FileType.FILES) { file ->

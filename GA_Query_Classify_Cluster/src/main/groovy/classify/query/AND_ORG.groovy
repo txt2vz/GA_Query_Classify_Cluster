@@ -35,7 +35,7 @@ public class AND_ORG extends Problem implements SimpleProblemForm, HitCounts {
 
 		super.setup(state, base);
 
-		println("Total docs for cat  " + IndexInfo.instance.getCatnumberAsString() + " "
+		println("Total docs for cat  " + IndexInfo.instance.categoryNumber + " "
 				+ IndexInfo.instance.totalTrainDocsInCat + " Total test docs for cat "
 				+ IndexInfo.instance.totalTestDocsInCat);
 

@@ -30,9 +30,8 @@ class GAmainClassify extends Evolve {
 
 			IndexInfo.NUMBER_OF_CATEGORIES.times{ categoryNumber ->
 
-				IndexInfo.instance.setCatNumber(categoryNumber)
-				//IndexInfo.instance.setCatName(cat)
-				IndexInfo.instance.setFilters()
+				IndexInfo.instance.setCategoryNumber(String.valueOf(categoryNumber))			
+				IndexInfo.instance.setIndex()
 
 				state = initialize(parameters, job);
 

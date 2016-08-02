@@ -13,7 +13,7 @@ class GAmainCluster extends Evolve {
 
 	public GAmainCluster(){
 		EvolutionState state;
-		IndexInfo.instance.setFilters()
+		IndexInfo.instance.setIndex()
 		ParameterDatabase parameters  = null;
 
 		final Date startRun = new Date();

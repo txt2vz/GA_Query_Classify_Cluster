@@ -26,8 +26,8 @@ import org.apache.lucene.codecs.*
 class IndexCrisisClusterFromCSV {
 
 	// Create Lucene index in this directory
-	Path indexPath = Paths.get("indexes/crisis4FireBombFloodShoot")
-	Path docsPath = Paths.get("Datasets/crisisData")
+	Path indexPath = Paths.get('indexes/crisis4FireBombFloodShoot')
+	Path docsPath = Paths.get('Datasets/crisisData')
 	Directory directory = FSDirectory.open(indexPath)
 	Analyzer analyzer = //new EnglishAnalyzer();  //with stemming
 	new StandardAnalyzer();
@@ -47,16 +47,16 @@ class IndexCrisisClusterFromCSV {
 		IndexWriter writer = new IndexWriter(directory, iwc);
 
 		Date start = new Date();
-		println("Indexing to directory '" + indexPath + "'...");
+		println("Indexing to directory $indexPath ...");
 		
 	//	println "docsPath $docsPath parent" + docsPath.getParent()
 
 		docsPath.toFile().eachFileRecurse {file -> 
 
 			def catName = file.getName().take(10)
-			println "file $file catName $catName"
+			println "File: $file  CatName: $catName"
 
-			file.splitEachLine(",") {fields ->
+			file.splitEachLine(',') {fields ->
 
 				def textBody = fields[1]
 				//def tweetID = fields[0]
@@ -69,8 +69,8 @@ class IndexCrisisClusterFromCSV {
 				writer.addDocument(doc);
 			}
 		}
-		println "Total docs in index: " + writer.maxDoc()
+		println "Total docs in index: ${writer.maxDoc()}"
 		writer.close()
-		println "done.."
+		println 'done...'
 	}
 }

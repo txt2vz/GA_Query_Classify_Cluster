@@ -1,29 +1,29 @@
 category, job, f1train, f1test, bepTest, totPositiveTest, totNegativeTest, totTestDocsInCat, query
-0, 0, 0.772, 0.799, 0.802, 543, 97, 719, acquire acquisition merger completed acquired sell undisclosed stake 
+0, 0, 0.775, 0.817, 0.818, 564, 98, 719, takeover acquired completed merger sell acquire stake acquisition 
 1, 0, 0.562, 0.544, 0.687, 56, 94, 56, maize corn 
-2, 0, 0.747, 0.732, 0.735, 130, 36, 189, refinery opec bbl barrels crude exploration barrel 
-3, 0, 0.553, 0.545, 0.681, 70, 116, 71, feedgrains wheat 
-4, 0, 0.931, 0.935, 0.937, 1055, 114, 1087, profit vs 1st shr 3rd dividend earnings split 
-5, 0, 0.505, 0.538, 0.618, 110, 168, 131, fed rate bills bundesbank 
-6, 0, 0.657, 0.641, 0.680, 151, 141, 179, money dollar currencies monetary fed 
-7, 0, 0.647, 0.601, 0.618, 64, 60, 89, tanker vessel harbour seamen vessels loading shipping port 
-8, 0, 0.622, 0.535, 0.554, 77, 94, 117, protectionism tariffs dumping protectionist retaliation yeutter deficit 
-9, 0, 0.638, 0.659, 0.741, 147, 150, 149, rice wheat maize corn grain barley crops usda 
+2, 0, 0.749, 0.727, 0.729, 144, 63, 189, cubic iraq exploration crude opec refinery barrels barrel 
+3, 0, 0.553, 0.550, 0.690, 71, 116, 71, wheat flour 
+4, 0, 0.925, 0.923, 0.924, 1043, 131, 1087, cts profit split oper vs 1st dividend revs 
+5, 0, 0.509, 0.542, 0.617, 109, 162, 131, band bundesbank fed rate 
+6, 0, 0.655, 0.585, 0.620, 137, 152, 179, dollar currencies yen money fed 
+7, 0, 0.645, 0.627, 0.648, 68, 60, 89, port shipping vessel tankers vessels ships shipowners loading 
+8, 0, 0.601, 0.537, 0.654, 109, 180, 117, yeutter retaliation impose trade 
+9, 0, 0.639, 0.653, 0.732, 145, 150, 149, barley grain cereals wheat maize rice corn 
  
-Run Number, 0, Micro F1: , 0.7677,  Macro F1: , 0.6529, Micro BEP:, 0.7771, Total Positive Matches , 2403, Total Negative Matches, 1070, Total Docs,  2787 
+Run Number, 0, Micro F1: , 0.7597,  Macro F1: , 0.6505, Micro BEP:, 0.7737, Total Positive Matches , 2446, Total Negative Matches, 1206, Total Docs,  2787 
 ,, Overall Micro F1 , Infinity,  Overall Macro F1, Infinity, Overall MicroBEP, Infinity 
  
-0, 1, 0.773, 0.803, 0.804, 558, 113, 719, undisclosed purchase stake merger acquired acquire acquisition sell 
-1, 1, 0.556, 0.521, 0.676, 56, 103, 56, ranged sorghum maize corn 
-2, 1, 0.753, 0.734, 0.736, 131, 37, 189, barrel refinery barrels bpd exploration gasoline crude opec 
-3, 1, 0.553, 0.545, 0.681, 70, 116, 71, feedgrains wheat 
-4, 1, 0.931, 0.931, 0.933, 1058, 128, 1087, split results div vs profit earnings shr dividend 
-5, 1, 0.506, 0.507, 0.563, 97, 155, 131, bundesbank customer rate band 
-6, 1, 0.640, 0.570, 0.621, 143, 180, 179, repurchase yen currencies currency dollar money 
-7, 1, 0.646, 0.670, 0.693, 73, 56, 89, port vessel shipping tankers vessels janeiro warships ships 
-8, 1, 0.601, 0.586, 0.680, 109, 146, 117, dumping trade 
-9, 1, 0.631, 0.632, 0.711, 141, 156, 149, cereals rice tonne maize wheat hectares grain corn 
+0, 1, 0.769, 0.821, 0.822, 566, 94, 719, acquire merger acquired takeover stake undisclosed unit acquisition 
+1, 1, 0.562, 0.544, 0.687, 56, 94, 56, maize corn 
+2, 1, 0.744, 0.717, 0.719, 143, 67, 189, exploration iraq crude barrels barrel gasoline opec ecuador 
+3, 1, 0.552, 0.547, 0.682, 70, 115, 71, wheat eep 
+4, 1, 0.934, 0.938, 0.939, 1058, 112, 1087, 4th dividend earnings qtr split vs profit revs 
+5, 1, 0.506, 0.507, 0.563, 97, 155, 131, rate customer band bundesbank 
+6, 1, 0.642, 0.647, 0.682, 150, 135, 179, liquidity england monetary fed dollar currencies 
+7, 1, 0.643, 0.644, 0.655, 66, 50, 89, hormuz ships port shipping vessels ferry seamen vessel 
+8, 1, 0.600, 0.542, 0.657, 109, 176, 117, protectionist retaliation trade 
+9, 1, 0.631, 0.649, 0.725, 143, 149, 149, grain grains crops rice maize wheat growers corn 
  
-Run Number, 1, Micro F1: , 0.7597,  Macro F1: , 0.6498, Micro BEP:, 0.7729, Total Positive Matches , 2436, Total Negative Matches, 1190, Total Docs,  2787 
-,, Overall Micro F1 , 1.5274,  Overall Macro F1, 1.3027, Overall MicroBEP, 1.5500 
+Run Number, 1, Micro F1: , 0.7691,  Macro F1: , 0.6554, Micro BEP:, 0.7819, Total Positive Matches , 2458, Total Negative Matches, 1147, Total Docs,  2787 
+,, Overall Micro F1 , 1.5288,  Overall Macro F1, 1.3059, Overall MicroBEP, 1.5556 
  

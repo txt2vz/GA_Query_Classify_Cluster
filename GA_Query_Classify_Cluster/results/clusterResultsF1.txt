@@ -307,3 +307,87 @@ PosHits: 3044 NegHits: 30 PosScore: 7098.72094720602 NegScore: 83.96738958358765
 TotalHits: 3059 Total Docs: 4436
 ************************************************ 
  
+  ***** Job: 0 Gen: 239 PopSize: 1024 Noclusters:4 pathToIndex: indexes/crisis4FireBombFloodShoot **************************************************************** 
+ Cluster 0 searching for:  shooting airport lax  Found 893 hits:
+0 path null cat number LA_airport catName: LA_airport
+1 path null cat number LA_airport catName: LA_airport
+2 path null cat number LA_airport catName: LA_airport
+3 path null cat number LA_airport catName: LA_airport
+4 path null cat number LA_airport catName: LA_airport
+categoryTotal is 1033 for catQ categoryName:LA_airport 
+f1: 0.92107995845755993569 recall: 0.8586640852 precision: 0.9932810750
+Purity: 0.9932810496 Job: 0 
+Cluster 1 searching for:  bigwet boston  Found 1127 hits:
+0 path null cat number Boston_bom catName: Boston_bom
+1 path null cat number Boston_bom catName: Boston_bom
+2 path null cat number Boston_bom catName: Boston_bom
+3 path null cat number Boston_bom catName: Boston_bom
+4 path null cat number Boston_bom catName: Boston_bom
+categoryTotal is 1201 for catQ categoryName:Queensland 
+f1: 0.50257731961099051145 recall: 0.4870940883 precision: 0.5190771961
+Purity: 0.5190771690 Job: 0 
+Cluster 2 searching for:  highparkfire floods  Found 321 hits:
+0 path null cat number Colorado_w catName: Colorado_w
+1 path null cat number Colorado_w catName: Colorado_w
+2 path null cat number Colorado_w catName: Colorado_w
+3 path null cat number Colorado_w catName: Colorado_w
+4 path null cat number Colorado_w catName: Colorado_w
+categoryTotal is 1201 for catQ categoryName:Queensland 
+f1: 0.22601839679519608164 recall: 0.1432139883 precision: 0.5358255452
+Purity: 0.5358255456 Job: 0 
+Cluster 3 searching for:  colorado prayforboston  Found 1016 hits:
+0 path null cat number Boston_bom catName: Boston_bom
+1 path null cat number Boston_bom catName: Boston_bom
+2 path null cat number Boston_bom catName: Boston_bom
+3 path null cat number Boston_bom catName: Boston_bom
+4 path null cat number Boston_bom catName: Boston_bom
+categoryTotal is 1201 for catQ categoryName:Colorado_w 
+f1: 0.72620658544251328918 recall: 0.6702747710 precision: 0.7923228346
+Purity: 0.7923228600 Job: 0 
+f1list: [0.92107995845755993569, 0.50257731961099051145, 0.22601839679519608164, 0.72620658544251328918] averagef1: :0.59397056507656495449
+PosHits: 3209 NegHits: 148 PosScore: 7703.643975496292 NegScore: 341.454598903656 Fitness: 5744.650072947657 
+TotalHits: 3283 Total Docs: 4436
+************************************************ 
+ 
+  ***** Job: 0 Gen: 23 PopSize: 1024 Noclusters:4 pathToIndex: indexes/r10 **************************************************************** 
+ Cluster 0 searching for:  vs net shr  Found 3553 hits:
+0 path C:\Users\Laurie\Dataset\reuters-top10\03_earn\train\reut2_09238.txt cat number ear catName: ear
+1 path C:\Users\Laurie\Dataset\reuters-top10\03_earn\train\reut2_05297.txt cat number ear catName: ear
+2 path C:\Users\Laurie\Dataset\reuters-top10\03_earn\train\reut2_05464.txt cat number ear catName: ear
+3 path C:\Users\Laurie\Dataset\reuters-top10\03_earn\train\reut2_08793.txt cat number ear catName: ear
+4 path C:\Users\Laurie\Dataset\reuters-top10\03_earn\train\reut2_13615.txt cat number ear catName: ear
+categoryTotal is 3964 for catQ categoryName:ear 
+f1: 0.87934016231018846749 recall: 0.8337537841 precision: 0.9301998311
+Purity: 0.9301998515 Job: 0 
+Cluster 1 searching for:  company oil  Found 2987 hits:
+0 path C:\Users\Laurie\Dataset\reuters-top10\02_crude\train\reut2_04386.txt cat number cru catName: cru
+1 path C:\Users\Laurie\Dataset\reuters-top10\02_crude\test\reut2_18736.txt cat number cru catName: cru
+2 path C:\Users\Laurie\Dataset\reuters-top10\02_crude\train\reut2_00543.txt cat number cru catName: cru
+3 path C:\Users\Laurie\Dataset\reuters-top10\02_crude\train\reut2_14395.txt cat number cru catName: cru
+4 path C:\Users\Laurie\Dataset\reuters-top10\02_crude\train\reut2_06184.txt cat number cru catName: cru
+categoryTotal is 2369 for catQ categoryName:acq 
+f1: 0.44772218073306213017 recall: 0.5061207260 precision: 0.4014060931
+Purity: 0.4014061359 Job: 0 
+Cluster 2 searching for:  20 today  Found 1707 hits:
+0 path C:\Users\Laurie\Dataset\reuters-top10\03_earn\test\reut2_15309.txt cat number ear catName: ear
+1 path C:\Users\Laurie\Dataset\reuters-top10\07_ship\train\reut2_10388.txt cat number shi catName: shi
+2 path C:\Users\Laurie\Dataset\reuters-top10\07_ship\train\reut2_02681.txt cat number shi catName: shi
+3 path C:\Users\Laurie\Dataset\reuters-top10\03_earn\train\reut2_11211.txt cat number ear catName: ear
+4 path C:\Users\Laurie\Dataset\reuters-top10\05_interest\train\reut2_00307.txt cat number int catName: int
+categoryTotal is 3964 for catQ categoryName:ear 
+f1: 0.14600599537724427500 recall: 0.1044399596 precision: 0.2425307557
+Purity: 0.2425307634 Job: 0 
+Cluster 3 searching for:  usda bank  Found 1643 hits:
+0 path C:\Users\Laurie\Dataset\reuters-top10\01_corn\train\reut2_08759.txt cat number cor catName: cor
+1 path C:\Users\Laurie\Dataset\reuters-top10\02_wheat\train\reut2_08759.txt cat number whe catName: whe
+2 path C:\Users\Laurie\Dataset\reuters-top10\14_grain\train\reut2_08759.txt cat number gra catName: gra
+3 path C:\Users\Laurie\Dataset\reuters-top10\02_wheat\test\reut2_15893.txt cat number whe catName: whe
+4 path C:\Users\Laurie\Dataset\reuters-top10\14_grain\test\reut2_15893.txt cat number gra catName: gra
+categoryTotal is 717 for catQ categoryName:mon 
+f1: 0.35169491526901088049 recall: 0.5788005579 precision: 0.2525867316
+Purity: 0.2525867205 Job: 0 
+f1list: [0.87934016231018846749, 0.44772218073306213017, 0.14600599537724427500, 0.35169491526901088049] averagef1: :0.4561908134223764382875
+PosHits: 8187 NegHits: 1150 PosScore: 27546.388311713934 NegScore: 3446.304173529148 Fitness: 18021.554875970694 
+TotalHits: 7508 Total Docs: 9980
+************************************************ 
+ 
