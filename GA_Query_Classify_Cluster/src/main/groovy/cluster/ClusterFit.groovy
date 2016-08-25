@@ -50,7 +50,7 @@ public class ClusterFit extends SimpleFitness {
 		def s=""
 		queryMap.keySet().eachWithIndex {q, index ->
 			if (index>0) s+='\n';
-			s +=  "Cluster " + index + ": " + queryMap.get(q) + " " + q.toString(IndexInfo.FIELD_CONTENTS)
+			s +=  "ClusterQuery " + index + ": " + queryMap.get(q) + " " + q.toString(IndexInfo.FIELD_CONTENTS)
 		}
 		return s
 	}
@@ -84,7 +84,7 @@ public class ClusterFit extends SimpleFitness {
 			def qString = q.toString(IndexInfo.FIELD_CONTENTS)
 
 			println "***********************************************************************************"
-			messageOut = "Cluster $index searching for:  $qString  Found ${hits.length} hits:" + '\n'
+			messageOut = "ClusterQuery $index searching for:  $qString  Found ${hits.length} hits:" + '\n'
 			println messageOut
 			resOut << messageOut
 
@@ -104,7 +104,7 @@ public class ClusterFit extends SimpleFitness {
 					resOut << messageOut + '\n'
 				}
 			}
-			println "Gen: $gen Cluster: $index catsFreq: $catsFreq for query: $qString "
+			println "Gen: $gen ClusterQuery: $index catsFreq: $catsFreq for query: $qString "
 
 			//find the category with maximimum returned docs for this query
 			def catMax = catsFreq?.max{it?.value} ?:0
@@ -171,18 +171,18 @@ public class ClusterFit extends SimpleFitness {
 	private String queryForCSV (int job){
 		def s="Job: $job "
 		queryMap.keySet().eachWithIndex {q, index ->
-			s += "Cluster " + index + ": " + queryMap.get(q) + " " + q.toString(IndexInfo.FIELD_CONTENTS) + " ## "
+			s += "ClusterQuery " + index + ": " + queryMap.get(q) + " " + q.toString(IndexInfo.FIELD_CONTENTS) + " ## "
 		}
 		return s + '\n'
 	}
 
 	public String fitnessToStringForHumans() {
 		//def origFit = this.fitness() -400
-		return  "Cluster Fitness: " + this.fitness() + " scoreOrig: $scoreOrig";
+		return  "ClusterQuery Fitness: " + this.fitness() + " scoreOrig: $scoreOrig";
 	}
 
 	public String toString(int gen) {
-		return "Gen: " + gen + " Cluster Fitness: " + this.fitness
+		return "Gen: " + gen + " ClusterQuery Fitness: " + this.fitness
 		+ " qMap: " + queryMap;
 	}
 }

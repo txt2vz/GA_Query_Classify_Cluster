@@ -4,7 +4,7 @@ repositories { jcenter() }
 
 dependencies {
 
-//	compile 'org.codehaus.groovy:groovy-all:2.4.3'
+	//	compile 'org.codehaus.groovy:groovy-all:2.4.3'
 	compile 'org.codehaus.groovy:groovy-all:2.4.7'
 
 	compile 'org.apache.lucene:lucene-core:6.1.0'
@@ -17,7 +17,7 @@ dependencies {
 	//	compile 'org.apache.lucene:lucene-core:5.3.2'
 	//	compile 'org.apache.lucene:lucene-analyzers-common:5.3.2'
 	// https://mvnrepository.com/artifact/org.spockframework/spock-core
-	
+
 	testCompile 'junit:junit:4.11'
 	testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
 

@@ -2,7 +2,7 @@
 #parent.0 = ClusterSinglePop.params
 #parent.0		= simple.params
 
-eval.problem = cluster.Cluster
+eval.problem = cluster.ClusterQuery
 
 evalthreads = 4 
 breedthreads = 4
