@@ -475,3 +475,45 @@ PosHits: 4257 NegHits: 522 PosScore: 13910.460031330585 NegScore: 1270.075835049
 TotalHits: 4444 Total Docs: 7095
 ************************************************ 
  
+  ***** Job: 0 Gen: 739 PopSize: 1024 Noclusters:4 pathToIndex: indexes/classic4 **************************************************************** 
+ ClusterQuery 0 searching for:  patients cells  Found 442 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\med.000375 cat number med. catName: med.
+1 path C:\Users\Laurie\Dataset\classic\classic\med.000026 cat number med. catName: med.
+2 path C:\Users\Laurie\Dataset\classic\classic\med.000743 cat number med. catName: med.
+3 path C:\Users\Laurie\Dataset\classic\classic\med.000179 cat number med. catName: med.
+4 path C:\Users\Laurie\Dataset\classic\classic\med.000108 cat number med. catName: med.
+categoryTotal is 1033 for catQ categoryName:med. 
+f1: 0.57355932207221051422 recall: 0.4094869313 precision: 0.9570135747
+Purity: 0.9570135582 Job: 0 
+ClusterQuery 1 searching for:  computer algorithm  Found 1971 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cacm.002004 cat number cacm catName: cacm
+1 path C:\Users\Laurie\Dataset\classic\classic\cacm.002209 cat number cacm catName: cacm
+2 path C:\Users\Laurie\Dataset\classic\classic\cacm.002285 cat number cacm catName: cacm
+3 path C:\Users\Laurie\Dataset\classic\classic\cacm.002589 cat number cacm catName: cacm
+4 path C:\Users\Laurie\Dataset\classic\classic\cacm.002675 cat number cacm catName: cacm
+categoryTotal is 3204 for catQ categoryName:cacm 
+f1: 0.66666666667401678639 recall: 0.5383895131 precision: 0.8751902588
+Purity: 0.8751903075 Job: 0 
+ClusterQuery 2 searching for:  libraries library  Found 575 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cisi.000186 cat number cisi catName: cisi
+1 path C:\Users\Laurie\Dataset\classic\classic\cisi.001236 cat number cisi catName: cisi
+2 path C:\Users\Laurie\Dataset\classic\classic\cisi.000340 cat number cisi catName: cisi
+3 path C:\Users\Laurie\Dataset\classic\classic\cisi.000370 cat number cisi catName: cisi
+4 path C:\Users\Laurie\Dataset\classic\classic\cisi.001410 cat number cisi catName: cisi
+categoryTotal is 1460 for catQ categoryName:cisi 
+f1: 0.54152334155568943972 recall: 0.3773972603 precision: 0.9582608696
+Purity: 0.9582608504 Job: 0 
+ClusterQuery 3 searching for:  pressure flow  Found 1047 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cran.000242 cat number cran catName: cran
+1 path C:\Users\Laurie\Dataset\classic\classic\cran.000310 cat number cran catName: cran
+2 path C:\Users\Laurie\Dataset\classic\classic\cran.001232 cat number cran catName: cran
+3 path C:\Users\Laurie\Dataset\classic\classic\cran.000388 cat number cran catName: cran
+4 path C:\Users\Laurie\Dataset\classic\classic\cran.000979 cat number cran catName: cran
+categoryTotal is 1398 for catQ categoryName:cran 
+f1: 0.73783231082325627611 recall: 0.6452074392 precision: 0.8615090735
+Purity: 0.8615090396 Job: 0 
+f1list: [0.57355932207221051422, 0.66666666667401678639, 0.54152334155568943972, 0.73783231082325627611] averagef1: :0.62989541028129325411
+PosHits: 3801 NegHits: 234 PosScore: 12678.728401601315 NegScore: 653.1596603989601 Fitness: 6817.863158798484 
+TotalHits: 3893 Total Docs: 7095
+************************************************ 
+ 

@@ -159,7 +159,7 @@ public class ImportantWords {
 			def word = text.utf8ToString()
 			Term t = new Term(IndexInfo.FIELD_CONTENTS, word);
 
-			char c = word.charAt(0)
+			//char c = word.charAt(0)
 			int df = indexSearcher.getIndexReader().docFreq(t)
 			def dfFraction = ((double) df/maxDoc)
 

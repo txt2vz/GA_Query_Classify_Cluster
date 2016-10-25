@@ -5,5 +5,5 @@
 .project
 .settings
 gradle.prefs
-/src/cfg/statDump/
 .gradle
+/indexes/
