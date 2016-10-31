@@ -51,7 +51,7 @@ public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProbl
 	  	getORQL(wordArray, intVectorIndividual, NUMBER_OF_CLUSTERS)
 		//getANDQL(wordArray, intVectorIndividual, NUMBER_OF_CLUSTERS)
 
-		final int hitsPerPage = 3000;
+		final int hitsPerPage = 10000;
 		def negHitsTotal=0
 		def posHitsTotal=0
 		def posScore =0
@@ -84,7 +84,7 @@ public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProbl
 			//qMap.put(q.toString(IndexInfo.FIELD_CONTENTS),hits.size())
 			qMap.put(q,hits.size())
 
-			if (hits.size()<1) emptyPen = emptyPen + 5
+			if (hits.size()<1) emptyPen = emptyPen + 100
 
 			hits.eachWithIndex {d, position ->
 				allHits << d.doc
@@ -104,12 +104,14 @@ public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProbl
 			}
 		}
 
-		def minScore = 400
+		def minScore = 1000
 		def scoreOnly = posScore - negScore
 		def scorePlus = (scoreOnly < -minScore) ? 0 : scoreOnly + minScore
 
 		def negIndicators =   //(graphPen+1) *	// (treePen+1) *
-				(noHitsCount+1) * (duplicateCount+1)  * (emptyPen + 1) 	* (coreClusterPen +1)
+				//(noHitsCount+1) * (duplicateCount+1)  * (emptyPen + 1) 	* (coreClusterPen +1)
+				// emptyPen +  coreClusterPen + 1
+				noHitsCount + duplicateCount + emptyPen + coreClusterPen + 1
 
 		def fractionCovered = allHits.size() / IndexInfo.instance.indexReader.maxDoc()
 		def missedDocs = IndexInfo.instance.indexReader.maxDoc() - allHits.size()

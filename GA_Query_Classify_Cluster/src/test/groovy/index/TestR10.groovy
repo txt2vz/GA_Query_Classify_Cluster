@@ -19,7 +19,7 @@ import org.apache.lucene.store.FSDirectory
 import spock.lang.*
 
 class TestR10 extends spock.lang.Specification {
-	Path path = Paths.get("indexes/r10")
+	Path path = Paths.get("indexes/r10l5")
 	Directory directory = FSDirectory.open(path)
 	DirectoryReader ireader = DirectoryReader.open(directory);
 	IndexSearcher isearcher = new IndexSearcher(ireader);

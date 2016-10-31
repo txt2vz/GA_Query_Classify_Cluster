@@ -13,9 +13,15 @@ import org.apache.lucene.search.IndexSearcher
 import org.apache.lucene.search.Query
 import org.apache.lucene.search.TermQuery
 import org.apache.lucene.search.TotalHitCountCollector
-import org.apache.lucene.search.similarities.BM25Similarity
-import org.apache.lucene.search.similarities.ClassicSimilarity
+
+//for lucene 6
+//import org.apache.lucene.search.similarities.BM25Similarity
+//import org.apache.lucene.search.similarities.ClassicSimilarity
+
+
+import org.apache.lucene.search.similarities.Similarity
 import org.apache.lucene.search.similarities.TFIDFSimilarity
+import org.apache.lucene.search.similarities.DefaultSimilarity
 import org.apache.lucene.search.spans.SpanFirstQuery
 import org.apache.lucene.search.spans.SpanTermQuery
 import org.apache.lucene.util.BytesRef
@@ -44,10 +50,11 @@ public class ImportantWords {
 	private Set<String> stopSet
 
 	public static void main(String[] args){
-		IndexInfo.instance.setCategoryName("cru")
+		//IndexInfo.instance.setCategoryName("cru")
 		IndexInfo.instance.setIndex()
 		def iw = new ImportantWords()
-		iw.getF1WordList(false, true)
+		//iw.getF1WordList(false, true)
+		iw.getTFIDFWordList()
 	}
 
 	public ImportantWords() throws IOException {
@@ -87,9 +94,9 @@ public class ImportantWords {
 			if (indexSearcher.getIndexReader().docFreq(t) < 3
 			//|| StopSet.stopSet.contains(t.text())
 			|| stopSet.contains(t.text())
-			//  ||t.text().contains("'")
+			  || t.text().contains("'")
 			//  ||t.text().contains(".")
-			//||!c.isLetter())
+			||!c.isLetter()
 			//|| stopSet.contains(t.text()))
 			)
 				continue;
@@ -159,7 +166,7 @@ public class ImportantWords {
 			def word = text.utf8ToString()
 			Term t = new Term(IndexInfo.FIELD_CONTENTS, word);
 
-			//char c = word.charAt(0)
+			char firstChar = word.charAt(0)
 			int df = indexSearcher.getIndexReader().docFreq(t)
 			def dfFraction = ((double) df/maxDoc)
 
@@ -168,9 +175,9 @@ public class ImportantWords {
 			//	|| dfFraction > 0.3
 			||
 			stopSet.contains(t.text())
-			//	|| t.text().contains("'")
+			|| t.text().contains("'")
 			|| t.text().length()<2
-			//	|| !c.isLetter()
+			|| !firstChar.isLetter()
 			//|| dfFraction < 0.005
 			//	|| t.text().contains(".")
 			)
@@ -178,10 +185,10 @@ public class ImportantWords {
 
 			long indexDf = indexReader.docFreq(t);
 			int docCount = indexReader.numDocs()
-			TFIDFSimilarity tfidfSim = new ClassicSimilarity()
-			//new BM25Similarity()
-			// new DefaultSimilarity()
 
+			TFIDFSimilarity tfidfSim = new DefaultSimilarity()
+			//For lucene 6
+			//TFIDFSimilarity tfidfSim = new ClassicSimilarity()
 			PostingsEnum docsEnum = termsEnum.postings(MultiFields.getTermDocsEnum(indexReader, IndexInfo.FIELD_CONTENTS, text ));
 			double tfidfTotal=0
 

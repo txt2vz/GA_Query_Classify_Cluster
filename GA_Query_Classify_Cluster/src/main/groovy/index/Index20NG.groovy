@@ -23,17 +23,22 @@ import org.apache.lucene.store.Directory
 import org.apache.lucene.store.FSDirectory
 import org.apache.lucene.codecs.*
 
-class IndexClusterData {
+class Index20NG {
 	// Create Lucene index in this directory
 	def indexPath = 
 	  //"indexes/Ohs3Bact02Dig06Resp08"	
-//	"indexes/20NG6GraphicsHockeyCryptSpaceChristianGuns"	
-	"indexes/20NG3SpaceHockeyChristian"
-
+	"indexes/20NG6GraphicsHockeyCryptSpaceChristianGunsL5"	
+//	"indexes/20NG3SpaceHockeyChristianl5"
+	//"indexes/20NG5WindowsMotorcycleSpaceMedMideast"
+//	"indexes/20NG5macForsaleCryptMideast"
+	
 	// Index files in this directory	
 	def docsPath =
-	// /C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns/	
-	/C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian/
+	 /C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns/	
+//	 /C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian/
+//	/C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast/
+//	/C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast/
+	///C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns/
 
 	//'/home/test/datasets/20NG3SpaceHockeyChristian'
 	//'/home/test/dataset/20NG4HockeySpaceChristianGuns/'
@@ -45,7 +50,7 @@ class IndexClusterData {
 	def catsFreq=[:]
 
 	static main(args) {
-		def i = new IndexClusterData()
+		def i = new Index20NG()
 		i.buildIndex()
 	}
 
@@ -74,6 +79,7 @@ class IndexClusterData {
 			catNumber++;
 		}
 
+		println "catsFreq $catsFreq"
 		Date end = new Date();
 		println (end.getTime() - start.getTime() + " total milliseconds");
 		println "Total docs: " + writer.maxDoc()
@@ -90,11 +96,12 @@ class IndexClusterData {
 		Field pathField = new StringField(IndexInfo.FIELD_PATH, f.getPath(), Field.Store.YES);
 		doc.add(pathField);
 
-		def catName = f.getCanonicalPath().drop(54).take(30).replaceAll(/[^a-z.]/, "")     //'[0-9]|\ ',"")	
+		//def catName = f.getCanonicalPath().drop(53).take(30).replaceAll(/[^a-z.]/, "")     //'[0-9]|\ ',"")	
+		def catName = f.getCanonicalPath().drop(70).take(30).replaceAll(/[^a-z.]/, "")
 
 
 		def n = catsFreq.get((catName)) ?: 0
-		if (n< 500 || true){
+		if (n < 500){
 			catsFreq.put((catName), n + 1)	
 
 			Field catNameField = new StringField(IndexInfo.FIELD_CATEGORY_NAME, catName, Field.Store.YES);

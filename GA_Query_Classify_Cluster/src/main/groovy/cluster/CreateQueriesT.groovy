@@ -36,7 +36,9 @@ trait CreateQueriesT {
 			//	{
 
 			//++ seems to cause and odd error for groovy properties? !
-			if (!genes.add(gene)) duplicateCount = duplicateCount + 1;
+			if (gene>=0){
+				if (!genes.add(gene)) duplicateCount = duplicateCount + 1;
+			}
 
 			int clusterNumber =  index % cNumber
 
@@ -49,12 +51,12 @@ trait CreateQueriesT {
 				bqbList[clusterNumber].add(tq,BooleanClause.Occur.SHOULD)
 
 				//check that the subquery returns something - not needed for OR?
-			//	TotalHitCountCollector collector = new TotalHitCountCollector();
-			//	searcher.search(tq, collector);
-			//	if (collector.getTotalHits() < hitsMin)
-			//	{
+				//	TotalHitCountCollector collector = new TotalHitCountCollector();
+				//	searcher.search(tq, collector);
+				//	if (collector.getTotalHits() < hitsMin)
+				//	{
 				//	noHitsCount = noHitsCount + 1;
-			//	}
+				//	}
 				//	}
 			}
 		}
@@ -90,7 +92,7 @@ trait CreateQueriesT {
 				} else
 				{
 					if (!genes.add(gene)) duplicateCount = duplicateCount + 1;
-					
+
 					bqbList[clusterNumber].add(tq,BooleanClause.Occur.SHOULD)
 				}
 

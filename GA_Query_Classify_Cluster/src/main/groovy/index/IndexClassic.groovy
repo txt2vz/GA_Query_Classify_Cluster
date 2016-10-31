@@ -24,26 +24,26 @@ import org.apache.lucene.store.FSDirectory
 
 /**
  * From http://www.icmc.usp.br/CMS/Arquivos/arquivos_enviados/BIBLIOTECA_113_RT_395.pdf  
-*Classic4 collection [Research, 2010] are composed by 4 distinct collections: 
-*CACM (titles and abstracts from the journal Communications of the ACM), 
-*ISI (information retrieval papers), CRANFIELD (aeronautical system papers), and 
-*MEDLINE (medical journals). 
+ *Classic4 collection [Research, 2010] are composed by 4 distinct collections: 
+ *CACM (titles and abstracts from the journal Communications of the ACM), 
+ *ISI (information retrieval papers), CRANFIELD (aeronautical system papers), and 
+ *MEDLINE (medical journals). 
  */
 
 
 class IndexClassic {
 	// Create Lucene index in this directory
-	def indexPath = 	"indexes/classic4"
+	def indexPath = 	"indexes/classic3L5"
 
 	// Index files in this directory
 	def docsPath =
-		/C:\Users\Laurie\Dataset\classic/
+	/C:\Users\Laurie\Dataset\classic/
 
 	Path path = Paths.get(indexPath)
 	Directory directory = FSDirectory.open(path)
 	Analyzer analyzer = //new EnglishAnalyzer();  //with stemming
 	new StandardAnalyzer();
-	def catFreq=[:]	
+	def catFreq=[:]
 
 	static main(args) {
 		def i = new IndexClassic()
@@ -65,9 +65,9 @@ class IndexClassic {
 		new File(docsPath).eachDir {
 			//	it.eachDir{
 
-			//	if ( !it.name.contains("cacm")) // for classic 3 exclude cacm
+			
 			it.eachFileRecurse(FileType.FILES) { file ->
-
+				if ( !file.name.contains("cacm")) // for classic 3 exclude cacm
 				indexDocs(writer,file, catNumber)
 			}
 			//	}
@@ -104,11 +104,13 @@ class IndexClassic {
 		def catName = f.getName().substring(0,4)
 
 		def n = catFreq.get((catName)) ?: 0
-		catFreq.put((catName), n + 1)
+		//if (n<500){
+			catFreq.put((catName), n + 1)
 
-		Field catNameField = new StringField(IndexInfo.FIELD_CATEGORY_NAME, catName, Field.Store.YES);
-		doc.add(catNameField)
-		doc.add(new TextField(IndexInfo.FIELD_CONTENTS, f.text,  Field.Store.YES)) ;
-		writer.addDocument(doc);
+			Field catNameField = new StringField(IndexInfo.FIELD_CATEGORY_NAME, catName, Field.Store.YES);
+			doc.add(catNameField)
+			doc.add(new TextField(IndexInfo.FIELD_CONTENTS, f.text,  Field.Store.YES)) ;
+			writer.addDocument(doc);
+		//}
 	}
 }

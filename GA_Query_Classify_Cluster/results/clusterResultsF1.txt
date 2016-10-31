@@ -517,3 +517,874 @@ PosHits: 3801 NegHits: 234 PosScore: 12678.728401601315 NegScore: 653.1596603989
 TotalHits: 3893 Total Docs: 7095
 ************************************************ 
  
+  ***** Job: 0 Gen: 439 PopSize: 1024 Noclusters:4 pathToIndex: indexes/classic4_500 **************************************************************** 
+ ClusterQuery 0 searching for:  dna algorithm  Found 194 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\med.000481 cat number med. catName: med.
+1 path C:\Users\Laurie\Dataset\classic\classic\med.000144 cat number med. catName: med.
+2 path C:\Users\Laurie\Dataset\classic\classic\med.000143 cat number med. catName: med.
+3 path C:\Users\Laurie\Dataset\classic\classic\med.000199 cat number med. catName: med.
+4 path C:\Users\Laurie\Dataset\classic\classic\med.000477 cat number med. catName: med.
+categoryTotal is 500 for catQ categoryName:cacm 
+f1: 0.4668587896266 recall: 0.324 precision: 0.8350515464
+Purity: 0.8350515504 Job: 0 
+ClusterQuery 1 searching for:  patients blood  Found 202 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\med.000258 cat number med. catName: med.
+1 path C:\Users\Laurie\Dataset\classic\classic\med.000092 cat number med. catName: med.
+2 path C:\Users\Laurie\Dataset\classic\classic\med.000386 cat number med. catName: med.
+3 path C:\Users\Laurie\Dataset\classic\classic\med.000389 cat number med. catName: med.
+4 path C:\Users\Laurie\Dataset\classic\classic\med.000246 cat number med. catName: med.
+categoryTotal is 500 for catQ categoryName:med. 
+f1: 0.5754985755 recall: 0.404 precision: 1
+Purity: 0.9999999900 Job: 0 
+ClusterQuery 2 searching for:  supersonic boundary  Found 289 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cran.000406 cat number cran catName: cran
+1 path C:\Users\Laurie\Dataset\classic\classic\cran.000340 cat number cran catName: cran
+2 path C:\Users\Laurie\Dataset\classic\classic\cran.000345 cat number cran catName: cran
+3 path C:\Users\Laurie\Dataset\classic\classic\cran.000124 cat number cran catName: cran
+4 path C:\Users\Laurie\Dataset\classic\classic\cran.000242 cat number cran catName: cran
+categoryTotal is 500 for catQ categoryName:cran 
+f1: 0.7275031685745 recall: 0.574 precision: 0.9930795848
+Purity: 0.9930795812 Job: 0 
+ClusterQuery 3 searching for:  computer library  Found 313 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cisi.000325 cat number cisi catName: cisi
+1 path C:\Users\Laurie\Dataset\classic\classic\cisi.000056 cat number cisi catName: cisi
+2 path C:\Users\Laurie\Dataset\classic\classic\cisi.000141 cat number cisi catName: cisi
+3 path C:\Users\Laurie\Dataset\classic\classic\cisi.000244 cat number cisi catName: cisi
+4 path C:\Users\Laurie\Dataset\classic\classic\cisi.000064 cat number cisi catName: cisi
+categoryTotal is 500 for catQ categoryName:cisi 
+f1: 0.5731857318612 recall: 0.466 precision: 0.7444089457
+Purity: 0.7444089506 Job: 0 
+f1list: [0.4668587896266, 0.5754985755, 0.7275031685745, 0.5731857318612] averagef1: :0.585761566390575
+PosHits: 980 NegHits: 18 PosScore: 3564.2202076911926 NegScore: 55.94190871715546 Fitness: 1932.6436188426615 
+TotalHits: 989 Total Docs: 2000
+************************************************ 
+ 
+  ***** Job: 0 Gen: 439 PopSize: 1024 Noclusters:4 pathToIndex: indexes/classic4_500 **************************************************************** 
+ ClusterQuery 0 searching for:  library computer  Found 313 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cisi.000325 cat number cisi catName: cisi
+1 path C:\Users\Laurie\Dataset\classic\classic\cisi.000056 cat number cisi catName: cisi
+2 path C:\Users\Laurie\Dataset\classic\classic\cisi.000141 cat number cisi catName: cisi
+3 path C:\Users\Laurie\Dataset\classic\classic\cisi.000244 cat number cisi catName: cisi
+4 path C:\Users\Laurie\Dataset\classic\classic\cisi.000064 cat number cisi catName: cisi
+categoryTotal is 500 for catQ categoryName:cisi 
+f1: 0.5731857318612 recall: 0.466 precision: 0.7444089457
+Purity: 0.7444089506 Job: 0 
+ClusterQuery 1 searching for:  algorithm  Found 166 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cacm.000199 cat number cacm catName: cacm
+1 path C:\Users\Laurie\Dataset\classic\classic\cacm.000284 cat number cacm catName: cacm
+2 path C:\Users\Laurie\Dataset\classic\classic\cacm.000029 cat number cacm catName: cacm
+3 path C:\Users\Laurie\Dataset\classic\classic\cacm.000178 cat number cacm catName: cacm
+4 path C:\Users\Laurie\Dataset\classic\classic\cacm.000125 cat number cacm catName: cacm
+categoryTotal is 500 for catQ categoryName:cacm 
+f1: 0.4864864864917 recall: 0.324 precision: 0.9759036145
+Purity: 0.9759036168 Job: 0 
+ClusterQuery 2 searching for:  flow boundary  Found 425 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cran.000004 cat number cran catName: cran
+1 path C:\Users\Laurie\Dataset\classic\classic\cran.000003 cat number cran catName: cran
+2 path C:\Users\Laurie\Dataset\classic\classic\cran.000335 cat number cran catName: cran
+3 path C:\Users\Laurie\Dataset\classic\classic\cran.000306 cat number cran catName: cran
+4 path C:\Users\Laurie\Dataset\classic\classic\cran.000326 cat number cran catName: cran
+categoryTotal is 500 for catQ categoryName:cran 
+f1: 0.8151351351227 recall: 0.754 precision: 0.8870588235
+Purity: 0.8870588324 Job: 0 
+ClusterQuery 3 searching for:  patients cells  Found 234 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\med.000375 cat number med. catName: med.
+1 path C:\Users\Laurie\Dataset\classic\classic\med.000026 cat number med. catName: med.
+2 path C:\Users\Laurie\Dataset\classic\classic\med.000179 cat number med. catName: med.
+3 path C:\Users\Laurie\Dataset\classic\classic\med.000108 cat number med. catName: med.
+4 path C:\Users\Laurie\Dataset\classic\classic\med.000431 cat number med. catName: med.
+categoryTotal is 500 for catQ categoryName:med. 
+f1: 0.6376021798 recall: 0.468 precision: 1
+Purity: 1.0000000062 Job: 0 
+f1list: [0.5731857318612, 0.4864864864917, 0.8151351351227, 0.6376021798] averagef1: :0.6281023833189
+PosHits: 1096 NegHits: 42 PosScore: 3786.2864720225334 NegScore: 119.07782506942749 Fitness: 2271.53602932331 
+TotalHits: 1117 Total Docs: 2000
+************************************************ 
+ 
+  ***** Job: 0 Gen: 639 PopSize: 1024 Noclusters:4 pathToIndex: indexes/classic4_500 **************************************************************** 
+ ClusterQuery 0 searching for:  retrieval algorithm  Found 265 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cisi.000450 cat number cisi catName: cisi
+1 path C:\Users\Laurie\Dataset\classic\classic\cisi.000073 cat number cisi catName: cisi
+2 path C:\Users\Laurie\Dataset\classic\classic\cisi.000459 cat number cisi catName: cisi
+3 path C:\Users\Laurie\Dataset\classic\classic\cisi.000061 cat number cisi catName: cisi
+4 path C:\Users\Laurie\Dataset\classic\classic\cisi.000071 cat number cisi catName: cisi
+categoryTotal is 500 for catQ categoryName:cacm 
+f1: 0.4339869280951 recall: 0.332 precision: 0.6264150943
+Purity: 0.6264150934 Job: 0 
+ClusterQuery 1 searching for:  supersonic boundary  Found 289 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cran.000406 cat number cran catName: cran
+1 path C:\Users\Laurie\Dataset\classic\classic\cran.000340 cat number cran catName: cran
+2 path C:\Users\Laurie\Dataset\classic\classic\cran.000345 cat number cran catName: cran
+3 path C:\Users\Laurie\Dataset\classic\classic\cran.000124 cat number cran catName: cran
+4 path C:\Users\Laurie\Dataset\classic\classic\cran.000242 cat number cran catName: cran
+categoryTotal is 500 for catQ categoryName:cran 
+f1: 0.7275031685745 recall: 0.574 precision: 0.9930795848
+Purity: 0.9930795812 Job: 0 
+ClusterQuery 2 searching for:  libraries cells  Found 213 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\med.000431 cat number med. catName: med.
+1 path C:\Users\Laurie\Dataset\classic\classic\cisi.000340 cat number cisi catName: cisi
+2 path C:\Users\Laurie\Dataset\classic\classic\med.000397 cat number med. catName: med.
+3 path C:\Users\Laurie\Dataset\classic\classic\cisi.000187 cat number cisi catName: cisi
+4 path C:\Users\Laurie\Dataset\classic\classic\med.000284 cat number med. catName: med.
+categoryTotal is 500 for catQ categoryName:cisi 
+f1: 0.3057503506308 recall: 0.218 precision: 0.5117370892
+Purity: 0.5117370913 Job: 0 
+ClusterQuery 3 searching for:  ventricular patients  Found 157 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\med.000383 cat number med. catName: med.
+1 path C:\Users\Laurie\Dataset\classic\classic\med.000313 cat number med. catName: med.
+2 path C:\Users\Laurie\Dataset\classic\classic\med.000115 cat number med. catName: med.
+3 path C:\Users\Laurie\Dataset\classic\classic\med.000321 cat number med. catName: med.
+4 path C:\Users\Laurie\Dataset\classic\classic\med.000092 cat number med. catName: med.
+categoryTotal is 500 for catQ categoryName:med. 
+f1: 0.4779299848 recall: 0.314 precision: 1
+Purity: 1.0000000076 Job: 0 
+f1list: [0.4339869280951, 0.7275031685745, 0.3057503506308, 0.4779299848] averagef1: :0.4862926080251
+PosHits: 896 NegHits: 28 PosScore: 3339.566940665245 NegScore: 80.65552830696106 Fitness: 1664.8046926230193 
+TotalHits: 910 Total Docs: 2000
+************************************************ 
+ 
+  ***** Job: 0 Gen: 639 PopSize: 1024 Noclusters:4 pathToIndex: indexes/classic4_500 **************************************************************** 
+ ClusterQuery 0 searching for:  algorithm  Found 166 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cacm.000199 cat number cacm catName: cacm
+1 path C:\Users\Laurie\Dataset\classic\classic\cacm.000284 cat number cacm catName: cacm
+2 path C:\Users\Laurie\Dataset\classic\classic\cacm.000029 cat number cacm catName: cacm
+3 path C:\Users\Laurie\Dataset\classic\classic\cacm.000178 cat number cacm catName: cacm
+4 path C:\Users\Laurie\Dataset\classic\classic\cacm.000125 cat number cacm catName: cacm
+categoryTotal is 500 for catQ categoryName:cacm 
+f1: 0.4864864864917 recall: 0.324 precision: 0.9759036145
+Purity: 0.9759036168 Job: 0 
+ClusterQuery 1 searching for:  layer flow boundary  Found 435 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cran.000004 cat number cran catName: cran
+1 path C:\Users\Laurie\Dataset\classic\classic\cran.000003 cat number cran catName: cran
+2 path C:\Users\Laurie\Dataset\classic\classic\cran.000335 cat number cran catName: cran
+3 path C:\Users\Laurie\Dataset\classic\classic\cran.000376 cat number cran catName: cran
+4 path C:\Users\Laurie\Dataset\classic\classic\cran.000326 cat number cran catName: cran
+categoryTotal is 500 for catQ categoryName:cran 
+f1: 0.8149732620470 recall: 0.762 precision: 0.8758620690
+Purity: 0.8758620786 Job: 0 
+ClusterQuery 2 searching for:  patients tissue cells  Found 263 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\med.000179 cat number med. catName: med.
+1 path C:\Users\Laurie\Dataset\classic\classic\med.000396 cat number med. catName: med.
+2 path C:\Users\Laurie\Dataset\classic\classic\med.000234 cat number med. catName: med.
+3 path C:\Users\Laurie\Dataset\classic\classic\med.000257 cat number med. catName: med.
+4 path C:\Users\Laurie\Dataset\classic\classic\med.000055 cat number med. catName: med.
+categoryTotal is 500 for catQ categoryName:med. 
+f1: 0.6893840105 recall: 0.526 precision: 1
+Purity: 1.0000000082 Job: 0 
+ClusterQuery 3 searching for:  library computer information  Found 484 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cisi.000325 cat number cisi catName: cisi
+1 path C:\Users\Laurie\Dataset\classic\classic\cisi.000064 cat number cisi catName: cisi
+2 path C:\Users\Laurie\Dataset\classic\classic\cisi.000244 cat number cisi catName: cisi
+3 path C:\Users\Laurie\Dataset\classic\classic\cisi.000452 cat number cisi catName: cisi
+4 path C:\Users\Laurie\Dataset\classic\classic\cisi.000056 cat number cisi catName: cisi
+categoryTotal is 500 for catQ categoryName:cisi 
+f1: 0.7276422764288 recall: 0.716 precision: 0.7396694215
+Purity: 0.7396694206 Job: 0 
+f1list: [0.4864864864917, 0.8149732620470, 0.6893840105, 0.7276422764288] averagef1: :0.679621508866875
+PosHits: 1211 NegHits: 137 PosScore: 4977.568253517151 NegScore: 379.0806910395622 Fitness: 3196.5327962044175 
+TotalHits: 1279 Total Docs: 2000
+************************************************ 
+ 
+  ***** Job: 0 Gen: 639 PopSize: 1024 Noclusters:4 pathToIndex: indexes/classic4_500 **************************************************************** 
+ ClusterQuery 0 searching for:  layer pressure boundary  Found 377 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cran.000003 cat number cran catName: cran
+1 path C:\Users\Laurie\Dataset\classic\classic\cran.000335 cat number cran catName: cran
+2 path C:\Users\Laurie\Dataset\classic\classic\cran.000055 cat number cran catName: cran
+3 path C:\Users\Laurie\Dataset\classic\classic\cran.000076 cat number cran catName: cran
+4 path C:\Users\Laurie\Dataset\classic\classic\cran.000358 cat number cran catName: cran
+categoryTotal is 500 for catQ categoryName:cran 
+f1: 0.7502850627164 recall: 0.658 precision: 0.8726790451
+Purity: 0.8726790471 Job: 0 
+ClusterQuery 1 searching for:  algorithm  Found 166 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cacm.000199 cat number cacm catName: cacm
+1 path C:\Users\Laurie\Dataset\classic\classic\cacm.000284 cat number cacm catName: cacm
+2 path C:\Users\Laurie\Dataset\classic\classic\cacm.000029 cat number cacm catName: cacm
+3 path C:\Users\Laurie\Dataset\classic\classic\cacm.000178 cat number cacm catName: cacm
+4 path C:\Users\Laurie\Dataset\classic\classic\cacm.000125 cat number cacm catName: cacm
+categoryTotal is 500 for catQ categoryName:cacm 
+f1: 0.4864864864917 recall: 0.324 precision: 0.9759036145
+Purity: 0.9759036168 Job: 0 
+ClusterQuery 2 searching for:  library information computer  Found 484 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cisi.000325 cat number cisi catName: cisi
+1 path C:\Users\Laurie\Dataset\classic\classic\cisi.000064 cat number cisi catName: cisi
+2 path C:\Users\Laurie\Dataset\classic\classic\cisi.000244 cat number cisi catName: cisi
+3 path C:\Users\Laurie\Dataset\classic\classic\cisi.000452 cat number cisi catName: cisi
+4 path C:\Users\Laurie\Dataset\classic\classic\cisi.000056 cat number cisi catName: cisi
+categoryTotal is 500 for catQ categoryName:cisi 
+f1: 0.7276422764288 recall: 0.716 precision: 0.7396694215
+Purity: 0.7396694206 Job: 0 
+ClusterQuery 3 searching for:  cells blood patients  Found 279 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\med.000108 cat number med. catName: med.
+1 path C:\Users\Laurie\Dataset\classic\classic\med.000437 cat number med. catName: med.
+2 path C:\Users\Laurie\Dataset\classic\classic\med.000431 cat number med. catName: med.
+3 path C:\Users\Laurie\Dataset\classic\classic\med.000436 cat number med. catName: med.
+4 path C:\Users\Laurie\Dataset\classic\classic\med.000052 cat number med. catName: med.
+categoryTotal is 500 for catQ categoryName:med. 
+f1: 0.7163029525 recall: 0.558 precision: 1
+Purity: 1.0000000026 Job: 0 
+f1list: [0.7502850627164, 0.4864864864917, 0.7276422764288, 0.7163029525] averagef1: :0.670179194534225
+PosHits: 1188 NegHits: 118 PosScore: 4869.085396885872 NegScore: 352.36919325590134 Fitness: 3063.114194861472 
+TotalHits: 1246 Total Docs: 2000
+************************************************ 
+ 
+  ***** Job: 0 Gen: 639 PopSize: 1024 Noclusters:4 pathToIndex: indexes/classic4_500 **************************************************************** 
+ ClusterQuery 0 searching for:  patients blood normal cells  Found 355 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\med.000108 cat number med. catName: med.
+1 path C:\Users\Laurie\Dataset\classic\classic\med.000436 cat number med. catName: med.
+2 path C:\Users\Laurie\Dataset\classic\classic\med.000425 cat number med. catName: med.
+3 path C:\Users\Laurie\Dataset\classic\classic\med.000123 cat number med. catName: med.
+4 path C:\Users\Laurie\Dataset\classic\classic\med.000386 cat number med. catName: med.
+categoryTotal is 500 for catQ categoryName:med. 
+f1: 0.7204678362563 recall: 0.616 precision: 0.8676056338
+Purity: 0.8676056312 Job: 0 
+ClusterQuery 1 searching for:  algorithm algorithm bodies  Found 256 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cacm.000199 cat number cacm catName: cacm
+1 path C:\Users\Laurie\Dataset\classic\classic\cacm.000284 cat number cacm catName: cacm
+2 path C:\Users\Laurie\Dataset\classic\classic\cacm.000029 cat number cacm catName: cacm
+3 path C:\Users\Laurie\Dataset\classic\classic\cacm.000178 cat number cacm catName: cacm
+4 path C:\Users\Laurie\Dataset\classic\classic\cacm.000125 cat number cacm catName: cacm
+categoryTotal is 500 for catQ categoryName:cacm 
+f1: 0.4285714286 recall: 0.324 precision: 0.6328125
+Purity: 0.63281250 Job: 0 
+ClusterQuery 2 searching for:  mach dimensional velocity boundary  Found 377 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cran.000126 cat number cran catName: cran
+1 path C:\Users\Laurie\Dataset\classic\classic\cran.000148 cat number cran catName: cran
+2 path C:\Users\Laurie\Dataset\classic\classic\cran.000406 cat number cran catName: cran
+3 path C:\Users\Laurie\Dataset\classic\classic\cran.000264 cat number cran catName: cran
+4 path C:\Users\Laurie\Dataset\classic\classic\cran.000004 cat number cran catName: cran
+categoryTotal is 500 for catQ categoryName:cran 
+f1: 0.832383124297 recall: 0.73 precision: 0.9681697613
+Purity: 0.9681697635 Job: 0 
+ClusterQuery 3 searching for:  information library computer libraries  Found 498 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cisi.000141 cat number cisi catName: cisi
+1 path C:\Users\Laurie\Dataset\classic\classic\cisi.000002 cat number cisi catName: cisi
+2 path C:\Users\Laurie\Dataset\classic\classic\cisi.000090 cat number cisi catName: cisi
+3 path C:\Users\Laurie\Dataset\classic\classic\cisi.000244 cat number cisi catName: cisi
+4 path C:\Users\Laurie\Dataset\classic\classic\cisi.000178 cat number cisi catName: cisi
+categoryTotal is 500 for catQ categoryName:cisi 
+f1: 0.7454909819603 recall: 0.744 precision: 0.7469879518
+Purity: 0.7469879412 Job: 0 
+f1list: [0.7204678362563, 0.4285714286, 0.832383124297, 0.7454909819603] averagef1: :0.6817283427784
+PosHits: 1197 NegHits: 289 PosScore: 5957.346734046936 NegScore: 948.7307029366493 Fitness: 1805.125600383058 
+TotalHits: 1335 Total Docs: 2000
+************************************************ 
+ 
+  ***** Job: 0 Gen: 639 PopSize: 1024 Noclusters:4 pathToIndex: indexes/classic4_500 **************************************************************** 
+ ClusterQuery 0 searching for:  library libraries computer retrieval  Found 397 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cisi.000141 cat number cisi catName: cisi
+1 path C:\Users\Laurie\Dataset\classic\classic\cisi.000267 cat number cisi catName: cisi
+2 path C:\Users\Laurie\Dataset\classic\classic\cisi.000244 cat number cisi catName: cisi
+3 path C:\Users\Laurie\Dataset\classic\classic\cisi.000376 cat number cisi catName: cisi
+4 path C:\Users\Laurie\Dataset\classic\classic\cisi.000408 cat number cisi catName: cisi
+categoryTotal is 500 for catQ categoryName:cisi 
+f1: 0.6978818283022 recall: 0.626 precision: 0.7884130982
+Purity: 0.7884131021 Job: 0 
+ClusterQuery 1 searching for:  ventricular cases significant patients  Found 327 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\med.000115 cat number med. catName: med.
+1 path C:\Users\Laurie\Dataset\classic\classic\med.000242 cat number med. catName: med.
+2 path C:\Users\Laurie\Dataset\classic\classic\med.000321 cat number med. catName: med.
+3 path C:\Users\Laurie\Dataset\classic\classic\med.000113 cat number med. catName: med.
+4 path C:\Users\Laurie\Dataset\classic\classic\med.000323 cat number med. catName: med.
+categoryTotal is 500 for catQ categoryName:med. 
+f1: 0.5102781136520 recall: 0.422 precision: 0.6452599388
+Purity: 0.6452599440 Job: 0 
+ClusterQuery 2 searching for:  algorithm supersonic heat mach  Found 452 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cran.000430 cat number cran catName: cran
+1 path C:\Users\Laurie\Dataset\classic\classic\cran.000074 cat number cran catName: cran
+2 path C:\Users\Laurie\Dataset\classic\classic\cran.000182 cat number cran catName: cran
+3 path C:\Users\Laurie\Dataset\classic\classic\cran.000369 cat number cran catName: cran
+4 path C:\Users\Laurie\Dataset\classic\classic\cran.000406 cat number cran catName: cran
+categoryTotal is 500 for catQ categoryName:cran 
+f1: 0.5903361344406 recall: 0.562 precision: 0.6216814159
+Purity: 0.6216814214 Job: 0 
+ClusterQuery 3 searching for:  cells cell  Found 130 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\med.000207 cat number med. catName: med.
+1 path C:\Users\Laurie\Dataset\classic\classic\med.000254 cat number med. catName: med.
+2 path C:\Users\Laurie\Dataset\classic\classic\med.000438 cat number med. catName: med.
+3 path C:\Users\Laurie\Dataset\classic\classic\med.000429 cat number med. catName: med.
+4 path C:\Users\Laurie\Dataset\classic\classic\med.000213 cat number med. catName: med.
+categoryTotal is 500 for catQ categoryName:med. 
+f1: 0.4063492063479 recall: 0.256 precision: 0.9846153846
+Purity: 0.9846153856 Job: 0 
+f1list: [0.6978818283022, 0.5102781136520, 0.5903361344406, 0.4063492063479] averagef1: :0.551211320685675
+PosHits: 1130 NegHits: 176 PosScore: 4983.279428601265 NegScore: 560.3439728021622 Fitness: 2937.1676925816537 
+TotalHits: 1218 Total Docs: 2000
+************************************************ 
+ 
+  ***** Job: 0 Gen: 639 PopSize: 1024 Noclusters:4 pathToIndex: indexes/classic4_500 **************************************************************** 
+ ClusterQuery 0 searching for:  heat solution turbulent algorithm  Found 448 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cran.000398 cat number cran catName: cran
+1 path C:\Users\Laurie\Dataset\classic\classic\cran.000348 cat number cran catName: cran
+2 path C:\Users\Laurie\Dataset\classic\classic\cran.000343 cat number cran catName: cran
+3 path C:\Users\Laurie\Dataset\classic\classic\cran.000131 cat number cran catName: cran
+4 path C:\Users\Laurie\Dataset\classic\classic\cran.000339 cat number cran catName: cran
+categoryTotal is 500 for catQ categoryName:cran 
+f1: 0.5147679324703 recall: 0.488 precision: 0.5446428571
+Purity: 0.5446428676 Job: 0 
+ClusterQuery 1 searching for:  wing dna cell  Found 140 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\med.000479 cat number med. catName: med.
+1 path C:\Users\Laurie\Dataset\classic\classic\med.000478 cat number med. catName: med.
+2 path C:\Users\Laurie\Dataset\classic\classic\med.000438 cat number med. catName: med.
+3 path C:\Users\Laurie\Dataset\classic\classic\med.000474 cat number med. catName: med.
+4 path C:\Users\Laurie\Dataset\classic\classic\med.000166 cat number med. catName: med.
+categoryTotal is 500 for catQ categoryName:med. 
+f1: 0.2625 recall: 0.168 precision: 0.6
+Purity: 0.5999999964 Job: 0 
+ClusterQuery 2 searching for:  systems libraries library research  Found 410 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cisi.000004 cat number cisi catName: cisi
+1 path C:\Users\Laurie\Dataset\classic\classic\cisi.000340 cat number cisi catName: cisi
+2 path C:\Users\Laurie\Dataset\classic\classic\cisi.000406 cat number cisi catName: cisi
+3 path C:\Users\Laurie\Dataset\classic\classic\cisi.000304 cat number cisi catName: cisi
+4 path C:\Users\Laurie\Dataset\classic\classic\cisi.000115 cat number cisi catName: cisi
+categoryTotal is 500 for catQ categoryName:cisi 
+f1: 0.7450549450579 recall: 0.678 precision: 0.8268292683
+Purity: 0.8268292716 Job: 0 
+ClusterQuery 3 searching for:  disease patients blood ventricular  Found 242 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\med.000092 cat number med. catName: med.
+1 path C:\Users\Laurie\Dataset\classic\classic\med.000118 cat number med. catName: med.
+2 path C:\Users\Laurie\Dataset\classic\classic\med.000258 cat number med. catName: med.
+3 path C:\Users\Laurie\Dataset\classic\classic\med.000389 cat number med. catName: med.
+4 path C:\Users\Laurie\Dataset\classic\classic\med.000246 cat number med. catName: med.
+categoryTotal is 500 for catQ categoryName:med. 
+f1: 0.6495956873326 recall: 0.482 precision: 0.9958677686
+Purity: 0.9958677674 Job: 0 
+f1list: [0.5147679324703, 0.2625, 0.7450549450579, 0.6495956873326] averagef1: :0.5429796412152
+PosHits: 1106 NegHits: 134 PosScore: 4973.465827703476 NegScore: 403.62015187740326 Fitness: 2912.3295660340787 
+TotalHits: 1172 Total Docs: 2000
+************************************************ 
+ 
+  ***** Job: 0 Gen: 639 PopSize: 1024 Noclusters:4 pathToIndex: indexes/classic4_500 **************************************************************** 
+ ClusterQuery 0 searching for:  libraries information computer library  Found 498 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cisi.000141 cat number cisi catName: cisi
+1 path C:\Users\Laurie\Dataset\classic\classic\cisi.000002 cat number cisi catName: cisi
+2 path C:\Users\Laurie\Dataset\classic\classic\cisi.000090 cat number cisi catName: cisi
+3 path C:\Users\Laurie\Dataset\classic\classic\cisi.000244 cat number cisi catName: cisi
+4 path C:\Users\Laurie\Dataset\classic\classic\cisi.000178 cat number cisi catName: cisi
+categoryTotal is 500 for catQ categoryName:cisi 
+f1: 0.7454909819603 recall: 0.744 precision: 0.7469879518
+Purity: 0.7469879412 Job: 0 
+ClusterQuery 1 searching for:  patients normal blood cells  Found 355 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\med.000108 cat number med. catName: med.
+1 path C:\Users\Laurie\Dataset\classic\classic\med.000436 cat number med. catName: med.
+2 path C:\Users\Laurie\Dataset\classic\classic\med.000425 cat number med. catName: med.
+3 path C:\Users\Laurie\Dataset\classic\classic\med.000123 cat number med. catName: med.
+4 path C:\Users\Laurie\Dataset\classic\classic\med.000386 cat number med. catName: med.
+categoryTotal is 500 for catQ categoryName:med. 
+f1: 0.7204678362563 recall: 0.616 precision: 0.8676056338
+Purity: 0.8676056312 Job: 0 
+ClusterQuery 2 searching for:  algorithm algorithm  Found 166 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cacm.000199 cat number cacm catName: cacm
+1 path C:\Users\Laurie\Dataset\classic\classic\cacm.000284 cat number cacm catName: cacm
+2 path C:\Users\Laurie\Dataset\classic\classic\cacm.000029 cat number cacm catName: cacm
+3 path C:\Users\Laurie\Dataset\classic\classic\cacm.000178 cat number cacm catName: cacm
+4 path C:\Users\Laurie\Dataset\classic\classic\cacm.000125 cat number cacm catName: cacm
+categoryTotal is 500 for catQ categoryName:cacm 
+f1: 0.4864864864917 recall: 0.324 precision: 0.9759036145
+Purity: 0.9759036168 Job: 0 
+ClusterQuery 3 searching for:  layer turbulent supersonic boundary  Found 320 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cran.000346 cat number cran catName: cran
+1 path C:\Users\Laurie\Dataset\classic\classic\cran.000271 cat number cran catName: cran
+2 path C:\Users\Laurie\Dataset\classic\classic\cran.000358 cat number cran catName: cran
+3 path C:\Users\Laurie\Dataset\classic\classic\cran.000406 cat number cran catName: cran
+4 path C:\Users\Laurie\Dataset\classic\classic\cran.000242 cat number cran catName: cran
+categoryTotal is 500 for catQ categoryName:cran 
+f1: 0.7585365854 recall: 0.622 precision: 0.971875
+Purity: 0.971875 Job: 0 
+f1list: [0.7454909819603, 0.7204678362563, 0.4864864864917, 0.7585365854] averagef1: :0.677745472527075
+PosHits: 1208 NegHits: 131 PosScore: 6298.907137393951 NegScore: 460.52097111940384 Fitness: 1983.8068008753062 
+TotalHits: 1272 Total Docs: 2000
+************************************************ 
+ 
+  ***** Job: 0 Gen: 639 PopSize: 640 Noclusters:4 pathToIndex: indexes/classic4_500 **************************************************************** 
+ ClusterQuery 0 searching for:  algorithm  Found 166 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cacm.000199 cat number cacm catName: cacm
+1 path C:\Users\Laurie\Dataset\classic\classic\cacm.000284 cat number cacm catName: cacm
+2 path C:\Users\Laurie\Dataset\classic\classic\cacm.000029 cat number cacm catName: cacm
+3 path C:\Users\Laurie\Dataset\classic\classic\cacm.000178 cat number cacm catName: cacm
+4 path C:\Users\Laurie\Dataset\classic\classic\cacm.000125 cat number cacm catName: cacm
+categoryTotal is 500 for catQ categoryName:cacm 
+f1: 0.4864864864917 recall: 0.324 precision: 0.9759036145
+Purity: 0.9759036168 Job: 0 
+ClusterQuery 1 searching for:  science library retrieval computer  Found 418 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cisi.000462 cat number cisi catName: cisi
+1 path C:\Users\Laurie\Dataset\classic\classic\cisi.000334 cat number cisi catName: cisi
+2 path C:\Users\Laurie\Dataset\classic\classic\cisi.000243 cat number cisi catName: cisi
+3 path C:\Users\Laurie\Dataset\classic\classic\cisi.000459 cat number cisi catName: cisi
+4 path C:\Users\Laurie\Dataset\classic\classic\cisi.000452 cat number cisi catName: cisi
+categoryTotal is 500 for catQ categoryName:cisi 
+f1: 0.7276688453155 recall: 0.668 precision: 0.7990430622
+Purity: 0.7990430630 Job: 0 
+ClusterQuery 2 searching for:  ventricular blood dna patients  Found 244 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\med.000092 cat number med. catName: med.
+1 path C:\Users\Laurie\Dataset\classic\classic\med.000389 cat number med. catName: med.
+2 path C:\Users\Laurie\Dataset\classic\classic\med.000118 cat number med. catName: med.
+3 path C:\Users\Laurie\Dataset\classic\classic\med.000321 cat number med. catName: med.
+4 path C:\Users\Laurie\Dataset\classic\classic\med.000323 cat number med. catName: med.
+categoryTotal is 500 for catQ categoryName:med. 
+f1: 0.6559139785 recall: 0.488 precision: 1
+Purity: 1.0000000108 Job: 0 
+ClusterQuery 3 searching for:  boundary shock equations layer  Found 346 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cran.000329 cat number cran catName: cran
+1 path C:\Users\Laurie\Dataset\classic\classic\cran.000358 cat number cran catName: cran
+2 path C:\Users\Laurie\Dataset\classic\classic\cran.000071 cat number cran catName: cran
+3 path C:\Users\Laurie\Dataset\classic\classic\cran.000335 cat number cran catName: cran
+4 path C:\Users\Laurie\Dataset\classic\classic\cran.000170 cat number cran catName: cran
+categoryTotal is 500 for catQ categoryName:cran 
+f1: 0.7470449172617 recall: 0.632 precision: 0.9132947977
+Purity: 0.9132947944 Job: 0 
+f1list: [0.4864864864917, 0.7276688453155, 0.6559139785, 0.7470449172617] averagef1: :0.654278556892225
+PosHits: 1126 NegHits: 48 PosScore: 5200.91496014595 NegScore: 166.56309580802917 Fitness: 3469.7523219943046 
+TotalHits: 1150 Total Docs: 2000
+************************************************ 
+ 
+  ***** Job: 0 Gen: 639 PopSize: 640 Noclusters:4 pathToIndex: indexes/classic4_500 **************************************************************** 
+ ClusterQuery 0 searching for:  flow boundary  Found 425 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cran.000004 cat number cran catName: cran
+1 path C:\Users\Laurie\Dataset\classic\classic\cran.000003 cat number cran catName: cran
+2 path C:\Users\Laurie\Dataset\classic\classic\cran.000335 cat number cran catName: cran
+3 path C:\Users\Laurie\Dataset\classic\classic\cran.000306 cat number cran catName: cran
+4 path C:\Users\Laurie\Dataset\classic\classic\cran.000326 cat number cran catName: cran
+categoryTotal is 500 for catQ categoryName:cran 
+f1: 0.8151351351227 recall: 0.754 precision: 0.8870588235
+Purity: 0.8870588324 Job: 0 
+ClusterQuery 1 searching for:  library computer  Found 313 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cisi.000325 cat number cisi catName: cisi
+1 path C:\Users\Laurie\Dataset\classic\classic\cisi.000056 cat number cisi catName: cisi
+2 path C:\Users\Laurie\Dataset\classic\classic\cisi.000141 cat number cisi catName: cisi
+3 path C:\Users\Laurie\Dataset\classic\classic\cisi.000244 cat number cisi catName: cisi
+4 path C:\Users\Laurie\Dataset\classic\classic\cisi.000064 cat number cisi catName: cisi
+categoryTotal is 500 for catQ categoryName:cisi 
+f1: 0.5731857318612 recall: 0.466 precision: 0.7444089457
+Purity: 0.7444089506 Job: 0 
+ClusterQuery 2 searching for:  cells  Found 104 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\med.000431 cat number med. catName: med.
+1 path C:\Users\Laurie\Dataset\classic\classic\med.000397 cat number med. catName: med.
+2 path C:\Users\Laurie\Dataset\classic\classic\med.000284 cat number med. catName: med.
+3 path C:\Users\Laurie\Dataset\classic\classic\med.000067 cat number med. catName: med.
+4 path C:\Users\Laurie\Dataset\classic\classic\med.000232 cat number med. catName: med.
+categoryTotal is 500 for catQ categoryName:med. 
+f1: 0.3443708609 recall: 0.208 precision: 1
+Purity: 0.9999999984 Job: 0 
+ClusterQuery 3 searching for:  algorithm  Found 166 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cacm.000199 cat number cacm catName: cacm
+1 path C:\Users\Laurie\Dataset\classic\classic\cacm.000284 cat number cacm catName: cacm
+2 path C:\Users\Laurie\Dataset\classic\classic\cacm.000029 cat number cacm catName: cacm
+3 path C:\Users\Laurie\Dataset\classic\classic\cacm.000178 cat number cacm catName: cacm
+4 path C:\Users\Laurie\Dataset\classic\classic\cacm.000125 cat number cacm catName: cacm
+categoryTotal is 500 for catQ categoryName:cacm 
+f1: 0.4864864864917 recall: 0.324 precision: 0.9759036145
+Purity: 0.9759036168 Job: 0 
+f1list: [0.8151351351227, 0.5731857318612, 0.3443708609, 0.4864864864917] averagef1: :0.5547945535939
+PosHits: 978 NegHits: 30 PosScore: 3399.3702798485756 NegScore: 83.24121510982513 Fitness: 2142.95808064279 
+TotalHits: 993 Total Docs: 2000
+************************************************ 
+ 
+  ***** Job: 0 Gen: 639 PopSize: 512 Noclusters:4 pathToIndex: indexes/classic4_500 **************************************************************** 
+ ClusterQuery 0 searching for:  patients associated cell cells blood  Found 366 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\med.000108 cat number med. catName: med.
+1 path C:\Users\Laurie\Dataset\classic\classic\med.000257 cat number med. catName: med.
+2 path C:\Users\Laurie\Dataset\classic\classic\med.000424 cat number med. catName: med.
+3 path C:\Users\Laurie\Dataset\classic\classic\med.000160 cat number med. catName: med.
+4 path C:\Users\Laurie\Dataset\classic\classic\med.000207 cat number med. catName: med.
+categoryTotal is 500 for catQ categoryName:med. 
+f1: 0.739030023098 recall: 0.64 precision: 0.8743169399
+Purity: 0.8743169280 Job: 0 
+ClusterQuery 1 searching for:  flat incompressible laminar heat speed  Found 305 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cran.000023 cat number cran catName: cran
+1 path C:\Users\Laurie\Dataset\classic\classic\cran.000382 cat number cran catName: cran
+2 path C:\Users\Laurie\Dataset\classic\classic\cran.000145 cat number cran catName: cran
+3 path C:\Users\Laurie\Dataset\classic\classic\cran.000375 cat number cran catName: cran
+4 path C:\Users\Laurie\Dataset\classic\classic\cran.000260 cat number cran catName: cran
+categoryTotal is 500 for catQ categoryName:cran 
+f1: 0.7180124223584 recall: 0.578 precision: 0.9475409836
+Purity: 0.9475409765 Job: 0 
+ClusterQuery 2 searching for:  book libraries techniques library report  Found 401 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cisi.000370 cat number cisi catName: cisi
+1 path C:\Users\Laurie\Dataset\classic\classic\cisi.000408 cat number cisi catName: cisi
+2 path C:\Users\Laurie\Dataset\classic\classic\cisi.000249 cat number cisi catName: cisi
+3 path C:\Users\Laurie\Dataset\classic\classic\cisi.000250 cat number cisi catName: cisi
+4 path C:\Users\Laurie\Dataset\classic\classic\cisi.000177 cat number cisi catName: cisi
+categoryTotal is 500 for catQ categoryName:cisi 
+f1: 0.66592674805 recall: 0.6 precision: 0.7481296758
+Purity: 0.7481296800 Job: 0 
+ClusterQuery 3 searching for:  algorithm scientific set algorithm  Found 305 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cacm.000256 cat number cacm catName: cacm
+1 path C:\Users\Laurie\Dataset\classic\classic\cacm.000301 cat number cacm catName: cacm
+2 path C:\Users\Laurie\Dataset\classic\classic\cacm.000134 cat number cacm catName: cacm
+3 path C:\Users\Laurie\Dataset\classic\classic\cacm.000245 cat number cacm catName: cacm
+4 path C:\Users\Laurie\Dataset\classic\classic\cacm.000310 cat number cacm catName: cacm
+categoryTotal is 500 for catQ categoryName:cacm 
+f1: 0.4521739130505 recall: 0.364 precision: 0.5967213115
+Purity: 0.5967213070 Job: 0 
+f1list: [0.739030023098, 0.7180124223584, 0.66592674805, 0.4521739130505] averagef1: :0.643785776639225
+PosHits: 1113 NegHits: 264 PosScore: 5979.311701178551 NegScore: 858.2384178638458 Fitness: 1900.593254469216 
+TotalHits: 1242 Total Docs: 2000
+************************************************ 
+ 
+  ***** Job: 0 Gen: 639 PopSize: 512 Noclusters:4 pathToIndex: indexes/classic4_500 **************************************************************** 
+ ClusterQuery 0 searching for:  theory flow boundary velocity patients  Found 653 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cran.000327 cat number cran catName: cran
+1 path C:\Users\Laurie\Dataset\classic\classic\cran.000305 cat number cran catName: cran
+2 path C:\Users\Laurie\Dataset\classic\classic\cran.000459 cat number cran catName: cran
+3 path C:\Users\Laurie\Dataset\classic\classic\cran.000097 cat number cran catName: cran
+4 path C:\Users\Laurie\Dataset\classic\classic\cran.000004 cat number cran catName: cran
+categoryTotal is 500 for catQ categoryName:cran 
+f1: 0.7493495229582 recall: 0.864 precision: 0.6615620214
+Purity: 0.6615620352 Job: 0 
+ClusterQuery 1 searching for:  algorithm algorithm algorithm algorithm algorithm  Found 166 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cacm.000199 cat number cacm catName: cacm
+1 path C:\Users\Laurie\Dataset\classic\classic\cacm.000284 cat number cacm catName: cacm
+2 path C:\Users\Laurie\Dataset\classic\classic\cacm.000029 cat number cacm catName: cacm
+3 path C:\Users\Laurie\Dataset\classic\classic\cacm.000178 cat number cacm catName: cacm
+4 path C:\Users\Laurie\Dataset\classic\classic\cacm.000125 cat number cacm catName: cacm
+categoryTotal is 500 for catQ categoryName:cacm 
+f1: 0.4864864864917 recall: 0.324 precision: 0.9759036145
+Purity: 0.9759036168 Job: 0 
+ClusterQuery 2 searching for:  library libraries research computer retrieval  Found 480 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cisi.000304 cat number cisi catName: cisi
+1 path C:\Users\Laurie\Dataset\classic\classic\cisi.000178 cat number cisi catName: cisi
+2 path C:\Users\Laurie\Dataset\classic\classic\cisi.000340 cat number cisi catName: cisi
+3 path C:\Users\Laurie\Dataset\classic\classic\cisi.000141 cat number cisi catName: cisi
+4 path C:\Users\Laurie\Dataset\classic\classic\cisi.000295 cat number cisi catName: cisi
+categoryTotal is 500 for catQ categoryName:cisi 
+f1: 0.755102040800 recall: 0.74 precision: 0.7708333333
+Purity: 0.7708333210 Job: 0 
+ClusterQuery 3 searching for:  cell structure tissue cells cell  Found 228 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\med.000078 cat number med. catName: med.
+1 path C:\Users\Laurie\Dataset\classic\classic\med.000176 cat number med. catName: med.
+2 path C:\Users\Laurie\Dataset\classic\classic\med.000405 cat number med. catName: med.
+3 path C:\Users\Laurie\Dataset\classic\classic\med.000283 cat number med. catName: med.
+4 path C:\Users\Laurie\Dataset\classic\classic\med.000207 cat number med. catName: med.
+categoryTotal is 500 for catQ categoryName:med. 
+f1: 0.4587912088008 recall: 0.334 precision: 0.7324561404
+Purity: 0.7324561383 Job: 0 
+f1list: [0.7493495229582, 0.4864864864917, 0.755102040800, 0.4587912088008] averagef1: :0.612432314762675
+PosHits: 1269 NegHits: 258 PosScore: 8637.923638105392 NegScore: 892.4020313620567 Fitness: 6086.883038293361 
+TotalHits: 1392 Total Docs: 2000
+************************************************ 
+ 
+  ***** Job: 0 Gen: 639 PopSize: 512 Noclusters:5 pathToIndex: indexes/20NG5WindowsMotorcycleSpaceMedMideast **************************************************************** 
+ ClusterQuery 0 searching for:  israel israeli  Found 147 hits:
+0 path C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast\talk.politics.mideast\76006 cat number dideasttalk.politics.mideast catName: dideasttalk.politics.mideast
+1 path C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast\talk.politics.mideast\75993 cat number dideasttalk.politics.mideast catName: dideasttalk.politics.mideast
+2 path C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast\talk.politics.mideast\76092 cat number dideasttalk.politics.mideast catName: dideasttalk.politics.mideast
+3 path C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast\talk.politics.mideast\75961 cat number dideasttalk.politics.mideast catName: dideasttalk.politics.mideast
+4 path C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast\talk.politics.mideast\76034 cat number dideasttalk.politics.mideast catName: dideasttalk.politics.mideast
+categoryTotal is 300 for catQ categoryName:dideasttalk.politics.mideast 
+f1: 0.63534675613121931444 recall: 0.4733333333 precision: 0.9659863946
+Purity: 0.9659863962 Job: 0 
+ClusterQuery 1 searching for:  banks geb  Found 73 hits:
+0 path C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast\sci.med\58114 cat number dideastsci.med catName: dideastsci.med
+1 path C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast\sci.med\58129 cat number dideastsci.med catName: dideastsci.med
+2 path C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast\sci.med\58136 cat number dideastsci.med catName: dideastsci.med
+3 path C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast\sci.med\58093 cat number dideastsci.med catName: dideastsci.med
+4 path C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast\sci.med\58116 cat number dideastsci.med catName: dideastsci.med
+categoryTotal is 300 for catQ categoryName:dideastsci.med 
+f1: 0.38069705097946941328 recall: 0.2366666667 precision: 0.9726027397
+Purity: 0.9726027371 Job: 0 
+ClusterQuery 2 searching for:  bike dod  Found 216 hits:
+0 path C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast\rec.motorcycles\103172 cat number dideastrec.motorcycles catName: dideastrec.motorcycles
+1 path C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast\rec.motorcycles\104329 cat number dideastrec.motorcycles catName: dideastrec.motorcycles
+2 path C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast\rec.motorcycles\104434 cat number dideastrec.motorcycles catName: dideastrec.motorcycles
+3 path C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast\rec.motorcycles\103228 cat number dideastrec.motorcycles catName: dideastrec.motorcycles
+4 path C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast\rec.motorcycles\104410 cat number dideastrec.motorcycles catName: dideastrec.motorcycles
+categoryTotal is 300 for catQ categoryName:dideastrec.motorcycles 
+f1: 0.802325581384 recall: 0.69 precision: 0.9583333333
+Purity: 0.9583333272 Job: 0 
+ClusterQuery 3 searching for:  motif window  Found 163 hits:
+0 path C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast\comp.windows.x\66871 cat number dideastcomp.windows.x catName: dideastcomp.windows.x
+1 path C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast\comp.windows.x\66878 cat number dideastcomp.windows.x catName: dideastcomp.windows.x
+2 path C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast\comp.windows.x\66877 cat number dideastcomp.windows.x catName: dideastcomp.windows.x
+3 path C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast\comp.windows.x\66429 cat number dideastcomp.windows.x catName: dideastcomp.windows.x
+4 path C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast\comp.windows.x\67079 cat number dideastcomp.windows.x catName: dideastcomp.windows.x
+categoryTotal is 300 for catQ categoryName:dideastcomp.windows.x 
+f1: 0.58747300212666756854 recall: 0.4533333333 precision: 0.8343558282
+Purity: 0.8343558248 Job: 0 
+ClusterQuery 4 searching for:  orbit armenia  Found 152 hits:
+0 path C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast\sci.space\60826 cat number dideastsci.space catName: dideastsci.space
+1 path C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast\sci.space\60830 cat number dideastsci.space catName: dideastsci.space
+2 path C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast\sci.space\60166 cat number dideastsci.space catName: dideastsci.space
+3 path C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast\sci.space\60201 cat number dideastsci.space catName: dideastsci.space
+4 path C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast\sci.space\60837 cat number dideastsci.space catName: dideastsci.space
+categoryTotal is 300 for catQ categoryName:dideasttalk.politics.mideast 
+f1: 0.40265486722131725272 recall: 0.3033333333 precision: 0.5986842105
+Purity: 0.5986842134 Job: 0 
+f1list: [0.63534675613121931444, 0.38069705097946941328, 0.802325581384, 0.58747300212666756854, 0.40265486722131725272] averagef1: :0.561699451568534709796
+PosHits: 694 NegHits: 57 PosScore: 3439.178975403309 NegScore: 129.574533700943 Fitness: 2071.4832017885906 
+TotalHits: 721 Total Docs: 1500
+************************************************ 
+ 
+  ***** Job: 0 Gen: 639 PopSize: 768 Noclusters:5 pathToIndex: indexes/20NG5macForsaleCryptMideast **************************************************************** 
+ ClusterQuery 0 searching for:  armenia turkish  Found 105 hits:
+0 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\talk.politics.mideast\75928 cat number lk.politics.mideast catName: lk.politics.mideast
+1 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\talk.politics.mideast\76142 cat number lk.politics.mideast catName: lk.politics.mideast
+2 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\talk.politics.mideast\75948 cat number lk.politics.mideast catName: lk.politics.mideast
+3 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\talk.politics.mideast\75916 cat number lk.politics.mideast catName: lk.politics.mideast
+4 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\talk.politics.mideast\76029 cat number lk.politics.mideast catName: lk.politics.mideast
+categoryTotal is 300 for catQ categoryName:lk.politics.mideast 
+f1: 0.5185185185 recall: 0.35 precision: 1
+Purity: 0.9999999975 Job: 0 
+ClusterQuery 1 searching for:  mac apple  Found 174 hits:
+0 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\comp.sys.mac.hardware\50418 cat number mp.sys.mac.hardware catName: mp.sys.mac.hardware
+1 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\comp.sys.mac.hardware\51616 cat number mp.sys.mac.hardware catName: mp.sys.mac.hardware
+2 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\comp.sys.mac.hardware\50437 cat number mp.sys.mac.hardware catName: mp.sys.mac.hardware
+3 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\comp.sys.mac.hardware\51633 cat number mp.sys.mac.hardware catName: mp.sys.mac.hardware
+4 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\comp.sys.mac.hardware\50466 cat number mp.sys.mac.hardware catName: mp.sys.mac.hardware
+categoryTotal is 300 for catQ categoryName:mp.sys.mac.hardware 
+f1: 0.62869198315433424131 recall: 0.4966666667 precision: 0.8563218391
+Purity: 0.8563218336 Job: 0 
+ClusterQuery 2 searching for:  israeli sale  Found 297 hits:
+0 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\talk.politics.mideast\75895 cat number lk.politics.mideast catName: lk.politics.mideast
+1 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\talk.politics.mideast\75995 cat number lk.politics.mideast catName: lk.politics.mideast
+2 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\talk.politics.mideast\76034 cat number lk.politics.mideast catName: lk.politics.mideast
+3 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\talk.politics.mideast\76006 cat number lk.politics.mideast catName: lk.politics.mideast
+4 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\talk.politics.mideast\76130 cat number lk.politics.mideast catName: lk.politics.mideast
+categoryTotal is 300 for catQ categoryName:sc.forsale 
+f1: 0.59631490784269589152 recall: 0.5933333333 precision: 0.5993265993
+Purity: 0.5993266052 Job: 0 
+ClusterQuery 3 searching for:  hockey win  Found 173 hits:
+0 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\rec.sport.hockey\53663 cat number c.sport.hockey catName: c.sport.hockey
+1 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\rec.sport.hockey\53620 cat number c.sport.hockey catName: c.sport.hockey
+2 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\rec.sport.hockey\53645 cat number c.sport.hockey catName: c.sport.hockey
+3 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\rec.sport.hockey\53621 cat number c.sport.hockey catName: c.sport.hockey
+4 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\rec.sport.hockey\53647 cat number c.sport.hockey catName: c.sport.hockey
+categoryTotal is 300 for catQ categoryName:c.sport.hockey 
+f1: 0.69344608881834183320 recall: 0.5466666667 precision: 0.9479768786
+Purity: 0.9479768752 Job: 0 
+ClusterQuery 4 searching for:  encryption clipper  Found 211 hits:
+0 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\sci.crypt\15192 cat number i.crypt catName: i.crypt
+1 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\sci.crypt\15233 cat number i.crypt catName: i.crypt
+2 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\sci.crypt\15219 cat number i.crypt catName: i.crypt
+3 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\sci.crypt\15234 cat number i.crypt catName: i.crypt
+4 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\sci.crypt\15291 cat number i.crypt catName: i.crypt
+categoryTotal is 300 for catQ categoryName:i.crypt 
+f1: 0.81800391391245437939 recall: 0.6966666667 precision: 0.9905213270
+Purity: 0.9905213285 Job: 0 
+f1list: [0.5185185185, 0.62869198315433424131, 0.59631490784269589152, 0.69344608881834183320, 0.81800391391245437939] averagef1: :0.650995082445565269084
+PosHits: 894 NegHits: 66 PosScore: 3696.9574849009514 NegScore: 184.01172433048487 Fitness: 2785.9918493750697 
+TotalHits: 926 Total Docs: 1500
+************************************************ 
+ 
+  ***** Job: 0 Gen: 739 PopSize: 512 Noclusters:5 pathToIndex: indexes/20NG5macForsaleCryptMideast **************************************************************** 
+ ClusterQuery 0 searching for:  sale  Found 193 hits:
+0 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\misc.forsale\75850 cat number sc.forsale catName: sc.forsale
+1 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\misc.forsale\75866 cat number sc.forsale catName: sc.forsale
+2 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\misc.forsale\75963 cat number sc.forsale catName: sc.forsale
+3 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\misc.forsale\75909 cat number sc.forsale catName: sc.forsale
+4 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\misc.forsale\76021 cat number sc.forsale catName: sc.forsale
+categoryTotal is 300 for catQ categoryName:sc.forsale 
+f1: 0.72210953342973885924 recall: 0.5933333333 precision: 0.9222797927
+Purity: 0.9222798016 Job: 0 
+ClusterQuery 1 searching for:  cup players game  Found 220 hits:
+0 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\rec.sport.hockey\52656 cat number c.sport.hockey catName: c.sport.hockey
+1 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\rec.sport.hockey\53625 cat number c.sport.hockey catName: c.sport.hockey
+2 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\rec.sport.hockey\53549 cat number c.sport.hockey catName: c.sport.hockey
+3 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\rec.sport.hockey\53686 cat number c.sport.hockey catName: c.sport.hockey
+4 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\rec.sport.hockey\52652 cat number c.sport.hockey catName: c.sport.hockey
+categoryTotal is 300 for catQ categoryName:c.sport.hockey 
+f1: 0.73076923073402366864 recall: 0.6333333333 precision: 0.8636363636
+Purity: 0.8636363550 Job: 0 
+ClusterQuery 2 searching for:  israeli arab israel  Found 150 hits:
+0 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\talk.politics.mideast\75993 cat number lk.politics.mideast catName: lk.politics.mideast
+1 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\talk.politics.mideast\75951 cat number lk.politics.mideast catName: lk.politics.mideast
+2 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\talk.politics.mideast\75981 cat number lk.politics.mideast catName: lk.politics.mideast
+3 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\talk.politics.mideast\76006 cat number lk.politics.mideast catName: lk.politics.mideast
+4 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\talk.politics.mideast\76034 cat number lk.politics.mideast catName: lk.politics.mideast
+categoryTotal is 300 for catQ categoryName:lk.politics.mideast 
+f1: 0.66222222224444444444 recall: 0.4966666667 precision: 0.9933333333
+Purity: 0.9933333383 Job: 0 
+ClusterQuery 3 searching for:  encryption des escrow  Found 198 hits:
+0 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\sci.crypt\15189 cat number i.crypt catName: i.crypt
+1 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\sci.crypt\15227 cat number i.crypt catName: i.crypt
+2 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\sci.crypt\15263 cat number i.crypt catName: i.crypt
+3 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\sci.crypt\15241 cat number i.crypt catName: i.crypt
+4 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\sci.crypt\15187 cat number i.crypt catName: i.crypt
+categoryTotal is 300 for catQ categoryName:i.crypt 
+f1: 0.77510040156722310930 recall: 0.6433333333 precision: 0.9747474747
+Purity: 0.9747474843 Job: 0 
+ClusterQuery 4 searching for:  armenia apple mac  Found 265 hits:
+0 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\comp.sys.mac.hardware\50418 cat number mp.sys.mac.hardware catName: mp.sys.mac.hardware
+1 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\comp.sys.mac.hardware\51616 cat number mp.sys.mac.hardware catName: mp.sys.mac.hardware
+2 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\comp.sys.mac.hardware\50437 cat number mp.sys.mac.hardware catName: mp.sys.mac.hardware
+3 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\comp.sys.mac.hardware\51633 cat number mp.sys.mac.hardware catName: mp.sys.mac.hardware
+4 path C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast\comp.sys.mac.hardware\50466 cat number mp.sys.mac.hardware catName: mp.sys.mac.hardware
+categoryTotal is 300 for catQ categoryName:mp.sys.mac.hardware 
+f1: 0.52743362831828647505 recall: 0.4966666667 precision: 0.5622641509
+Purity: 0.5622641501 Job: 0 
+f1list: [0.72210953342973885924, 0.73076923073402366864, 0.66222222224444444444, 0.77510040156722310930, 0.52743362831828647505] averagef1: :0.683527003258743311334
+PosHits: 922 NegHits: 104 PosScore: 4280.465665817261 NegScore: 280.45544854551554 Fitness: 3240.006620792091 
+TotalHits: 972 Total Docs: 1500
+************************************************ 
+ 
+  ***** Job: 0 Gen: 539 PopSize: 512 Noclusters:6 pathToIndex: indexes/20NG6GraphicsHockeyCryptSpaceChristianGuns **************************************************************** 
+ ClusterQuery 0 searching for:  hockey nhl  Found 279 hits:
+0 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\rec.sport.hockey\52623 cat number .sport.hockey catName: .sport.hockey
+1 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\rec.sport.hockey\52605 cat number .sport.hockey catName: .sport.hockey
+2 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\rec.sport.hockey\52612 cat number .sport.hockey catName: .sport.hockey
+3 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\rec.sport.hockey\52602 cat number .sport.hockey catName: .sport.hockey
+4 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\rec.sport.hockey\52661 cat number .sport.hockey catName: .sport.hockey
+categoryTotal is 500 for catQ categoryName:.sport.hockey 
+f1: 0.7163029525 recall: 0.558 precision: 1
+Purity: 1.0000000026 Job: 0 
+ClusterQuery 1 searching for:  encryption clipper  Found 356 hits:
+0 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.crypt\15192 cat number .crypt catName: .crypt
+1 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.crypt\15458 cat number .crypt catName: .crypt
+2 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.crypt\15233 cat number .crypt catName: .crypt
+3 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.crypt\15470 cat number .crypt catName: .crypt
+4 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.crypt\15613 cat number .crypt catName: .crypt
+categoryTotal is 500 for catQ categoryName:.crypt 
+f1: 0.8014018691702 recall: 0.686 precision: 0.9634831461
+Purity: 0.9634831584 Job: 0 
+ClusterQuery 2 searching for:    Found 0 hits:
+ClusterQuery 3 searching for:  graphics nasa  Found 318 hits:
+0 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\comp.graphics\38582 cat number p.graphics catName: p.graphics
+1 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\comp.graphics\38660 cat number p.graphics catName: p.graphics
+2 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.space\59908 cat number .space catName: .space
+3 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.space\61033 cat number .space catName: .space
+4 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.space\61030 cat number .space catName: .space
+categoryTotal is 500 for catQ categoryName:p.graphics 
+f1: 0.4132029339912 recall: 0.338 precision: 0.5314465409
+Purity: 0.5314465429 Job: 0 
+ClusterQuery 4 searching for:  gun  Found 255 hits:
+0 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\talk.politics.guns\53369 cat number k.politics.guns catName: k.politics.guns
+1 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.space\60840 cat number .space catName: .space
+2 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\talk.politics.guns\53370 cat number k.politics.guns catName: k.politics.guns
+3 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\talk.politics.guns\54549 cat number k.politics.guns catName: k.politics.guns
+4 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\talk.politics.guns\53313 cat number k.politics.guns catName: k.politics.guns
+categoryTotal is 500 for catQ categoryName:k.politics.guns 
+f1: 0.622516556303 recall: 0.47 precision: 0.9215686275
+Purity: 0.9215686210 Job: 0 
+ClusterQuery 5 searching for:  bible god  Found 366 hits:
+0 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\soc.religion.christian\20647 cat number .religion.christian catName: .religion.christian
+1 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\soc.religion.christian\20534 cat number .religion.christian catName: .religion.christian
+2 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\soc.religion.christian\20837 cat number .religion.christian catName: .religion.christian
+3 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\soc.religion.christian\20795 cat number .religion.christian catName: .religion.christian
+4 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\soc.religion.christian\20492 cat number .religion.christian catName: .religion.christian
+categoryTotal is 500 for catQ categoryName:.religion.christian 
+f1: 0.7251732101732 recall: 0.628 precision: 0.8579234973
+Purity: 0.8579234856 Job: 0 
+f1list: [0.7163029525, 0.8014018691702, 0.4132029339912, 0.622516556303, 0.7251732101732] averagef1: :0.65571950442752
+PosHits: 1462 NegHits: 112 PosScore: 5964.67350474 NegScore: 348.5934117138386 Fitness: 557.5885278767942 
+TotalHits: 1517 Total Docs: 3000
+************************************************ 
+ 
+  ***** Job: 0 Gen: 539 PopSize: 640 Noclusters:6 pathToIndex: indexes/20NG6GraphicsHockeyCryptSpaceChristianGuns **************************************************************** 
+ ClusterQuery 0 searching for:  christians god  Found 378 hits:
+0 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\soc.religion.christian\20647 cat number .religion.christian catName: .religion.christian
+1 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\soc.religion.christian\20949 cat number .religion.christian catName: .religion.christian
+2 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\soc.religion.christian\20745 cat number .religion.christian catName: .religion.christian
+3 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\soc.religion.christian\20888 cat number .religion.christian catName: .religion.christian
+4 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\soc.religion.christian\20919 cat number .religion.christian catName: .religion.christian
+categoryTotal is 500 for catQ categoryName:.religion.christian 
+f1: 0.7448747152696 recall: 0.654 precision: 0.8650793651
+Purity: 0.8650793502 Job: 0 
+ClusterQuery 1 searching for:  secure chip  Found 322 hits:
+0 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.crypt\15446 cat number .crypt catName: .crypt
+1 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.crypt\15644 cat number .crypt catName: .crypt
+2 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.crypt\15236 cat number .crypt catName: .crypt
+3 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.crypt\15351 cat number .crypt catName: .crypt
+4 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.crypt\15378 cat number .crypt catName: .crypt
+categoryTotal is 500 for catQ categoryName:.crypt 
+f1: 0.717761557171 recall: 0.59 precision: 0.9161490683
+Purity: 0.9161490795 Job: 0 
+ClusterQuery 2 searching for:  files  Found 138 hits:
+0 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\comp.graphics\38619 cat number p.graphics catName: p.graphics
+1 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\comp.graphics\38618 cat number p.graphics catName: p.graphics
+2 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\comp.graphics\38563 cat number p.graphics catName: p.graphics
+3 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.crypt\15003 cat number .crypt catName: .crypt
+4 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\comp.graphics\38590 cat number p.graphics catName: p.graphics
+categoryTotal is 500 for catQ categoryName:p.graphics 
+f1: 0.2257053291504 recall: 0.144 precision: 0.5217391304
+Purity: 0.5217391296 Job: 0 
+ClusterQuery 3 searching for:  gun  Found 255 hits:
+0 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\talk.politics.guns\53369 cat number k.politics.guns catName: k.politics.guns
+1 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.space\60840 cat number .space catName: .space
+2 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\talk.politics.guns\53370 cat number k.politics.guns catName: k.politics.guns
+3 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\talk.politics.guns\54549 cat number k.politics.guns catName: k.politics.guns
+4 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\talk.politics.guns\53313 cat number k.politics.guns catName: k.politics.guns
+categoryTotal is 500 for catQ categoryName:k.politics.guns 
+f1: 0.622516556303 recall: 0.47 precision: 0.9215686275
+Purity: 0.9215686210 Job: 0 
+ClusterQuery 4 searching for:  play hockey  Found 315 hits:
+0 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\rec.sport.hockey\53568 cat number .sport.hockey catName: .sport.hockey
+1 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\rec.sport.hockey\53536 cat number .sport.hockey catName: .sport.hockey
+2 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\rec.sport.hockey\52605 cat number .sport.hockey catName: .sport.hockey
+3 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\rec.sport.hockey\53528 cat number .sport.hockey catName: .sport.hockey
+4 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\rec.sport.hockey\53818 cat number .sport.hockey catName: .sport.hockey
+categoryTotal is 500 for catQ categoryName:.sport.hockey 
+f1: 0.650306748475 recall: 0.53 precision: 0.8412698413
+Purity: 0.8412698480 Job: 0 
+ClusterQuery 5 searching for:  nasa  Found 141 hits:
+0 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\comp.graphics\38582 cat number p.graphics catName: p.graphics
+1 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.space\59908 cat number .space catName: .space
+2 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.space\61033 cat number .space catName: .space
+3 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.space\61030 cat number .space catName: .space
+4 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.space\60822 cat number .space catName: .space
+categoryTotal is 500 for catQ categoryName:.space 
+f1: 0.3775351014071 recall: 0.242 precision: 0.8581560284
+Purity: 0.8581560306 Job: 0 
+f1list: [0.7448747152696, 0.717761557171, 0.2257053291504, 0.622516556303, 0.650306748475, 0.3775351014071] averagef1: :0.5564500012960
+PosHits: 1328 NegHits: 221 PosScore: 5302.006715595722 NegScore: 613.862948268652 Fitness: 2709.452480980523 
+TotalHits: 1429 Total Docs: 3000
+************************************************ 
+ 
+  ***** Job: 0 Gen: 539 PopSize: 640 Noclusters:6 pathToIndex: indexes/20NG6GraphicsHockeyCryptSpaceChristianGunsL5 **************************************************************** 
+ ClusterQuery 0 searching for:  secure escrow  Found 209 hits:
+0 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.crypt\15232 cat number .crypt catName: .crypt
+1 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.crypt\15267 cat number .crypt catName: .crypt
+2 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.crypt\15486 cat number .crypt catName: .crypt
+3 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.crypt\15249 cat number .crypt catName: .crypt
+4 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.crypt\15309 cat number .crypt catName: .crypt
+categoryTotal is 500 for catQ categoryName:.crypt 
+f1: 0.5613540197378 recall: 0.398 precision: 0.9521531100
+Purity: 0.9521531110 Job: 0 
+ClusterQuery 1 searching for:  christians jesus  Found 282 hits:
+0 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\soc.religion.christian\20547 cat number .religion.christian catName: .religion.christian
+1 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\soc.religion.christian\20671 cat number .religion.christian catName: .religion.christian
+2 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\soc.religion.christian\20883 cat number .religion.christian catName: .religion.christian
+3 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\soc.religion.christian\20773 cat number .religion.christian catName: .religion.christian
+4 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\soc.religion.christian\20924 cat number .religion.christian catName: .religion.christian
+categoryTotal is 500 for catQ categoryName:.religion.christian 
+f1: 0.6854219948773 recall: 0.536 precision: 0.9503546099
+Purity: 0.9503546124 Job: 0 
+ClusterQuery 2 searching for:  research  Found 208 hits:
+0 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\comp.graphics\38305 cat number p.graphics catName: p.graphics
+1 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\comp.graphics\38279 cat number p.graphics catName: p.graphics
+2 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\rec.sport.hockey\53738 cat number .sport.hockey catName: .sport.hockey
+3 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.space\61023 cat number .space catName: .space
+4 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.space\61147 cat number .space catName: .space
+categoryTotal is 500 for catQ categoryName:.space 
+f1: 0.2062146892722 recall: 0.146 precision: 0.3509615385
+Purity: 0.3509615379 Job: 0 
+ClusterQuery 3 searching for:  gun  Found 255 hits:
+0 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\talk.politics.guns\53369 cat number k.politics.guns catName: k.politics.guns
+1 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\talk.politics.guns\53370 cat number k.politics.guns catName: k.politics.guns
+2 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.space\60840 cat number .space catName: .space
+3 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\talk.politics.guns\54549 cat number k.politics.guns catName: k.politics.guns
+4 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\talk.politics.guns\54155 cat number k.politics.guns catName: k.politics.guns
+categoryTotal is 500 for catQ categoryName:k.politics.guns 
+f1: 0.622516556303 recall: 0.47 precision: 0.9215686275
+Purity: 0.9215686210 Job: 0 
+ClusterQuery 4 searching for:  fbi image  Found 248 hits:
+0 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\talk.politics.guns\54382 cat number k.politics.guns catName: k.politics.guns
+1 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\comp.graphics\38231 cat number p.graphics catName: p.graphics
+2 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\comp.graphics\38409 cat number p.graphics catName: p.graphics
+3 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\talk.politics.guns\54407 cat number k.politics.guns catName: k.politics.guns
+4 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\talk.politics.guns\54510 cat number k.politics.guns catName: k.politics.guns
+categoryTotal is 500 for catQ categoryName:k.politics.guns 
+f1: 0.2513368984035 recall: 0.188 precision: 0.3790322581
+Purity: 0.3790322614 Job: 0 
+ClusterQuery 5 searching for:  play toronto  Found 344 hits:
+0 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\rec.sport.hockey\53667 cat number .sport.hockey catName: .sport.hockey
+1 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\rec.sport.hockey\53888 cat number .sport.hockey catName: .sport.hockey
+2 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\rec.sport.hockey\53801 cat number .sport.hockey catName: .sport.hockey
+3 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\rec.sport.hockey\53593 cat number .sport.hockey catName: .sport.hockey
+4 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\rec.sport.hockey\53748 cat number .sport.hockey catName: .sport.hockey
+categoryTotal is 500 for catQ categoryName:.sport.hockey 
+f1: 0.5781990521389 recall: 0.488 precision: 0.7093023256
+Purity: 0.7093023148 Job: 0 
+f1list: [0.5613540197378, 0.6854219948773, 0.2062146892722, 0.622516556303, 0.2513368984035, 0.5781990521389] averagef1: :0.48417386845545
+PosHits: 1207 NegHits: 339 PosScore: 272.81960694491863 NegScore: 50.870414443314075 Fitness: 278.1970994724995 
+TotalHits: 1366 Total Docs: 3000
+************************************************ 
+ 

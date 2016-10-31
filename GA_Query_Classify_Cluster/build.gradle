@@ -1,15 +1,18 @@
-apply plugin: 'java'
+//apply plugin: 'java'
 apply plugin: 'groovy'
 
 repositories { jcenter() }
 
 dependencies {
 
-	//	compile 'org.codehaus.groovy:groovy-all:2.4.3'
+	//compile 'org.codehaus.groovy:groovy-all:2.4.3'
 	compile 'org.codehaus.groovy:groovy-all:2.4.7'
 
-	compile 'org.apache.lucene:lucene-core:6.1.0'
-	compile 'org.apache.lucene:lucene-analyzers-common:6.1.0'
+	//compile 'org.apache.lucene:lucene-core:6.1.0'
+	//compile 'org.apache.lucene:lucene-analyzers-common:6.1.0'
+	
+	compile 'org.apache.lucene:lucene-core:5.3.2'
+	compile 'org.apache.lucene:lucene-analyzers-common:5.3.2'
 	
 	testCompile "org.codehaus.groovy:groovy:2.4.7"
 	
@@ -65,10 +68,37 @@ task(indexR10, dependsOn: 'classes', type: JavaExec) {
 	main = 'index.IndexR10'
 	classpath = sourceSets.main.runtimeClasspath
 }
+
+task(index20NG, dependsOn: 'classes', type: JavaExec) {
+	main = 'index.Index20NG'
+	classpath = sourceSets.main.runtimeClasspath
+}
+
+task(indexClassic, dependsOn: 'classes', type: JavaExec) {
+	main = 'index.IndexClassic'
+	classpath = sourceSets.main.runtimeClasspath
+}
+
+task(importantWords, dependsOn: 'classes', type: JavaExec) {
+	main = 'index.ImportantWords'
+	classpath = sourceSets.main.runtimeClasspath
+}
+
 configure(indexR10) {
 	group = 'index'
 	description = 'IndexR10 dataset'
 }
+
+configure(index20NG) {
+	group = 'index'
+	description = 'Index20NG dataset'
+}
+
+configure(indexClassic) {
+	group = 'index'
+	description = 'Index20NG dataset'
+}
+
 
 configure(indexCrisisData) {
 	group = 'index'

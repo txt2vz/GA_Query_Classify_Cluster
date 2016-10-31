@@ -31,7 +31,7 @@ import org.apache.lucene.store.FSDirectory
 
 class IndexR10 {
 	// Create Lucene index in this directory
-	def indexPath = "indexes/r10"
+	def indexPath = "indexes/r10l5"
 
 	// Index files in this directory
 	def docsPath =  /C:\Users\Laurie\Dataset\reuters-top10/
