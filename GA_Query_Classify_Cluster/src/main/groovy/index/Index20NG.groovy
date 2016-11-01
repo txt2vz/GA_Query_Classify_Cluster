@@ -28,20 +28,12 @@ class Index20NG {
 	def indexPath = 
 	  //"indexes/Ohs3Bact02Dig06Resp08"	
 	"indexes/20NG6GraphicsHockeyCryptSpaceChristianGunsL5"	
-//	"indexes/20NG3SpaceHockeyChristianl5"
-	//"indexes/20NG5WindowsMotorcycleSpaceMedMideast"
-//	"indexes/20NG5macForsaleCryptMideast"
+
 	
 	// Index files in this directory	
 	def docsPath =
-	 /C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns/	
-//	 /C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian/
-//	/C:\Users\Laurie\Dataset\20NG5WindowsMotorcyclesSpaceMedMideast/
-//	/C:\Users\Laurie\Dataset\20NG5macForsaleCryptMideast/
-	///C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns/
-
-	//'/home/test/datasets/20NG3SpaceHockeyChristian'
-	//'/home/test/dataset/20NG4HockeySpaceChristianGuns/'
+	//  /C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns/	
+	/C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian/
 
 	Path path = Paths.get(indexPath)
 	Directory directory = FSDirectory.open(path)
@@ -96,12 +88,12 @@ class Index20NG {
 		Field pathField = new StringField(IndexInfo.FIELD_PATH, f.getPath(), Field.Store.YES);
 		doc.add(pathField);
 
-		//def catName = f.getCanonicalPath().drop(53).take(30).replaceAll(/[^a-z.]/, "")     //'[0-9]|\ ',"")	
-		def catName = f.getCanonicalPath().drop(70).take(30).replaceAll(/[^a-z.]/, "")
+		def catName = f.getCanonicalPath().drop(53).take(30).replaceAll(/[^a-z.]/, "")     //'[0-9]|\ ',"")	
+	//	def catName = f.getCanonicalPath().drop(70).take(30).replaceAll(/[^a-z.]/, "")
 
 
 		def n = catsFreq.get((catName)) ?: 0
-		if (n < 500){
+		//if (n < 500){
 			catsFreq.put((catName), n + 1)	
 
 			Field catNameField = new StringField(IndexInfo.FIELD_CATEGORY_NAME, catName, Field.Store.YES);
@@ -123,6 +115,6 @@ class Index20NG {
 			doc.add(ttField)
 
 			writer.addDocument(doc);
-		}
+		//}
 	}
 }

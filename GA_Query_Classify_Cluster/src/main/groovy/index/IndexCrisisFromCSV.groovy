@@ -26,11 +26,12 @@ import org.apache.lucene.codecs.*
 class IndexCrisisClusterFromCSV {
 
 	// Create Lucene index in this directory
-	Path indexPath = Paths.get('indexes/crisis4FireBombFloodShoot')
+	Path indexPath = Paths.get('indexes/crisis3FireBombFloodL5')
 	Path docsPath = Paths.get('Datasets/crisisData')
 	Directory directory = FSDirectory.open(indexPath)
 	Analyzer analyzer = //new EnglishAnalyzer();  //with stemming
-	new StandardAnalyzer();
+								new StandardAnalyzer();
+	def catsFreq=[:]
 
 	static main(args) {
 		def i = new IndexCrisisClusterFromCSV()
@@ -42,22 +43,25 @@ class IndexCrisisClusterFromCSV {
 
 		// Create a new index in the directory, removing any
 		// previously indexed documents:
-		iwc.setOpenMode(OpenMode.CREATE);	
+		iwc.setOpenMode(OpenMode.CREATE);
 
 		IndexWriter writer = new IndexWriter(directory, iwc);
 
 		Date start = new Date();
 		println("Indexing to directory $indexPath ...");
-		
-	//	println "docsPath $docsPath parent" + docsPath.getParent()
 
-		docsPath.toFile().eachFileRecurse {file -> 
+		//	println "docsPath $docsPath parent" + docsPath.getParent()
+
+		docsPath.toFile().eachFileRecurse {file ->
 
 			def catName = file.getName().take(10)
 			println "File: $file  CatName: $catName"
 
 			file.splitEachLine(',') {fields ->
-
+				
+				def n = catsFreq.get((catName)) ?: 0
+				catsFreq.put((catName), n + 1)
+				
 				def textBody = fields[1]
 				//def tweetID = fields[0]
 				def doc = new Document()
@@ -69,6 +73,7 @@ class IndexCrisisClusterFromCSV {
 				writer.addDocument(doc);
 			}
 		}
+		println "catsFreq $catsFreq"
 		println "Total docs in index: ${writer.maxDoc()}"
 		writer.close()
 		println 'done...'

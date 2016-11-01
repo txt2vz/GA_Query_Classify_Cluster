@@ -1388,3 +1388,36 @@ PosHits: 1207 NegHits: 339 PosScore: 272.81960694491863 NegScore: 50.87041444331
 TotalHits: 1366 Total Docs: 3000
 ************************************************ 
  
+  ***** Job: 0 Gen: 539 PopSize: 640 Noclusters:3 pathToIndex: indexes/crisis3FireBombFloodL5 **************************************************************** 
+ ClusterQuery 0 searching for:  colorado  Found 805 hits:
+0 path null cat number Colorado_w catName: Colorado_w
+1 path null cat number Colorado_w catName: Colorado_w
+2 path null cat number Colorado_w catName: Colorado_w
+3 path null cat number Colorado_w catName: Colorado_w
+4 path null cat number Colorado_w catName: Colorado_w
+categoryTotal is 1201 for catQ category:Colorado_w 
+f1: 0.8025922233 recall: 0.6702747710 precision: 1
+Purity: 0.9999999800 Job: 0 
+ClusterQuery 1 searching for:  highparkfire boston prayforboston marathon  Found 874 hits:
+0 path null cat number Boston_bom catName: Boston_bom
+1 path null cat number Boston_bom catName: Boston_bom
+2 path null cat number Boston_bom catName: Boston_bom
+3 path null cat number Boston_bom catName: Boston_bom
+4 path null cat number Boston_bom catName: Boston_bom
+categoryTotal is 1001 for catQ category:Boston_bom 
+f1: 0.77440000003151126756 recall: 0.7252747253 precision: 0.8306636156
+Purity: 0.8306636448 Job: 0 
+ClusterQuery 2 searching for:  flood bigwet qldfloods floods  Found 950 hits:
+0 path null cat number Queensland catName: Queensland
+1 path null cat number Queensland catName: Queensland
+2 path null cat number Queensland catName: Queensland
+3 path null cat number Queensland catName: Queensland
+4 path null cat number Queensland catName: Queensland
+categoryTotal is 1201 for catQ category:Queensland 
+f1: 0.88145048811554021883 recall: 0.7893422148 precision: 0.9978947368
+Purity: 0.9978947568 Job: 0 
+f1list: [0.8025922233, 0.77440000003151126756, 0.88145048811554021883] averagef1: :0.81948090381568382880
+PosHits: 2611 NegHits: 18 PosScore: 918.5004805922508 NegScore: 6.820740640163422 Fitness: 1471.8192531943487 
+TotalHits: 2620 Total Docs: 3403
+************************************************ 
+ 

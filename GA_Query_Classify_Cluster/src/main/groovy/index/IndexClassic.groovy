@@ -33,7 +33,7 @@ import org.apache.lucene.store.FSDirectory
 
 class IndexClassic {
 	// Create Lucene index in this directory
-	def indexPath = 	"indexes/classic3L5"
+	def indexPath = 	"indexes/classic4_500L5"
 
 	// Index files in this directory
 	def docsPath =
@@ -63,14 +63,11 @@ class IndexClassic {
 		def catNumber=0;
 
 		new File(docsPath).eachDir {
-			//	it.eachDir{
 
-			
 			it.eachFileRecurse(FileType.FILES) { file ->
-				if ( !file.name.contains("cacm")) // for classic 3 exclude cacm
-				indexDocs(writer,file, catNumber)
+				//if ( !file.name.contains("cacm")) // for classic 3 exclude cacm
+					indexDocs(writer,file, catNumber)
 			}
-			//	}
 			catNumber++;
 		}
 
@@ -96,21 +93,19 @@ class IndexClassic {
 	throws IOException {
 
 		def doc = new Document()
-
 		Field pathField = new StringField(IndexInfo.FIELD_PATH, f.getPath(), Field.Store.YES);
 		doc.add(pathField);
 
 		//for classic dataset
 		def catName = f.getName().substring(0,4)
-
 		def n = catFreq.get((catName)) ?: 0
-		//if (n<500){
+		if (n<500){
 			catFreq.put((catName), n + 1)
 
 			Field catNameField = new StringField(IndexInfo.FIELD_CATEGORY_NAME, catName, Field.Store.YES);
 			doc.add(catNameField)
 			doc.add(new TextField(IndexInfo.FIELD_CONTENTS, f.text,  Field.Store.YES)) ;
 			writer.addDocument(doc);
-		//}
+		}
 	}
 }
