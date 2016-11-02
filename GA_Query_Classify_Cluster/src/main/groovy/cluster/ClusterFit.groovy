@@ -135,7 +135,8 @@ public class ClusterFit extends SimpleFitness {
 				resOut << "Purity: $purity Job: $job \n"
 			}
 		}
-		averageF1 = f1list.sum()/f1list.size()
+		//averageF1 = f1list.sum()/f1list.size()
+		averageF1 = f1list.sum()/ IndexInfo.NUMBER_OF_CLUSTERS
 
 		messageOut = "f1list: $f1list averagef1: :$averageF1"
 		println messageOut

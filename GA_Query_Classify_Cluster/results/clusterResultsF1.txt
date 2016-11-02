@@ -1421,3 +1421,36 @@ PosHits: 2611 NegHits: 18 PosScore: 918.5004805922508 NegScore: 6.82074064016342
 TotalHits: 2620 Total Docs: 3403
 ************************************************ 
  
+  ***** Job: 0 Gen: 39 PopSize: 640 Noclusters:3 pathToIndex: indexes/crisis3FireBombFloodL5 **************************************************************** 
+ ClusterQuery 0 searching for:  areas bigwet made time  Found 650 hits:
+0 path null cat number Queensland catName: Queensland
+1 path null cat number Queensland catName: Queensland
+2 path null cat number Queensland catName: Queensland
+3 path null cat number Queensland catName: Queensland
+4 path null cat number Boston_bom catName: Boston_bom
+categoryTotal is 1201 for catQ category:Queensland 
+f1: 0.65370070232897462817 recall: 0.5037468776 precision: 0.9307692308
+Purity: 0.9307692075 Job: 0 
+ClusterQuery 1 searching for:  colorado explosions thoughts waldocanyonfire  Found 947 hits:
+0 path null cat number Boston_bom catName: Boston_bom
+1 path null cat number Boston_bom catName: Boston_bom
+2 path null cat number Colorado_w catName: Colorado_w
+3 path null cat number Colorado_w catName: Colorado_w
+4 path null cat number Colorado_w catName: Colorado_w
+categoryTotal is 1201 for catQ category:Colorado_w 
+f1: 0.76815642460511657806 recall: 0.6869275604 precision: 0.8711721225
+Purity: 0.8711721150 Job: 0 
+ClusterQuery 2 searching for:  suspects qldfloods live highparkfire  Found 402 hits:
+0 path null cat number Colorado_w catName: Colorado_w
+1 path null cat number Colorado_w catName: Colorado_w
+2 path null cat number Colorado_w catName: Colorado_w
+3 path null cat number Queensland catName: Queensland
+4 path null cat number Colorado_w catName: Colorado_w
+categoryTotal is 1201 for catQ category:Queensland 
+f1: 0.23705552095071460288 recall: 0.1582014988 precision: 0.4726368159
+Purity: 0.4726368180 Job: 0 
+f1list: [0.65370070232897462817, 0.76815642460511657806, 0.23705552095071460288] averagef1: :0.55297088262826860304
+PosHits: 1708 NegHits: 291 PosScore: 181.7845520079136 NegScore: 30.388972736895084 Fitness: 626.9573930249215 
+TotalHits: 1853 Total Docs: 3403
+************************************************ 
+ 

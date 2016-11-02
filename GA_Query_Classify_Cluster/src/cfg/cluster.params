@@ -6,7 +6,7 @@ eval.problem = cluster.ClusterQuery
 
 evalthreads = 4 
 breedthreads = 4
-generations =  540
+generations =  40
 breed.elite.0 = 1
 
 #pop.subpops = 1
