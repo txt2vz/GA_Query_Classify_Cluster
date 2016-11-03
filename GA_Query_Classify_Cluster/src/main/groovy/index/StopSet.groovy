@@ -10,75 +10,17 @@ class StopSet {
 
 	public static Set<String> getStopSetFromFile()  {
 
-		def stopSet =     
-		  new File('src/cfg/stop_words_most.txt') as String[]
-		  //  new File('src/cfg/stop_words_moderate.txt') as String[]
+		def stopSet =
+				// new File('src/cfg/stop_words_most.txt') as String[]
+				new File('src/cfg/stop_words_moderate.txt') as String[]
 		//println "stopSet $stopSet"
 		return stopSet;
 	}
 
-	def static final smallStopSet = [
-		"a",
-		"an",
-		"and",
-		"are",
-		"as",
-		"at",
-		"be",
-		"but",
-		"by",
-		"for",
-		"if",
-		"in",
-		"into",
-		"is",
-		"it",
-		"no",
-		"not",
-		"of",
-		"on",
-		"or",
-		"such",
-		"that",
-		"the",
-		"their",
-		"then",
-		"there",
-		"these",
-		"they",
-		"this",
-		"to",
-		"was",
-		"will",
-		"with",
-		"1",
-		"2",
-		"3",
-		"4",
-		"5",
-		"6",
-		"7",
-		"8",
-		"9",
-		"0",
-		//for webkb
-		"td",
-		"dd",
-		"dt",
-		"tr",
-		"h4",
-		"em",
-		"icons",
-		"ps",
-		"blockquote",
-		"postscript",
-		"valign",
-		"vlink",
-		"ffffff",
-		"cellpadding"
-	];
+	def static final smallStopSet = ["a", "an", "and", "are", "as", "at", "be", "but", "by", "for", "if", "in", "into", "is", "it", "no", "not", "of", "on", "or", "such", "that", "the", "their", "then", "there", "these", "they", "this", "to", "was", "will", "with", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", //for webkb
+		"td", "dd", "dt", "tr", "h4", "em", "icons", "ps", "blockquote", "postscript", "valign", "vlink", "ffffff", "cellpadding"];
 
-	def static stopSetFromFile= [
+	def static stopSetLarge= [
 		//extra words
 		"tness",
 		"text",
@@ -91,7 +33,7 @@ class StopSet {
 		"chapter",
 		"table",
 		//end extras
-		
+
 		"able",
 		"about",
 		"above",

@@ -94,7 +94,7 @@ public class ImportantWords {
 			if (indexSearcher.getIndexReader().docFreq(t) < 3
 			//|| StopSet.stopSet.contains(t.text())
 			|| stopSet.contains(t.text())
-			  || t.text().contains("'")
+			|| t.text().contains("'")
 			//  ||t.text().contains(".")
 			||!c.isLetter()
 			//|| stopSet.contains(t.text()))
@@ -168,18 +168,17 @@ public class ImportantWords {
 
 			char firstChar = word.charAt(0)
 			int df = indexSearcher.getIndexReader().docFreq(t)
-			def dfFraction = ((double) df/maxDoc)
+			//def dfFraction = ((double) df/maxDoc)
 
 			if (
 			df < 3
-			//	|| dfFraction > 0.3
-			||
-			stopSet.contains(t.text())
+			|| stopSet.contains(t.text())
 			|| t.text().contains("'")
-			|| t.text().length()<2
+			|| t.text().length() < 2
 			|| !firstChar.isLetter()
+			|| t.text().contains(".")
 			//|| dfFraction < 0.005
-			//	|| t.text().contains(".")
+			//	|| dfFraction > 0.3
 			)
 				continue;
 

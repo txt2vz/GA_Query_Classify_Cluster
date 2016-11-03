@@ -33,20 +33,16 @@ trait CreateQueriesT {
 			//			if (index==0){
 			//				cNumber = gene
 			//			} else
-			//	{
-
-			//++ seems to cause and odd error for groovy properties? !
-			if (gene>=0){
-				if (!genes.add(gene)) duplicateCount = duplicateCount + 1;
-			}
-
+			//	{			
+			
 			int clusterNumber =  index % cNumber
-
 			String wrd = wordArray[gene]
-
 			bqbList[clusterNumber] = bqbList[clusterNumber] ?: new BooleanQuery.Builder()
 
 			if (gene < wordArray.size() && gene >= 0){
+				
+				//++ seems to cause and odd error for groovy properties? !
+				if (!genes.add(gene)) duplicateCount = duplicateCount + 1;
 				TermQuery tq = new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, wrd))
 				bqbList[clusterNumber].add(tq,BooleanClause.Occur.SHOULD)
 

@@ -16,7 +16,7 @@ evalthreads = 				4
 breedthreads = 				4
 
 eval.problem = ecj.ClusterAnd
-stat = ecj.ClusterGAStatistics
+#stat = cluster.ClusterGAStatistics
 stat.file = statDump/out.stat
 
 select.tournament.size = 3
@@ -29,7 +29,7 @@ pop.subpop.0 = ec.Subpopulation
 pop.subpop.0.size = 512 
 pop.subpop.0.species = ec.vector.IntegerVectorSpecies
 pop.subpop.0.species.ind = ec.vector.IntegerVectorIndividual
-pop.subpop.0.species.fitness = ecj.ClusterFit
+pop.subpop.0.species.fitness = cluster.ClusterFit
 
 pop.subpop.0.species.min-gene = -1
 pop.subpop.0.species.max-gene = 300

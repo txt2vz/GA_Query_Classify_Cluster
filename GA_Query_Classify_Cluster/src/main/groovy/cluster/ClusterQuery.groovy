@@ -47,9 +47,11 @@ public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProbl
 		IntegerVectorIndividual intVectorIndividual = (IntegerVectorIndividual) ind;
 
 		def bqbList =
-		//		getORNOTQL(wordArray, intVectorIndividual, NUMBER_OF_CLUSTERS)
+		
+		//from ClusterQueriesT = trait
 	  	getORQL(wordArray, intVectorIndividual, NUMBER_OF_CLUSTERS)
 		//getANDQL(wordArray, intVectorIndividual, NUMBER_OF_CLUSTERS)
+		//getORNOTQL(wordArray, intVectorIndividual, NUMBER_OF_CLUSTERS)
 
 		final int hitsPerPage = 10000;
 		def negHitsTotal=0
