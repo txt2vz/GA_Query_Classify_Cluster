@@ -7,21 +7,21 @@ stat = cluster.ClusterGAStatistics
 
 evalthreads = 4 
 breedthreads = 4
-generations =  540
+generations =  740
 breed.elite.0 = 1
 
 #pop.subpops = 1
-pop.subpop.0.species.genome-size = 12
-pop.subpop.0.size = 256
+pop.subpop.0.species.genome-size = 8
+pop.subpop.0.size = 128
 
-pop.subpop.1.species.genome-size = 12
+pop.subpop.1.species.genome-size = 8
 pop.subpop.1.size = 128
-pop.subpop.2.species.genome-size = 12
+pop.subpop.2.species.genome-size = 8
 pop.subpop.2.size = 128
 
 pop.subpop.0.species.min-gene = -2
-pop.subpop.0.species.max-gene = 50
+pop.subpop.0.species.max-gene = 100
 pop.subpop.1.species.min-gene = -2
-pop.subpop.1.species.max-gene = 50
+pop.subpop.1.species.max-gene = 100
 pop.subpop.2.species.min-gene = -2
-pop.subpop.2.species.max-gene = 50
+pop.subpop.2.species.max-gene = 100
