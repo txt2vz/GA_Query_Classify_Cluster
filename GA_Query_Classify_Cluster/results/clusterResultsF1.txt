@@ -1454,3 +1454,309 @@ PosHits: 1708 NegHits: 291 PosScore: 181.7845520079136 NegScore: 30.388972736895
 TotalHits: 1853 Total Docs: 3403
 ************************************************ 
  
+  ***** Job: 0 Gen: 39 PopSize: 256 Noclusters:3 pathToIndex: indexes/crisis3FireBombFloodL5 **************************************************************** 
+ ClusterQuery 0 searching for:  off time weather colorado  Found 883 hits:
+0 path null cat number Colorado_w catName: Colorado_w
+1 path null cat number Colorado_w catName: Colorado_w
+2 path null cat number Colorado_w catName: Colorado_w
+3 path null cat number Colorado_w catName: Colorado_w
+4 path null cat number Colorado_w catName: Colorado_w
+categoryTotal is 1201 for catQ category:Colorado_w 
+f1: 0.78023032631715870115 recall: 0.6769358868 precision: 0.9207248018
+Purity: 0.9207247764 Job: 0 
+ClusterQuery 1 searching for:  two cofire really abcnews  Found 135 hits:
+0 path null cat number Queensland catName: Queensland
+1 path null cat number Boston_bom catName: Boston_bom
+2 path null cat number Colorado_w catName: Colorado_w
+3 path null cat number Colorado_w catName: Colorado_w
+4 path null cat number Queensland catName: Queensland
+categoryTotal is 1201 for catQ category:Queensland 
+f1: 0.09580838324200222310 recall: 0.0532889259 precision: 0.4740740741
+Purity: 0.4740740736 Job: 0 
+ClusterQuery 2 searching for:  bombing made love power  Found 267 hits:
+0 path null cat number Queensland catName: Queensland
+1 path null cat number Queensland catName: Queensland
+2 path null cat number Queensland catName: Queensland
+3 path null cat number Boston_bom catName: Boston_bom
+4 path null cat number Boston_bom catName: Boston_bom
+categoryTotal is 1001 for catQ category:Boston_bom 
+f1: 0.25236593054668981182 recall: 0.1598401598 precision: 0.5992509363
+Purity: 0.5992509440 Job: 0 
+f1list: [0.78023032631715870115, 0.09580838324200222310, 0.25236593054668981182] averagef1: :0.37613488003528357869
+PosHits: 1207 NegHits: 78 PosScore: 120.10551300272346 NegScore: 9.690908789634705 Fitness: 406.57555006211874 
+TotalHits: 1246 Total Docs: 3403
+************************************************ 
+ 
+  ***** Job: 0 Gen: 39 PopSize: 256 Noclusters:6 pathToIndex: indexes/20NG6GraphicsHockeyCryptSpaceChristianGunsL5 **************************************************************** 
+ ClusterQuery 0 searching for:  april wrong  Found 253 hits:
+0 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\61250 cat number space catName: space
+1 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\20806 cat number christian catName: christian
+2 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\52555 cat number hockey catName: hockey
+3 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53956 cat number hockey catName: hockey
+4 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\52579 cat number hockey catName: hockey
+categoryTotal is 599 for catQ category:christian 
+f1: 0.21596244128256050387 recall: 0.1535893155 precision: 0.3636363636
+Purity: 0.3636363664 Job: 0 
+ClusterQuery 1 searching for:  mark christ  Found 275 hits:
+0 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\20849 cat number christian catName: christian
+1 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\20724 cat number christian catName: christian
+2 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\21407 cat number christian catName: christian
+3 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\20525 cat number christian catName: christian
+4 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\21384 cat number christian catName: christian
+categoryTotal is 599 for catQ category:christian 
+f1: 0.46224256289732103116 recall: 0.3372287145 precision: 0.7345454545
+Purity: 0.7345454472 Job: 0 
+ClusterQuery 2 searching for:  pat  Found 113 hits:
+0 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\61203 cat number space catName: space
+1 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\60230 cat number space catName: space
+2 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\60828 cat number space catName: space
+3 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\60903 cat number space catName: space
+4 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\61010 cat number space catName: space
+categoryTotal is 593 for catQ category:space 
+f1: 0.23796033990597509008 recall: 0.1416526138 precision: 0.7433628319
+Purity: 0.7433628300 Job: 0 
+ClusterQuery 3 searching for:  nhl  Found 187 hits:
+0 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53979 cat number hockey catName: hockey
+1 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53929 cat number hockey catName: hockey
+2 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53667 cat number hockey catName: hockey
+3 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\54723 cat number hockey catName: hockey
+4 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53801 cat number hockey catName: hockey
+categoryTotal is 600 for catQ category:hockey 
+f1: 0.4752223634 recall: 0.3116666667 precision: 1
+Purity: 1.0000000032 Job: 0 
+ClusterQuery 4 searching for:  national  Found 111 hits:
+0 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\20635 cat number christian catName: christian
+1 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\60863 cat number space catName: space
+2 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\60919 cat number space catName: space
+3 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\61249 cat number space catName: space
+4 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\21383 cat number christian catName: christian
+categoryTotal is 593 for catQ category:space 
+f1: 0.16477272731850989475 recall: 0.0978077572 precision: 0.5225225225
+Purity: 0.5225225220 Job: 0 
+ClusterQuery 5 searching for:  please  Found 187 hits:
+0 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\20514 cat number christian catName: christian
+1 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\52557 cat number hockey catName: hockey
+2 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\52668 cat number hockey catName: hockey
+3 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53797 cat number hockey catName: hockey
+4 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\20630 cat number christian catName: christian
+categoryTotal is 599 for catQ category:christian 
+f1: 0.19083969461369578307 recall: 0.1252086811 precision: 0.4010695187
+Purity: 0.4010695200 Job: 0 
+f1list: [0.21596244128256050387, 0.46224256289732103116, 0.23796033990597509008, 0.4752223634, 0.16477272731850989475, 0.19083969461369578307] averagef1: :0.291166688236343717155
+PosHits: 631 NegHits: 495 PosScore: 142.9063467234373 NegScore: 80.33812284842134 Fitness: 2.1566404106226034 
+TotalHits: 862 Total Docs: 1792
+************************************************ 
+ 
+  ***** Job: 0 Gen: 539 PopSize: 512 Noclusters:6 pathToIndex: indexes/20NG6GraphicsHockeyCryptSpaceChristianGunsL5 **************************************************************** 
+ ClusterQuery 0 searching for:  however canada  Found 315 hits:
+0 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53572 cat number hockey catName: hockey
+1 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\54164 cat number hockey catName: hockey
+2 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53983 cat number hockey catName: hockey
+3 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53722 cat number hockey catName: hockey
+4 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53836 cat number hockey catName: hockey
+categoryTotal is 599 for catQ category:christian 
+f1: 0.27352297590214748455 recall: 0.2086811352 precision: 0.3968253968
+Purity: 0.3968254000 Job: 0 
+ClusterQuery 1 searching for:  pittsburgh  Found 127 hits:
+0 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53980 cat number hockey catName: hockey
+1 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\52562 cat number hockey catName: hockey
+2 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53660 cat number hockey catName: hockey
+3 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\54076 cat number hockey catName: hockey
+4 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53541 cat number hockey catName: hockey
+categoryTotal is 600 for catQ category:hockey 
+f1: 0.29160935355350302443 recall: 0.1766666667 precision: 0.8346456693
+Purity: 0.8346456642 Job: 0 
+ClusterQuery 2 searching for:  henry anything  Found 243 hits:
+0 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\61126 cat number space catName: space
+1 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\61128 cat number space catName: space
+2 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\61053 cat number space catName: space
+3 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\61162 cat number space catName: space
+4 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\61154 cat number space catName: space
+categoryTotal is 593 for catQ category:space 
+f1: 0.27511961723072531535 recall: 0.1939291737 precision: 0.4732510288
+Purity: 0.4732510245 Job: 0 
+ClusterQuery 3 searching for:  data  Found 93 hits:
+0 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53688 cat number hockey catName: hockey
+1 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\52622 cat number hockey catName: hockey
+2 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\61241 cat number space catName: space
+3 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\60894 cat number space catName: space
+4 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\61058 cat number space catName: space
+categoryTotal is 593 for catQ category:space 
+f1: 0.23032069967298404576 recall: 0.1332209106 precision: 0.8494623656
+Purity: 0.8494623678 Job: 0 
+ClusterQuery 4 searching for:  apr  Found 269 hits:
+0 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53671 cat number hockey catName: hockey
+1 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\20487 cat number christian catName: christian
+2 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\61144 cat number space catName: space
+3 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\20543 cat number christian catName: christian
+4 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\20691 cat number christian catName: christian
+categoryTotal is 599 for catQ category:christian 
+f1: 0.44930875580705207161 recall: 0.3255425710 precision: 0.7249070632
+Purity: 0.7249070595 Job: 0 
+ClusterQuery 5 searching for:  wings faith  Found 257 hits:
+0 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53811 cat number hockey catName: hockey
+1 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\20761 cat number christian catName: christian
+2 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53577 cat number hockey catName: hockey
+3 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53877 cat number hockey catName: hockey
+4 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\20886 cat number christian catName: christian
+categoryTotal is 599 for catQ category:christian 
+f1: 0.32009345794407317233 recall: 0.2287145242 precision: 0.5330739300
+Purity: 0.5330739322 Job: 0 
+f1list: [0.27352297590214748455, 0.29160935355350302443, 0.27511961723072531535, 0.23032069967298404576, 0.44930875580705207161, 0.32009345794407317233] averagef1: :0.30666247668508085234
+PosHits: 668 NegHits: 636 PosScore: 127.32197243534029 NegScore: 78.02393500506878 Fitness: 4.396240537229729 
+TotalHits: 946 Total Docs: 1792
+************************************************ 
+ 
+  ***** Job: 0 Gen: 339 PopSize: 512 Noclusters:3 pathToIndex: indexes/crisis3FireBombFloodL5 **************************************************************** 
+ ClusterQuery 0 searching for:  boston explosions photo sad  Found 623 hits:
+0 path null cat number Boston_bom catName: Boston_bom
+1 path null cat number Boston_bom catName: Boston_bom
+2 path null cat number Boston_bom catName: Boston_bom
+3 path null cat number Boston_bom catName: Boston_bom
+4 path null cat number Boston_bom catName: Boston_bom
+categoryTotal is 1001 for catQ category:Boston_bom 
+f1: 0.70320197042177838882 recall: 0.5704295704 precision: 0.9165329053
+Purity: 0.9165328844 Job: 0 
+ClusterQuery 1 searching for:  bigwet australia flood area  Found 829 hits:
+0 path null cat number Queensland catName: Queensland
+1 path null cat number Queensland catName: Queensland
+2 path null cat number Queensland catName: Queensland
+3 path null cat number Queensland catName: Queensland
+4 path null cat number Queensland catName: Queensland
+categoryTotal is 1201 for catQ category:Queensland 
+f1: 0.79014778322709306220 recall: 0.6677768526 precision: 0.9674306393
+Purity: 0.9674306252 Job: 0 
+ClusterQuery 2 searching for:  fires highparkfire thousands colorado  Found 975 hits:
+0 path null cat number Colorado_w catName: Colorado_w
+1 path null cat number Colorado_w catName: Colorado_w
+2 path null cat number Colorado_w catName: Colorado_w
+3 path null cat number Colorado_w catName: Colorado_w
+4 path null cat number Colorado_w catName: Colorado_w
+categoryTotal is 1201 for catQ category:Colorado_w 
+f1: 0.87683823529515423098 recall: 0.7943380516 precision: 0.9784615385
+Purity: 0.9784615140 Job: 0 
+f1list: [0.70320197042177838882, 0.79014778322709306220, 0.87683823529515423098] averagef1: :0.79006266298134189400
+PosHits: 2266 NegHits: 161 PosScore: 270.01929204538465 NegScore: 23.10876438766718 Fitness: 859.6097848690698 
+TotalHits: 2346 Total Docs: 3403
+************************************************ 
+ 
+  ***** Job: 0 Gen: 739 PopSize: 896 Noclusters:6 pathToIndex: indexes/20NG6GraphicsHockeyCryptSpaceChristianGunsL5 **************************************************************** 
+ ClusterQuery 0 searching for:  life  Found 183 hits:
+0 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\60996 cat number space catName: space
+1 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\61004 cat number space catName: space
+2 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\21344 cat number christian catName: christian
+3 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\61007 cat number space catName: space
+4 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\61186 cat number space catName: space
+categoryTotal is 599 for catQ category:christian 
+f1: 0.35294117648856169177 recall: 0.2303839733 precision: 0.7540983607
+Purity: 0.7540983642 Job: 0 
+ClusterQuery 1 searching for:  church  Found 149 hits:
+0 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\20942 cat number christian catName: christian
+1 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\20793 cat number christian catName: christian
+2 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\20792 cat number christian catName: christian
+3 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\20684 cat number christian catName: christian
+4 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\20738 cat number christian catName: christian
+categoryTotal is 599 for catQ category:christian 
+f1: 0.39304812830948911893 recall: 0.2454090150 precision: 0.9865771812
+Purity: 0.9865771818 Job: 0 
+ClusterQuery 2 searching for:  ever  Found 185 hits:
+0 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\20885 cat number christian catName: christian
+1 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\21356 cat number christian catName: christian
+2 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\christian\20880 cat number christian catName: christian
+3 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53626 cat number hockey catName: hockey
+4 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53821 cat number hockey catName: hockey
+categoryTotal is 599 for catQ category:christian 
+f1: 0.19897959185693591212 recall: 0.1302170284 precision: 0.4216216216
+Purity: 0.4216216212 Job: 0 
+ClusterQuery 3 searching for:  league game  Found 300 hits:
+0 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53558 cat number hockey catName: hockey
+1 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53591 cat number hockey catName: hockey
+2 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53656 cat number hockey catName: hockey
+3 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53632 cat number hockey catName: hockey
+4 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\52602 cat number hockey catName: hockey
+categoryTotal is 600 for catQ category:hockey 
+f1: 0.6266666667 recall: 0.47 precision: 0.94
+Purity: 0.9399999906 Job: 0 
+ClusterQuery 4 searching for:  information  Found 121 hits:
+0 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\61195 cat number space catName: space
+1 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53569 cat number hockey catName: hockey
+2 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\hockey\53718 cat number hockey catName: hockey
+3 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\60773 cat number space catName: space
+4 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\60854 cat number space catName: space
+categoryTotal is 593 for catQ category:space 
+f1: 0.18487394959151582202 recall: 0.1112984823 precision: 0.5454545455
+Purity: 0.5454545448 Job: 0 
+ClusterQuery 5 searching for:  moon  Found 118 hits:
+0 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\60830 cat number space catName: space
+1 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\61211 cat number space catName: space
+2 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\60170 cat number space catName: space
+3 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\60837 cat number space catName: space
+4 path C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian\space\60813 cat number space catName: space
+categoryTotal is 593 for catQ category:space 
+f1: 0.32348804501739828810 recall: 0.1939291737 precision: 0.9745762712
+Purity: 0.9745762745 Job: 0 
+f1list: [0.35294117648856169177, 0.39304812830948911893, 0.19897959185693591212, 0.6266666667, 0.18487394959151582202, 0.32348804501739828810] averagef1: :0.34666625966065013882
+PosHits: 685 NegHits: 371 PosScore: 174.87077950313687 NegScore: 69.46350809186697 Fitness: 30.80655112170336 
+TotalHits: 849 Total Docs: 1792
+************************************************ 
+ 
+  ***** Job: 0 Gen: 539 PopSize: 512 Noclusters:6 pathToIndex: indexes/20NG6GraphicsHockeyCryptSpaceChristianGunsL5 **************************************************************** 
+ ClusterQuery 0 searching for:  program  Found 275 hits:
+0 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\comp.graphics\38691 cat number p.graphics catName: p.graphics
+1 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\comp.graphics\38550 cat number p.graphics catName: p.graphics
+2 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\comp.graphics\38551 cat number p.graphics catName: p.graphics
+3 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\comp.graphics\38666 cat number p.graphics catName: p.graphics
+4 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\comp.graphics\38747 cat number p.graphics catName: p.graphics
+categoryTotal is 584 for catQ category:p.graphics 
+f1: 0.25378346914243245184 recall: 0.1866438356 precision: 0.3963636364
+Purity: 0.3963636324 Job: 0 
+ClusterQuery 1 searching for:  god jesus  Found 465 hits:
+0 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\soc.religion.christian\20867 cat number .religion.christian catName: .religion.christian
+1 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\soc.religion.christian\21316 cat number .religion.christian catName: .religion.christian
+2 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\soc.religion.christian\20547 cat number .religion.christian catName: .religion.christian
+3 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\soc.religion.christian\20492 cat number .religion.christian catName: .religion.christian
+4 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\soc.religion.christian\20780 cat number .religion.christian catName: .religion.christian
+categoryTotal is 599 for catQ category:.religion.christian 
+f1: 0.74248120300307977415 recall: 0.6594323873 precision: 0.8494623656
+Purity: 0.8494623520 Job: 0 
+ClusterQuery 2 searching for:  hockey  Found 225 hits:
+0 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\rec.sport.hockey\53568 cat number .sport.hockey catName: .sport.hockey
+1 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\rec.sport.hockey\53640 cat number .sport.hockey catName: .sport.hockey
+2 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\rec.sport.hockey\53927 cat number .sport.hockey catName: .sport.hockey
+3 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\rec.sport.hockey\53705 cat number .sport.hockey catName: .sport.hockey
+4 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\rec.sport.hockey\53536 cat number .sport.hockey catName: .sport.hockey
+categoryTotal is 600 for catQ category:.sport.hockey 
+f1: 0.5454545455 recall: 0.375 precision: 1
+Purity: 0.9999999900 Job: 0 
+ClusterQuery 3 searching for:  clipper chip  Found 398 hits:
+0 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.crypt\15658 cat number .crypt catName: .crypt
+1 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.crypt\15185 cat number .crypt catName: .crypt
+2 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.crypt\15726 cat number .crypt catName: .crypt
+3 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.crypt\15224 cat number .crypt catName: .crypt
+4 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.crypt\15642 cat number .crypt catName: .crypt
+categoryTotal is 595 for catQ category:.crypt 
+f1: 0.73716012081545562137 recall: 0.6151260504 precision: 0.9195979899
+Purity: 0.9195979848 Job: 0 
+ClusterQuery 4 searching for:  software  Found 275 hits:
+0 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\comp.graphics\38305 cat number p.graphics catName: p.graphics
+1 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.space\60998 cat number .space catName: .space
+2 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\comp.graphics\37941 cat number p.graphics catName: p.graphics
+3 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\comp.graphics\38283 cat number p.graphics catName: p.graphics
+4 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.space\61180 cat number .space catName: .space
+categoryTotal is 584 for catQ category:p.graphics 
+f1: 0.21420256113105527856 recall: 0.1575342466 precision: 0.3345454545
+Purity: 0.3345454512 Job: 0 
+ClusterQuery 5 searching for:  gun  Found 276 hits:
+0 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\talk.politics.guns\53369 cat number k.politics.guns catName: k.politics.guns
+1 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\talk.politics.guns\53370 cat number k.politics.guns catName: k.politics.guns
+2 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\talk.politics.guns\54723 cat number k.politics.guns catName: k.politics.guns
+3 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\sci.space\60840 cat number .space catName: .space
+4 path C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns\talk.politics.guns\54549 cat number k.politics.guns catName: k.politics.guns
+categoryTotal is 546 for catQ category:k.politics.guns 
+f1: 0.61557177618973839842 recall: 0.4633699634 precision: 0.9166666667
+Purity: 0.9166666652 Job: 0 
+f1list: [0.25378346914243245184, 0.74248120300307977415, 0.5454545455, 0.73716012081545562137, 0.21420256113105527856, 0.61557177618973839842] averagef1: :0.51810894596362692072
+PosHits: 1535 NegHits: 379 PosScore: 460.3015025258064 NegScore: 84.3421927895397 Fitness: 37.34082225919504 
+TotalHits: 1718 Total Docs: 3517
+************************************************ 
+ 

@@ -32,8 +32,8 @@ class Index20NG {
 	
 	// Index files in this directory	
 	def docsPath =
-	//  /C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns/	
-	/C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian/
+	  /C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns/	
+	///C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian/
 
 	Path path = Paths.get(indexPath)
 	Directory directory = FSDirectory.open(path)
@@ -88,8 +88,8 @@ class Index20NG {
 		Field pathField = new StringField(IndexInfo.FIELD_PATH, f.getPath(), Field.Store.YES);
 		doc.add(pathField);
 
-		def catName = f.getCanonicalPath().drop(53).take(30).replaceAll(/[^a-z.]/, "")     //'[0-9]|\ ',"")	
-	//	def catName = f.getCanonicalPath().drop(70).take(30).replaceAll(/[^a-z.]/, "")
+	//	def catName = f.getCanonicalPath().drop(53).take(30).replaceAll(/[^a-z.]/, "")     //'[0-9]|\ ',"")	
+		def catName = f.getCanonicalPath().drop(70).take(30).replaceAll(/[^a-z.]/, "")
 
 
 		def n = catsFreq.get((catName)) ?: 0
