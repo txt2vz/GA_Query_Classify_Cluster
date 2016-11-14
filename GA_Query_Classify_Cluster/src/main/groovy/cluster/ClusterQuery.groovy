@@ -45,13 +45,14 @@ public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProbl
 
 		ClusterFit fitness = (ClusterFit) ind.fitness;
 		IntegerVectorIndividual intVectorIndividual = (IntegerVectorIndividual) ind;
-
+        
+		//list of lucene Boolean Query Builders
 		def bqbList =
 		
-		//from ClusterQueriesT = trait
-	  	getORQL(wordArray, intVectorIndividual, NUMBER_OF_CLUSTERS)
-		//getANDQL(wordArray, intVectorIndividual, NUMBER_OF_CLUSTERS)
-		//getORNOTQL(wordArray, intVectorIndividual, NUMBER_OF_CLUSTERS)
+		  //from ClusterQueriesT = trait
+	  	  getORQL(wordArray, intVectorIndividual, NUMBER_OF_CLUSTERS)
+		  //getANDQL(wordArray, intVectorIndividual, NUMBER_OF_CLUSTERS)
+		  //getORNOTQL(wordArray, intVectorIndividual, NUMBER_OF_CLUSTERS)
 
 		final int hitsPerPage = 10000;
 		def negHitsTotal=0
@@ -106,7 +107,7 @@ public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProbl
 			}
 		}
 
-		def minScore = 1000
+		def final  minScore = 1000
 		def scoreOnly = posScore - negScore
 		def scorePlus = (scoreOnly < -minScore) ? 0 : scoreOnly + minScore
 
@@ -146,7 +147,6 @@ public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProbl
 		fitness.emptyPen = emptyPen
 
 		((SimpleFitness) intVectorIndividual.fitness).setFitness(state, rawfitness, false);
-
 		ind.evaluated = true;
 	}
 }
