@@ -30,7 +30,7 @@ class IndexCrisisClusterFromCSV {
 	Path docsPath = Paths.get('Datasets/crisisData')
 	Directory directory = FSDirectory.open(indexPath)
 	Analyzer analyzer = //new EnglishAnalyzer();  //with stemming
-								new StandardAnalyzer();
+	new StandardAnalyzer();
 	def catsFreq=[:]
 
 	static main(args) {
@@ -58,19 +58,21 @@ class IndexCrisisClusterFromCSV {
 			println "File: $file  CatName: $catName"
 
 			file.splitEachLine(',') {fields ->
-				
-				def n = catsFreq.get((catName)) ?: 0
-				catsFreq.put((catName), n + 1)
-				
-				def textBody = fields[1]
-				//def tweetID = fields[0]
-				def doc = new Document()
-				if (textBody!=" ")
-					doc.add(new TextField(IndexInfo.FIELD_CONTENTS, textBody,  Field.Store.YES))
 
-				Field catNameField = new StringField(IndexInfo.FIELD_CATEGORY_NAME, catName, Field.Store.YES);
-				doc.add(catNameField)
-				writer.addDocument(doc);
+				def n = catsFreq.get((catName)) ?: 0
+				if (n < 1000) {
+					catsFreq.put((catName), n + 1)
+
+					def textBody = fields[1]
+					//def tweetID = fields[0]
+					def doc = new Document()
+					if (textBody!=" ")
+						doc.add(new TextField(IndexInfo.FIELD_CONTENTS, textBody,  Field.Store.YES))
+
+					Field catNameField = new StringField(IndexInfo.FIELD_CATEGORY_NAME, catName, Field.Store.YES);
+					doc.add(catNameField)
+					writer.addDocument(doc);
+				}
 			}
 		}
 		println "catsFreq $catsFreq"

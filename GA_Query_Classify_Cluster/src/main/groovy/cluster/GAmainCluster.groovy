@@ -44,7 +44,7 @@ class GAmainCluster extends Evolve {
 			cfit.queryStats(job, state.generation, popSize)	
 
 			cleanup(state);
-			println " ---------------------------------END-----------------------------------------------"
+			println ' ---------------------------------END-----------------------------------------------'
 		}
 
 		final Date endRun = new Date();

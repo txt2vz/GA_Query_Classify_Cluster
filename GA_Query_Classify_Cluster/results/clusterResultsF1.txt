@@ -1760,3 +1760,531 @@ PosHits: 1535 NegHits: 379 PosScore: 460.3015025258064 NegScore: 84.342192789539
 TotalHits: 1718 Total Docs: 3517
 ************************************************ 
  
+  ***** Job: 0 Gen: 539 PopSize: 512 Noclusters:4 pathToIndex: indexes/classic4_500L5 **************************************************************** 
+ ClusterQuery 0 searching for:  high high patients  Found 300 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cacm.000074 cat number cacm catName: cacm
+1 path C:\Users\Laurie\Dataset\classic\classic\cacm.000081 cat number cacm catName: cacm
+2 path C:\Users\Laurie\Dataset\classic\classic\cacm.000232 cat number cacm catName: cacm
+3 path C:\Users\Laurie\Dataset\classic\classic\cacm.000198 cat number cacm catName: cacm
+4 path C:\Users\Laurie\Dataset\classic\classic\med.000226 cat number med. catName: med.
+categoryTotal is 500 for catQ category:med. 
+f1: 0.4524999999906 recall: 0.362 precision: 0.6033333333
+Purity: 0.6033333273 Job: 0 
+ClusterQuery 1 searching for:  cells library  Found 292 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\med.000431 cat number med. catName: med.
+1 path C:\Users\Laurie\Dataset\classic\classic\cacm.000263 cat number cacm catName: cacm
+2 path C:\Users\Laurie\Dataset\classic\classic\med.000397 cat number med. catName: med.
+3 path C:\Users\Laurie\Dataset\classic\classic\med.000067 cat number med. catName: med.
+4 path C:\Users\Laurie\Dataset\classic\classic\med.000232 cat number med. catName: med.
+categoryTotal is 500 for catQ category:cisi 
+f1: 0.4722222222211 recall: 0.374 precision: 0.6404109589
+Purity: 0.6404109525 Job: 0 
+ClusterQuery 2 searching for:  computer  Found 147 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cacm.000037 cat number cacm catName: cacm
+1 path C:\Users\Laurie\Dataset\classic\classic\cacm.000057 cat number cacm catName: cacm
+2 path C:\Users\Laurie\Dataset\classic\classic\cacm.000217 cat number cacm catName: cacm
+3 path C:\Users\Laurie\Dataset\classic\classic\cacm.000218 cat number cacm catName: cacm
+4 path C:\Users\Laurie\Dataset\classic\classic\cacm.000436 cat number cacm catName: cacm
+categoryTotal is 500 for catQ category:cacm 
+f1: 0.2132921174650 recall: 0.138 precision: 0.4693877551
+Purity: 0.4693877559 Job: 0 
+ClusterQuery 3 searching for:  theory solution  Found 308 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cran.000028 cat number cran catName: cran
+1 path C:\Users\Laurie\Dataset\classic\classic\cran.000496 cat number cran catName: cran
+2 path C:\Users\Laurie\Dataset\classic\classic\cran.000027 cat number cran catName: cran
+3 path C:\Users\Laurie\Dataset\classic\classic\cran.000445 cat number cran catName: cran
+4 path C:\Users\Laurie\Dataset\classic\classic\cran.000273 cat number cran catName: cran
+categoryTotal is 500 for catQ category:cran 
+f1: 0.5594059406039 recall: 0.452 precision: 0.7337662338
+Purity: 0.7337662232 Job: 0 
+f1list: [0.4524999999906, 0.4722222222211, 0.2132921174650, 0.5594059406039] averagef1: :0.42435507007015
+PosHits: 815 NegHits: 232 PosScore: 238.97053130716085 NegScore: 55.326905995607376 Fitness: 274.90123197860834 
+TotalHits: 929 Total Docs: 2000
+************************************************ 
+ 
+  ***** Job: 0 Gen: 539 PopSize: 512 Noclusters:4 pathToIndex: indexes/classic4_500L5 **************************************************************** 
+ ClusterQuery 0 searching for:  boundary flow  Found 425 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cran.000003 cat number cran catName: cran
+1 path C:\Users\Laurie\Dataset\classic\classic\cran.000004 cat number cran catName: cran
+2 path C:\Users\Laurie\Dataset\classic\classic\cran.000335 cat number cran catName: cran
+3 path C:\Users\Laurie\Dataset\classic\classic\cran.000376 cat number cran catName: cran
+4 path C:\Users\Laurie\Dataset\classic\classic\cran.000326 cat number cran catName: cran
+categoryTotal is 500 for catQ category:cran 
+f1: 0.8151351351227 recall: 0.754 precision: 0.8870588235
+Purity: 0.8870588324 Job: 0 
+ClusterQuery 1 searching for:  library cells  Found 292 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\med.000431 cat number med. catName: med.
+1 path C:\Users\Laurie\Dataset\classic\classic\cacm.000263 cat number cacm catName: cacm
+2 path C:\Users\Laurie\Dataset\classic\classic\med.000397 cat number med. catName: med.
+3 path C:\Users\Laurie\Dataset\classic\classic\med.000067 cat number med. catName: med.
+4 path C:\Users\Laurie\Dataset\classic\classic\med.000232 cat number med. catName: med.
+categoryTotal is 500 for catQ category:cisi 
+f1: 0.4722222222211 recall: 0.374 precision: 0.6404109589
+Purity: 0.6404109525 Job: 0 
+ClusterQuery 2 searching for:  algorithm  Found 166 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cacm.000199 cat number cacm catName: cacm
+1 path C:\Users\Laurie\Dataset\classic\classic\cacm.000029 cat number cacm catName: cacm
+2 path C:\Users\Laurie\Dataset\classic\classic\cacm.000178 cat number cacm catName: cacm
+3 path C:\Users\Laurie\Dataset\classic\classic\cacm.000125 cat number cacm catName: cacm
+4 path C:\Users\Laurie\Dataset\classic\classic\cacm.000127 cat number cacm catName: cacm
+categoryTotal is 500 for catQ category:cacm 
+f1: 0.4864864864917 recall: 0.324 precision: 0.9759036145
+Purity: 0.9759036168 Job: 0 
+ClusterQuery 3 searching for:  computer patients  Found 282 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\med.000219 cat number med. catName: med.
+1 path C:\Users\Laurie\Dataset\classic\classic\cacm.000037 cat number cacm catName: cacm
+2 path C:\Users\Laurie\Dataset\classic\classic\cacm.000057 cat number cacm catName: cacm
+3 path C:\Users\Laurie\Dataset\classic\classic\cacm.000217 cat number cacm catName: cacm
+4 path C:\Users\Laurie\Dataset\classic\classic\cacm.000218 cat number cacm catName: cacm
+categoryTotal is 500 for catQ category:med. 
+f1: 0.3503836317040 recall: 0.274 precision: 0.4858156028
+Purity: 0.4858156041 Job: 0 
+f1list: [0.8151351351227, 0.4722222222211, 0.4864864864917, 0.3503836317040] averagef1: :0.531056868884875
+PosHits: 1069 NegHits: 96 PosScore: 484.2653343863785 NegScore: 16.721822164952755 Fitness: 819.6230515756663 
+TotalHits: 1117 Total Docs: 2000
+************************************************ 
+ 
+  ***** Job: 0 Gen: 739 PopSize: 384 Noclusters:4 pathToIndex: indexes/classic4_500L5 **************************************************************** 
+ ClusterQuery 0 searching for:  boundary flow  Found 425 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cran.000003 cat number cran catName: cran
+1 path C:\Users\Laurie\Dataset\classic\classic\cran.000004 cat number cran catName: cran
+2 path C:\Users\Laurie\Dataset\classic\classic\cran.000335 cat number cran catName: cran
+3 path C:\Users\Laurie\Dataset\classic\classic\cran.000376 cat number cran catName: cran
+4 path C:\Users\Laurie\Dataset\classic\classic\cran.000326 cat number cran catName: cran
+categoryTotal is 500 for catQ category:cran 
+f1: 0.8151351351227 recall: 0.754 precision: 0.8870588235
+Purity: 0.8870588324 Job: 0 
+ClusterQuery 1 searching for:  cells patients  Found 234 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\med.000375 cat number med. catName: med.
+1 path C:\Users\Laurie\Dataset\classic\classic\med.000026 cat number med. catName: med.
+2 path C:\Users\Laurie\Dataset\classic\classic\med.000179 cat number med. catName: med.
+3 path C:\Users\Laurie\Dataset\classic\classic\med.000108 cat number med. catName: med.
+4 path C:\Users\Laurie\Dataset\classic\classic\med.000458 cat number med. catName: med.
+categoryTotal is 500 for catQ category:med. 
+f1: 0.6376021798 recall: 0.468 precision: 1
+Purity: 1.0000000062 Job: 0 
+ClusterQuery 2 searching for:  algorithm  Found 166 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cacm.000199 cat number cacm catName: cacm
+1 path C:\Users\Laurie\Dataset\classic\classic\cacm.000029 cat number cacm catName: cacm
+2 path C:\Users\Laurie\Dataset\classic\classic\cacm.000178 cat number cacm catName: cacm
+3 path C:\Users\Laurie\Dataset\classic\classic\cacm.000125 cat number cacm catName: cacm
+4 path C:\Users\Laurie\Dataset\classic\classic\cacm.000127 cat number cacm catName: cacm
+categoryTotal is 500 for catQ category:cacm 
+f1: 0.4864864864917 recall: 0.324 precision: 0.9759036145
+Purity: 0.9759036168 Job: 0 
+ClusterQuery 3 searching for:  computer library  Found 313 hits:
+0 path C:\Users\Laurie\Dataset\classic\classic\cisi.000325 cat number cisi catName: cisi
+1 path C:\Users\Laurie\Dataset\classic\classic\cisi.000056 cat number cisi catName: cisi
+2 path C:\Users\Laurie\Dataset\classic\classic\cisi.000141 cat number cisi catName: cisi
+3 path C:\Users\Laurie\Dataset\classic\classic\cisi.000244 cat number cisi catName: cisi
+4 path C:\Users\Laurie\Dataset\classic\classic\cisi.000092 cat number cisi catName: cisi
+categoryTotal is 500 for catQ category:cisi 
+f1: 0.5731857318612 recall: 0.466 precision: 0.7444089457
+Purity: 0.7444089506 Job: 0 
+f1list: [0.8151351351227, 0.6376021798, 0.4864864864917, 0.5731857318612] averagef1: :0.6281023833189
+PosHits: 1096 NegHits: 42 PosScore: 502.84507432207465 NegScore: 8.24808008223772 Fitness: 834.732421282949 
+TotalHits: 1117 Total Docs: 2000
+************************************************ 
+ 
+  ***** Job: 0 Gen: 739 PopSize: 512 Noclusters:5 pathToIndex: indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL5 **************************************************************** 
+ ClusterQuery 0 searching for:  windows  Found 70 hits:
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9155 cat number mp.os.mswindows.misc catName: mp.os.mswindows.misc
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9450 cat number mp.os.mswindows.misc catName: mp.os.mswindows.misc
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9139 cat number mp.os.mswindows.misc catName: mp.os.mswindows.misc
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9489 cat number mp.os.mswindows.misc catName: mp.os.mswindows.misc
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\10017 cat number mp.os.mswindows.misc catName: mp.os.mswindows.misc
+categoryTotal is 100 for catQ category:mp.os.mswindows.misc 
+f1: 0.776470588250 recall: 0.66 precision: 0.9428571429
+Purity: 0.9428571438 Job: 0 
+ClusterQuery 1 searching for:  god jesus  Found 68 hits:
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20547 cat number c.religion.christian catName: c.religion.christian
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20492 cat number c.religion.christian catName: c.religion.christian
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20531 cat number c.religion.christian catName: c.religion.christian
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20534 cat number c.religion.christian catName: c.religion.christian
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20488 cat number c.religion.christian catName: c.religion.christian
+categoryTotal is 100 for catQ category:c.religion.christian 
+f1: 0.773809523796 recall: 0.65 precision: 0.9558823529
+Purity: 0.9558823560 Job: 0 
+ClusterQuery 2 searching for:  sale  Found 60 hits:
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74725 cat number sc.forsale catName: sc.forsale
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74732 cat number sc.forsale catName: sc.forsale
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74741 cat number sc.forsale catName: sc.forsale
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74799 cat number sc.forsale catName: sc.forsale
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74740 cat number sc.forsale catName: sc.forsale
+categoryTotal is 100 for catQ category:sc.forsale 
+f1: 0.7125 recall: 0.57 precision: 0.95
+Purity: 0.9500000019 Job: 0 
+ClusterQuery 3 searching for:  nhl hockey  Found 66 hits:
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52605 cat number c.sport.hockey catName: c.sport.hockey
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52602 cat number c.sport.hockey catName: c.sport.hockey
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52612 cat number c.sport.hockey catName: c.sport.hockey
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52595 cat number c.sport.hockey catName: c.sport.hockey
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52626 cat number c.sport.hockey catName: c.sport.hockey
+categoryTotal is 100 for catQ category:c.sport.hockey 
+f1: 0.783132530105 recall: 0.65 precision: 0.9848484848
+Purity: 0.9848484880 Job: 0 
+ClusterQuery 4 searching for:  station orbit  Found 50 hits:
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60233 cat number i.space catName: i.space
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60190 cat number i.space catName: i.space
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60151 cat number i.space catName: i.space
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\59904 cat number i.space catName: i.space
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60187 cat number i.space catName: i.space
+categoryTotal is 100 for catQ category:i.space 
+f1: 0.6266666667 recall: 0.47 precision: 0.94
+Purity: 0.94 Job: 0 
+f1list: [0.776470588250, 0.773809523796, 0.7125, 0.783132530105, 0.6266666667] averagef1: :0.7345158617702
+PosHits: 294 NegHits: 20 PosScore: 78.71512825973332 NegScore: 3.5330210849642754 Fitness: 653.7107211622596 
+TotalHits: 304 Total Docs: 500
+************************************************ 
+ 
+  ***** Job: 0 Gen: 539 PopSize: 512 Noclusters:5 pathToIndex: indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL5 **************************************************************** 
+ ClusterQuery 0 searching for:  jesus god  Found 68 hits:
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20547 cat number c.religion.christian catName: c.religion.christian
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20492 cat number c.religion.christian catName: c.religion.christian
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20531 cat number c.religion.christian catName: c.religion.christian
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20534 cat number c.religion.christian catName: c.religion.christian
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20488 cat number c.religion.christian catName: c.religion.christian
+categoryTotal is 100 for catQ category:c.religion.christian 
+f1: 0.773809523796 recall: 0.65 precision: 0.9558823529
+Purity: 0.9558823560 Job: 0 
+ClusterQuery 1 searching for:  orbit station  Found 50 hits:
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60233 cat number i.space catName: i.space
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60190 cat number i.space catName: i.space
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60151 cat number i.space catName: i.space
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\59904 cat number i.space catName: i.space
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60187 cat number i.space catName: i.space
+categoryTotal is 100 for catQ category:i.space 
+f1: 0.6266666667 recall: 0.47 precision: 0.94
+Purity: 0.94 Job: 0 
+ClusterQuery 2 searching for:  sale  Found 60 hits:
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74725 cat number sc.forsale catName: sc.forsale
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74732 cat number sc.forsale catName: sc.forsale
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74741 cat number sc.forsale catName: sc.forsale
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74799 cat number sc.forsale catName: sc.forsale
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74740 cat number sc.forsale catName: sc.forsale
+categoryTotal is 100 for catQ category:sc.forsale 
+f1: 0.7125 recall: 0.57 precision: 0.95
+Purity: 0.9500000019 Job: 0 
+ClusterQuery 3 searching for:  hockey nhl  Found 66 hits:
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52605 cat number c.sport.hockey catName: c.sport.hockey
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52602 cat number c.sport.hockey catName: c.sport.hockey
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52612 cat number c.sport.hockey catName: c.sport.hockey
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52595 cat number c.sport.hockey catName: c.sport.hockey
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52626 cat number c.sport.hockey catName: c.sport.hockey
+categoryTotal is 100 for catQ category:c.sport.hockey 
+f1: 0.783132530105 recall: 0.65 precision: 0.9848484848
+Purity: 0.9848484880 Job: 0 
+ClusterQuery 4 searching for:  windows  Found 70 hits:
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9155 cat number mp.os.mswindows.misc catName: mp.os.mswindows.misc
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9450 cat number mp.os.mswindows.misc catName: mp.os.mswindows.misc
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9139 cat number mp.os.mswindows.misc catName: mp.os.mswindows.misc
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9489 cat number mp.os.mswindows.misc catName: mp.os.mswindows.misc
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\10017 cat number mp.os.mswindows.misc catName: mp.os.mswindows.misc
+categoryTotal is 100 for catQ category:mp.os.mswindows.misc 
+f1: 0.776470588250 recall: 0.66 precision: 0.9428571429
+Purity: 0.9428571438 Job: 0 
+f1list: [0.773809523796, 0.6266666667, 0.7125, 0.783132530105, 0.776470588250] averagef1: :0.7345158617702
+PosHits: 294 NegHits: 20 PosScore: 78.71512825973332 NegScore: 3.5330210849642754 Fitness: 653.7107211622596 
+TotalHits: 304 Total Docs: 500
+************************************************ 
+ 
+  ***** Job: 0 Gen: 539 PopSize: 512 Noclusters:5 pathToIndex: indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL5 **************************************************************** 
+ ClusterQuery 0 searching for:  windows  Found 70 hits:
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9155 cat number mp.os.mswindows.misc catName: mp.os.mswindows.misc
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9450 cat number mp.os.mswindows.misc catName: mp.os.mswindows.misc
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9139 cat number mp.os.mswindows.misc catName: mp.os.mswindows.misc
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9489 cat number mp.os.mswindows.misc catName: mp.os.mswindows.misc
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\10017 cat number mp.os.mswindows.misc catName: mp.os.mswindows.misc
+categoryTotal is 100 for catQ category:mp.os.mswindows.misc 
+f1: 0.776470588250 recall: 0.66 precision: 0.9428571429
+Purity: 0.9428571438 Job: 0 
+ClusterQuery 1 searching for:  sale sale  Found 60 hits:
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74725 cat number sc.forsale catName: sc.forsale
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74732 cat number sc.forsale catName: sc.forsale
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74741 cat number sc.forsale catName: sc.forsale
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74799 cat number sc.forsale catName: sc.forsale
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74740 cat number sc.forsale catName: sc.forsale
+categoryTotal is 100 for catQ category:sc.forsale 
+f1: 0.7125 recall: 0.57 precision: 0.95
+Purity: 0.9500000019 Job: 0 
+ClusterQuery 2 searching for:  station orbit  Found 50 hits:
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60233 cat number i.space catName: i.space
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60190 cat number i.space catName: i.space
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60151 cat number i.space catName: i.space
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\59904 cat number i.space catName: i.space
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60187 cat number i.space catName: i.space
+categoryTotal is 100 for catQ category:i.space 
+f1: 0.6266666667 recall: 0.47 precision: 0.94
+Purity: 0.94 Job: 0 
+ClusterQuery 3 searching for:  christians jesus god  Found 73 hits:
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20547 cat number c.religion.christian catName: c.religion.christian
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20506 cat number c.religion.christian catName: c.religion.christian
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20532 cat number c.religion.christian catName: c.religion.christian
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20571 cat number c.religion.christian catName: c.religion.christian
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20500 cat number c.religion.christian catName: c.religion.christian
+categoryTotal is 100 for catQ category:c.religion.christian 
+f1: 0.80924855492 recall: 0.7 precision: 0.9589041096
+Purity: 0.9589041070 Job: 0 
+ClusterQuery 4 searching for:  players nhl hockey  Found 76 hits:
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52623 cat number c.sport.hockey catName: c.sport.hockey
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52595 cat number c.sport.hockey catName: c.sport.hockey
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52602 cat number c.sport.hockey catName: c.sport.hockey
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52612 cat number c.sport.hockey catName: c.sport.hockey
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52605 cat number c.sport.hockey catName: c.sport.hockey
+categoryTotal is 100 for catQ category:c.sport.hockey 
+f1: 0.840909090899 recall: 0.74 precision: 0.9736842105
+Purity: 0.9736842078 Job: 0 
+f1list: [0.776470588250, 0.7125, 0.6266666667, 0.80924855492, 0.840909090899] averagef1: :0.7531589801538
+PosHits: 308 NegHits: 21 PosScore: 85.85924698319286 NegScore: 4.0214332435280085 Fitness: 344.02442476921345 
+TotalHits: 318 Total Docs: 500
+************************************************ 
+ 
+  ***** Job: 0 Gen: 739 PopSize: 512 Noclusters:5 pathToIndex: indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL5 **************************************************************** 
+ ClusterQuery 0 searching for:  god jesus  Found 68 hits:
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20547 cat number c.religion.christian catName: c.religion.christian
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20492 cat number c.religion.christian catName: c.religion.christian
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20531 cat number c.religion.christian catName: c.religion.christian
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20534 cat number c.religion.christian catName: c.religion.christian
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20488 cat number c.religion.christian catName: c.religion.christian
+categoryTotal is 100 for catQ category:c.religion.christian 
+f1: 0.773809523796 recall: 0.65 precision: 0.9558823529
+Purity: 0.9558823560 Job: 0 
+ClusterQuery 1 searching for:  hockey nhl players  Found 76 hits:
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52623 cat number c.sport.hockey catName: c.sport.hockey
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52595 cat number c.sport.hockey catName: c.sport.hockey
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52602 cat number c.sport.hockey catName: c.sport.hockey
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52612 cat number c.sport.hockey catName: c.sport.hockey
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52605 cat number c.sport.hockey catName: c.sport.hockey
+categoryTotal is 100 for catQ category:c.sport.hockey 
+f1: 0.840909090899 recall: 0.74 precision: 0.9736842105
+Purity: 0.9736842078 Job: 0 
+ClusterQuery 2 searching for:  sale  Found 60 hits:
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74725 cat number sc.forsale catName: sc.forsale
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74732 cat number sc.forsale catName: sc.forsale
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74741 cat number sc.forsale catName: sc.forsale
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74799 cat number sc.forsale catName: sc.forsale
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74740 cat number sc.forsale catName: sc.forsale
+categoryTotal is 100 for catQ category:sc.forsale 
+f1: 0.7125 recall: 0.57 precision: 0.95
+Purity: 0.9500000019 Job: 0 
+ClusterQuery 3 searching for:  windows  Found 70 hits:
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9155 cat number mp.os.mswindows.misc catName: mp.os.mswindows.misc
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9450 cat number mp.os.mswindows.misc catName: mp.os.mswindows.misc
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9139 cat number mp.os.mswindows.misc catName: mp.os.mswindows.misc
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9489 cat number mp.os.mswindows.misc catName: mp.os.mswindows.misc
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\10017 cat number mp.os.mswindows.misc catName: mp.os.mswindows.misc
+categoryTotal is 100 for catQ category:mp.os.mswindows.misc 
+f1: 0.776470588250 recall: 0.66 precision: 0.9428571429
+Purity: 0.9428571438 Job: 0 
+ClusterQuery 4 searching for:  station orbit  Found 50 hits:
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60233 cat number i.space catName: i.space
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60190 cat number i.space catName: i.space
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60151 cat number i.space catName: i.space
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\59904 cat number i.space catName: i.space
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60187 cat number i.space catName: i.space
+categoryTotal is 100 for catQ category:i.space 
+f1: 0.6266666667 recall: 0.47 precision: 0.94
+Purity: 0.94 Job: 0 
+f1list: [0.773809523796, 0.840909090899, 0.7125, 0.776470588250, 0.6266666667] averagef1: :0.746071173929
+PosHits: 303 NegHits: 21 PosScore: 78.86288466583937 NegScore: 3.452979451045394 Fitness: 673.206600664461 
+TotalHits: 313 Total Docs: 500
+************************************************ 
+ 
+  ***** Job: 0 Gen: 739 PopSize: 512 Noclusters:3 pathToIndex: indexes/crisis3FireBombFloodL5 **************************************************************** 
+ ClusterQuery 0 searching for:  colorado springs  Found 810 hits:
+0 path null cat number Colorado_w catName: Colorado_w
+1 path null cat number Colorado_w catName: Colorado_w
+2 path null cat number Colorado_w catName: Colorado_w
+3 path null cat number Colorado_w catName: Colorado_w
+4 path null cat number Colorado_w catName: Colorado_w
+categoryTotal is 1201 for catQ category:Colorado_w 
+f1: 0.8055693685 recall: 0.6744379684 precision: 1
+Purity: 0.9999999990 Job: 0 
+ClusterQuery 1 searching for:  highparkfire qldfloods flooding floods bigwet  Found 1099 hits:
+0 path null cat number Queensland catName: Queensland
+1 path null cat number Queensland catName: Queensland
+2 path null cat number Queensland catName: Queensland
+3 path null cat number Queensland catName: Queensland
+4 path null cat number Queensland catName: Queensland
+categoryTotal is 1201 for catQ category:Queensland 
+f1: 0.82521739131337550095 recall: 0.7901748543 precision: 0.8635122839
+Purity: 0.8635122769 Job: 0 
+ClusterQuery 2 searching for:  prayforboston explosion boston marathon  Found 728 hits:
+0 path null cat number Boston_bom catName: Boston_bom
+1 path null cat number Boston_bom catName: Boston_bom
+2 path null cat number Boston_bom catName: Boston_bom
+3 path null cat number Boston_bom catName: Boston_bom
+4 path null cat number Boston_bom catName: Boston_bom
+categoryTotal is 1001 for catQ category:Boston_bom 
+f1: 0.8421052632 recall: 0.7272727273 precision: 1
+Purity: 1.0000000192 Job: 0 
+f1list: [0.8055693685, 0.82521739131337550095, 0.8421052632] averagef1: :0.82429734100445850032
+PosHits: 2619 NegHits: 18 PosScore: 765.6954790130258 NegScore: 2.569317936897278 Fitness: 1361.5914050441347 
+TotalHits: 2628 Total Docs: 3403
+************************************************ 
+ 
+  ***** Job: 0 Gen: 739 PopSize: 512 Noclusters:3 pathToIndex: indexes/crisis3FireBombFloodL5 **************************************************************** 
+ ClusterQuery 0 searching for:  highparkfire queensland qldfloods qld bigwet  Found 1046 hits:
+0 path null cat number Queensland catName: Queensland
+1 path null cat number Queensland catName: Queensland
+2 path null cat number Queensland catName: Queensland
+3 path null cat number Queensland catName: Queensland
+4 path null cat number Queensland catName: Queensland
+categoryTotal is 1201 for catQ category:Queensland 
+f1: 0.79928793949178094157 recall: 0.7477102415 precision: 0.8585086042
+Purity: 0.8585085642 Job: 0 
+ClusterQuery 1 searching for:  colorado  Found 805 hits:
+0 path null cat number Colorado_w catName: Colorado_w
+1 path null cat number Colorado_w catName: Colorado_w
+2 path null cat number Colorado_w catName: Colorado_w
+3 path null cat number Colorado_w catName: Colorado_w
+4 path null cat number Colorado_w catName: Colorado_w
+categoryTotal is 1201 for catQ category:Colorado_w 
+f1: 0.8025922233 recall: 0.6702747710 precision: 1
+Purity: 0.9999999800 Job: 0 
+ClusterQuery 2 searching for:  boston  Found 538 hits:
+0 path null cat number Boston_bom catName: Boston_bom
+1 path null cat number Boston_bom catName: Boston_bom
+2 path null cat number Boston_bom catName: Boston_bom
+3 path null cat number Boston_bom catName: Boston_bom
+4 path null cat number Boston_bom catName: Boston_bom
+categoryTotal is 1001 for catQ category:Boston_bom 
+f1: 0.6991552957 recall: 0.5374625375 precision: 1
+Purity: 1.0000000218 Job: 0 
+f1list: [0.79928793949178094157, 0.8025922233, 0.6991552957] averagef1: :0.76701181949726031386
+PosHits: 2373 NegHits: 16 PosScore: 1121.0895399451256 NegScore: 5.75675231218338 Fitness: 1480.0491822883873 
+TotalHits: 2381 Total Docs: 3403
+************************************************ 
+ 
+  ***** Job: 0 Gen: 739 PopSize: 512 Noclusters:3 pathToIndex: indexes/crisis3FireBombFloodL5 **************************************************************** 
+ ClusterQuery 0 searching for:  floods qld qldfloods flooding bigwet  Found 852 hits:
+0 path null cat number Queensland catName: Queensland
+1 path null cat number Queensland catName: Queensland
+2 path null cat number Queensland catName: Queensland
+3 path null cat number Queensland catName: Queensland
+4 path null cat number Queensland catName: Queensland
+categoryTotal is 1000 for catQ category:Queensland 
+f1: 0.917926565892 recall: 0.85 precision: 0.9976525822
+Purity: 0.9976525650 Job: 0 
+ClusterQuery 1 searching for:  colorado  Found 649 hits:
+0 path null cat number Colorado_w catName: Colorado_w
+1 path null cat number Colorado_w catName: Colorado_w
+2 path null cat number Colorado_w catName: Colorado_w
+3 path null cat number Colorado_w catName: Colorado_w
+4 path null cat number Colorado_w catName: Colorado_w
+categoryTotal is 1000 for catQ category:Colorado_w 
+f1: 0.7871437235 recall: 0.649 precision: 1
+Purity: 0.9999999680 Job: 0 
+ClusterQuery 2 searching for:  boston bombing prayforboston marathon  Found 731 hits:
+0 path null cat number Boston_bom catName: Boston_bom
+1 path null cat number Boston_bom catName: Boston_bom
+2 path null cat number Boston_bom catName: Boston_bom
+3 path null cat number Boston_bom catName: Boston_bom
+4 path null cat number Boston_bom catName: Boston_bom
+categoryTotal is 1000 for catQ category:Boston_bom 
+f1: 0.8445984980 recall: 0.731 precision: 1
+Purity: 1.0000000321 Job: 0 
+f1list: [0.917926565892, 0.7871437235, 0.8445984980] averagef1: :0.849889595797
+PosHits: 2230 NegHits: 2 PosScore: 836.833953294903 NegScore: 0.9224704056978226 Fitness: 1365.3061728364694 
+TotalHits: 2231 Total Docs: 3000
+************************************************ 
+ 
+  ***** Job: 0 Gen: 799 PopSize: 512 Noclusters:3 pathToIndex: indexes/crisis3FireBombFloodL5 **************************************************************** 
+ ClusterQuery 0 searching for:  bigwet qldfloods floods flood emergency  Found 808 hits:
+0 path null cat number Queensland catName: Queensland
+1 path null cat number Queensland catName: Queensland
+2 path null cat number Queensland catName: Queensland
+3 path null cat number Queensland catName: Queensland
+4 path null cat number Queensland catName: Queensland
+categoryTotal is 1000 for catQ category:Queensland 
+f1: 0.8838495575067 recall: 0.799 precision: 0.9888613861
+Purity: 0.9888614162 Job: 0 
+ClusterQuery 1 searching for:  marathon boston prayforboston  Found 726 hits:
+0 path null cat number Boston_bom catName: Boston_bom
+1 path null cat number Boston_bom catName: Boston_bom
+2 path null cat number Boston_bom catName: Boston_bom
+3 path null cat number Boston_bom catName: Boston_bom
+4 path null cat number Boston_bom catName: Boston_bom
+categoryTotal is 1000 for catQ category:Boston_bom 
+f1: 0.8412514484 recall: 0.726 precision: 1
+Purity: 1.0000000230 Job: 0 
+ClusterQuery 2 searching for:  springs wildfire waldocanyonfire fire colorado  Found 742 hits:
+0 path null cat number Colorado_w catName: Colorado_w
+1 path null cat number Colorado_w catName: Colorado_w
+2 path null cat number Colorado_w catName: Colorado_w
+3 path null cat number Colorado_w catName: Colorado_w
+4 path null cat number Colorado_w catName: Colorado_w
+categoryTotal is 1000 for catQ category:Colorado_w 
+f1: 0.8427095292618 recall: 0.734 precision: 0.9892183288
+Purity: 0.9892183326 Job: 0 
+f1list: [0.8838495575067, 0.8412514484, 0.8427095292618] averagef1: :0.8559368450562
+PosHits: 2256 NegHits: 20 PosScore: 539.0501167606562 NegScore: 2.2721983268857002 Fitness: 1160.7795876724153 
+TotalHits: 2266 Total Docs: 3000
+************************************************ 
+ 
+  ***** Job: 0 Gen: 799 PopSize: 512 Noclusters:3 pathToIndex: indexes/crisis3FireBombFloodL5 **************************************************************** 
+ ClusterQuery 0 searching for:  boston bostonmarathon marathon suspect prayforboston  Found 816 hits:
+0 path null cat number Boston_bom catName: Boston_bom
+1 path null cat number Boston_bom catName: Boston_bom
+2 path null cat number Boston_bom catName: Boston_bom
+3 path null cat number Boston_bom catName: Boston_bom
+4 path null cat number Boston_bom catName: Boston_bom
+categoryTotal is 1000 for catQ category:Boston_bom 
+f1: 0.8975770925094 recall: 0.815 precision: 0.9987745098
+Purity: 0.9987745130 Job: 0 
+ClusterQuery 1 searching for:  floods highparkfire flooding qldfloods bigwet  Found 964 hits:
+0 path null cat number Queensland catName: Queensland
+1 path null cat number Queensland catName: Queensland
+2 path null cat number Queensland catName: Queensland
+3 path null cat number Queensland catName: Queensland
+4 path null cat number Queensland catName: Queensland
+categoryTotal is 1000 for catQ category:Queensland 
+f1: 0.8309572301206 recall: 0.816 precision: 0.8464730290
+Purity: 0.8464730304 Job: 0 
+ClusterQuery 2 searching for:  springs fire colorado  Found 710 hits:
+0 path null cat number Colorado_w catName: Colorado_w
+1 path null cat number Colorado_w catName: Colorado_w
+2 path null cat number Colorado_w catName: Colorado_w
+3 path null cat number Colorado_w catName: Colorado_w
+4 path null cat number Colorado_w catName: Colorado_w
+categoryTotal is 1000 for catQ category:Colorado_w 
+f1: 0.8210526315906 recall: 0.702 precision: 0.9887323944
+Purity: 0.9887323914 Job: 0 
+f1list: [0.8975770925094, 0.8309572301206, 0.8210526315906] averagef1: :0.8498623180735
+PosHits: 2440 NegHits: 50 PosScore: 567.0842872858047 NegScore: 7.057753968983889 Fitness: 1281.8218015939888 
+TotalHits: 2465 Total Docs: 3000
+************************************************ 
+ 
+  ***** Job: 0 Gen: 799 PopSize: 512 Noclusters:3 pathToIndex: indexes/crisis3FireBombFloodL5 **************************************************************** 
+ ClusterQuery 0 searching for:  boston prayforboston marathon  Found 726 hits:
+0 path null cat number Boston_bom catName: Boston_bom
+1 path null cat number Boston_bom catName: Boston_bom
+2 path null cat number Boston_bom catName: Boston_bom
+3 path null cat number Boston_bom catName: Boston_bom
+4 path null cat number Boston_bom catName: Boston_bom
+categoryTotal is 1000 for catQ category:Boston_bom 
+f1: 0.8412514484 recall: 0.726 precision: 1
+Purity: 1.0000000230 Job: 0 
+ClusterQuery 1 searching for:  floods qld australia qldfloods bigwet  Found 831 hits:
+0 path null cat number Queensland catName: Queensland
+1 path null cat number Queensland catName: Queensland
+2 path null cat number Queensland catName: Queensland
+3 path null cat number Queensland catName: Queensland
+4 path null cat number Queensland catName: Queensland
+categoryTotal is 1000 for catQ category:Queensland 
+f1: 0.906608410719 recall: 0.83 precision: 0.9987966306
+Purity: 0.9987966020 Job: 0 
+ClusterQuery 2 searching for:  fire springs highparkfire colorado  Found 837 hits:
+0 path null cat number Colorado_w catName: Colorado_w
+1 path null cat number Colorado_w catName: Colorado_w
+2 path null cat number Colorado_w catName: Colorado_w
+3 path null cat number Colorado_w catName: Colorado_w
+4 path null cat number Colorado_w catName: Colorado_w
+categoryTotal is 1000 for catQ category:Colorado_w 
+f1: 0.9025585193423 recall: 0.829 precision: 0.9904420550
+Purity: 0.9904420299 Job: 0 
+f1list: [0.8412514484, 0.906608410719, 0.9025585193423] averagef1: :0.8834727928204
+PosHits: 2388 NegHits: 6 PosScore: 604.456904720515 NegScore: 1.0587414391338825 Fitness: 1277.908336135261 
+TotalHits: 2391 Total Docs: 3000
+************************************************ 
+ 

@@ -33,11 +33,12 @@ import org.apache.lucene.store.FSDirectory
 
 class IndexClassic {
 	// Create Lucene index in this directory
-	def indexPath = 	"indexes/classic4_500L5"
+	def indexPath = 	'indexes/classic4_500L5'
 
 	// Index files in this directory
 	def docsPath =
-	/C:\Users\Laurie\Dataset\classic/
+	// /C:\Users\Laurie\Dataset\classic/
+	/C:\Users\Laurie\Dataset\classic4_500/
 
 	Path path = Paths.get(indexPath)
 	Directory directory = FSDirectory.open(path)

@@ -26,14 +26,15 @@ import org.apache.lucene.codecs.*
 class Index20NG {
 	// Create Lucene index in this directory
 	def indexPath = 
-	  //"indexes/Ohs3Bact02Dig06Resp08"	
-	"indexes/20NG6GraphicsHockeyCryptSpaceChristianGunsL5"	
-
+	   'indexes/20NG3SpaceHockeyChristianl5'
+	//'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL5'	
 	
 	// Index files in this directory	
 	def docsPath =
-	  /C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns/	
-	///C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian/
+	//  /C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns/	
+	//  /C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian/
+
+	  /C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian/
 
 	Path path = Paths.get(indexPath)
 	Directory directory = FSDirectory.open(path)
@@ -93,7 +94,7 @@ class Index20NG {
 
 
 		def n = catsFreq.get((catName)) ?: 0
-		//if (n < 500){
+	//	if (n < 100){
 			catsFreq.put((catName), n + 1)	
 
 			Field catNameField = new StringField(IndexInfo.FIELD_CATEGORY_NAME, catName, Field.Store.YES);
