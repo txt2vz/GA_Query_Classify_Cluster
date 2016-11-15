@@ -25,9 +25,8 @@ import ec.vector.IntegerVectorIndividual
 public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProblemForm {
 
 	IndexSearcher searcher = IndexInfo.instance.indexSearcher;
-	private String[] wordArray;
-	final int NUMBER_OF_CLUSTERS =  IndexInfo.NUMBER_OF_CLUSTERS   
-	final int coreClusterSize=20
+	private String[] wordArray;	   
+	private final int coreClusterSize=20
 
 	public void setup(final EvolutionState state, final Parameter base) {
 
@@ -50,9 +49,9 @@ public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProbl
 		def bqbList =
 		
 		  //from ClusterQueriesT = trait
-	  	  getORQL(wordArray, intVectorIndividual, NUMBER_OF_CLUSTERS)
-		  //getANDQL(wordArray, intVectorIndividual, NUMBER_OF_CLUSTERS)
-		  //getORNOTQL(wordArray, intVectorIndividual, NUMBER_OF_CLUSTERS)
+	  	  getORQL(wordArray, intVectorIndividual, IndexInfo.NUMBER_OF_CLUSTERS)
+		  //getANDQL(wordArray, intVectorIndividual, IndexInfo.NUMBER_OF_CLUSTERS)
+		  //getORNOTQL(wordArray, intVectorIndividual, IndexInfo.NUMBER_OF_CLUSTERS)
 
 		final int hitsPerPage = 10000;
 		def negHitsTotal=0
@@ -84,9 +83,9 @@ public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProbl
 			TopDocs docs = searcher.search(q, hitsPerPage);
 
 			ScoreDoc[] hits = docs.scoreDocs;
-			//qMap.put(q.toString(IndexInfo.FIELD_CONTENTS),hits.size())
 			qMap.put(q,hits.size())
 
+			//major penalty for query returning nothing
 			if (hits.size()<1) emptyPen = emptyPen + 100
 
 			hits.eachWithIndex {d, position ->
@@ -107,8 +106,11 @@ public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProbl
 			}
 		}
 
-		def final  minScore = 1000
+		
 		def scoreOnly = posScore - negScore
+		
+		//fitness must be positive for ECJ
+		def final  minScore = 1000
 		def scorePlus = (scoreOnly < -minScore) ? 0 : scoreOnly + minScore
 
 		def negIndicators =   //(graphPen+1) *	// (treePen+1) *

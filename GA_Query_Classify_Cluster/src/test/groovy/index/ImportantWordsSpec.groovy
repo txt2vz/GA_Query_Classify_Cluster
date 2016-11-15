@@ -28,6 +28,6 @@ class ImportantWordsSpec extends spock.lang.Specification {
 		then:
 		tfidfList[0] == 'space'
 		tfidfList[1] == 'god'
-		tfidfList[3] == 'hockey'
+		tfidfList[4] == 'hockey'
 	}
 }

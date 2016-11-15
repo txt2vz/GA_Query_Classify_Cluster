@@ -2156,3 +2156,135 @@ PosHits: 2373 NegHits: 16 PosScore: 1121.0895399451256 NegScore: 5.7567523121833
 TotalHits: 2381 Total Docs: 3403
 ************************************************ 
  
+  ***** Job: 0 Gen: 739 PopSize: 512 Noclusters:3 pathToIndex: indexes/crisis3FireBombFloodL5 **************************************************************** 
+ ClusterQuery 0 searching for:  floods qld qldfloods flooding bigwet  Found 852 hits:
+0 path null cat number Queensland catName: Queensland
+1 path null cat number Queensland catName: Queensland
+2 path null cat number Queensland catName: Queensland
+3 path null cat number Queensland catName: Queensland
+4 path null cat number Queensland catName: Queensland
+categoryTotal is 1000 for catQ category:Queensland 
+f1: 0.917926565892 recall: 0.85 precision: 0.9976525822
+Purity: 0.9976525650 Job: 0 
+ClusterQuery 1 searching for:  colorado  Found 649 hits:
+0 path null cat number Colorado_w catName: Colorado_w
+1 path null cat number Colorado_w catName: Colorado_w
+2 path null cat number Colorado_w catName: Colorado_w
+3 path null cat number Colorado_w catName: Colorado_w
+4 path null cat number Colorado_w catName: Colorado_w
+categoryTotal is 1000 for catQ category:Colorado_w 
+f1: 0.7871437235 recall: 0.649 precision: 1
+Purity: 0.9999999680 Job: 0 
+ClusterQuery 2 searching for:  boston bombing prayforboston marathon  Found 731 hits:
+0 path null cat number Boston_bom catName: Boston_bom
+1 path null cat number Boston_bom catName: Boston_bom
+2 path null cat number Boston_bom catName: Boston_bom
+3 path null cat number Boston_bom catName: Boston_bom
+4 path null cat number Boston_bom catName: Boston_bom
+categoryTotal is 1000 for catQ category:Boston_bom 
+f1: 0.8445984980 recall: 0.731 precision: 1
+Purity: 1.0000000321 Job: 0 
+f1list: [0.917926565892, 0.7871437235, 0.8445984980] averagef1: :0.849889595797
+PosHits: 2230 NegHits: 2 PosScore: 836.833953294903 NegScore: 0.9224704056978226 Fitness: 1365.3061728364694 
+TotalHits: 2231 Total Docs: 3000
+************************************************ 
+ 
+  ***** Job: 0 Gen: 799 PopSize: 512 Noclusters:3 pathToIndex: indexes/crisis3FireBombFloodL5 **************************************************************** 
+ ClusterQuery 0 searching for:  bigwet qldfloods floods flood emergency  Found 808 hits:
+0 path null cat number Queensland catName: Queensland
+1 path null cat number Queensland catName: Queensland
+2 path null cat number Queensland catName: Queensland
+3 path null cat number Queensland catName: Queensland
+4 path null cat number Queensland catName: Queensland
+categoryTotal is 1000 for catQ category:Queensland 
+f1: 0.8838495575067 recall: 0.799 precision: 0.9888613861
+Purity: 0.9888614162 Job: 0 
+ClusterQuery 1 searching for:  marathon boston prayforboston  Found 726 hits:
+0 path null cat number Boston_bom catName: Boston_bom
+1 path null cat number Boston_bom catName: Boston_bom
+2 path null cat number Boston_bom catName: Boston_bom
+3 path null cat number Boston_bom catName: Boston_bom
+4 path null cat number Boston_bom catName: Boston_bom
+categoryTotal is 1000 for catQ category:Boston_bom 
+f1: 0.8412514484 recall: 0.726 precision: 1
+Purity: 1.0000000230 Job: 0 
+ClusterQuery 2 searching for:  springs wildfire waldocanyonfire fire colorado  Found 742 hits:
+0 path null cat number Colorado_w catName: Colorado_w
+1 path null cat number Colorado_w catName: Colorado_w
+2 path null cat number Colorado_w catName: Colorado_w
+3 path null cat number Colorado_w catName: Colorado_w
+4 path null cat number Colorado_w catName: Colorado_w
+categoryTotal is 1000 for catQ category:Colorado_w 
+f1: 0.8427095292618 recall: 0.734 precision: 0.9892183288
+Purity: 0.9892183326 Job: 0 
+f1list: [0.8838495575067, 0.8412514484, 0.8427095292618] averagef1: :0.8559368450562
+PosHits: 2256 NegHits: 20 PosScore: 539.0501167606562 NegScore: 2.2721983268857002 Fitness: 1160.7795876724153 
+TotalHits: 2266 Total Docs: 3000
+************************************************ 
+ 
+  ***** Job: 0 Gen: 799 PopSize: 512 Noclusters:3 pathToIndex: indexes/crisis3FireBombFloodL5 **************************************************************** 
+ ClusterQuery 0 searching for:  boston bostonmarathon marathon suspect prayforboston  Found 816 hits:
+0 path null cat number Boston_bom catName: Boston_bom
+1 path null cat number Boston_bom catName: Boston_bom
+2 path null cat number Boston_bom catName: Boston_bom
+3 path null cat number Boston_bom catName: Boston_bom
+4 path null cat number Boston_bom catName: Boston_bom
+categoryTotal is 1000 for catQ category:Boston_bom 
+f1: 0.8975770925094 recall: 0.815 precision: 0.9987745098
+Purity: 0.9987745130 Job: 0 
+ClusterQuery 1 searching for:  floods highparkfire flooding qldfloods bigwet  Found 964 hits:
+0 path null cat number Queensland catName: Queensland
+1 path null cat number Queensland catName: Queensland
+2 path null cat number Queensland catName: Queensland
+3 path null cat number Queensland catName: Queensland
+4 path null cat number Queensland catName: Queensland
+categoryTotal is 1000 for catQ category:Queensland 
+f1: 0.8309572301206 recall: 0.816 precision: 0.8464730290
+Purity: 0.8464730304 Job: 0 
+ClusterQuery 2 searching for:  springs fire colorado  Found 710 hits:
+0 path null cat number Colorado_w catName: Colorado_w
+1 path null cat number Colorado_w catName: Colorado_w
+2 path null cat number Colorado_w catName: Colorado_w
+3 path null cat number Colorado_w catName: Colorado_w
+4 path null cat number Colorado_w catName: Colorado_w
+categoryTotal is 1000 for catQ category:Colorado_w 
+f1: 0.8210526315906 recall: 0.702 precision: 0.9887323944
+Purity: 0.9887323914 Job: 0 
+f1list: [0.8975770925094, 0.8309572301206, 0.8210526315906] averagef1: :0.8498623180735
+PosHits: 2440 NegHits: 50 PosScore: 567.0842872858047 NegScore: 7.057753968983889 Fitness: 1281.8218015939888 
+TotalHits: 2465 Total Docs: 3000
+************************************************ 
+ 
+  ***** Job: 0 Gen: 799 PopSize: 512 Noclusters:3 pathToIndex: indexes/crisis3FireBombFloodL5 **************************************************************** 
+ ClusterQuery 0 searching for:  boston prayforboston marathon  Found 726 hits:
+0 path null cat number Boston_bom catName: Boston_bom
+1 path null cat number Boston_bom catName: Boston_bom
+2 path null cat number Boston_bom catName: Boston_bom
+3 path null cat number Boston_bom catName: Boston_bom
+4 path null cat number Boston_bom catName: Boston_bom
+categoryTotal is 1000 for catQ category:Boston_bom 
+f1: 0.8412514484 recall: 0.726 precision: 1
+Purity: 1.0000000230 Job: 0 
+ClusterQuery 1 searching for:  floods qld australia qldfloods bigwet  Found 831 hits:
+0 path null cat number Queensland catName: Queensland
+1 path null cat number Queensland catName: Queensland
+2 path null cat number Queensland catName: Queensland
+3 path null cat number Queensland catName: Queensland
+4 path null cat number Queensland catName: Queensland
+categoryTotal is 1000 for catQ category:Queensland 
+f1: 0.906608410719 recall: 0.83 precision: 0.9987966306
+Purity: 0.9987966020 Job: 0 
+ClusterQuery 2 searching for:  fire springs highparkfire colorado  Found 837 hits:
+0 path null cat number Colorado_w catName: Colorado_w
+1 path null cat number Colorado_w catName: Colorado_w
+2 path null cat number Colorado_w catName: Colorado_w
+3 path null cat number Colorado_w catName: Colorado_w
+4 path null cat number Colorado_w catName: Colorado_w
+categoryTotal is 1000 for catQ category:Colorado_w 
+f1: 0.9025585193423 recall: 0.829 precision: 0.9904420550
+Purity: 0.9904420299 Job: 0 
+f1list: [0.8412514484, 0.906608410719, 0.9025585193423] averagef1: :0.8834727928204
+PosHits: 2388 NegHits: 6 PosScore: 604.456904720515 NegScore: 1.0587414391338825 Fitness: 1277.908336135261 
+TotalHits: 2391 Total Docs: 3000
+************************************************ 
+ 
