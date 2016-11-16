@@ -94,7 +94,7 @@ class Index20NG {
 
 
 		def n = catsFreq.get((catName)) ?: 0
-	//	if (n < 100){
+		if (n < 100){
 			catsFreq.put((catName), n + 1)	
 
 			Field catNameField = new StringField(IndexInfo.FIELD_CATEGORY_NAME, catName, Field.Store.YES);
@@ -116,6 +116,6 @@ class Index20NG {
 			doc.add(ttField)
 
 			writer.addDocument(doc);
-		//}
+		}
 	}
 }

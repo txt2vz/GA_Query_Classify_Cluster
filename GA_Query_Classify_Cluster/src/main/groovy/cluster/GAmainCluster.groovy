@@ -9,13 +9,13 @@ import ec.util.ParameterDatabase
 class GAmainCluster extends Evolve {
 
 	private final String parameterFilePath =  "src/cfg/cluster.params"
-	private final int NUMBER_OF_JOBS = 3; 
+	private final int NUMBER_OF_JOBS = 1; 
 
 	public GAmainCluster(){
 		EvolutionState state;
-		IndexInfo.instance.setIndex()
+		IndexInfo.instance.setIndex() 
 		ParameterDatabase parameters  = null;
-
+ 
 		final Date startRun = new Date();
 
 		NUMBER_OF_JOBS.times{job ->

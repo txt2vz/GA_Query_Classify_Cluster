@@ -2354,3 +2354,309 @@ PosHits: 1351 NegHits: 207 PosScore: 132.91888042353094 NegScore: 19.34851538389
 TotalHits: 1451 Total Docs:  3000 
 ************************************************ 
  
+  ***** Job: 0 Gen: 799 PopSize: 512 Noclusters: 5  pathToIndex: indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL5  **************************************************************** 
+ ClusterQuery 0 searching for:  earth nhl season  Found 455 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\54723 cat number: c.sport.hockey catName: c.sport.hockey
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\53778 cat number: c.sport.hockey catName: c.sport.hockey
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52626 cat number: c.sport.hockey catName: c.sport.hockey
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\53607 cat number: c.sport.hockey catName: c.sport.hockey
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\53821 cat number: c.sport.hockey catName: c.sport.hockey
+categoryTotal: 600 for catQ: category:c.sport.hockey 
+f1: 0.50426540281631589587 recall: 0.4433333333 precision: 0.5846153846
+Purity: 0.5846153852 Job: 0 
+ClusterQuery 1 searching for:  win  Found 238 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\53656 cat number: c.sport.hockey catName: c.sport.hockey
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\10001 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\10008 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9963 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\53715 cat number: c.sport.hockey catName: c.sport.hockey
+categoryTotal: 600 for catQ: category:c.sport.hockey 
+f1: 0.31026252986792510865 recall: 0.2166666667 precision: 0.5462184874
+Purity: 0.5462184910 Job: 0 
+ClusterQuery 2 searching for:  max pl b8f  Found 45 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9990 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9984 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9982 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9986 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9988 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+categoryTotal: 591 for catQ: category:mp.os.mswindows.misc 
+f1: 0.06603773580818796725 recall: 0.0355329949 precision: 0.4666666667
+Purity: 0.4666666662 Job: 0 
+ClusterQuery 3 searching for:  program church  Found 367 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20573 cat number: c.religion.christian catName: c.religion.christian
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20942 cat number: c.religion.christian catName: c.religion.christian
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20801 cat number: c.religion.christian catName: c.religion.christian
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20793 cat number: c.religion.christian catName: c.religion.christian
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20792 cat number: c.religion.christian catName: c.religion.christian
+categoryTotal: 599 for catQ: category:c.religion.christian 
+f1: 0.31884057970895327255 recall: 0.2570951586 precision: 0.4196185286
+Purity: 0.4196185224 Job: 0 
+ClusterQuery 4 searching for:  sale  Found 374 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\75872 cat number: sc.forsale catName: sc.forsale
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\75914 cat number: sc.forsale catName: sc.forsale
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\75977 cat number: sc.forsale catName: sc.forsale
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\76514 cat number: sc.forsale catName: sc.forsale
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9880 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+categoryTotal: 585 for catQ: category:sc.forsale 
+f1: 0.74035453595837252264 recall: 0.6068376068 precision: 0.9491978610
+Purity: 0.9491978640 Job: 0 
+f1list: [0.50426540281631589587, 0.31026252986792510865, 0.06603773580818796725, 0.31884057970895327255, 0.74035453595837252264] averagef1: :0.387952156831950953392
+PosHits: 1135 NegHits: 344 PosScore: 250.03556060697883 NegScore: 44.81700444687158 Fitness: 528.7043666378715 
+TotalHits: 1302 Total Docs:  2968 
+************************************************ 
+ 
+  ***** Job: 1 Gen: 799 PopSize: 512 Noclusters: 5  pathToIndex: indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL5  **************************************************************** 
+ ClusterQuery 0 searching for:  using program win  Found 646 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9555 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9640 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9889 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9886 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9669 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+categoryTotal: 591 for catQ: category:mp.os.mswindows.misc 
+f1: 0.45917542444702408688 recall: 0.4805414552 precision: 0.4396284830
+Purity: 0.4396284784 Job: 1 
+ClusterQuery 1 searching for:  church christians christian  Found 384 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\21349 cat number: c.religion.christian catName: c.religion.christian
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20837 cat number: c.religion.christian catName: c.religion.christian
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20586 cat number: c.religion.christian catName: c.religion.christian
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20520 cat number: c.religion.christian catName: c.religion.christian
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20833 cat number: c.religion.christian catName: c.religion.christian
+categoryTotal: 599 for catQ: category:c.religion.christian 
+f1: 0.75483214644383636779 recall: 0.6193656093 precision: 0.9661458333
+Purity: 0.9661458457 Job: 1 
+ClusterQuery 2 searching for:  sale  Found 374 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\75872 cat number: sc.forsale catName: sc.forsale
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\75914 cat number: sc.forsale catName: sc.forsale
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\75977 cat number: sc.forsale catName: sc.forsale
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\76514 cat number: sc.forsale catName: sc.forsale
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9880 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+categoryTotal: 585 for catQ: category:sc.forsale 
+f1: 0.74035453595837252264 recall: 0.6068376068 precision: 0.9491978610
+Purity: 0.9491978640 Job: 1 
+ClusterQuery 3 searching for:  max ax pl  Found 47 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9988 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9987 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9986 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9990 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9981 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+categoryTotal: 591 for catQ: category:mp.os.mswindows.misc 
+f1: 0.06896551723953135288 recall: 0.0372250423 precision: 0.4680851064
+Purity: 0.4680851054 Job: 1 
+ClusterQuery 4 searching for:  nhl earth hockey  Found 516 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52605 cat number: c.sport.hockey catName: c.sport.hockey
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\53979 cat number: c.sport.hockey catName: c.sport.hockey
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52602 cat number: c.sport.hockey catName: c.sport.hockey
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52612 cat number: c.sport.hockey catName: c.sport.hockey
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\53595 cat number: c.sport.hockey catName: c.sport.hockey
+categoryTotal: 600 for catQ: category:c.sport.hockey 
+f1: 0.58781362007869117817 recall: 0.5466666667 precision: 0.6356589147
+Purity: 0.6356589160 Job: 1 
+f1list: [0.45917542444702408688, 0.75483214644383636779, 0.74035453595837252264, 0.06896551723953135288, 0.58781362007869117817] averagef1: :0.522228248833491101672
+PosHits: 1474 NegHits: 493 PosScore: 271.32591893617064 NegScore: 39.434855395928025 Fitness: 710.5786727598821 
+TotalHits: 1712 Total Docs:  2968 
+************************************************ 
+ 
+  ***** Job: 2 Gen: 799 PopSize: 512 Noclusters: 5  pathToIndex: indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL5  **************************************************************** 
+ ClusterQuery 0 searching for:  program using  Found 452 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9886 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9669 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9660 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9795 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9685 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+categoryTotal: 591 for catQ: category:mp.os.mswindows.misc 
+f1: 0.44295302015735235313 recall: 0.3908629442 precision: 0.5110619469
+Purity: 0.5110619514 Job: 2 
+ClusterQuery 1 searching for:  sale  Found 374 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\75872 cat number: sc.forsale catName: sc.forsale
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\75914 cat number: sc.forsale catName: sc.forsale
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\75977 cat number: sc.forsale catName: sc.forsale
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\76514 cat number: sc.forsale catName: sc.forsale
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9880 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+categoryTotal: 585 for catQ: category:sc.forsale 
+f1: 0.74035453595837252264 recall: 0.6068376068 precision: 0.9491978610
+Purity: 0.9491978640 Job: 2 
+ClusterQuery 2 searching for:  season nhl  Found 271 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\54723 cat number: c.sport.hockey catName: c.sport.hockey
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\53778 cat number: c.sport.hockey catName: c.sport.hockey
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52626 cat number: c.sport.hockey catName: c.sport.hockey
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\53607 cat number: c.sport.hockey catName: c.sport.hockey
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\53821 cat number: c.sport.hockey catName: c.sport.hockey
+categoryTotal: 600 for catQ: category:c.sport.hockey 
+f1: 0.61079219285046682159 recall: 0.4433333333 precision: 0.9815498155
+Purity: 0.9815498154 Job: 2 
+ClusterQuery 3 searching for:  earth christians church  Found 457 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20738 cat number: c.religion.christian catName: c.religion.christian
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20729 cat number: c.religion.christian catName: c.religion.christian
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20793 cat number: c.religion.christian catName: c.religion.christian
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20751 cat number: c.religion.christian catName: c.religion.christian
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20931 cat number: c.religion.christian catName: c.religion.christian
+categoryTotal: 599 for catQ: category:c.religion.christian 
+f1: 0.60795454548550687988 recall: 0.5358931553 precision: 0.7024070022
+Purity: 0.7024069998 Job: 2 
+ClusterQuery 4 searching for:  max ax pl  Found 47 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9988 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9987 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9986 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9990 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9981 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+categoryTotal: 591 for catQ: category:mp.os.mswindows.misc 
+f1: 0.06896551723953135288 recall: 0.0372250423 precision: 0.4680851064
+Purity: 0.4680851054 Job: 2 
+f1list: [0.44295302015735235313, 0.74035453595837252264, 0.61079219285046682159, 0.60795454548550687988, 0.06896551723953135288] averagef1: :0.494203962338245986024
+PosHits: 1361 NegHits: 240 PosScore: 287.60131093580276 NegScore: 26.432679899036884 Fitness: 627.6098611570678 
+TotalHits: 1477 Total Docs:  2968 
+************************************************ 
+ 
+  ***** Job: 0 Gen: 799 PopSize: 512 Noclusters: 5  pathToIndex: indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL5  **************************************************************** 
+ ClusterQuery 0 searching for:  god christians jesus  Found 73 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20547 cat number: c.religion.christian catName: c.religion.christian
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20506 cat number: c.religion.christian catName: c.religion.christian
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20532 cat number: c.religion.christian catName: c.religion.christian
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20571 cat number: c.religion.christian catName: c.religion.christian
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20500 cat number: c.religion.christian catName: c.religion.christian
+categoryTotal: 100 for catQ: category:c.religion.christian 
+f1: 0.80924855492 recall: 0.7 precision: 0.9589041096
+Purity: 0.9589041070 Job: 0 
+ClusterQuery 1 searching for:  windows  Found 70 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9155 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9450 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9139 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9489 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\10017 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+categoryTotal: 100 for catQ: category:mp.os.mswindows.misc 
+f1: 0.776470588250 recall: 0.66 precision: 0.9428571429
+Purity: 0.9428571438 Job: 0 
+ClusterQuery 2 searching for:  sale  Found 60 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74725 cat number: sc.forsale catName: sc.forsale
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74732 cat number: sc.forsale catName: sc.forsale
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74741 cat number: sc.forsale catName: sc.forsale
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74799 cat number: sc.forsale catName: sc.forsale
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74740 cat number: sc.forsale catName: sc.forsale
+categoryTotal: 100 for catQ: category:sc.forsale 
+f1: 0.7125 recall: 0.57 precision: 0.95
+Purity: 0.9500000019 Job: 0 
+ClusterQuery 3 searching for:  orbit station  Found 50 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60233 cat number: i.space catName: i.space
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60190 cat number: i.space catName: i.space
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60151 cat number: i.space catName: i.space
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\59904 cat number: i.space catName: i.space
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60187 cat number: i.space catName: i.space
+categoryTotal: 100 for catQ: category:i.space 
+f1: 0.6266666667 recall: 0.47 precision: 0.94
+Purity: 0.94 Job: 0 
+ClusterQuery 4 searching for:  hockey players nhl  Found 76 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52623 cat number: c.sport.hockey catName: c.sport.hockey
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52595 cat number: c.sport.hockey catName: c.sport.hockey
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52602 cat number: c.sport.hockey catName: c.sport.hockey
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52612 cat number: c.sport.hockey catName: c.sport.hockey
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52605 cat number: c.sport.hockey catName: c.sport.hockey
+categoryTotal: 100 for catQ: category:c.sport.hockey 
+f1: 0.840909090899 recall: 0.74 precision: 0.9736842105
+Purity: 0.9736842078 Job: 0 
+f1list: [0.80924855492, 0.776470588250, 0.7125, 0.6266666667, 0.840909090899] averagef1: :0.7531589801538
+PosHits: 308 NegHits: 21 PosScore: 78.16842832323164 NegScore: 3.3614217545837164 Fitness: 683.57725617766 
+TotalHits: 318 Total Docs:  500 
+************************************************ 
+ 
+  ***** Job: 0 Gen: 799 PopSize: 512 Noclusters: 5  pathToIndex: indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL5  **************************************************************** 
+ ClusterQuery 0 searching for:  station orbit  Found 50 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60233 cat number: i.space catName: i.space
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60190 cat number: i.space catName: i.space
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60151 cat number: i.space catName: i.space
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\59904 cat number: i.space catName: i.space
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60187 cat number: i.space catName: i.space
+categoryTotal: 100 for catQ: category:i.space 
+f1: 0.6266666667 recall: 0.47 precision: 0.94
+Purity: 0.94 Job: 0 
+ClusterQuery 1 searching for:  hockey nhl  Found 66 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52605 cat number: c.sport.hockey catName: c.sport.hockey
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52602 cat number: c.sport.hockey catName: c.sport.hockey
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52612 cat number: c.sport.hockey catName: c.sport.hockey
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52595 cat number: c.sport.hockey catName: c.sport.hockey
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52626 cat number: c.sport.hockey catName: c.sport.hockey
+categoryTotal: 100 for catQ: category:c.sport.hockey 
+f1: 0.783132530105 recall: 0.65 precision: 0.9848484848
+Purity: 0.9848484880 Job: 0 
+ClusterQuery 2 searching for:  windows  Found 70 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9155 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9450 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9139 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9489 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\10017 cat number: mp.os.mswindows.misc catName: mp.os.mswindows.misc
+categoryTotal: 100 for catQ: category:mp.os.mswindows.misc 
+f1: 0.776470588250 recall: 0.66 precision: 0.9428571429
+Purity: 0.9428571438 Job: 0 
+ClusterQuery 3 searching for:  god christ jesus  Found 77 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20547 cat number: c.religion.christian catName: c.religion.christian
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20492 cat number: c.religion.christian catName: c.religion.christian
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20531 cat number: c.religion.christian catName: c.religion.christian
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20525 cat number: c.religion.christian catName: c.religion.christian
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20488 cat number: c.religion.christian catName: c.religion.christian
+categoryTotal: 100 for catQ: category:c.religion.christian 
+f1: 0.836158192076 recall: 0.74 precision: 0.9610389610
+Purity: 0.9610389620 Job: 0 
+ClusterQuery 4 searching for:  sale  Found 60 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74725 cat number: sc.forsale catName: sc.forsale
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74732 cat number: sc.forsale catName: sc.forsale
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74741 cat number: sc.forsale catName: sc.forsale
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74799 cat number: sc.forsale catName: sc.forsale
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74740 cat number: sc.forsale catName: sc.forsale
+categoryTotal: 100 for catQ: category:sc.forsale 
+f1: 0.7125 recall: 0.57 precision: 0.95
+Purity: 0.9500000019 Job: 0 
+f1list: [0.6266666667, 0.783132530105, 0.776470588250, 0.836158192076, 0.7125] averagef1: :0.7469855954262
+PosHits: 303 NegHits: 20 PosScore: 78.35772050730884 NegScore: 3.4417575374245644 Fitness: 672.8973928191475 
+TotalHits: 313 Total Docs:  500 
+************************************************ 
+ 
+  ***** Job: 0 Gen: 799 PopSize: 512 Noclusters: 5  pathToIndex: indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL5  **************************************************************** 
+ ClusterQuery 0 searching for:  players nhl hockey  Found 76 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52623 cat name: c.sport.hockey 
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52595 cat name: c.sport.hockey 
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52602 cat name: c.sport.hockey 
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52612 cat name: c.sport.hockey 
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\rec.sport.hockey\52605 cat name: c.sport.hockey 
+categoryTotal: 100 for catQ: category:c.sport.hockey 
+f1: 0.840909090899 recall: 0.74 precision: 0.9736842105
+Purity: 0.9736842078 Job: 0 
+ClusterQuery 1 searching for:  orbit station  Found 50 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60233 cat name: i.space 
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60190 cat name: i.space 
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60151 cat name: i.space 
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\59904 cat name: i.space 
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\sci.space\60187 cat name: i.space 
+categoryTotal: 100 for catQ: category:i.space 
+f1: 0.6266666667 recall: 0.47 precision: 0.94
+Purity: 0.94 Job: 0 
+ClusterQuery 2 searching for:  windows  Found 70 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9155 cat name: mp.os.mswindows.misc 
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9450 cat name: mp.os.mswindows.misc 
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9139 cat name: mp.os.mswindows.misc 
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\9489 cat name: mp.os.mswindows.misc 
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\comp.os.ms-windows.misc\10017 cat name: mp.os.mswindows.misc 
+categoryTotal: 100 for catQ: category:mp.os.mswindows.misc 
+f1: 0.776470588250 recall: 0.66 precision: 0.9428571429
+Purity: 0.9428571438 Job: 0 
+ClusterQuery 3 searching for:  sale  Found 60 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74725 cat name: sc.forsale 
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74732 cat name: sc.forsale 
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74741 cat name: sc.forsale 
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74799 cat name: sc.forsale 
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\misc.forsale\74740 cat name: sc.forsale 
+categoryTotal: 100 for catQ: category:sc.forsale 
+f1: 0.7125 recall: 0.57 precision: 0.95
+Purity: 0.9500000019 Job: 0 
+ClusterQuery 4 searching for:  christ god jesus  Found 77 hits: 
+0 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20547 cat name: c.religion.christian 
+1 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20492 cat name: c.religion.christian 
+2 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20531 cat name: c.religion.christian 
+3 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20525 cat name: c.religion.christian 
+4 path C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian\soc.religion.christian\20488 cat name: c.religion.christian 
+categoryTotal: 100 for catQ: category:c.religion.christian 
+f1: 0.836158192076 recall: 0.74 precision: 0.9610389610
+Purity: 0.9610389620 Job: 0 
+f1list: [0.840909090899, 0.6266666667, 0.776470588250, 0.7125, 0.836158192076] averagef1: :0.758540907585
+PosHits: 312 NegHits: 21 PosScore: 78.5054769134149 NegScore: 3.361715903505683 Fitness: 692.3925820903816 
+TotalHits: 322 Total Docs:  500 
+************************************************ 
+ 

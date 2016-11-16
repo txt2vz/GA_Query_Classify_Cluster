@@ -90,12 +90,12 @@ public class ClusterFit extends SimpleFitness {
 				int docId = h.doc;
 				def scr = h.score
 				Document d = searcher.doc(docId);
-				def cat = d.get(IndexInfo.FIELD_CATEGORY_NAME)
-				def n = catsFreq.get((cat)) ?: 0
-				catsFreq.put((cat), n + 1)
+				def catName = d.get(IndexInfo.FIELD_CATEGORY_NAME)
+				def n = catsFreq.get((catName)) ?: 0
+				catsFreq.put((catName), n + 1)
 
 				if (i <5){
-					messageOut = "$i path ${d.get(IndexInfo.FIELD_PATH)} cat number: $cat catName: ${d.get(IndexInfo.FIELD_CATEGORY_NAME)}"
+					messageOut = "$i path ${d.get(IndexInfo.FIELD_PATH)} cat name: $catName "
 					println messageOut
 					resultsOut << messageOut + '\n'
 				}
