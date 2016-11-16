@@ -41,23 +41,11 @@ public class ClusterFit extends SimpleFitness {
 	def missedDocs =0
 	def emptyPen =0
 	Formatter bestResultsOut
-
 	def averageF1
-
 	IndexSearcher searcher = IndexInfo.instance.indexSearcher;
-
-	private String queryShort (){
-		def s=""
-		queryMap.keySet().eachWithIndex {q, index ->
-			if (index>0) s+='\n';
-			s +=  "ClusterQuery " + index + ": " + queryMap.get(q) + " " + q.toString(IndexInfo.FIELD_CONTENTS)
-		}
-		return s
-	}
+	final int hitsPerPage=10000
 
 	private int getTotalHits(){
-
-		int hitsPerPage=Integer.MAX_VALUE
 
 		def docsReturned =	queryMap.keySet().inject([] as Set) {docSet, q ->
 
@@ -69,11 +57,19 @@ public class ClusterFit extends SimpleFitness {
 		return docsReturned.size()
 	}
 
+	String queryShort (){
+		def s=""
+		queryMap.keySet().eachWithIndex {q, index ->
+			if (index>0) s+='\n';
+			s +=  "ClusterQuery: $index :  ${queryMap.get(q)}  ${q.toString(IndexInfo.FIELD_CONTENTS)}"
+		}
+		return s
+	}
+
 	public void queryStats (int job, int gen, int popSize){
 		def messageOut=""
-		int hitsPerPage=10000
-		FileWriter resOut = new FileWriter("results/clusterResultsF1.txt", true)
-		resOut <<"  ***** Job: $job Gen: $gen PopSize: $popSize Noclusters:" + IndexInfo.instance.NUMBER_OF_CLUSTERS + " pathToIndex: " + IndexInfo.instance.pathToIndex + " **************************************************************** \n "
+		FileWriter resultsOut = new FileWriter("results/clusterResultsF1.txt", true)
+		resultsOut <<"  ***** Job: $job Gen: $gen PopSize: $popSize Noclusters: ${IndexInfo.instance.NUMBER_OF_CLUSTERS}  pathToIndex: ${IndexInfo.instance.pathToIndex}  **************************************************************** \n "
 
 		def f1list = []
 		queryMap.keySet().eachWithIndex {q, index ->
@@ -84,9 +80,9 @@ public class ClusterFit extends SimpleFitness {
 			def qString = q.toString(IndexInfo.FIELD_CONTENTS)
 
 			println "***********************************************************************************"
-			messageOut = "ClusterQuery $index searching for:  $qString  Found ${hits.length} hits:" + '\n'
+			messageOut = "ClusterQuery $index searching for:  $qString  Found ${hits.length} hits: \n"
 			println messageOut
-			resOut << messageOut
+			resultsOut << messageOut
 
 			//map of categories (ground truth) and their frequencies
 			def catsFreq=[:]
@@ -99,9 +95,9 @@ public class ClusterFit extends SimpleFitness {
 				catsFreq.put((cat), n + 1)
 
 				if (i <5){
-					messageOut = "$i path " + d.get(IndexInfo.FIELD_PATH)	+ " cat number $cat catName: " + d.get(IndexInfo.FIELD_CATEGORY_NAME)
+					messageOut = "$i path ${d.get(IndexInfo.FIELD_PATH)} cat number: $cat catName: ${d.get(IndexInfo.FIELD_CATEGORY_NAME)}"
 					println messageOut
-					resOut << messageOut + '\n'
+					resultsOut << messageOut + '\n'
 				}
 			}
 			println "Gen: $gen ClusterQuery: $index catsFreq: $catsFreq for query: $qString "
@@ -116,14 +112,14 @@ public class ClusterFit extends SimpleFitness {
 			println "purity:  $purity"
 
 			if (catMax !=0){
-				TotalHitCountCollector thcollector  = new TotalHitCountCollector();
-				final TermQuery catQ = new TermQuery(new Term(IndexInfo.FIELD_CATEGORY_NAME,
+				TotalHitCountCollector totalHitCollector  = new TotalHitCountCollector();
+				TermQuery catQ = new TermQuery(new Term(IndexInfo.FIELD_CATEGORY_NAME,
 						catMax.key));
-				searcher.search(catQ, thcollector);
-				def categoryTotal = thcollector.getTotalHits();
-				messageOut = "categoryTotal is $categoryTotal for catQ $catQ \n"
+				searcher.search(catQ, totalHitCollector);
+				def categoryTotal = totalHitCollector.getTotalHits();
+				messageOut = "categoryTotal: $categoryTotal for catQ: $catQ \n"
 				println messageOut
-				resOut << messageOut
+				resultsOut << messageOut
 
 				def recall = catMax.value / categoryTotal;
 				def precision = catMax.value / hits.size()
@@ -131,23 +127,22 @@ public class ClusterFit extends SimpleFitness {
 				f1list << f1
 				messageOut = "f1: $f1 recall: $recall precision: $precision"
 				println messageOut
-				resOut << messageOut + "\n"
-				resOut << "Purity: $purity Job: $job \n"
+				resultsOut << messageOut + "\n"
+				resultsOut << "Purity: $purity Job: $job \n"
 			}
 		}
 		//averageF1 = f1list.sum()/f1list.size()
 		averageF1 = f1list.sum()/ IndexInfo.NUMBER_OF_CLUSTERS
-
 		messageOut = "f1list: $f1list averagef1: :$averageF1"
 		println messageOut
-		resOut << messageOut + "\n"
+		resultsOut << messageOut + "\n"
 
-		resOut << "PosHits: $posHits NegHits: $negHits PosScore: $positiveScore NegScore: $negativeScore Fitness: ${fitness()} \n"
-		resOut << "TotalHits: " + getTotalHits() + " Total Docs: " + IndexInfo.instance.indexReader.maxDoc() + "\n"
-		resOut << "************************************************ \n \n"
+		resultsOut << "PosHits: $posHits NegHits: $negHits PosScore: $positiveScore NegScore: $negativeScore Fitness: ${fitness()} \n"
+		resultsOut << "TotalHits: ${getTotalHits()} Total Docs:  ${IndexInfo.instance.indexReader.maxDoc()} \n"
+		resultsOut << "************************************************ \n \n"
 
-		resOut.flush()
-		resOut.close()
+		resultsOut.flush()
+		resultsOut.close()
 
 		boolean appnd = true //job!=1
 		FileWriter f = new FileWriter("results/resultsCluster.csv", appnd)
@@ -178,12 +173,10 @@ public class ClusterFit extends SimpleFitness {
 	}
 
 	public String fitnessToStringForHumans() {
-		//def origFit = this.fitness() -400
-		return  "ClusterQuery Fitness: " + this.fitness() + " scoreOrig: $scoreOrig";
+		return  "ClusterQuery Fitness: ${this.fitness()}  scoreOrig: $scoreOrig"
 	}
 
 	public String toString(int gen) {
-		return "Gen: " + gen + " ClusterQuery Fitness: " + this.fitness
-		+ " qMap: " + queryMap;
+		return "Gen: $gen ClusterQuery Fitness: ${this.fitness} qMap: $queryMap}"
 	}
 }

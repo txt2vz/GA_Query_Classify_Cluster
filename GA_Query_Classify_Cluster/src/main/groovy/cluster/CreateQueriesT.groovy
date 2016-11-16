@@ -28,32 +28,20 @@ trait CreateQueriesT {
 		def bqbList = []
 
 		intVectorIndividual.genome.eachWithIndex {gene, index ->
-			//GA to set number of clusters
-			//	gene =0;
-			//			if (index==0){
-			//				cNumber = gene
-			//			} else
-			//	{			
-			
+			//GA to set number of clusters in gene 0
+			//			if (index==0){cNumber = gene } else	{
+
 			int clusterNumber =  index % cNumber
-			String wrd = wordArray[gene]
+			String word = wordArray[gene]
 			bqbList[clusterNumber] = bqbList[clusterNumber] ?: new BooleanQuery.Builder()
 
 			if (gene < wordArray.size() && gene >= 0){
-				
+
 				//++ seems to cause and odd error for groovy properties? !
 				if (!genes.add(gene)) duplicateCount = duplicateCount + 1;
-				TermQuery tq = new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, wrd))
+				
+				TermQuery tq = new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, word))
 				bqbList[clusterNumber].add(tq,BooleanClause.Occur.SHOULD)
-
-				//check that the subquery returns something - not needed for OR?
-				//	TotalHitCountCollector collector = new TotalHitCountCollector();
-				//	searcher.search(tq, collector);
-				//	if (collector.getTotalHits() < hitsMin)
-				//	{
-				//	noHitsCount = noHitsCount + 1;
-				//	}
-				//	}
 			}
 		}
 		return bqbList
