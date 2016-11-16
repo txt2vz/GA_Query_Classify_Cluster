@@ -26,15 +26,15 @@ import org.apache.lucene.codecs.*
 class Index20NG {
 	// Create Lucene index in this directory
 	def indexPath = 
-	   'indexes/20NG3SpaceHockeyChristianl5'
-	//'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL5'	
+	//   'indexes/20NG3SpaceHockeyChristianl5'
+	'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL5'	
 	
 	// Index files in this directory	
 	def docsPath =
 	//  /C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns/	
-	//  /C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian/
+	  /C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian/
 
-	  /C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian/
+	//  /C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian/
 
 	Path path = Paths.get(indexPath)
 	Directory directory = FSDirectory.open(path)

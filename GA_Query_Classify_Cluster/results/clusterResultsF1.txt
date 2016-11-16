@@ -2288,3 +2288,69 @@ PosHits: 2388 NegHits: 6 PosScore: 604.456904720515 NegScore: 1.0587414391338825
 TotalHits: 2391 Total Docs: 3000
 ************************************************ 
  
+  ***** Job: 0 Gen: 39 PopSize: 512 Noclusters: 3  pathToIndex: indexes/crisis3FireBombFloodL5  **************************************************************** 
+ ClusterQuery 0 searching for:  fires boulder video breaking area  Found 251 hits: 
+0 path {d.get(IndexInfo.FIELD_PATH)}	 cat number: Colorado_w catName: Colorado_w
+1 path {d.get(IndexInfo.FIELD_PATH)}	 cat number: Colorado_w catName: Colorado_w
+2 path {d.get(IndexInfo.FIELD_PATH)}	 cat number: Colorado_w catName: Colorado_w
+3 path {d.get(IndexInfo.FIELD_PATH)}	 cat number: Colorado_w catName: Colorado_w
+4 path {d.get(IndexInfo.FIELD_PATH)}	 cat number: Colorado_w catName: Colorado_w
+categoryTotal: 1000 for catQ: category:Colorado_w 
+f1: 0.223820943245 recall: 0.14 precision: 0.5577689243
+Purity: 0.5577689180 Job: 0 
+ClusterQuery 1 searching for:  love flooding everyone wildfires down  Found 359 hits: 
+0 path {d.get(IndexInfo.FIELD_PATH)}	 cat number: Colorado_w catName: Colorado_w
+1 path {d.get(IndexInfo.FIELD_PATH)}	 cat number: Colorado_w catName: Colorado_w
+2 path {d.get(IndexInfo.FIELD_PATH)}	 cat number: Boston_bom catName: Boston_bom
+3 path {d.get(IndexInfo.FIELD_PATH)}	 cat number: Colorado_w catName: Colorado_w
+4 path {d.get(IndexInfo.FIELD_PATH)}	 cat number: Colorado_w catName: Colorado_w
+categoryTotal: 1000 for catQ: category:Queensland 
+f1: 0.264900662257 recall: 0.18 precision: 0.5013927577
+Purity: 0.5013927540 Job: 0 
+ClusterQuery 2 searching for:  update prayforboston photo old wildfire  Found 475 hits: 
+0 path {d.get(IndexInfo.FIELD_PATH)}	 cat number: Boston_bom catName: Boston_bom
+1 path {d.get(IndexInfo.FIELD_PATH)}	 cat number: Boston_bom catName: Boston_bom
+2 path {d.get(IndexInfo.FIELD_PATH)}	 cat number: Colorado_w catName: Colorado_w
+3 path {d.get(IndexInfo.FIELD_PATH)}	 cat number: Boston_bom catName: Boston_bom
+4 path {d.get(IndexInfo.FIELD_PATH)}	 cat number: Colorado_w catName: Colorado_w
+categoryTotal: 1000 for catQ: category:Boston_bom 
+f1: 0.352542372891 recall: 0.26 precision: 0.5473684211
+Purity: 0.5473684320 Job: 0 
+f1list: [0.223820943245, 0.264900662257, 0.352542372891] averagef1: :0.280421326131
+PosHits: 986 NegHits: 99 PosScore: 118.85601779073477 NegScore: 10.146610397845507 Fitness: 382.5047455505468 
+TotalHits: 1035 Total Docs:  3000 
+************************************************ 
+ 
+  ***** Job: 0 Gen: 39 PopSize: 512 Noclusters: 3  pathToIndex: indexes/crisis3FireBombFloodL5  **************************************************************** 
+ ClusterQuery 0 searching for:  bombings boulder homes photo australia  Found 271 hits: 
+0 path null cat number: Colorado_w catName: Colorado_w
+1 path null cat number: Boston_bom catName: Boston_bom
+2 path null cat number: Colorado_w catName: Colorado_w
+3 path null cat number: Colorado_w catName: Colorado_w
+4 path null cat number: Queensland catName: Queensland
+categoryTotal: 1000 for catQ: category:Queensland 
+f1: 0.1841070023564 recall: 0.117 precision: 0.4317343173
+Purity: 0.4317343173 Job: 0 
+ClusterQuery 1 searching for:  bigwet river prayforboston warning wildfire  Found 922 hits: 
+0 path null cat number: Queensland catName: Queensland
+1 path null cat number: Queensland catName: Queensland
+2 path null cat number: Queensland catName: Queensland
+3 path null cat number: Queensland catName: Queensland
+4 path null cat number: Queensland catName: Queensland
+categoryTotal: 1000 for catQ: category:Queensland 
+f1: 0.5733610822229 recall: 0.551 precision: 0.5976138829
+Purity: 0.5976138837 Job: 0 
+ClusterQuery 2 searching for:  praying bostonmarathon bombing via emergency  Found 365 hits: 
+0 path null cat number: Boston_bom catName: Boston_bom
+1 path null cat number: Boston_bom catName: Boston_bom
+2 path null cat number: Colorado_w catName: Colorado_w
+3 path null cat number: Boston_bom catName: Boston_bom
+4 path null cat number: Boston_bom catName: Boston_bom
+categoryTotal: 1000 for catQ: category:Boston_bom 
+f1: 0.4058608058624 recall: 0.277 precision: 0.7589041096
+Purity: 0.7589041020 Job: 0 
+f1list: [0.1841070023564, 0.5733610822229, 0.4058608058624] averagef1: :0.3877762968139
+PosHits: 1351 NegHits: 207 PosScore: 132.91888042353094 NegScore: 19.348515383899212 Fitness: 538.5968665946209 
+TotalHits: 1451 Total Docs:  3000 
+************************************************ 
+ 
