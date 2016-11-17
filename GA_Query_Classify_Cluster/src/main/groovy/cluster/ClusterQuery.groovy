@@ -124,8 +124,15 @@ public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProbl
 		///You might want to multiple your fitness function by 1/(number of unclassified documents).
 		//(1.1)^{number of words covered by clusters}.
 
-		def baseFitness = //(posScore + 1) / (negScore + coreClusterPen + emptyPen + duplicateCount + 1)
-				scorePlus / negIndicators
+		def baseFitness //= //(posScore + 1) / (negScore + coreClusterPen + emptyPen + duplicateCount + 1)
+		//		scorePlus / negIndicators
+
+		if (scoreOnly> 0) {
+			baseFitness = scoreOnly / negIndicators
+		} else
+			baseFitness =
+					(posScore + 1) / (negScore + coreClusterPen + emptyPen + duplicateCount + 1)
+
 		def rawfitness=
 
 				//improve recall?

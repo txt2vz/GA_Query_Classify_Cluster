@@ -166,3 +166,45 @@ PosHits: 1063 NegHits: 297 PosScore: 376.88152246549726 NegScore: 29.27710240706
 TotalHits: 1208 Total Docs:  2000 
 ************************************************ 
  
+  ***** Job: 0 Gen: 999 PopSize: 512 Noclusters: 4  pathToIndex: indexes/classic4_500L5  **************************************************************** 
+ ClusterQuery 0 searching for:  libraries library  Found 213 hits: 
+0 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000186 cat name: cisi 
+1 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000370 cat name: cisi 
+2 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000340 cat name: cisi 
+3 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000304 cat name: cisi 
+4 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000187 cat name: cisi 
+categoryTotal: 500 for catQ: category:cisi 
+f1: 0.5946704067287 recall: 0.424 precision: 0.9953051643
+Purity: 0.9953051684 Job: 0 
+ClusterQuery 1 searching for:  blood patients cells  Found 279 hits: 
+0 path C:\Users\Laurie\Dataset\classic4_500\med\med.000108 cat name: med. 
+1 path C:\Users\Laurie\Dataset\classic4_500\med\med.000431 cat name: med. 
+2 path C:\Users\Laurie\Dataset\classic4_500\med\med.000458 cat name: med. 
+3 path C:\Users\Laurie\Dataset\classic4_500\med\med.000052 cat name: med. 
+4 path C:\Users\Laurie\Dataset\classic4_500\med\med.000437 cat name: med. 
+categoryTotal: 500 for catQ: category:med. 
+f1: 0.7163029525 recall: 0.558 precision: 1
+Purity: 1.0000000026 Job: 0 
+ClusterQuery 2 searching for:  algorithm  Found 166 hits: 
+0 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000199 cat name: cacm 
+1 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000029 cat name: cacm 
+2 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000178 cat name: cacm 
+3 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000125 cat name: cacm 
+4 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000127 cat name: cacm 
+categoryTotal: 500 for catQ: category:cacm 
+f1: 0.4864864864917 recall: 0.324 precision: 0.9759036145
+Purity: 0.9759036168 Job: 0 
+ClusterQuery 3 searching for:  boundary pressure theory  Found 458 hits: 
+0 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000242 cat name: cran 
+1 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000121 cat name: cran 
+2 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000134 cat name: cran 
+3 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000347 cat name: cran 
+4 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000496 cat name: cran 
+categoryTotal: 500 for catQ: category:cran 
+f1: 0.7807933194324 recall: 0.748 precision: 0.8165938865
+Purity: 0.8165938814 Job: 0 
+f1list: [0.5946704067287, 0.7163029525, 0.4864864864917, 0.7807933194324] averagef1: :0.6445632912882
+PosHits: 1042 NegHits: 74 PosScore: 461.3585138581693 NegScore: 10.036797694861889 Fitness: 243.48806587010435 
+TotalHits: 1079 Total Docs:  2000 
+************************************************ 
+ 
