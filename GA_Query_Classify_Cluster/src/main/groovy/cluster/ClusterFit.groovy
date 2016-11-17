@@ -38,6 +38,7 @@ public class ClusterFit extends SimpleFitness {
 	def totalHits=0
 	def fraction = 0 as float
 	def baseFitness = 0 as float
+	def scrPlus = 0 as float
 	def missedDocs =0
 	def emptyPen =0
 	Formatter bestResultsOut
@@ -173,7 +174,7 @@ public class ClusterFit extends SimpleFitness {
 	}
 
 	public String fitnessToStringForHumans() {
-		return  "ClusterQuery Fitness: ${this.fitness()}  scoreOrig: $scoreOrig"
+		return  "ClusterQuery Fitness: ${this.fitness()} "
 	}
 
 	public String toString(int gen) {

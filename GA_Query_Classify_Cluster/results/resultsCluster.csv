@@ -1,0 +1,4 @@
+999, 0, 512, 937.296, 0.667, Job: 0 ClusterQuery 0: 166 algorithm ## ClusterQuery 1: 234 patients cells ## ClusterQuery 2: 435 layer boundary flow ## ClusterQuery 3: 484 library information computer ## 
+999, 1, 512, 862.128, 0.523, Job: 1 ClusterQuery 0: 282 patients computer ## ClusterQuery 1: 292 library cells ## ClusterQuery 2: 166 algorithm ## ClusterQuery 3: 570 given boundary flow ## 
+999, 2, 512, 872.549, 0.466, Job: 2 ClusterQuery 0: 166 algorithm ## ClusterQuery 1: 422 cells library patients ## ClusterQuery 2: 661 boundary information flow ## ClusterQuery 3: 147 computer ## 
+999, 3, 512, 813.953, 0.604, Job: 3 ClusterQuery 0: 166 algorithm ## ClusterQuery 1: 374 library computer retrieval ## ClusterQuery 2: 413 patients cells study ## ClusterQuery 3: 407 conditions theory temperature ## 

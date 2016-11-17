@@ -25,7 +25,7 @@ import ec.vector.IntegerVectorIndividual
 public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProblemForm {
 
 	IndexSearcher searcher = IndexInfo.instance.indexSearcher;
-	private String[] wordArray;	   
+	private String[] wordArray;
 	private final int coreClusterSize=20
 
 	public void setup(final EvolutionState state, final Parameter base) {
@@ -44,14 +44,14 @@ public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProbl
 
 		ClusterFit fitness = (ClusterFit) ind.fitness;
 		IntegerVectorIndividual intVectorIndividual = (IntegerVectorIndividual) ind;
-        
+
 		//list of lucene Boolean Query Builders
 		def bqbList =
-		
-		  //from ClusterQueriesT = trait
-	  	  getORQL(wordArray, intVectorIndividual, IndexInfo.NUMBER_OF_CLUSTERS)
-		  //getANDQL(wordArray, intVectorIndividual, IndexInfo.NUMBER_OF_CLUSTERS)
-		  //getORNOTQL(wordArray, intVectorIndividual, IndexInfo.NUMBER_OF_CLUSTERS)
+
+				//from ClusterQueriesT = trait
+				getORQL(wordArray, intVectorIndividual)
+		//getANDQL(wordArray, intVectorIndividual, IndexInfo.NUMBER_OF_CLUSTERS)
+		//getORNOTQL(wordArray, intVectorIndividual, IndexInfo.NUMBER_OF_CLUSTERS)
 
 		final int hitsPerPage = 10000;
 		def negHitsTotal=0
@@ -106,29 +106,35 @@ public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProbl
 			}
 		}
 
-		
+
 		def scoreOnly = posScore - negScore
-		
+
 		//fitness must be positive for ECJ
 		def final  minScore = 1000
 		def scorePlus = (scoreOnly < -minScore) ? 0 : scoreOnly + minScore
 
-		def negIndicators =   //(graphPen+1) *	// (treePen+1) *
-				//(noHitsCount+1) * (duplicateCount+1)  * (emptyPen + 1) 	* (coreClusterPen +1)
-				// emptyPen +  coreClusterPen + 1
+		def negIndicators =
 				noHitsCount + duplicateCount + emptyPen + coreClusterPen + 1
+		//(graphPen+1) *	// (treePen+1) *
+		//(noHitsCount+1) * (duplicateCount+1)  * (emptyPen + 1) 	* (coreClusterPen +1)
+		// emptyPen +  coreClusterPen + 1
 
 		def fractionCovered = allHits.size() / IndexInfo.instance.indexReader.maxDoc()
 		def missedDocs = IndexInfo.instance.indexReader.maxDoc() - allHits.size()
 		///You might want to multiple your fitness function by 1/(number of unclassified documents).
 		//(1.1)^{number of words covered by clusters}.
 
-		def baseFitness = scorePlus / negIndicators
+		def baseFitness = //(posScore + 1) / (negScore + coreClusterPen + emptyPen + duplicateCount + 1)
+				scorePlus / negIndicators
 		def rawfitness=
-				//baseFitness * (1/(Math.log(missedDocs)))
-				//baseFitness * (1/(Math.pow(1.01,missedDocs)))
-				//	baseFitness * (Math.pow(1.01,allHits.size()))
+
+				//improve recall?
 				baseFitness * fractionCovered
+
+		//baseFitness * (1/(Math.log(missedDocs)))
+		//baseFitness * (1/(Math.pow(1.01,missedDocs)))
+		//	baseFitness * (Math.pow(1.01,allHits.size()))
+		//	baseFitness
 
 		fitness.baseFitness = baseFitness;
 		fitness.missedDocs = missedDocs
@@ -136,6 +142,7 @@ public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProbl
 		fitness.totalHits = allHits.size()
 		fitness.graphPenalty=graphPen
 		fitness.queryMap = qMap.asImmutable()
+		fitness.scrPlus = scorePlus
 		fitness.negativeScore = negScore
 		fitness.positiveScore = posScore
 		fitness.negHits = negHitsTotal
@@ -145,7 +152,7 @@ public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProbl
 		fitness.treePenalty=treePen
 		fitness.noHitsCount=noHitsCount
 		fitness.scoreOnly=scoreOnly
-		fitness.scoreOrig= rawfitness - minScore
+		//	fitness.scoreOrig= rawfitness - minScore
 		fitness.emptyPen = emptyPen
 
 		((SimpleFitness) intVectorIndividual.fitness).setFitness(state, rawfitness, false);

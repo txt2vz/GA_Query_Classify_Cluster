@@ -1,0 +1,168 @@
+  ***** Job: 0 Gen: 999 PopSize: 512 Noclusters: 4  pathToIndex: indexes/classic4_500L5  **************************************************************** 
+ ClusterQuery 0 searching for:  algorithm  Found 166 hits: 
+0 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000199 cat name: cacm 
+1 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000029 cat name: cacm 
+2 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000178 cat name: cacm 
+3 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000125 cat name: cacm 
+4 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000127 cat name: cacm 
+categoryTotal: 500 for catQ: category:cacm 
+f1: 0.4864864864917 recall: 0.324 precision: 0.9759036145
+Purity: 0.9759036168 Job: 0 
+ClusterQuery 1 searching for:  patients cells  Found 234 hits: 
+0 path C:\Users\Laurie\Dataset\classic4_500\med\med.000375 cat name: med. 
+1 path C:\Users\Laurie\Dataset\classic4_500\med\med.000026 cat name: med. 
+2 path C:\Users\Laurie\Dataset\classic4_500\med\med.000179 cat name: med. 
+3 path C:\Users\Laurie\Dataset\classic4_500\med\med.000108 cat name: med. 
+4 path C:\Users\Laurie\Dataset\classic4_500\med\med.000458 cat name: med. 
+categoryTotal: 500 for catQ: category:med. 
+f1: 0.6376021798 recall: 0.468 precision: 1
+Purity: 1.0000000062 Job: 0 
+ClusterQuery 2 searching for:  layer boundary flow  Found 435 hits: 
+0 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000003 cat name: cran 
+1 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000004 cat name: cran 
+2 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000376 cat name: cran 
+3 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000335 cat name: cran 
+4 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000326 cat name: cran 
+categoryTotal: 500 for catQ: category:cran 
+f1: 0.8149732620470 recall: 0.762 precision: 0.8758620690
+Purity: 0.8758620786 Job: 0 
+ClusterQuery 3 searching for:  library information computer  Found 484 hits: 
+0 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000325 cat name: cisi 
+1 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000064 cat name: cisi 
+2 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000244 cat name: cisi 
+3 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000452 cat name: cisi 
+4 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000462 cat name: cisi 
+categoryTotal: 500 for catQ: category:cisi 
+f1: 0.7276422764288 recall: 0.716 precision: 0.7396694215
+Purity: 0.7396694206 Job: 0 
+f1list: [0.4864864864917, 0.6376021798, 0.8149732620470, 0.7276422764288] averagef1: :0.666676051191875
+PosHits: 1190 NegHits: 129 PosScore: 514.1873301044106 NegScore: 19.297435272485018 Fitness: 937.2959640596174 
+TotalHits: 1254 Total Docs:  2000 
+************************************************ 
+ 
+  ***** Job: 1 Gen: 999 PopSize: 512 Noclusters: 4  pathToIndex: indexes/classic4_500L5  **************************************************************** 
+ ClusterQuery 0 searching for:  patients computer  Found 282 hits: 
+0 path C:\Users\Laurie\Dataset\classic4_500\med\med.000219 cat name: med. 
+1 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000037 cat name: cacm 
+2 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000057 cat name: cacm 
+3 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000217 cat name: cacm 
+4 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000218 cat name: cacm 
+categoryTotal: 500 for catQ: category:med. 
+f1: 0.3503836317040 recall: 0.274 precision: 0.4858156028
+Purity: 0.4858156041 Job: 1 
+ClusterQuery 1 searching for:  library cells  Found 292 hits: 
+0 path C:\Users\Laurie\Dataset\classic4_500\med\med.000431 cat name: med. 
+1 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000263 cat name: cacm 
+2 path C:\Users\Laurie\Dataset\classic4_500\med\med.000397 cat name: med. 
+3 path C:\Users\Laurie\Dataset\classic4_500\med\med.000067 cat name: med. 
+4 path C:\Users\Laurie\Dataset\classic4_500\med\med.000232 cat name: med. 
+categoryTotal: 500 for catQ: category:cisi 
+f1: 0.4722222222211 recall: 0.374 precision: 0.6404109589
+Purity: 0.6404109525 Job: 1 
+ClusterQuery 2 searching for:  algorithm  Found 166 hits: 
+0 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000199 cat name: cacm 
+1 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000029 cat name: cacm 
+2 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000178 cat name: cacm 
+3 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000125 cat name: cacm 
+4 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000127 cat name: cacm 
+categoryTotal: 500 for catQ: category:cacm 
+f1: 0.4864864864917 recall: 0.324 precision: 0.9759036145
+Purity: 0.9759036168 Job: 1 
+ClusterQuery 3 searching for:  given boundary flow  Found 570 hits: 
+0 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000335 cat name: cran 
+1 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000333 cat name: cran 
+2 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000306 cat name: cran 
+3 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000461 cat name: cran 
+4 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000023 cat name: cran 
+categoryTotal: 500 for catQ: category:cran 
+f1: 0.7813084111960 recall: 0.836 precision: 0.7333333333
+Purity: 0.7333333480 Job: 1 
+f1list: [0.3503836317040, 0.4722222222211, 0.4864864864917, 0.7813084111960] averagef1: :0.5226001879032
+PosHits: 1119 NegHits: 191 PosScore: 449.90876532904804 NegScore: 27.254498779773712 Fitness: 862.1284855288602 
+TotalHits: 1212 Total Docs:  2000 
+************************************************ 
+ 
+  ***** Job: 2 Gen: 999 PopSize: 512 Noclusters: 4  pathToIndex: indexes/classic4_500L5  **************************************************************** 
+ ClusterQuery 0 searching for:  algorithm  Found 166 hits: 
+0 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000199 cat name: cacm 
+1 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000029 cat name: cacm 
+2 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000178 cat name: cacm 
+3 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000125 cat name: cacm 
+4 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000127 cat name: cacm 
+categoryTotal: 500 for catQ: category:cacm 
+f1: 0.4864864864917 recall: 0.324 precision: 0.9759036145
+Purity: 0.9759036168 Job: 2 
+ClusterQuery 1 searching for:  cells library patients  Found 422 hits: 
+0 path C:\Users\Laurie\Dataset\classic4_500\med\med.000375 cat name: med. 
+1 path C:\Users\Laurie\Dataset\classic4_500\med\med.000026 cat name: med. 
+2 path C:\Users\Laurie\Dataset\classic4_500\med\med.000179 cat name: med. 
+3 path C:\Users\Laurie\Dataset\classic4_500\med\med.000108 cat name: med. 
+4 path C:\Users\Laurie\Dataset\classic4_500\med\med.000458 cat name: med. 
+categoryTotal: 500 for catQ: category:med. 
+f1: 0.5075921909027 recall: 0.468 precision: 0.5545023697
+Purity: 0.5545023588 Job: 2 
+ClusterQuery 2 searching for:  boundary information flow  Found 661 hits: 
+0 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000265 cat name: cran 
+1 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000121 cat name: cran 
+2 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000003 cat name: cran 
+3 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000363 cat name: cran 
+4 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000170 cat name: cran 
+categoryTotal: 500 for catQ: category:cran 
+f1: 0.6580534022651 recall: 0.764 precision: 0.5779122542
+Purity: 0.5779122526 Job: 2 
+ClusterQuery 3 searching for:  computer  Found 147 hits: 
+0 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000037 cat name: cacm 
+1 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000057 cat name: cacm 
+2 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000217 cat name: cacm 
+3 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000218 cat name: cacm 
+4 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000436 cat name: cacm 
+categoryTotal: 500 for catQ: category:cacm 
+f1: 0.2132921174650 recall: 0.138 precision: 0.4693877551
+Purity: 0.4693877559 Job: 2 
+f1list: [0.4864864864917, 0.5075921909027, 0.6580534022651, 0.2132921174650] averagef1: :0.466356049281125
+PosHits: 1112 NegHits: 284 PosScore: 450.4194619935006 NegScore: 49.85888786613941 Fitness: 872.549237681346 
+TotalHits: 1246 Total Docs:  2000 
+************************************************ 
+ 
+  ***** Job: 3 Gen: 999 PopSize: 512 Noclusters: 4  pathToIndex: indexes/classic4_500L5  **************************************************************** 
+ ClusterQuery 0 searching for:  algorithm  Found 166 hits: 
+0 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000199 cat name: cacm 
+1 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000029 cat name: cacm 
+2 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000178 cat name: cacm 
+3 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000125 cat name: cacm 
+4 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000127 cat name: cacm 
+categoryTotal: 500 for catQ: category:cacm 
+f1: 0.4864864864917 recall: 0.324 precision: 0.9759036145
+Purity: 0.9759036168 Job: 3 
+ClusterQuery 1 searching for:  library computer retrieval  Found 374 hits: 
+0 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000452 cat name: cisi 
+1 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000462 cat name: cisi 
+2 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000243 cat name: cisi 
+3 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000325 cat name: cisi 
+4 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000056 cat name: cisi 
+categoryTotal: 500 for catQ: category:cisi 
+f1: 0.663615560634 recall: 0.58 precision: 0.7754010695
+Purity: 0.7754010720 Job: 3 
+ClusterQuery 2 searching for:  patients cells study  Found 413 hits: 
+0 path C:\Users\Laurie\Dataset\classic4_500\med\med.000026 cat name: med. 
+1 path C:\Users\Laurie\Dataset\classic4_500\med\med.000108 cat name: med. 
+2 path C:\Users\Laurie\Dataset\classic4_500\med\med.000067 cat name: med. 
+3 path C:\Users\Laurie\Dataset\classic4_500\med\med.000397 cat name: med. 
+4 path C:\Users\Laurie\Dataset\classic4_500\med\med.000286 cat name: med. 
+categoryTotal: 500 for catQ: category:med. 
+f1: 0.5958378970237 recall: 0.544 precision: 0.6585956416
+Purity: 0.6585956400 Job: 3 
+ClusterQuery 3 searching for:  conditions theory temperature  Found 407 hits: 
+0 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000030 cat name: cran 
+1 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000049 cat name: cran 
+2 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000131 cat name: cran 
+3 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000079 cat name: cran 
+4 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000283 cat name: cran 
+categoryTotal: 500 for catQ: category:cran 
+f1: 0.6703417860965 recall: 0.608 precision: 0.7469287469
+Purity: 0.7469287600 Job: 3 
+f1list: [0.4864864864917, 0.663615560634, 0.5958378970237, 0.6703417860965] averagef1: :0.604070432561475
+PosHits: 1063 NegHits: 297 PosScore: 376.88152246549726 NegScore: 29.277102407068014 Fitness: 813.9530697152912 
+TotalHits: 1208 Total Docs:  2000 
+************************************************ 
+ 

@@ -16,7 +16,7 @@ trait CreateQueriesT {
 	final int hitsMin = 4
 	int treePen, graphPen, duplicateCount, noHitsCount;
 
-	def getORQL(String[] wordArray, IntegerVectorIndividual intVectorIndividual, int cNumber ) {
+	def getORQL(String[] wordArray, IntegerVectorIndividual intVectorIndividual) {
 
 		treePen = 0
 		graphPen = 0
@@ -26,12 +26,17 @@ trait CreateQueriesT {
 		IndexSearcher searcher = IndexInfo.instance.indexSearcher;
 		def genes =[] as Set
 		def bqbList = []
+		//int clusterNumber=0
+		//final int step = intVectorIndividual.genome.size() / IndexInfo.NUMBER_OF_CLUSTERS 
 
 		intVectorIndividual.genome.eachWithIndex {gene, index ->
 			//GA to set number of clusters in gene 0
 			//			if (index==0){cNumber = gene } else	{
 
-			int clusterNumber =  index % cNumber
+			int clusterNumber =  index % IndexInfo.NUMBER_OF_CLUSTERS 
+			
+			//possible advantage in keeping words for same query together on genome?  
+			//if (index % step ==0 && index > 0  && clusterNumber < IndexInfo.NUMBER_OF_CLUSTERS ){	clusterNumber++	} 
 			String word = wordArray[gene]
 			bqbList[clusterNumber] = bqbList[clusterNumber] ?: new BooleanQuery.Builder()
 
