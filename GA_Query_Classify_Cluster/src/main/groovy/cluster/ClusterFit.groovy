@@ -95,11 +95,12 @@ public class ClusterFit extends SimpleFitness {
 				def n = catsFreq.get((catName)) ?: 0
 				catsFreq.put((catName), n + 1)
 
-				if (i <5){
-					messageOut = "$i path ${d.get(IndexInfo.FIELD_PATH)} cat name: $catName "
-					println messageOut
-					resultsOut << messageOut + '\n'
-				}
+//view top 5 results
+//				if (i <5){
+//					messageOut = "$i path ${d.get(IndexInfo.FIELD_PATH)} cat name: $catName "
+//					println messageOut
+//					resultsOut << messageOut + '\n'
+//				}
 			}
 			println "Gen: $gen ClusterQuery: $index catsFreq: $catsFreq for query: $qString "
 
@@ -109,8 +110,8 @@ public class ClusterFit extends SimpleFitness {
 			println "catsFreq: $catsFreq cats max: $catMax "
 
 			//purity measure - check this is correct?
-			def purity = (hits.size()==0) ? 0 : (1 / hits.size())  * catMax.value
-			println "purity:  $purity"
+//			def purity = (hits.size()==0) ? 0 : (1 / hits.size())  * catMax.value
+	//		println "purity:  $purity"
 
 			if (catMax !=0){
 				TotalHitCountCollector totalHitCollector  = new TotalHitCountCollector();
@@ -118,39 +119,42 @@ public class ClusterFit extends SimpleFitness {
 						catMax.key));
 				searcher.search(catQ, totalHitCollector);
 				def categoryTotal = totalHitCollector.getTotalHits();
-				messageOut = "categoryTotal: $categoryTotal for catQ: $catQ \n"
+				messageOut = "categoryTotal: $categoryTotal for category: $catQ \n"
 				println messageOut
 				resultsOut << messageOut
 
 				def recall = catMax.value / categoryTotal;
 				def precision = catMax.value / hits.size()
 				def f1 = (2 * precision * recall) / (precision + recall);
+				
 				f1list << f1
 				messageOut = "f1: $f1 recall: $recall precision: $precision"
 				println messageOut
 				resultsOut << messageOut + "\n"
-				resultsOut << "Purity: $purity Job: $job \n"
+				//resultsOut << "Purity: $purity Job: $job \n"
 			}
 		}
 		//averageF1 = f1list.sum()/f1list.size()
+		
 		averageF1 = f1list.sum()/ IndexInfo.NUMBER_OF_CLUSTERS
-		messageOut = "f1list: $f1list averagef1: :$averageF1"
+		messageOut ="***  TOTALS:   *****   f1list: $f1list averagef1: :$averageF1"
 		println messageOut
-		resultsOut << messageOut + "\n"
-
-		resultsOut << "PosHits: $posHits NegHits: $negHits PosScore: $positiveScore NegScore: $negativeScore Fitness: ${fitness()} \n"
+		
 		resultsOut << "TotalHits: ${getTotalHits()} Total Docs:  ${IndexInfo.instance.indexReader.maxDoc()} \n"
+		resultsOut << "PosHits: $posHits NegHits: $negHits PosScore: $positiveScore NegScore: $negativeScore Fitness: ${fitness()} \n"
+		resultsOut << messageOut + "\n"
 		resultsOut << "************************************************ \n \n"
 
 		resultsOut.flush()
 		resultsOut.close()
 
-		boolean appnd = true //job!=1
-		FileWriter f = new FileWriter("results/resultsCluster.csv", appnd)
-		Formatter csvOut = new Formatter(f);
+		boolean appnd = true //job!=0
+		FileWriter fcsv = new FileWriter("results/resultsCluster.csv", appnd)
+		Formatter csvOut = new Formatter(fcsv);
 		if (!appnd){
 			final String fileHead = "gen, job, popSize, fitness, averageF1, query" + '\n';
 			csvOut.format("%s", fileHead)
+			
 		}
 		csvOut.format(
 				"%s, %s, %s, %.3f, %.3f, %s",

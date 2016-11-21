@@ -80,8 +80,7 @@ public class ClusterQuery extends Problem implements CreateQueryTrait, SimplePro
 			ScoreDoc[] hitsOthers = otherTopDocs.scoreDocs;
 			hitsOthers.each {otherHit -> otherdocIdSet << otherHit.doc }
 
-			TopDocs docs = searcher.search(q, hitsPerPage);
-
+			TopDocs docs = searcher.search(q, hitsPerPage)
 			ScoreDoc[] hits = docs.scoreDocs;
 			qMap.put(q,hits.size())
 

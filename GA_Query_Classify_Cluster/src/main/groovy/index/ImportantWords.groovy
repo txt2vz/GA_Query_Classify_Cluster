@@ -13,15 +13,10 @@ import org.apache.lucene.search.IndexSearcher
 import org.apache.lucene.search.Query
 import org.apache.lucene.search.TermQuery
 import org.apache.lucene.search.TotalHitCountCollector
-
-//for lucene 6
-//import org.apache.lucene.search.similarities.BM25Similarity
-//import org.apache.lucene.search.similarities.ClassicSimilarity
-
-
+import org.apache.lucene.search.similarities.ClassicSimilarity
 import org.apache.lucene.search.similarities.Similarity
 import org.apache.lucene.search.similarities.TFIDFSimilarity
-import org.apache.lucene.search.similarities.DefaultSimilarity
+//import org.apache.lucene.search.similarities.DefaultSimilarity
 import org.apache.lucene.search.spans.SpanFirstQuery
 import org.apache.lucene.search.spans.SpanTermQuery
 import org.apache.lucene.util.BytesRef
@@ -185,9 +180,10 @@ public class ImportantWords {
 			long indexDf = indexReader.docFreq(t);
 			int docCount = indexReader.numDocs()
 
-			TFIDFSimilarity tfidfSim = new DefaultSimilarity()
+			//for lucene 5
+			//TFIDFSimilarity tfidfSim = new DefaultSimilarity()
 			//For lucene 6
-			//TFIDFSimilarity tfidfSim = new ClassicSimilarity()
+			TFIDFSimilarity tfidfSim = new ClassicSimilarity()
 			PostingsEnum docsEnum = termsEnum.postings(MultiFields.getTermDocsEnum(indexReader, IndexInfo.FIELD_CONTENTS, text ));
 			double tfidfTotal=0
 

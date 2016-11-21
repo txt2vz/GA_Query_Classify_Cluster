@@ -1,210 +1,162 @@
-  ***** Job: 0 Gen: 999 PopSize: 512 Noclusters: 4  pathToIndex: indexes/classic4_500L5  **************************************************************** 
- ClusterQuery 0 searching for:  algorithm  Found 166 hits: 
-0 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000199 cat name: cacm 
-1 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000029 cat name: cacm 
-2 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000178 cat name: cacm 
-3 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000125 cat name: cacm 
-4 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000127 cat name: cacm 
-categoryTotal: 500 for catQ: category:cacm 
-f1: 0.4864864864917 recall: 0.324 precision: 0.9759036145
-Purity: 0.9759036168 Job: 0 
-ClusterQuery 1 searching for:  patients cells  Found 234 hits: 
-0 path C:\Users\Laurie\Dataset\classic4_500\med\med.000375 cat name: med. 
-1 path C:\Users\Laurie\Dataset\classic4_500\med\med.000026 cat name: med. 
-2 path C:\Users\Laurie\Dataset\classic4_500\med\med.000179 cat name: med. 
-3 path C:\Users\Laurie\Dataset\classic4_500\med\med.000108 cat name: med. 
-4 path C:\Users\Laurie\Dataset\classic4_500\med\med.000458 cat name: med. 
-categoryTotal: 500 for catQ: category:med. 
-f1: 0.6376021798 recall: 0.468 precision: 1
-Purity: 1.0000000062 Job: 0 
-ClusterQuery 2 searching for:  layer boundary flow  Found 435 hits: 
-0 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000003 cat name: cran 
-1 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000004 cat name: cran 
-2 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000376 cat name: cran 
-3 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000335 cat name: cran 
-4 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000326 cat name: cran 
-categoryTotal: 500 for catQ: category:cran 
-f1: 0.8149732620470 recall: 0.762 precision: 0.8758620690
-Purity: 0.8758620786 Job: 0 
-ClusterQuery 3 searching for:  library information computer  Found 484 hits: 
-0 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000325 cat name: cisi 
-1 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000064 cat name: cisi 
-2 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000244 cat name: cisi 
-3 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000452 cat name: cisi 
-4 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000462 cat name: cisi 
-categoryTotal: 500 for catQ: category:cisi 
-f1: 0.7276422764288 recall: 0.716 precision: 0.7396694215
-Purity: 0.7396694206 Job: 0 
-f1list: [0.4864864864917, 0.6376021798, 0.8149732620470, 0.7276422764288] averagef1: :0.666676051191875
-PosHits: 1190 NegHits: 129 PosScore: 514.1873301044106 NegScore: 19.297435272485018 Fitness: 937.2959640596174 
-TotalHits: 1254 Total Docs:  2000 
-************************************************ 
- 
-  ***** Job: 1 Gen: 999 PopSize: 512 Noclusters: 4  pathToIndex: indexes/classic4_500L5  **************************************************************** 
- ClusterQuery 0 searching for:  patients computer  Found 282 hits: 
-0 path C:\Users\Laurie\Dataset\classic4_500\med\med.000219 cat name: med. 
-1 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000037 cat name: cacm 
-2 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000057 cat name: cacm 
-3 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000217 cat name: cacm 
-4 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000218 cat name: cacm 
-categoryTotal: 500 for catQ: category:med. 
-f1: 0.3503836317040 recall: 0.274 precision: 0.4858156028
-Purity: 0.4858156041 Job: 1 
-ClusterQuery 1 searching for:  library cells  Found 292 hits: 
-0 path C:\Users\Laurie\Dataset\classic4_500\med\med.000431 cat name: med. 
-1 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000263 cat name: cacm 
-2 path C:\Users\Laurie\Dataset\classic4_500\med\med.000397 cat name: med. 
-3 path C:\Users\Laurie\Dataset\classic4_500\med\med.000067 cat name: med. 
-4 path C:\Users\Laurie\Dataset\classic4_500\med\med.000232 cat name: med. 
-categoryTotal: 500 for catQ: category:cisi 
-f1: 0.4722222222211 recall: 0.374 precision: 0.6404109589
-Purity: 0.6404109525 Job: 1 
-ClusterQuery 2 searching for:  algorithm  Found 166 hits: 
-0 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000199 cat name: cacm 
-1 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000029 cat name: cacm 
-2 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000178 cat name: cacm 
-3 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000125 cat name: cacm 
-4 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000127 cat name: cacm 
-categoryTotal: 500 for catQ: category:cacm 
-f1: 0.4864864864917 recall: 0.324 precision: 0.9759036145
-Purity: 0.9759036168 Job: 1 
-ClusterQuery 3 searching for:  given boundary flow  Found 570 hits: 
-0 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000335 cat name: cran 
-1 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000333 cat name: cran 
-2 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000306 cat name: cran 
-3 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000461 cat name: cran 
-4 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000023 cat name: cran 
-categoryTotal: 500 for catQ: category:cran 
-f1: 0.7813084111960 recall: 0.836 precision: 0.7333333333
-Purity: 0.7333333480 Job: 1 
-f1list: [0.3503836317040, 0.4722222222211, 0.4864864864917, 0.7813084111960] averagef1: :0.5226001879032
-PosHits: 1119 NegHits: 191 PosScore: 449.90876532904804 NegScore: 27.254498779773712 Fitness: 862.1284855288602 
-TotalHits: 1212 Total Docs:  2000 
-************************************************ 
- 
-  ***** Job: 2 Gen: 999 PopSize: 512 Noclusters: 4  pathToIndex: indexes/classic4_500L5  **************************************************************** 
- ClusterQuery 0 searching for:  algorithm  Found 166 hits: 
-0 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000199 cat name: cacm 
-1 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000029 cat name: cacm 
-2 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000178 cat name: cacm 
-3 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000125 cat name: cacm 
-4 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000127 cat name: cacm 
-categoryTotal: 500 for catQ: category:cacm 
-f1: 0.4864864864917 recall: 0.324 precision: 0.9759036145
-Purity: 0.9759036168 Job: 2 
-ClusterQuery 1 searching for:  cells library patients  Found 422 hits: 
-0 path C:\Users\Laurie\Dataset\classic4_500\med\med.000375 cat name: med. 
-1 path C:\Users\Laurie\Dataset\classic4_500\med\med.000026 cat name: med. 
-2 path C:\Users\Laurie\Dataset\classic4_500\med\med.000179 cat name: med. 
-3 path C:\Users\Laurie\Dataset\classic4_500\med\med.000108 cat name: med. 
-4 path C:\Users\Laurie\Dataset\classic4_500\med\med.000458 cat name: med. 
-categoryTotal: 500 for catQ: category:med. 
-f1: 0.5075921909027 recall: 0.468 precision: 0.5545023697
-Purity: 0.5545023588 Job: 2 
-ClusterQuery 2 searching for:  boundary information flow  Found 661 hits: 
-0 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000265 cat name: cran 
-1 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000121 cat name: cran 
-2 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000003 cat name: cran 
-3 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000363 cat name: cran 
-4 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000170 cat name: cran 
-categoryTotal: 500 for catQ: category:cran 
-f1: 0.6580534022651 recall: 0.764 precision: 0.5779122542
-Purity: 0.5779122526 Job: 2 
-ClusterQuery 3 searching for:  computer  Found 147 hits: 
-0 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000037 cat name: cacm 
-1 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000057 cat name: cacm 
-2 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000217 cat name: cacm 
-3 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000218 cat name: cacm 
-4 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000436 cat name: cacm 
-categoryTotal: 500 for catQ: category:cacm 
-f1: 0.2132921174650 recall: 0.138 precision: 0.4693877551
-Purity: 0.4693877559 Job: 2 
-f1list: [0.4864864864917, 0.5075921909027, 0.6580534022651, 0.2132921174650] averagef1: :0.466356049281125
-PosHits: 1112 NegHits: 284 PosScore: 450.4194619935006 NegScore: 49.85888786613941 Fitness: 872.549237681346 
-TotalHits: 1246 Total Docs:  2000 
-************************************************ 
- 
-  ***** Job: 3 Gen: 999 PopSize: 512 Noclusters: 4  pathToIndex: indexes/classic4_500L5  **************************************************************** 
- ClusterQuery 0 searching for:  algorithm  Found 166 hits: 
-0 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000199 cat name: cacm 
-1 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000029 cat name: cacm 
-2 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000178 cat name: cacm 
-3 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000125 cat name: cacm 
-4 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000127 cat name: cacm 
-categoryTotal: 500 for catQ: category:cacm 
-f1: 0.4864864864917 recall: 0.324 precision: 0.9759036145
-Purity: 0.9759036168 Job: 3 
-ClusterQuery 1 searching for:  library computer retrieval  Found 374 hits: 
-0 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000452 cat name: cisi 
-1 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000462 cat name: cisi 
-2 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000243 cat name: cisi 
-3 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000325 cat name: cisi 
-4 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000056 cat name: cisi 
-categoryTotal: 500 for catQ: category:cisi 
+  ***** Job: 0 Gen: 799 PopSize: 512 Noclusters: 4  pathToIndex: indexes/classic4_500L6  **************************************************************** 
+ ClusterQuery 0 searching for:  library computer retrieval  Found 374 hits: 
+categoryTotal: 500 for category: category:cisi 
 f1: 0.663615560634 recall: 0.58 precision: 0.7754010695
-Purity: 0.7754010720 Job: 3 
-ClusterQuery 2 searching for:  patients cells study  Found 413 hits: 
-0 path C:\Users\Laurie\Dataset\classic4_500\med\med.000026 cat name: med. 
-1 path C:\Users\Laurie\Dataset\classic4_500\med\med.000108 cat name: med. 
-2 path C:\Users\Laurie\Dataset\classic4_500\med\med.000067 cat name: med. 
-3 path C:\Users\Laurie\Dataset\classic4_500\med\med.000397 cat name: med. 
-4 path C:\Users\Laurie\Dataset\classic4_500\med\med.000286 cat name: med. 
-categoryTotal: 500 for catQ: category:med. 
-f1: 0.5958378970237 recall: 0.544 precision: 0.6585956416
-Purity: 0.6585956400 Job: 3 
-ClusterQuery 3 searching for:  conditions theory temperature  Found 407 hits: 
-0 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000030 cat name: cran 
-1 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000049 cat name: cran 
-2 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000131 cat name: cran 
-3 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000079 cat name: cran 
-4 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000283 cat name: cran 
-categoryTotal: 500 for catQ: category:cran 
-f1: 0.6703417860965 recall: 0.608 precision: 0.7469287469
-Purity: 0.7469287600 Job: 3 
-f1list: [0.4864864864917, 0.663615560634, 0.5958378970237, 0.6703417860965] averagef1: :0.604070432561475
-PosHits: 1063 NegHits: 297 PosScore: 376.88152246549726 NegScore: 29.277102407068014 Fitness: 813.9530697152912 
-TotalHits: 1208 Total Docs:  2000 
+ClusterQuery 1 searching for:  patients cells  Found 234 hits: 
+categoryTotal: 500 for category: category:med. 
+f1: 0.6376021798 recall: 0.468 precision: 1
+ClusterQuery 2 searching for:  algorithm  Found 166 hits: 
+categoryTotal: 500 for category: category:cacm 
+f1: 0.4864864864917 recall: 0.324 precision: 0.9759036145
+ClusterQuery 3 searching for:  pressure flow boundary  Found 485 hits: 
+categoryTotal: 500 for category: category:cran 
+f1: 0.8263959390708 recall: 0.814 precision: 0.8391752577
+TotalHits: 1221 Total Docs:  2000 
+PosHits: 1183 NegHits: 76 PosScore: 4586.349348902702 NegScore: 210.01108586788177 Fitness: 3282.254509582758 
+***  TOTALS:   *****   f1list: [0.663615560634, 0.6376021798, 0.4864864864917, 0.8263959390708] averagef1: :0.653525041499125
 ************************************************ 
  
-  ***** Job: 0 Gen: 999 PopSize: 512 Noclusters: 4  pathToIndex: indexes/classic4_500L5  **************************************************************** 
- ClusterQuery 0 searching for:  libraries library  Found 213 hits: 
-0 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000186 cat name: cisi 
-1 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000370 cat name: cisi 
-2 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000340 cat name: cisi 
-3 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000304 cat name: cisi 
-4 path C:\Users\Laurie\Dataset\classic4_500\cisi\cisi.000187 cat name: cisi 
-categoryTotal: 500 for catQ: category:cisi 
-f1: 0.5946704067287 recall: 0.424 precision: 0.9953051643
-Purity: 0.9953051684 Job: 0 
-ClusterQuery 1 searching for:  blood patients cells  Found 279 hits: 
-0 path C:\Users\Laurie\Dataset\classic4_500\med\med.000108 cat name: med. 
-1 path C:\Users\Laurie\Dataset\classic4_500\med\med.000431 cat name: med. 
-2 path C:\Users\Laurie\Dataset\classic4_500\med\med.000458 cat name: med. 
-3 path C:\Users\Laurie\Dataset\classic4_500\med\med.000052 cat name: med. 
-4 path C:\Users\Laurie\Dataset\classic4_500\med\med.000437 cat name: med. 
-categoryTotal: 500 for catQ: category:med. 
+  ***** Job: 1 Gen: 799 PopSize: 512 Noclusters: 4  pathToIndex: indexes/classic4_500L6  **************************************************************** 
+ ClusterQuery 0 searching for:  information computer library  Found 484 hits: 
+categoryTotal: 500 for category: category:cisi 
+f1: 0.7276422764288 recall: 0.716 precision: 0.7396694215
+ClusterQuery 1 searching for:  layer boundary pressure  Found 377 hits: 
+categoryTotal: 500 for category: category:cran 
+f1: 0.7502850627164 recall: 0.658 precision: 0.8726790451
+ClusterQuery 2 searching for:  cells patients blood  Found 279 hits: 
+categoryTotal: 500 for category: category:med. 
 f1: 0.7163029525 recall: 0.558 precision: 1
-Purity: 1.0000000026 Job: 0 
-ClusterQuery 2 searching for:  algorithm  Found 166 hits: 
-0 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000199 cat name: cacm 
-1 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000029 cat name: cacm 
-2 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000178 cat name: cacm 
-3 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000125 cat name: cacm 
-4 path C:\Users\Laurie\Dataset\classic4_500\cacm\cacm.000127 cat name: cacm 
-categoryTotal: 500 for catQ: category:cacm 
+ClusterQuery 3 searching for:  algorithm  Found 166 hits: 
+categoryTotal: 500 for category: category:cacm 
 f1: 0.4864864864917 recall: 0.324 precision: 0.9759036145
-Purity: 0.9759036168 Job: 0 
-ClusterQuery 3 searching for:  boundary pressure theory  Found 458 hits: 
-0 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000242 cat name: cran 
-1 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000121 cat name: cran 
-2 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000134 cat name: cran 
-3 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000347 cat name: cran 
-4 path C:\Users\Laurie\Dataset\classic4_500\cran\cran.000496 cat name: cran 
-categoryTotal: 500 for catQ: category:cran 
-f1: 0.7807933194324 recall: 0.748 precision: 0.8165938865
-Purity: 0.8165938814 Job: 0 
-f1list: [0.5946704067287, 0.7163029525, 0.4864864864917, 0.7807933194324] averagef1: :0.6445632912882
-PosHits: 1042 NegHits: 74 PosScore: 461.3585138581693 NegScore: 10.036797694861889 Fitness: 243.48806587010435 
-TotalHits: 1079 Total Docs:  2000 
+TotalHits: 1246 Total Docs:  2000 
+PosHits: 1188 NegHits: 118 PosScore: 4869.085396885872 NegScore: 352.36919325590134 Fitness: 3436.9141948614715 
+***  TOTALS:   *****   f1list: [0.7276422764288, 0.7502850627164, 0.7163029525, 0.4864864864917] averagef1: :0.670179194534225
+************************************************ 
+ 
+  ***** Job: 2 Gen: 799 PopSize: 512 Noclusters: 4  pathToIndex: indexes/classic4_500L6  **************************************************************** 
+ ClusterQuery 0 searching for:  information book library  Found 429 hits: 
+categoryTotal: 500 for category: category:cisi 
+f1: 0.818083961257 recall: 0.76 precision: 0.8857808858
+ClusterQuery 1 searching for:  patients blood cells  Found 279 hits: 
+categoryTotal: 500 for category: category:med. 
+f1: 0.7163029525 recall: 0.558 precision: 1
+ClusterQuery 2 searching for:  pressure equations boundary  Found 414 hits: 
+categoryTotal: 500 for category: category:cran 
+f1: 0.7746170678468 recall: 0.708 precision: 0.8550724638
+ClusterQuery 3 searching for:  algorithm  Found 166 hits: 
+categoryTotal: 500 for category: category:cacm 
+f1: 0.4864864864917 recall: 0.324 precision: 0.9759036145
+TotalHits: 1230 Total Docs:  2000 
+PosHits: 1174 NegHits: 114 PosScore: 4541.50638282299 NegScore: 318.73331290483475 Fitness: 3212.005437999666 
+***  TOTALS:   *****   f1list: [0.818083961257, 0.7163029525, 0.7746170678468, 0.4864864864917] averagef1: :0.698872617023875
+************************************************ 
+ 
+  ***** Job: 0 Gen: 799 PopSize: 512 Noclusters: 5  pathToIndex: indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6  **************************************************************** 
+ ClusterQuery 0 searching for:  windows  Found 70 hits: 
+categoryTotal: 100 for category: category:mp.os.mswindows.misc 
+f1: 0.776470588250 recall: 0.66 precision: 0.9428571429
+ClusterQuery 1 searching for:  high orbit nasa  Found 77 hits: 
+categoryTotal: 100 for category: category:i.space 
+f1: 0.734463276853 recall: 0.65 precision: 0.8441558442
+ClusterQuery 2 searching for:  christ god jesus  Found 77 hits: 
+categoryTotal: 100 for category: category:c.religion.christian 
+f1: 0.836158192076 recall: 0.74 precision: 0.9610389610
+ClusterQuery 3 searching for:  sale  Found 60 hits: 
+categoryTotal: 100 for category: category:sc.forsale 
+f1: 0.7125 recall: 0.57 precision: 0.95
+ClusterQuery 4 searching for:  hockey players nhl  Found 76 hits: 
+categoryTotal: 100 for category: category:c.sport.hockey 
+f1: 0.840909090899 recall: 0.74 precision: 0.9736842105
+TotalHits: 344 Total Docs:  500 
+PosHits: 331 NegHits: 29 PosScore: 1353.5291347503662 NegScore: 66.72792771458626 Fitness: 1573.3192304406166 
+***  TOTALS:   *****   f1list: [0.776470588250, 0.734463276853, 0.836158192076, 0.7125, 0.840909090899] averagef1: :0.7801002296156
+************************************************ 
+ 
+  ***** Job: 1 Gen: 799 PopSize: 512 Noclusters: 5  pathToIndex: indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6  **************************************************************** 
+ ClusterQuery 0 searching for:  windows  Found 70 hits: 
+categoryTotal: 100 for category: category:mp.os.mswindows.misc 
+f1: 0.776470588250 recall: 0.66 precision: 0.9428571429
+ClusterQuery 1 searching for:  sale  Found 60 hits: 
+categoryTotal: 100 for category: category:sc.forsale 
+f1: 0.7125 recall: 0.57 precision: 0.95
+ClusterQuery 2 searching for:  god jesus christians  Found 73 hits: 
+categoryTotal: 100 for category: category:c.religion.christian 
+f1: 0.80924855492 recall: 0.7 precision: 0.9589041096
+ClusterQuery 3 searching for:  mars nasa orbit  Found 58 hits: 
+categoryTotal: 100 for category: category:i.space 
+f1: 0.7341772152 recall: 0.58 precision: 1
+ClusterQuery 4 searching for:  players hockey nhl  Found 76 hits: 
+categoryTotal: 100 for category: category:c.sport.hockey 
+f1: 0.840909090899 recall: 0.74 precision: 0.9736842105
+TotalHits: 327 Total Docs:  500 
+PosHits: 318 NegHits: 19 PosScore: 1346.3750219345093 NegScore: 47.415285497903824 Fitness: 1503.51966762954 
+***  TOTALS:   *****   f1list: [0.776470588250, 0.7125, 0.80924855492, 0.7341772152, 0.840909090899] averagef1: :0.7746610898538
+************************************************ 
+ 
+  ***** Job: 2 Gen: 799 PopSize: 512 Noclusters: 5  pathToIndex: indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6  **************************************************************** 
+ ClusterQuery 0 searching for:  sale sale sale  Found 60 hits: 
+categoryTotal: 100 for category: category:sc.forsale 
+f1: 0.7125 recall: 0.57 precision: 0.95
+ClusterQuery 1 searching for:  file file access  Found 63 hits: 
+categoryTotal: 100 for category: category:mp.os.mswindows.misc 
+f1: 0.404907975457 recall: 0.33 precision: 0.5238095238
+ClusterQuery 2 searching for:  satellite programs programs  Found 45 hits: 
+categoryTotal: 100 for category: category:i.space 
+f1: 0.289655172420 recall: 0.21 precision: 0.4666666667
+ClusterQuery 3 searching for:  play players team  Found 80 hits: 
+categoryTotal: 100 for category: category:c.sport.hockey 
+f1: 0.7555555556 recall: 0.68 precision: 0.85
+ClusterQuery 4 searching for:  man believe man  Found 86 hits: 
+categoryTotal: 100 for category: category:c.religion.christian 
+f1: 0.387096774209 recall: 0.36 precision: 0.4186046512
+TotalHits: 281 Total Docs:  500 
+PosHits: 236 NegHits: 98 PosScore: 1432.1013379096985 NegScore: 354.51161339879036 Fitness: 24.842668620747457 
+***  TOTALS:   *****   f1list: [0.7125, 0.404907975457, 0.289655172420, 0.7555555556, 0.387096774209] averagef1: :0.5099430955372
+************************************************ 
+ 
+  ***** Job: 0 Gen: 799 PopSize: 512 Noclusters: 3  pathToIndex: indexes/crisis3FireBombFloodL6  **************************************************************** 
+ ClusterQuery 0 searching for:  fire springs wildfires colorado highparkfire  Found 845 hits: 
+categoryTotal: 1000 for category: category:Colorado_w 
+f1: 0.9073170731797 recall: 0.837 precision: 0.9905325444
+ClusterQuery 1 searching for:  bostonmarathon tsarnaev boston marathon prayforboston  Found 870 hits: 
+categoryTotal: 1000 for category: category:Boston_bom 
+f1: 0.9304812834 recall: 0.87 precision: 1
+ClusterQuery 2 searching for:  bigwet floods qld qldfloods flooding  Found 854 hits: 
+categoryTotal: 1000 for category: category:Queensland 
+f1: 0.9190938511220 recall: 0.852 precision: 0.9976580796
+TotalHits: 2564 Total Docs:  3000 
+PosHits: 2559 NegHits: 10 PosScore: 7762.745280265808 NegScore: 29.911637663841248 Fitness: 7463.661820168242 
+***  TOTALS:   *****   f1list: [0.9073170731797, 0.9304812834, 0.9190938511220] averagef1: :0.9189640692339
+************************************************ 
+ 
+  ***** Job: 1 Gen: 799 PopSize: 512 Noclusters: 3  pathToIndex: indexes/crisis3FireBombFloodL6  **************************************************************** 
+ ClusterQuery 0 searching for:  fire highparkfire colorado wildfires wildfire  Found 857 hits: 
+categoryTotal: 1000 for category: category:Colorado_w 
+f1: 0.9143780290997 recall: 0.849 precision: 0.9906651109
+ClusterQuery 1 searching for:  qld qldfloods flooding floods bigwet  Found 854 hits: 
+categoryTotal: 1000 for category: category:Queensland 
+f1: 0.9190938511220 recall: 0.852 precision: 0.9976580796
+ClusterQuery 2 searching for:  bostonmarathon prayforboston boston bombing marathon  Found 810 hits: 
+categoryTotal: 1000 for category: category:Boston_bom 
+f1: 0.8950276243 recall: 0.81 precision: 1
+TotalHits: 2516 Total Docs:  3000 
+PosHits: 2511 NegHits: 10 PosScore: 7746.105839312077 NegScore: 29.911637663841248 Fitness: 7309.981537406194 
+***  TOTALS:   *****   f1list: [0.9143780290997, 0.9190938511220, 0.8950276243] averagef1: :0.9094998348406
+************************************************ 
+ 
+  ***** Job: 2 Gen: 799 PopSize: 512 Noclusters: 3  pathToIndex: indexes/crisis3FireBombFloodL6  **************************************************************** 
+ ClusterQuery 0 searching for:  boston bostonmarathon prayforboston marathon tsarnaev  Found 870 hits: 
+categoryTotal: 1000 for category: category:Boston_bom 
+f1: 0.9304812834 recall: 0.87 precision: 1
+ClusterQuery 1 searching for:  fire colorado wildfires wildfire highparkfire  Found 857 hits: 
+categoryTotal: 1000 for category: category:Colorado_w 
+f1: 0.9143780290997 recall: 0.849 precision: 0.9906651109
+ClusterQuery 2 searching for:  qldfloods flooding bigwet floods queensland  Found 839 hits: 
+categoryTotal: 1000 for category: category:Queensland 
+f1: 0.9102773246440 recall: 0.837 precision: 0.9976162098
+TotalHits: 2561 Total Docs:  3000 
+PosHits: 2556 NegHits: 10 PosScore: 7616.306698858738 NegScore: 33.45098960399628 Fitness: 7326.89782408656 
+***  TOTALS:   *****   f1list: [0.9304812834, 0.9143780290997, 0.9102773246440] averagef1: :0.9183788790479
 ************************************************ 
  

@@ -8,36 +8,21 @@ dependencies {
 	//compile 'org.codehaus.groovy:groovy-all:2.4.3'
 	compile 'org.codehaus.groovy:groovy-all:2.4.7'
 
-	//compile 'org.apache.lucene:lucene-core:6.1.0'
-	//compile 'org.apache.lucene:lucene-analyzers-common:6.1.0'
+	compile 'org.apache.lucene:lucene-core:6.3.0'
+	compile 'org.apache.lucene:lucene-analyzers-common:6.3.0'
 	
-	compile 'org.apache.lucene:lucene-core:5.3.2'
-	compile 'org.apache.lucene:lucene-analyzers-common:5.3.2'
+//  compile 'org.apache.lucene:lucene-core:5.3.2'
+//	compile 'org.apache.lucene:lucene-analyzers-common:5.3.2'
 	
-	testCompile "org.codehaus.groovy:groovy:2.4.7"
-	
-	//compile localGroovy()
-
-	// https://mvnrepository.com/artifact/org.apache.lucene/lucene-codecs
-	//compile group: 'org.apache.lucene', name: 'lucene-codecs', version: '5.2.1'
-	//compile group: 'org.apache.lucene', name: 'lucene-codecs', version: '5.0.0'
-	//compile group: 'org.apache.lucene', name: 'lucene-queryparser', version: '6.1.0'
-	//	compile 'org.apache.lucene:lucene-core:5.3.2'
-	//	compile 'org.apache.lucene:lucene-analyzers-common:5.3.2'
-	// https://mvnrepository.com/artifact/org.spockframework/spock-core
+	testCompile "org.codehaus.groovy:groovy:2.4.7"	
 
 	//testCompile 'junit:junit:4.11'
-	testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
-	
-	//testCompile ('org.spockframework:spock-core:0.7-groovy-2.0') {
-	//	exclude module : 'groovy-all'
-	//}
-	//configurations.all { exclude module: "groovy-all" }
+	testCompile "org.spockframework:spock-core:1.0-groovy-2.4"	
+
 	//for some reason ecj23 not on maven
 	//compile 'edu.gmu.cs:ecj:22'
-
 	//pick up ecj23 jar file
-	compile fileTree(dir: 'lib', include: ['*.jar'])
+	compile fileTree(dir: 'lib', include: ['*.jar']) v
 	//compile files('libs/ecj23.jar')
 }
 

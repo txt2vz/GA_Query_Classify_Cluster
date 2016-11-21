@@ -26,7 +26,7 @@ import org.apache.lucene.codecs.*
 class IndexCrisisClusterFromCSV {
 
 	// Create Lucene index in this directory
-	Path indexPath = Paths.get('indexes/crisis3FireBombFloodL5')
+	Path indexPath = Paths.get('indexes/crisis3FireBombFloodL6')
 	Path docsPath = Paths.get('Datasets/crisisData')
 	Directory directory = FSDirectory.open(indexPath)
 	Analyzer analyzer = //new EnglishAnalyzer();  //with stemming

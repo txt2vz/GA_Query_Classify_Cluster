@@ -31,7 +31,7 @@ pop.subpop.0.species.ind = ec.vector.IntegerVectorIndividual
 pop.subpop.0.species.fitness = cluster.ClusterFit
 
 pop.subpop.0.species.min-gene = -1
-pop.subpop.0.species.max-gene = 300
+pop.subpop.0.species.max-gene = 100
 pop.subpop.0.species.genome-size = 30
 pop.subpop.0.species.crossover-type	= two
 pop.subpop.0.species.crossover-likelihood = 0.7
