@@ -9,7 +9,7 @@ import ec.util.ParameterDatabase
 class GAmainCluster extends Evolve {
 
 	private final String parameterFilePath =  "src/cfg/cluster.params"
-	private final int NUMBER_OF_JOBS = 1   
+	private final int NUMBER_OF_JOBS = 2   
 
 	public GAmainCluster(){
 		EvolutionState state;

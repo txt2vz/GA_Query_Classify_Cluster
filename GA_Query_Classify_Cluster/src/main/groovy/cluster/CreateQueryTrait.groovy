@@ -1,4 +1,4 @@
- package cluster;
+package cluster;
 
 import index.IndexInfo
 
@@ -11,7 +11,7 @@ import org.apache.lucene.search.TotalHitCountCollector
 
 import ec.vector.IntegerVectorIndividual
 
-trait CreateQueriesT {
+trait CreateQueryTrait {
 
 	final int hitsMin = 4
 	int treePen, graphPen, duplicateCount, noHitsCount;
@@ -98,7 +98,7 @@ trait CreateQueriesT {
 	}
 
 	//query in DNF format - could be used to generate graph
-	def getANDQL(String[] wordArray, IntegerVectorIndividual intVectorIndividual, int cNumber) {
+	def getANDQL(String[] wordArray, IntegerVectorIndividual intVectorIndividual) {
 
 		treePen=0
 		graphPen=0
@@ -122,7 +122,7 @@ trait CreateQueriesT {
 			} else {
 				word1 = wordArray[gene]
 
-				int clusterNumber =  qNumber % cNumber
+				int clusterNumber =  qNumber % IndexInfo.NUMBER_OF_CLUSTERS 
 				qNumber++
 
 				def wrds=[word0, word1] as Set

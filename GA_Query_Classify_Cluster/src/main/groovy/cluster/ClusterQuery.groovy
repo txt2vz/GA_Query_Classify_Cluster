@@ -19,10 +19,10 @@ import ec.util.Parameter
 import ec.vector.IntegerVectorIndividual
 
 /**
- * To generate queries for clustering
+ * To generate sets of queries for clustering
  */
 
-public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProblemForm {
+public class ClusterQuery extends Problem implements CreateQueryTrait, SimpleProblemForm {
 
 	IndexSearcher searcher = IndexInfo.instance.indexSearcher;
 	private String[] wordArray;
@@ -106,42 +106,34 @@ public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProbl
 			}
 		}
 
-
-		def scoreOnly = posScore - negScore
+		def totalScore = posScore - negScore
 
 		//fitness must be positive for ECJ
 		def final  minScore = 1000
-		def scorePlus = (scoreOnly < -minScore) ? 0 : scoreOnly + minScore
+		def scorePlus = (totalScore < -minScore) ? 0 : totalScore + minScore
 
 		def negIndicators =
 				noHitsCount + duplicateCount + emptyPen + coreClusterPen + 1
-		//(graphPen+1) *	// (treePen+1) *
-		//(noHitsCount+1) * (duplicateCount+1)  * (emptyPen + 1) 	* (coreClusterPen +1)
-		// emptyPen +  coreClusterPen + 1
 
 		def fractionCovered = allHits.size() / IndexInfo.instance.indexReader.maxDoc()
 		def missedDocs = IndexInfo.instance.indexReader.maxDoc() - allHits.size()
 		///You might want to multiple your fitness function by 1/(number of unclassified documents).
 		//(1.1)^{number of words covered by clusters}.
 
-		def baseFitness //= //(posScore + 1) / (negScore + coreClusterPen + emptyPen + duplicateCount + 1)
-		//		scorePlus / negIndicators
+		def baseFitness = scorePlus / negIndicators
 
-		if (scoreOnly> 0) {
-			baseFitness = scoreOnly / negIndicators
-		} else
-			baseFitness =
-					(posScore + 1) / (negScore + coreClusterPen + emptyPen + duplicateCount + 1)
+//		if (totalScore> 0) {
+//			baseFitness = totalScore / negIndicators
+//		} else
+//			baseFitness =
+//					(posScore + 1) / (negScore + coreClusterPen + emptyPen + duplicateCount + 1)
 
-		def rawfitness=
-
-				//improve recall?
-				baseFitness * fractionCovered
+		//may improve recall?
+		def rawfitness =	baseFitness * fractionCovered
 
 		//baseFitness * (1/(Math.log(missedDocs)))
 		//baseFitness * (1/(Math.pow(1.01,missedDocs)))
 		//	baseFitness * (Math.pow(1.01,allHits.size()))
-		//	baseFitness
 
 		fitness.baseFitness = baseFitness;
 		fitness.missedDocs = missedDocs
@@ -158,8 +150,7 @@ public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProbl
 		fitness.coreClusterPenalty= coreClusterPen
 		fitness.treePenalty=treePen
 		fitness.noHitsCount=noHitsCount
-		fitness.scoreOnly=scoreOnly
-		//	fitness.scoreOrig= rawfitness - minScore
+		fitness.scoreOnly=totalScore
 		fitness.emptyPen = emptyPen
 
 		((SimpleFitness) intVectorIndividual.fitness).setFitness(state, rawfitness, false);
