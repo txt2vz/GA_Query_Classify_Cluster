@@ -40,23 +40,11 @@ public class ClusterFit extends SimpleFitness {
 	def baseFitness = 0 as float
 	def scrPlus = 0 as float
 	def missedDocs =0
-	def emptyPen =0
+	def emptyPenalty =0
 	Formatter bestResultsOut
 	def averageF1
 	IndexSearcher searcher = IndexInfo.instance.indexSearcher;
 	final int hitsPerPage=10000
-
-	private int getTotalHits(){
-
-		def docsReturned =	queryMap.keySet().inject([] as Set) {docSet, q ->
-
-			TopDocs topDocs = searcher.search(q, hitsPerPage)
-			ScoreDoc[] hits = topDocs.scoreDocs;
-			hits.each {h -> docSet << h.doc				 }
-			docSet
-		}
-		return docsReturned.size()
-	}
 
 	String queryShort (){
 		def s=""
@@ -70,7 +58,7 @@ public class ClusterFit extends SimpleFitness {
 	public void queryStats (int job, int gen, int popSize){
 		def messageOut=""
 		FileWriter resultsOut = new FileWriter("results/clusterResultsF1.txt", true)
-		resultsOut <<"  ***** Job: $job Gen: $gen PopSize: $popSize Noclusters: ${IndexInfo.instance.NUMBER_OF_CLUSTERS}  pathToIndex: ${IndexInfo.instance.pathToIndex}  **************************************************************** \n "
+		resultsOut <<"  ***** Job: $job Gen: $gen PopSize: $popSize Noclusters: ${IndexInfo.instance.NUMBER_OF_CLUSTERS}  pathToIndex: ${IndexInfo.instance.pathToIndex}  **************************************************************** \n"
 
 		def f1list = []
 		queryMap.keySet().eachWithIndex {q, index ->
@@ -81,7 +69,7 @@ public class ClusterFit extends SimpleFitness {
 			def qString = q.toString(IndexInfo.FIELD_CONTENTS)
 
 			println "***********************************************************************************"
-			messageOut = "ClusterQuery $index searching for:  $qString  Found ${hits.length} hits: \n"
+			messageOut = "ClusterQuery: $index hits: ${hits.length} Query:  $qString \n"
 			println messageOut
 			resultsOut << messageOut
 
@@ -134,13 +122,12 @@ public class ClusterFit extends SimpleFitness {
 				//resultsOut << "Purity: $purity Job: $job \n"
 			}
 		}
-		//averageF1 = f1list.sum()/f1list.size()
-		
+	    
 		averageF1 = f1list.sum()/ IndexInfo.NUMBER_OF_CLUSTERS
 		messageOut ="***  TOTALS:   *****   f1list: $f1list averagef1: :$averageF1"
 		println messageOut
 		
-		resultsOut << "TotalHits: ${getTotalHits()} Total Docs:  ${IndexInfo.instance.indexReader.maxDoc()} \n"
+		resultsOut << "TotalHits: $totalHits Total Docs:  ${IndexInfo.instance.indexReader.maxDoc()} \n"
 		resultsOut << "PosHits: $posHits NegHits: $negHits PosScore: $positiveScore NegScore: $negativeScore Fitness: ${fitness()} \n"
 		resultsOut << messageOut + "\n"
 		resultsOut << "************************************************ \n \n"

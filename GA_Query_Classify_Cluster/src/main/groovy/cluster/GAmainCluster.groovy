@@ -11,7 +11,7 @@ class GAmainCluster extends Evolve {
 	private final String parameterFilePath =  "src/cfg/cluster.params"
 	private final int NUMBER_OF_JOBS = 3   
 
-	public GAmainCluster(){
+	public GAmainCluster(){ 
 		EvolutionState state;
 		IndexInfo.instance.setIndex() 
 		ParameterDatabase parameters  = null;

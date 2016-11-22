@@ -150,7 +150,7 @@ public class ClusterQuery extends Problem implements CreateQueryTrait, SimplePro
 		fitness.treePenalty=treePen
 		fitness.noHitsCount=noHitsCount
 		fitness.scoreOnly=totalScore
-		fitness.emptyPen = emptyPen
+		fitness.emptyPenalty = emptyPen
 
 		((SimpleFitness) intVectorIndividual.fitness).setFitness(state, rawfitness, false);
 		ind.evaluated = true;
