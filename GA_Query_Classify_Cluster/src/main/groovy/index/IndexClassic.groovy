@@ -33,8 +33,8 @@ import org.apache.lucene.store.FSDirectory
 
 class IndexClassic {
 	// Create Lucene index in this directory
-	def indexPath = 	'indexes/classic4_500L5'
-
+	//def indexPath = 	'indexes/classic4_500L5'
+    def indexPath = 	'indexes/classic4_500L6'
 	// Index files in this directory
 	def docsPath =
 	// /C:\Users\Laurie\Dataset\classic/

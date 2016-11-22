@@ -31,15 +31,12 @@ class IndexInfo {
 							   FIELD_CATEGORY_NUMBER = 'categoryNumber';
 	public static final int NUMBER_OF_CLUSTERS =  3, NUMBER_OF_CATEGORIES = 10
 
-	String 	pathToIndex =
-	
-       'indexes/crisis3FireBombFloodL5'
-	// 'indexes/classic4_500L5'
-	// 'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL5'
-	
-	// 'indexes/20NG6GraphicsHockeyCryptSpaceChristianGunsL5'
-	// 'indexes/r10'
-    // 'indexes/20NG3SpaceHockeyChristianl5'
+	String 	pathToIndex =	
+       'indexes/crisis3FireBombFloodL6'
+	// 'indexes/classic4_500L6'
+	// 'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6'
+
+   //  'indexes/20NG3SpaceHockeyChristianL6'
 
 	IndexReader indexReader
 	IndexSearcher indexSearcher

@@ -19,13 +19,13 @@ import ec.util.Parameter
 import ec.vector.IntegerVectorIndividual
 
 /**
- * To generate queries for clustering
+ * To generate sets of queries for clustering
  */
 
-public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProblemForm {
+public class ClusterQuery extends Problem implements CreateQueryTrait, SimpleProblemForm {
 
 	IndexSearcher searcher = IndexInfo.instance.indexSearcher;
-	private String[] wordArray;	   
+	private String[] wordArray;
 	private final int coreClusterSize=20
 
 	public void setup(final EvolutionState state, final Parameter base) {
@@ -44,14 +44,14 @@ public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProbl
 
 		ClusterFit fitness = (ClusterFit) ind.fitness;
 		IntegerVectorIndividual intVectorIndividual = (IntegerVectorIndividual) ind;
-        
+
 		//list of lucene Boolean Query Builders
 		def bqbList =
-		
-		  //from ClusterQueriesT = trait
-	  	  getORQL(wordArray, intVectorIndividual, IndexInfo.NUMBER_OF_CLUSTERS)
-		  //getANDQL(wordArray, intVectorIndividual, IndexInfo.NUMBER_OF_CLUSTERS)
-		  //getORNOTQL(wordArray, intVectorIndividual, IndexInfo.NUMBER_OF_CLUSTERS)
+
+				//from ClusterQueriesT = trait
+				getORQL(wordArray, intVectorIndividual)
+		//getANDQL(wordArray, intVectorIndividual, IndexInfo.NUMBER_OF_CLUSTERS)
+		//getORNOTQL(wordArray, intVectorIndividual, IndexInfo.NUMBER_OF_CLUSTERS)
 
 		final int hitsPerPage = 10000;
 		def negHitsTotal=0
@@ -80,8 +80,7 @@ public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProbl
 			ScoreDoc[] hitsOthers = otherTopDocs.scoreDocs;
 			hitsOthers.each {otherHit -> otherdocIdSet << otherHit.doc }
 
-			TopDocs docs = searcher.search(q, hitsPerPage);
-
+			TopDocs docs = searcher.search(q, hitsPerPage)
 			ScoreDoc[] hits = docs.scoreDocs;
 			qMap.put(q,hits.size())
 
@@ -106,16 +105,13 @@ public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProbl
 			}
 		}
 
-		
-		def scoreOnly = posScore - negScore
-		
+		def totalScore = posScore - negScore
+
 		//fitness must be positive for ECJ
 		def final  minScore = 1000
-		def scorePlus = (scoreOnly < -minScore) ? 0 : scoreOnly + minScore
+		def scorePlus = (totalScore < -minScore) ? 0 : totalScore + minScore
 
-		def negIndicators =   //(graphPen+1) *	// (treePen+1) *
-				//(noHitsCount+1) * (duplicateCount+1)  * (emptyPen + 1) 	* (coreClusterPen +1)
-				// emptyPen +  coreClusterPen + 1
+		def negIndicators =
 				noHitsCount + duplicateCount + emptyPen + coreClusterPen + 1
 
 		def fractionCovered = allHits.size() / IndexInfo.instance.indexReader.maxDoc()
@@ -124,11 +120,19 @@ public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProbl
 		//(1.1)^{number of words covered by clusters}.
 
 		def baseFitness = scorePlus / negIndicators
-		def rawfitness=
-				//baseFitness * (1/(Math.log(missedDocs)))
-				//baseFitness * (1/(Math.pow(1.01,missedDocs)))
-				//	baseFitness * (Math.pow(1.01,allHits.size()))
-				baseFitness * fractionCovered
+
+//		if (totalScore> 0) {
+//			baseFitness = totalScore / negIndicators
+//		} else
+//			baseFitness =
+//					(posScore + 1) / (negScore + coreClusterPen + emptyPen + duplicateCount + 1)
+
+		//may improve recall?
+		def rawfitness =	baseFitness * fractionCovered
+
+		//baseFitness * (1/(Math.log(missedDocs)))
+		//baseFitness * (1/(Math.pow(1.01,missedDocs)))
+		//	baseFitness * (Math.pow(1.01,allHits.size()))
 
 		fitness.baseFitness = baseFitness;
 		fitness.missedDocs = missedDocs
@@ -136,6 +140,7 @@ public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProbl
 		fitness.totalHits = allHits.size()
 		fitness.graphPenalty=graphPen
 		fitness.queryMap = qMap.asImmutable()
+		fitness.scrPlus = scorePlus
 		fitness.negativeScore = negScore
 		fitness.positiveScore = posScore
 		fitness.negHits = negHitsTotal
@@ -144,9 +149,8 @@ public class ClusterQuery extends Problem implements CreateQueriesT, SimpleProbl
 		fitness.coreClusterPenalty= coreClusterPen
 		fitness.treePenalty=treePen
 		fitness.noHitsCount=noHitsCount
-		fitness.scoreOnly=scoreOnly
-		fitness.scoreOrig= rawfitness - minScore
-		fitness.emptyPen = emptyPen
+		fitness.scoreOnly=totalScore
+		fitness.emptyPenalty = emptyPen
 
 		((SimpleFitness) intVectorIndividual.fitness).setFitness(state, rawfitness, false);
 		ind.evaluated = true;

@@ -26,8 +26,8 @@ import org.apache.lucene.codecs.*
 class Index20NG {
 	// Create Lucene index in this directory
 	def indexPath = 
-	   'indexes/20NG3SpaceHockeyChristianl5'
-	//'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL5'	
+	   'indexes/20NG3SpaceHockeyChristianL6'
+	//'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6'	
 	
 	// Index files in this directory	
 	def docsPath =
@@ -89,12 +89,12 @@ class Index20NG {
 		Field pathField = new StringField(IndexInfo.FIELD_PATH, f.getPath(), Field.Store.YES);
 		doc.add(pathField);
 
-	//	def catName = f.getCanonicalPath().drop(53).take(30).replaceAll(/[^a-z.]/, "")     //'[0-9]|\ ',"")	
-		def catName = f.getCanonicalPath().drop(70).take(30).replaceAll(/[^a-z.]/, "")
+		def catName = f.getCanonicalPath().drop(53).take(30).replaceAll(/[^a-z.]/, "")     //'[0-9]|\ ',"")	
+	//	def catName = f.getCanonicalPath().drop(70).take(30).replaceAll(/[^a-z.]/, "")
 
 
 		def n = catsFreq.get((catName)) ?: 0
-	//	if (n < 100){
+		if (n < 100){
 			catsFreq.put((catName), n + 1)	
 
 			Field catNameField = new StringField(IndexInfo.FIELD_CATEGORY_NAME, catName, Field.Store.YES);
@@ -109,13 +109,13 @@ class Index20NG {
 			//doc.add(categoryField)
 
 			//set test train field
-			String test_train
-			if ( f.canonicalPath.contains("test")) test_train="test" else test_train="train";
-
-			Field ttField = new StringField(IndexInfo.FIELD_TEST_TRAIN, test_train, Field.Store.YES)
-			doc.add(ttField)
+//			String test_train
+//			if ( f.canonicalPath.contains("test")) test_train="test" else test_train="train";
+//
+//			Field ttField = new StringField(IndexInfo.FIELD_TEST_TRAIN, test_train, Field.Store.YES)
+//			doc.add(ttField)
 
 			writer.addDocument(doc);
-		//}
+		}
 	}
 }
