@@ -51,9 +51,9 @@ public class ClusterQuery extends Problem implements CreateQueryTrait, SimplePro
 				//from ClusterQueriesT = trait
 			getORQL(wordArray, intVectorIndividual)
 	//	getANDQL(wordArray, intVectorIndividual)
-		//getORNOTQL(wordArray, intVectorIndividual, IndexInfo.NUMBER_OF_CLUSTERS)
+	//	getORNOTQL(wordArray, intVectorIndividual)
 
-		final int hitsPerPage = 10000;
+		final int hitsPerPage = IndexInfo.instance.indexReader.maxDoc();
 		def negHitsTotal=0
 		def posHitsTotal=0
 		def posScore =0

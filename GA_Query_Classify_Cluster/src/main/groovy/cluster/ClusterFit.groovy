@@ -44,7 +44,7 @@ public class ClusterFit extends SimpleFitness {
 	Formatter bestResultsOut
 	def averageF1
 	IndexSearcher searcher = IndexInfo.instance.indexSearcher;
-	final int hitsPerPage=10000
+	final int hitsPerPage=IndexInfo.instance.indexReader.maxDoc()
 
 	String queryShort (){
 		def s=""
@@ -58,7 +58,7 @@ public class ClusterFit extends SimpleFitness {
 	public void queryStats (int job, int gen, int popSize){
 		def messageOut=""
 		FileWriter resultsOut = new FileWriter("results/clusterResultsF1.txt", true)
-		resultsOut <<"  ***** Job: $job Gen: $gen PopSize: $popSize Noclusters: ${IndexInfo.instance.NUMBER_OF_CLUSTERS}  pathToIndex: ${IndexInfo.instance.pathToIndex}  *********** ${new Date()} ***************************************************** \n"
+		resultsOut <<"  ***** Job: $job Gen: $gen PopSize: $popSize Noclusters: ${IndexInfo.NUMBER_OF_CLUSTERS}  pathToIndex: ${IndexInfo.instance.pathToIndex}  *********** ${new Date()} ***************************************************** \n"
 
 		def f1list = []
 		queryMap.keySet().eachWithIndex {q, index ->

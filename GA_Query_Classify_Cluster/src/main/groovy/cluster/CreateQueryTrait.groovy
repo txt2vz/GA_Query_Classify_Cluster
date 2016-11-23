@@ -65,7 +65,7 @@ trait CreateQueryTrait {
 
 		intVectorIndividual.genome.eachWithIndex {gene, index ->
 
-			int clusterNumber =  index % cNumber
+			int clusterNumber =  index % IndexInfo.NUMBER_OF_CLUSTERS 
 
 			String wrd = wordArray[gene]
 
@@ -74,7 +74,7 @@ trait CreateQueryTrait {
 			if (gene < wordArray.size() && gene >= 0){
 				TermQuery tq = new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, wrd))
 
-				if (index >= (intVectorIndividual.genome.size() -  cNumber)){
+				if (index >= (intVectorIndividual.genome.size() -  IndexInfo.NUMBER_OF_CLUSTERS )){
 
 					bqbList[clusterNumber].add(tq,BooleanClause.Occur.MUST_NOT)
 
