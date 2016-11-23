@@ -58,7 +58,7 @@ public class ClusterFit extends SimpleFitness {
 	public void queryStats (int job, int gen, int popSize){
 		def messageOut=""
 		FileWriter resultsOut = new FileWriter("results/clusterResultsF1.txt", true)
-		resultsOut <<"  ***** Job: $job Gen: $gen PopSize: $popSize Noclusters: ${IndexInfo.instance.NUMBER_OF_CLUSTERS}  pathToIndex: ${IndexInfo.instance.pathToIndex}  **************************************************************** \n"
+		resultsOut <<"  ***** Job: $job Gen: $gen PopSize: $popSize Noclusters: ${IndexInfo.instance.NUMBER_OF_CLUSTERS}  pathToIndex: ${IndexInfo.instance.pathToIndex}  *********** ${new Date()} ***************************************************** \n"
 
 		def f1list = []
 		queryMap.keySet().eachWithIndex {q, index ->

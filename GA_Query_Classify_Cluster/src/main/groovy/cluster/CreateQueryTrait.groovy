@@ -52,7 +52,7 @@ trait CreateQueryTrait {
 		return bqbList
 	}
 
-	def getORNOTQL(String[] wordArray, IntegerVectorIndividual intVectorIndividual, int cNumber ) {
+	def getORNOTQL(String[] wordArray, IntegerVectorIndividual intVectorIndividual ) {
 
 		treePen = 0
 		graphPen = 0
