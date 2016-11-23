@@ -49,8 +49,8 @@ public class ClusterQuery extends Problem implements CreateQueryTrait, SimplePro
 		def bqbList =
 
 				//from ClusterQueriesT = trait
-				getORQL(wordArray, intVectorIndividual)
-		//getANDQL(wordArray, intVectorIndividual, IndexInfo.NUMBER_OF_CLUSTERS)
+			//	getORQL(wordArray, intVectorIndividual)
+		getANDQL(wordArray, intVectorIndividual)
 		//getORNOTQL(wordArray, intVectorIndividual, IndexInfo.NUMBER_OF_CLUSTERS)
 
 		final int hitsPerPage = 10000;

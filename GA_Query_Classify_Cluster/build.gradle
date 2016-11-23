@@ -1,29 +1,19 @@
-//apply plugin: 'java'
 apply plugin: 'groovy'
 
 repositories { jcenter() }
 
 dependencies {
-
-	//compile 'org.codehaus.groovy:groovy-all:2.4.3'
+	
 	compile 'org.codehaus.groovy:groovy-all:2.4.7'
 
 	compile 'org.apache.lucene:lucene-core:6.3.0'
 	compile 'org.apache.lucene:lucene-analyzers-common:6.3.0'
 	
-//  compile 'org.apache.lucene:lucene-core:5.3.2'
-//	compile 'org.apache.lucene:lucene-analyzers-common:5.3.2'
-	
-	testCompile "org.codehaus.groovy:groovy:2.4.7"	
-
-	//testCompile 'junit:junit:4.11'
 	testCompile "org.spockframework:spock-core:1.0-groovy-2.4"	
 
-	//for some reason ecj23 not on maven
-	//compile 'edu.gmu.cs:ecj:22'
-	//pick up ecj23 jar file
+	//for some reason ecj23 not on maven: compile 'edu.gmu.cs:ecj:22'
+	//pick up ecj23 jar file  	//compile files('libs/ecj23.jar')
 	compile fileTree(dir: 'lib', include: ['*.jar']) 
-	//compile files('libs/ecj23.jar')
 }
 
 task(runClustering, dependsOn: 'classes', type: JavaExec) {
@@ -83,7 +73,6 @@ configure(indexClassic) {
 	group = 'index'
 	description = 'Index20NG dataset'
 }
-
 
 configure(indexCrisisData) {
 	group = 'index'
