@@ -49,7 +49,7 @@ public class ClusterQuery extends Problem implements CreateQueryTrait, SimplePro
 		def bqbList =
 
 				//from ClusterQueriesT = trait
-			getORQL(wordArray, intVectorIndividual)
+		getORQL(wordArray, intVectorIndividual)
 	//	getANDQL(wordArray, intVectorIndividual)
 	//	getORNOTQL(wordArray, intVectorIndividual)
 

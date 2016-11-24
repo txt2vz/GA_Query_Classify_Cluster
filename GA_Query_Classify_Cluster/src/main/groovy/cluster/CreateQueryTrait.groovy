@@ -27,16 +27,16 @@ trait CreateQueryTrait {
 		def genes =[] as Set
 		def bqbList = []
 		//int clusterNumber=0
-		//final int step = intVectorIndividual.genome.size() / IndexInfo.NUMBER_OF_CLUSTERS 
+		//final int step = intVectorIndividual.genome.size() / IndexInfo.NUMBER_OF_CLUSTERS
 
 		intVectorIndividual.genome.eachWithIndex {gene, index ->
 			//GA to set number of clusters in gene 0
 			//			if (index==0){cNumber = gene } else	{
 
-			int clusterNumber =  index % IndexInfo.NUMBER_OF_CLUSTERS 
-			
-			//possible advantage in keeping words for same query together on genome?  
-			//if (index % step ==0 && index > 0  && clusterNumber < IndexInfo.NUMBER_OF_CLUSTERS ){	clusterNumber++	} 
+			int clusterNumber =  index % IndexInfo.NUMBER_OF_CLUSTERS
+
+			//possible advantage in keeping words for same query together on genome?
+			//if (index % step ==0 && index > 0  && clusterNumber < IndexInfo.NUMBER_OF_CLUSTERS ){	clusterNumber++	}
 			String word = wordArray[gene]
 			bqbList[clusterNumber] = bqbList[clusterNumber] ?: new BooleanQuery.Builder()
 
@@ -44,7 +44,7 @@ trait CreateQueryTrait {
 
 				//++ seems to cause and odd error for groovy properties? !
 				if (!genes.add(gene)) duplicateCount = duplicateCount + 1;
-				
+
 				TermQuery tq = new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, word))
 				bqbList[clusterNumber].add(tq,BooleanClause.Occur.SHOULD)
 			}
@@ -65,13 +65,13 @@ trait CreateQueryTrait {
 
 		intVectorIndividual.genome.eachWithIndex {gene, index ->
 
-			int clusterNumber =  index % IndexInfo.NUMBER_OF_CLUSTERS 
-
+			int clusterNumber =  index % IndexInfo.NUMBER_OF_CLUSTERS
 			String wrd = wordArray[gene]
-
 			bqbList[clusterNumber] = bqbList[clusterNumber] ?: new BooleanQuery.Builder()
 
 			if (gene < wordArray.size() && gene >= 0){
+				if (!genes.add(gene)) duplicateCount = duplicateCount + 1;
+
 				TermQuery tq = new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, wrd))
 
 				if (index >= (intVectorIndividual.genome.size() -  IndexInfo.NUMBER_OF_CLUSTERS )){
@@ -80,8 +80,6 @@ trait CreateQueryTrait {
 
 				} else
 				{
-					if (!genes.add(gene)) duplicateCount = duplicateCount + 1;
-
 					bqbList[clusterNumber].add(tq,BooleanClause.Occur.SHOULD)
 				}
 
@@ -122,7 +120,7 @@ trait CreateQueryTrait {
 			} else {
 				word1 = wordArray[gene]
 
-				int clusterNumber =  qNumber % IndexInfo.NUMBER_OF_CLUSTERS 
+				int clusterNumber =  qNumber % IndexInfo.NUMBER_OF_CLUSTERS
 				qNumber++
 
 				def wrds=[word0, word1] as Set
