@@ -35,7 +35,7 @@ public class ClusterFit extends SimpleFitness {
 	def totalHits=0
 	def fraction = 0 as float
 	def baseFitness = 0 as float
-	def scorePlus = 0 as float
+	def scorePlus1000 = 0 as float
 	def missedDocs =0
 	def zeroHitsCount =0
 	
