@@ -162,8 +162,7 @@ public class ImportantWords {
 			Term t = new Term(IndexInfo.FIELD_CONTENTS, word);
 
 			char firstChar = word.charAt(0)
-			int df = indexSearcher.getIndexReader().docFreq(t)
-			//def dfFraction = ((double) df/maxDoc)
+			int df = indexSearcher.getIndexReader().docFreq(t)		
 
 			if (
 			df < 3
@@ -171,9 +170,7 @@ public class ImportantWords {
 			|| t.text().contains("'")
 			|| t.text().length() < 2
 			|| !firstChar.isLetter()
-			|| t.text().contains(".")
-			//|| dfFraction < 0.005
-			//	|| dfFraction > 0.3
+			|| t.text().contains(".")		
 			)
 				continue;
 

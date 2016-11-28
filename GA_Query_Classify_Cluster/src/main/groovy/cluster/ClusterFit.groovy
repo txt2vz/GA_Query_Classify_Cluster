@@ -16,7 +16,7 @@ import org.apache.lucene.search.TopScoreDocCollector
 import org.apache.lucene.search.TotalHitCountCollector
 
 /**
- * Store cluster information
+ * Store cluster fitness information
  * 
  * @author Laurie 
  */
@@ -24,23 +24,24 @@ import org.apache.lucene.search.TotalHitCountCollector
 public class ClusterFit extends SimpleFitness {
 
 	def queryMap = [:]
-	def positiveScore=0 as float
-	def negativeScore=0 as float
-	def posHits=0
-	def negHits=0
-	def duplicateCount=0;
-	def noHitsCount=0;
+	def positiveScoreTotal=0 as float
+	def negativeScoreTotal=0 as float
+	def positiveHits=0
+	def negativeHits=0
+	def duplicateCount
+	def noHitsCount=0
 	def coreClusterPenalty=0
-	def treePenalty=0;
-	def graphPenalty=0
 	def scoreOnly=0 as float
-	def scoreOrig =0 as float
 	def totalHits=0
 	def fraction = 0 as float
 	def baseFitness = 0 as float
-	def scrPlus = 0 as float
+	def scorePlus = 0 as float
 	def missedDocs =0
-	def emptyPenalty =0
+	def zeroHitsCount =0
+	
+	def treePenalty=0;
+	def graphPenalty=0
+	
 	Formatter bestResultsOut
 	def averageF1
 	IndexSearcher searcher = IndexInfo.instance.indexSearcher;
@@ -98,8 +99,8 @@ public class ClusterFit extends SimpleFitness {
 			println "catsFreq: $catsFreq cats max: $catMax "
 
 			//purity measure - check this is correct?
-//			def purity = (hits.size()==0) ? 0 : (1 / hits.size())  * catMax.value
-	//		println "purity:  $purity"
+            //def purity = (hits.size()==0) ? 0 : (1 / hits.size())  * catMax.value
+	        //println "purity:  $purity"
 
 			if (catMax !=0){
 				TotalHitCountCollector totalHitCollector  = new TotalHitCountCollector();
@@ -128,7 +129,7 @@ public class ClusterFit extends SimpleFitness {
 		println messageOut
 		
 		resultsOut << "TotalHits: $totalHits Total Docs:  ${IndexInfo.instance.indexReader.maxDoc()} \n"
-		resultsOut << "PosHits: $posHits NegHits: $negHits PosScore: $positiveScore NegScore: $negativeScore Fitness: ${fitness()} \n"
+		resultsOut << "PosHits: $positiveHits NegHits: $negativeHits PosScore: $positiveScoreTotal NegScore: $negativeScoreTotal Fitness: ${fitness()} \n"
 		resultsOut << messageOut + "\n"
 		resultsOut << "************************************************ \n \n"
 
@@ -140,8 +141,7 @@ public class ClusterFit extends SimpleFitness {
 		Formatter csvOut = new Formatter(fcsv);
 		if (!appnd){
 			final String fileHead = "gen, job, popSize, fitness, averageF1, query" + '\n';
-			csvOut.format("%s", fileHead)
-			
+			csvOut.format("%s", fileHead)			
 		}
 		csvOut.format(
 				"%s, %s, %s, %.3f, %.3f, %s",

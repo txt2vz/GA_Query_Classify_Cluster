@@ -2,12 +2,13 @@ package cluster;
 
 import index.ImportantWords
 import index.IndexInfo
-
+import org.apache.lucene.index.Term
 import org.apache.lucene.search.BooleanClause
 import org.apache.lucene.search.BooleanQuery
 import org.apache.lucene.search.IndexSearcher
 import org.apache.lucene.search.Query
 import org.apache.lucene.search.ScoreDoc
+import org.apache.lucene.search.TermQuery
 import org.apache.lucene.search.TopDocs
 
 import ec.EvolutionState
@@ -22,18 +23,22 @@ import ec.vector.IntegerVectorIndividual
  * To generate sets of queries for clustering
  */
 
-public class ClusterQuery extends Problem implements CreateQueryTrait, SimpleProblemForm {
+public class ClusterQuery extends Problem implements SimpleProblemForm {
 
-	IndexSearcher searcher = IndexInfo.instance.indexSearcher;
-	private String[] wordArray;
+	private IndexSearcher searcher = IndexInfo.instance.indexSearcher;
 	private final int coreClusterSize=20
+	private QueryListFromChromosome queryListFromChromosome
+
+	enum QueryType {
+		OR, ORNOT, AND
+	}
+	final QueryType queryType = QueryType.OR
 
 	public void setup(final EvolutionState state, final Parameter base) {
 
 		super.setup(state, base);
 		println "Total docs for ClusterQuery.groovy   " + IndexInfo.instance.indexReader.maxDoc()
-		ImportantWords iw = new ImportantWords();
-		wordArray =	iw.getTFIDFWordList()
+		queryListFromChromosome = new QueryListFromChromosome()
 	}
 
 	public void evaluate(final EvolutionState state, final Individual ind, final int subpopulation,
@@ -46,20 +51,31 @@ public class ClusterQuery extends Problem implements CreateQueryTrait, SimplePro
 		IntegerVectorIndividual intVectorIndividual = (IntegerVectorIndividual) ind;
 
 		//list of lucene Boolean Query Builders
-		def bqbList =
+		def bqbList
+		switch (queryType) {
+			case QueryType.OR :
+				bqbList = queryListFromChromosome.getORQueryList(intVectorIndividual)
+				break;
+			case QueryType.AND :
+				bqbList = queryListFromChromosome.getANDQL(intVectorIndividual)
+				break;
+			case QueryType.ORNOT : bqbList = queryListFromChromosome.getORNOTQL(intVectorIndividual)
+				break;
+		}
+		assert bqbList.size == IndexInfo.NUMBER_OF_CLUSTERS
+		//def dupCount = queryListFromChromosome.getDuplicateCount()
+		
+		final int hitsPerPage = IndexInfo.instance.indexReader.maxDoc()
 
-				//from ClusterQueriesT = trait
-		getORQL(wordArray, intVectorIndividual)
-	//	getANDQL(wordArray, intVectorIndividual)
-	//	getORNOTQL(wordArray, intVectorIndividual)
-
-		final int hitsPerPage = IndexInfo.instance.indexReader.maxDoc();
-		def negHitsTotal=0
-		def posHitsTotal=0
-		def posScore =0
-		def negScore =0
-		def coreClusterPen = 0
-		def emptyPen = 0
+		fitness.positiveScoreTotal=0
+		fitness.negativeScoreTotal=0
+		fitness.positiveHits=0
+		fitness.negativeHits=0
+		fitness.noHitsCount=0;
+		fitness.coreClusterPenalty=0
+		fitness.totalHits=0
+		fitness.missedDocs =0
+		fitness.zeroHitsCount =0
 
 		def qMap = [:]
 		def allHits = [] as Set
@@ -83,76 +99,61 @@ public class ClusterQuery extends Problem implements CreateQueryTrait, SimplePro
 			TopDocs docs = searcher.search(q, hitsPerPage)
 			ScoreDoc[] hits = docs.scoreDocs;
 			qMap.put(q,hits.size())
-
-			//major penalty for query returning nothing
-			if (hits.size()<1) emptyPen = emptyPen + 100
+			
+			if (hits.size()<1)   fitness.zeroHitsCount ++
 
 			hits.eachWithIndex {d, position ->
 				allHits << d.doc
 
 				if (otherdocIdSet.contains(d.doc)){
-					negHitsTotal++;
-					negScore += d.score
+					fitness.negativeHits++;
+					fitness.negativeScoreTotal += d.score
 					if (position < coreClusterSize ){
 						def reverseRank = coreClusterSize - position
-						coreClusterPen +=reverseRank
+						fitness.coreClusterPenalty +=reverseRank
 					}
 				}
 				else {
-					posHitsTotal++
-					posScore +=d.score
+					fitness.positiveHits++
+					fitness.positiveScoreTotal +=d.score
 				}
 			}
 		}
 
-		def totalScore = posScore - negScore
+		fitness.scoreOnly = fitness.positiveScoreTotal - fitness.negativeScoreTotal
+		//fitness.duplicateCount =  dupCount  // 5//queryListFromChromosome.getDuplicateCount()
 
-		//fitness must be positive for ECJ
-		def final  minScore = 1000
-		def scorePlus = (totalScore < -minScore) ? 0 : totalScore + minScore
+		//fitness must be positive for ECJ - most runs start with large negative score
+		def final minScore = 1000
+		fitness.scorePlus = (fitness.scoreOnly < -minScore) ? 0 : fitness.scoreOnly + minScore
 
 		def negIndicators =
-				noHitsCount + duplicateCount + emptyPen + coreClusterPen + 1
+						//noHitsCount + //major penalty for query returning nothing or empty query
+					(fitness.zeroHitsCount * 100) + fitness.coreClusterPenalty + 1;
 
-		def fractionCovered = allHits.size() / IndexInfo.instance.indexReader.maxDoc()
-		def missedDocs = IndexInfo.instance.indexReader.maxDoc() - allHits.size()
-		///You might want to multiple your fitness function by 1/(number of unclassified documents).
-		//(1.1)^{number of words covered by clusters}.
+		fitness.totalHits = allHits.size()		
+		fitness.fraction = fitness.totalHits / IndexInfo.instance.indexReader.maxDoc()
+		fitness.missedDocs = IndexInfo.instance.indexReader.maxDoc() - allHits.size()
 
-		def baseFitness = scorePlus / negIndicators
+		fitness.baseFitness = fitness.positiveScoreTotal / negIndicators
+	
+		//		if (totalScore> 0) {
+		//			baseFitness = totalScore / negIndicators
+		//		} else
+		//			baseFitness =
+		//					(posScore + 1) / (negScore + coreClusterPen + emptyPen + duplicateCount + 1)
 
-//		if (totalScore> 0) {
-//			baseFitness = totalScore / negIndicators
-//		} else
-//			baseFitness =
-//					(posScore + 1) / (negScore + coreClusterPen + emptyPen + duplicateCount + 1)
+		//may improve recall?	
+		def rawfitness = //fitness.baseFitness
+				fitness.baseFitness * fitness.fraction
 
-		//may improve recall?
-		def rawfitness =	baseFitness * fractionCovered
-
+		fitness.queryMap = qMap.asImmutable()
 		//baseFitness * (1/(Math.log(missedDocs)))
 		//baseFitness * (1/(Math.pow(1.01,missedDocs)))
 		//	baseFitness * (Math.pow(1.01,allHits.size()))
+	
 
-		fitness.baseFitness = baseFitness;
-		fitness.missedDocs = missedDocs
-		fitness.fraction = fractionCovered
-		fitness.totalHits = allHits.size()
-		fitness.graphPenalty=graphPen
-		fitness.queryMap = qMap.asImmutable()
-		fitness.scrPlus = scorePlus
-		fitness.negativeScore = negScore
-		fitness.positiveScore = posScore
-		fitness.negHits = negHitsTotal
-		fitness.posHits = posHitsTotal
-		fitness.duplicateCount=duplicateCount
-		fitness.coreClusterPenalty= coreClusterPen
-		fitness.treePenalty=treePen
-		fitness.noHitsCount=noHitsCount
-		fitness.scoreOnly=totalScore
-		fitness.emptyPenalty = emptyPen
-
-		((SimpleFitness) intVectorIndividual.fitness).setFitness(state, rawfitness, false);
+		((SimpleFitness) intVectorIndividual.fitness).setFitness(state, rawfitness, false)
 		ind.evaluated = true;
 	}
 }

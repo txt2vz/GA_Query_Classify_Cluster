@@ -1,6 +1,4 @@
-package cluster;
-
-import index.IndexInfo
+package cluster
 
 import org.apache.lucene.index.Term
 import org.apache.lucene.search.BooleanClause
@@ -8,58 +6,43 @@ import org.apache.lucene.search.BooleanQuery
 import org.apache.lucene.search.IndexSearcher
 import org.apache.lucene.search.TermQuery
 import org.apache.lucene.search.TotalHitCountCollector
-
 import ec.vector.IntegerVectorIndividual
+import index.ImportantWords
+import index.IndexInfo
 
-trait CreateQueryTrait {
+class QueryListFromChromosome {
 
-	final int hitsMin = 4
-	int treePen, graphPen, duplicateCount, noHitsCount;
+	def duplicateCount
+	def noHitsCount
+	def treePen=0
+	def graphPen=0
 
-	def getORQL(String[] wordArray, IntegerVectorIndividual intVectorIndividual) {
+	private IndexSearcher searcher = IndexInfo.instance.indexSearcher
+	private final ImportantWords iw = new ImportantWords();
+	private final String[] wordArray = iw.getTFIDFWordList()
 
-		treePen = 0
-		graphPen = 0
-		duplicateCount = 0
-		noHitsCount = 0
-
-		IndexSearcher searcher = IndexInfo.instance.indexSearcher;
-		def genes =[] as Set
-		def bqbList = []
-		//int clusterNumber=0
-		//final int step = intVectorIndividual.genome.size() / IndexInfo.NUMBER_OF_CLUSTERS
+	public List getORQueryList(IntegerVectorIndividual intVectorIndividual) {
+	
+		def bqbL = []
+		def genes = [] as Set
 
 		intVectorIndividual.genome.eachWithIndex {gene, index ->
-			//GA to set number of clusters in gene 0
-			//			if (index==0){cNumber = gene } else	{
-
 			int clusterNumber =  index % IndexInfo.NUMBER_OF_CLUSTERS
-
-			//possible advantage in keeping words for same query together on genome?
-			//if (index % step ==0 && index > 0  && clusterNumber < IndexInfo.NUMBER_OF_CLUSTERS ){	clusterNumber++	}
 			String word = wordArray[gene]
-			bqbList[clusterNumber] = bqbList[clusterNumber] ?: new BooleanQuery.Builder()
+			bqbL[clusterNumber] = bqbL[clusterNumber] ?: new BooleanQuery.Builder()
 
-			if (gene < wordArray.size() && gene >= 0){
-
-				//++ seems to cause and odd error for groovy properties? !
-				if (!genes.add(gene)) duplicateCount = duplicateCount + 1;
+			if (gene < wordArray.size() && gene >= 0  && genes.add(gene)){
 
 				TermQuery tq = new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, word))
-				bqbList[clusterNumber].add(tq,BooleanClause.Occur.SHOULD)
+				bqbL[clusterNumber].add(tq,BooleanClause.Occur.SHOULD)
 			}
 		}
-		return bqbList
+		return bqbL
 	}
 
-	def getORNOTQL(String[] wordArray, IntegerVectorIndividual intVectorIndividual ) {
+	public List getORNOTQL(IntegerVectorIndividual intVectorIndividual ) {
 
-		treePen = 0
-		graphPen = 0
 		duplicateCount = 0
-		noHitsCount = 0
-
-		IndexSearcher searcher = IndexInfo.instance.indexSearcher;
 		def genes =[] as Set
 		def bqbList = []
 
@@ -70,25 +53,16 @@ trait CreateQueryTrait {
 			bqbList[clusterNumber] = bqbList[clusterNumber] ?: new BooleanQuery.Builder()
 
 			if (gene < wordArray.size() && gene >= 0){
-				if (!genes.add(gene)) duplicateCount = duplicateCount + 1;
 
 				TermQuery tq = new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, wrd))
 
 				if (index >= (intVectorIndividual.genome.size() -  IndexInfo.NUMBER_OF_CLUSTERS )){
-
 					bqbList[clusterNumber].add(tq,BooleanClause.Occur.MUST_NOT)
-
-				} else
-				{
+				} else {
 					bqbList[clusterNumber].add(tq,BooleanClause.Occur.SHOULD)
-				}
-
-				//check that the subquery returns something
-				TotalHitCountCollector collector = new TotalHitCountCollector();
-				searcher.search(tq, collector);
-				if (collector.getTotalHits() < hitsMin)
-				{
-					noHitsCount = noHitsCount + 1;
+					if (!genes.add(gene)) {
+						duplicateCount = duplicateCount + 1
+					}
 				}
 			}
 		}
@@ -96,14 +70,15 @@ trait CreateQueryTrait {
 	}
 
 	//query in DNF format - could be used to generate graph
-	def getANDQL(String[] wordArray, IntegerVectorIndividual intVectorIndividual) {
+	public List getANDQL(IntegerVectorIndividual intVectorIndividual) {
 
-		treePen=0
-		graphPen=0
+
 		duplicateCount=0
 		noHitsCount=0
+		treePen=0
+		graphPen=0
+		int hitsMin=4
 
-		IndexSearcher searcher = IndexInfo.instance.indexSearcher;
 		def duplicates =[] as Set
 		def clusterSets =[]
 		def word0=null, word1=null

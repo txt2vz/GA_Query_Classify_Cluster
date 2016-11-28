@@ -34,7 +34,7 @@ class GAmainCluster extends Evolve {
 			state.run(EvolutionState.C_STARTED_FRESH);
 			
 			def popSize=0;
-			ClusterFit cfit = (ClusterFit) state.population.subpops.collect {sbp ->
+			ClusterFit cfit = (ClusterFit) state.population.subpops.collect {sbp -> 
 				popSize= popSize + sbp.individuals.size()
 				sbp.individuals.max() {ind ->
 					ind.fitness.fitness()
