@@ -52,6 +52,7 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 
 		//list of lucene Boolean Query Builders
 		def bqbList
+		def duplicateCount = 0
 		switch (queryType) {
 			case QueryType.OR :
 				bqbList = queryListFromChromosome.getORQueryList(intVectorIndividual)
@@ -59,13 +60,13 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 			case QueryType.AND :
 				bqbList = queryListFromChromosome.getANDQL(intVectorIndividual)
 				break;
-			case QueryType.ORNOT : bqbList = queryListFromChromosome.getORNOTQL(intVectorIndividual)
+			case QueryType.ORNOT : (bqbList, duplicateCount) = queryListFromChromosome.getORNOTQL(intVectorIndividual)
 				break;
 		}
 		assert bqbList.size == IndexInfo.NUMBER_OF_CLUSTERS			
 		final int hitsPerPage = IndexInfo.instance.indexReader.maxDoc()
 
-		fitness.positiveScoreTotal=0
+		fitness.positiveScoreTotal=0 
 		fitness.negativeScoreTotal=0
 		fitness.positiveHits=0
 		fitness.negativeHits=0
@@ -74,6 +75,7 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 		fitness.totalHits=0
 		fitness.missedDocs =0
 		fitness.zeroHitsCount =0
+		fitness.duplicateCount = duplicateCount
 
 		def qMap = [:]
 		def allHits = [] as Set
@@ -127,7 +129,7 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 
 		def negIndicators =
 						//major penalty for query returning nothing or empty query
-					(fitness.zeroHitsCount * 100) + fitness.coreClusterPenalty + 1;
+					(fitness.zeroHitsCount * 100) + fitness.coreClusterPenalty + fitness.duplicateCount + 1;
 
 		fitness.totalHits = allHits.size()		
 		fitness.fraction = fitness.totalHits / IndexInfo.instance.indexReader.maxDoc()

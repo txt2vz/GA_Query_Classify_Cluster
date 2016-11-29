@@ -12,7 +12,6 @@ import index.IndexInfo
 
 class QueryListFromChromosome {
 
-	def duplicateCount
 	def noHitsCount
 	def treePen=0
 	def graphPen=0
@@ -22,17 +21,19 @@ class QueryListFromChromosome {
 	private final String[] wordArray = iw.getTFIDFWordList()
 
 	public List getORQueryList(IntegerVectorIndividual intVectorIndividual) {
-	
+
+		//list of queries
 		def bqbL = []
+		// set of genes - for duplicate checking
 		def genes = [] as Set
 
 		intVectorIndividual.genome.eachWithIndex {gene, index ->
 			int clusterNumber =  index % IndexInfo.NUMBER_OF_CLUSTERS
-			String word = wordArray[gene]
 			bqbL[clusterNumber] = bqbL[clusterNumber] ?: new BooleanQuery.Builder()
 
-			if (gene < wordArray.size() && gene >= 0  && genes.add(gene)){
+			if (gene < wordArray.size() && gene >= 0 && genes.add(gene)){
 
+				String word = wordArray[gene]
 				TermQuery tq = new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, word))
 				bqbL[clusterNumber].add(tq,BooleanClause.Occur.SHOULD)
 			}
@@ -42,7 +43,7 @@ class QueryListFromChromosome {
 
 	public List getORNOTQL(IntegerVectorIndividual intVectorIndividual ) {
 
-		duplicateCount = 0
+		def duplicateCount = 0
 		def genes =[] as Set
 		def bqbList = []
 
@@ -66,14 +67,14 @@ class QueryListFromChromosome {
 				}
 			}
 		}
-		return bqbList
+		return [bqbList, duplicateCount]
 	}
 
 	//query in DNF format - could be used to generate graph
 	public List getANDQL(IntegerVectorIndividual intVectorIndividual) {
 
 
-		duplicateCount=0
+		def duplicateCount=0
 		noHitsCount=0
 		treePen=0
 		graphPen=0
