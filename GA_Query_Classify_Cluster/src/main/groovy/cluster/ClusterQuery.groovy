@@ -52,25 +52,26 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 
 		//list of lucene Boolean Query Builders
 		def bqbList
-		def duplicateCount = 0
+		int duplicateCount = 0, lowSubqHits=0
 		switch (queryType) {
 			case QueryType.OR :
 				bqbList = queryListFromChromosome.getORQueryList(intVectorIndividual)
 				break;
 			case QueryType.AND :
-				bqbList = queryListFromChromosome.getANDQL(intVectorIndividual)
+				(bqbList, duplicateCount, lowSubqHits) = queryListFromChromosome.getANDQL(intVectorIndividual)
 				break;
-			case QueryType.ORNOT : (bqbList, duplicateCount) = queryListFromChromosome.getORNOTQL(intVectorIndividual)
+			case QueryType.ORNOT :
+				(bqbList, duplicateCount) = queryListFromChromosome.getORNOTQL(intVectorIndividual)
 				break;
 		}
-		assert bqbList.size == IndexInfo.NUMBER_OF_CLUSTERS			
+		assert bqbList.size == IndexInfo.NUMBER_OF_CLUSTERS
 		final int hitsPerPage = IndexInfo.instance.indexReader.maxDoc()
 
-		fitness.positiveScoreTotal=0 
+		fitness.positiveScoreTotal=0
 		fitness.negativeScoreTotal=0
 		fitness.positiveHits=0
 		fitness.negativeHits=0
-		fitness.noHitsCount=0;
+		fitness.lowSubqHits=lowSubqHits
 		fitness.coreClusterPenalty=0
 		fitness.totalHits=0
 		fitness.missedDocs =0
@@ -99,7 +100,7 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 			TopDocs docs = searcher.search(q, hitsPerPage)
 			ScoreDoc[] hits = docs.scoreDocs;
 			qMap.put(q,hits.size())
-			
+
 			if (hits.size()<1)   fitness.zeroHitsCount ++
 
 			hits.eachWithIndex {d, position ->
@@ -128,32 +129,32 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 		fitness.scorePlus1000 = (fitness.scoreOnly < -minScore) ? 0 : fitness.scoreOnly + minScore
 
 		def negIndicators =
-						//major penalty for query returning nothing or empty query
-					(fitness.zeroHitsCount * 100) + fitness.coreClusterPenalty + fitness.duplicateCount + 1;
+				//major penalty for query returning nothing or empty query
+				(fitness.zeroHitsCount * 100) + fitness.coreClusterPenalty + fitness.duplicateCount + fitness.lowSubqHits + 1;
 
-		fitness.totalHits = allHits.size()		
+		fitness.totalHits = allHits.size()
 		fitness.fraction = fitness.totalHits / IndexInfo.instance.indexReader.maxDoc()
 		fitness.missedDocs = IndexInfo.instance.indexReader.maxDoc() - allHits.size()
-		
+
 		fitness.baseFitness = fitness.scorePlus1000 / negIndicators
-		
+
 		//rawfitness used by ECJ for evaluation  -- * fraction may improve recall
 		def rawfitness = fitness.baseFitness * fitness.fraction
 
 		fitness.queryMap = qMap.asImmutable()
 		//baseFitness * (1/(Math.log(missedDocs)))
 		//baseFitness * (1/(Math.pow(1.01,missedDocs)))
-		
+
 		//just use positive score?
 		//	fitness.baseFitness = fitness.positiveScoreTotal / negIndicators
 		//force positive
-			//		if (totalScore> 0) {
-			//			baseFitness = totalScore / negIndicators
-			//		} else
-			//			baseFitness =
-			//					(posScore + 1) / (negScore + coreClusterPen + emptyPen + duplicateCount + 1)
-		
-	
+		//		if (totalScore> 0) {
+		//			baseFitness = totalScore / negIndicators
+		//		} else
+		//			baseFitness =
+		//					(posScore + 1) / (negScore + coreClusterPen + emptyPen + duplicateCount + 1)
+
+
 		((SimpleFitness) intVectorIndividual.fitness).setFitness(state, rawfitness, false)
 		ind.evaluated = true;
 	}

@@ -29,7 +29,7 @@ public class ClusterFit extends SimpleFitness {
 	def positiveHits=0
 	def negativeHits=0
 	def duplicateCount
-	def noHitsCount=0
+	def lowSubqHits=0
 	def coreClusterPenalty=0
 	def scoreOnly=0 as float
 	def totalHits=0

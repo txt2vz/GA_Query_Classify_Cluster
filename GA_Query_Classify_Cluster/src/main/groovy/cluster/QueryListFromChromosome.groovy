@@ -12,10 +12,6 @@ import index.IndexInfo
 
 class QueryListFromChromosome {
 
-	def noHitsCount
-	def treePen=0
-	def graphPen=0
-
 	private IndexSearcher searcher = IndexInfo.instance.indexSearcher
 	private final ImportantWords iw = new ImportantWords();
 	private final String[] wordArray = iw.getTFIDFWordList()
@@ -70,17 +66,16 @@ class QueryListFromChromosome {
 		return [bqbList, duplicateCount]
 	}
 
-	//query in DNF format - could be used to generate graph
+	//query in DNF format - could be used to generate graph for cluster visualisation?
 	public List getANDQL(IntegerVectorIndividual intVectorIndividual) {
 
-
-		def duplicateCount=0
-		noHitsCount=0
-		treePen=0
-		graphPen=0
+		int duplicateCount=0
+		int lowSubqHits=0
+		int treePen=0
+		int graphPen=0
 		int hitsMin=4
 
-		def duplicates =[] as Set
+		def andPairSet =[] as Set
 		def clusterSets =[]
 		def word0=null, word1=null
 		int qNumber=0;
@@ -100,7 +95,7 @@ class QueryListFromChromosome {
 				qNumber++
 
 				def wrds=[word0, word1] as Set
-				if (word0==word1 || !duplicates.add(wrds))
+				if (word0==word1 || !andPairSet.add(wrds))
 				{
 					duplicateCount= duplicateCount + 1;
 				}
@@ -132,13 +127,13 @@ class QueryListFromChromosome {
 				searcher.search(subq, collector);
 				if (collector.getTotalHits() < hitsMin)
 				{
-					noHitsCount = noHitsCount + 1;
+					lowSubqHits = lowSubqHits + 1;
 				}
 
 				bqbList[clusterNumber].add(subq, BooleanClause.Occur.SHOULD);
 				word0=null;
 			}
 		}
-		return bqbList
+		return [bqbList, duplicateCount, lowSubqHits]
 	}
 }
