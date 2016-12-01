@@ -18,6 +18,9 @@ class QueryListFromChromosome {
 	private final String[] wordArray = iw.getTFIDFWordList()
 	//terms from previous run  classic4
 	def private final notWords = ["pressure", "layer", "heat", "boundary", "computer", "library", "retrieval", "information", "cells", "patients", "blood", "algorithm"] as String[]
+	def private final notWords20NG5 = ["jesus", "christ", "god", "windows", "high", "nasa", "orbit", 
+		"hockey", "nhl", "players", "sale" ]
+		
 	public List getORQueryList(IntegerVectorIndividual intVectorIndividual) {
 
 		//list of queries
@@ -55,8 +58,8 @@ class QueryListFromChromosome {
 
 				if (index >=  (intVectorIndividual.genome.size() -  IndexInfo.NUMBER_OF_CLUSTERS )){
 					//if ()
-					assert gene <= notWords.size()
-					String wrd = notWords[gene]
+					assert gene <= notWords20NG5.size()
+					String wrd = notWords20NG5[gene]
 					TermQuery tq = new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, wrd))
 					bqbList[clusterNumber].add(tq,BooleanClause.Occur.MUST_NOT)
 				} else {
