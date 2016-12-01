@@ -4,6 +4,7 @@ import org.apache.lucene.index.Term
 import org.apache.lucene.search.BooleanClause
 import org.apache.lucene.search.BooleanQuery
 import org.apache.lucene.search.IndexSearcher
+import org.apache.lucene.search.MatchAllDocsQuery
 import org.apache.lucene.search.TermQuery
 import org.apache.lucene.search.TotalHitCountCollector
 import ec.vector.IntegerVectorIndividual
@@ -15,7 +16,8 @@ class QueryListFromChromosome {
 	private IndexSearcher searcher = IndexInfo.instance.indexSearcher
 	private final ImportantWords iw = new ImportantWords();
 	private final String[] wordArray = iw.getTFIDFWordList()
-
+	//terms from previous run  classic4
+	def private final notWords = ["pressure", "layer", "heat", "boundary", "computer", "library", "retrieval", "information", "cells", "patients", "blood", "algorithm"] as String[]
 	public List getORQueryList(IntegerVectorIndividual intVectorIndividual) {
 
 		//list of queries
@@ -35,6 +37,38 @@ class QueryListFromChromosome {
 			}
 		}
 		return bqbL
+	}
+
+	public List getORNOTfromEvolvedList(IntegerVectorIndividual intVectorIndividual ) {
+
+		def duplicateCount = 0
+		def genes =[] as Set
+		def bqbList = []
+
+		intVectorIndividual.genome.eachWithIndex {gene, index ->
+
+			int clusterNumber =  index % IndexInfo.NUMBER_OF_CLUSTERS
+
+			bqbList[clusterNumber] = bqbList[clusterNumber] ?: new BooleanQuery.Builder()
+
+			if (gene >= 0){
+
+				if (index >=  (intVectorIndividual.genome.size() -  IndexInfo.NUMBER_OF_CLUSTERS )){
+					//if ()
+					assert gene <= notWords.size()
+					String wrd = notWords[gene]
+					TermQuery tq = new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, wrd))
+					bqbList[clusterNumber].add(tq,BooleanClause.Occur.MUST_NOT)
+				} else {
+					if (genes.add(gene) && gene < wordArray.size()) {
+						String wrd = wordArray[gene]
+						TermQuery tq = new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, wrd))
+						bqbList[clusterNumber].add(tq,BooleanClause.Occur.SHOULD)
+					}
+				}
+			}
+		}
+		return bqbList
 	}
 
 	public List getORNOTQL(IntegerVectorIndividual intVectorIndividual ) {
@@ -64,6 +98,36 @@ class QueryListFromChromosome {
 			}
 		}
 		return [bqbList, duplicateCount]
+	}
+
+	public List getALLNOTQL(IntegerVectorIndividual intVectorIndividual ) {
+
+
+		final MatchAllDocsQuery allQ = new MatchAllDocsQuery();
+
+		//list of queries
+		def bqbL = []
+		// set of genes - for duplicate checking
+		def genes = [] as Set
+
+		//println "in allNot $allQ"
+
+		intVectorIndividual.genome.eachWithIndex {gene, index ->
+			int clusterNumber =  index % IndexInfo.NUMBER_OF_CLUSTERS
+			if (bqbL[clusterNumber] == null) {
+				bqbL[clusterNumber] = new BooleanQuery.Builder()
+				bqbL[clusterNumber].add(allQ,BooleanClause.Occur.SHOULD)
+			}
+
+			if (gene < wordArray.size() && gene >= 0 && genes.add(gene)){
+
+				String word = wordArray[gene]
+				TermQuery tq = new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, word))
+				bqbL[clusterNumber].add(tq,BooleanClause.Occur.MUST_NOT)
+			}
+		}
+		//println "end allNot bqbl  $bqbL"
+		return bqbL
 	}
 
 	//query in DNF format - could be used to generate graph for cluster visualisation?

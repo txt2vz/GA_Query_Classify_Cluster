@@ -8,7 +8,9 @@ import ec.util.ParameterDatabase
 
 class GAmainCluster extends Evolve {
 
-	private final String parameterFilePath =  "src/cfg/cluster.params"
+	private final String parameterFilePath = 
+	 //"src/cfg/clusterWithNOTset.params" 
+	  "src/cfg/cluster.params"
 	private final int NUMBER_OF_JOBS = 3   
 
 	public GAmainCluster(){ 

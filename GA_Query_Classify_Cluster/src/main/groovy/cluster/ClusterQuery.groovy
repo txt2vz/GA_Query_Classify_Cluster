@@ -30,7 +30,7 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 	private QueryListFromChromosome queryListFromChromosome
 
 	enum QueryType {
-		OR, ORNOT, AND
+		OR, ORNOT, AND, ALLNOT, ORNOTEVOLVED
 	}
 	final QueryType queryType = QueryType.OR
 
@@ -62,6 +62,12 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 				break;
 			case QueryType.ORNOT :
 				(bqbList, duplicateCount) = queryListFromChromosome.getORNOTQL(intVectorIndividual)
+				break;
+			case QueryType.ALLNOT :
+				bqbList = queryListFromChromosome.getALLNOTQL(intVectorIndividual)
+				break;
+			case QueryType.ORNOTEVOLVED :
+				bqbList = queryListFromChromosome.getORNOTfromEvolvedList(intVectorIndividual)
 				break;
 		}
 		assert bqbList.size == IndexInfo.NUMBER_OF_CLUSTERS
@@ -111,8 +117,9 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 					fitness.negativeScoreTotal += d.score
 					if (position < coreClusterSize ){
 						//heavy penalty
-						def reverseRank = coreClusterSize - position
-						fitness.coreClusterPenalty +=reverseRank
+						//def reverseRank = coreClusterSize - position
+						//fitness.coreClusterPenalty +=reverseRank
+						fitness.coreClusterPenalty++
 					}
 				}
 				else {
@@ -139,7 +146,8 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 		fitness.baseFitness = fitness.scorePlus1000 / negIndicators
 
 		//rawfitness used by ECJ for evaluation  -- * fraction may improve recall
-		def rawfitness = fitness.baseFitness * fitness.fraction
+		def rawfitness =// fitness.scorePlus1000
+				fitness.baseFitness * fitness.fraction
 
 		fitness.queryMap = qMap.asImmutable()
 		//baseFitness * (1/(Math.log(missedDocs)))
