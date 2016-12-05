@@ -43,7 +43,6 @@ public class ClusterFit extends SimpleFitness {
 	def graphPenalty=0
 	
 	Formatter bestResultsOut
-	def averageF1
 	IndexSearcher searcher = IndexInfo.instance.indexSearcher;
 	final int hitsPerPage=IndexInfo.instance.indexReader.maxDoc()
 
@@ -61,7 +60,7 @@ public class ClusterFit extends SimpleFitness {
 		FileWriter resultsOut = new FileWriter("results/clusterResultsF1.txt", true)
 		resultsOut <<"  ***** Job: $job Gen: $gen PopSize: $popSize Noclusters: ${IndexInfo.NUMBER_OF_CLUSTERS}  pathToIndex: ${IndexInfo.instance.pathToIndex}  *********** ${new Date()} ***************************************************** \n"
 
-		def f1list = []
+		def f1list = [], precisionList =[], recallList =[]
 		queryMap.keySet().eachWithIndex {q, index ->
 
 			TopScoreDocCollector collector = TopScoreDocCollector.create(hitsPerPage);
@@ -117,6 +116,8 @@ public class ClusterFit extends SimpleFitness {
 				def f1 = (2 * precision * recall) / (precision + recall);
 				
 				f1list << f1
+				precisionList << precision
+				recallList << recall
 				messageOut = "f1: $f1 recall: $recall precision: $precision"
 				println messageOut
 				resultsOut << messageOut + "\n"
@@ -124,8 +125,10 @@ public class ClusterFit extends SimpleFitness {
 			}
 		}
 	    
-		averageF1 = f1list.sum()/ IndexInfo.NUMBER_OF_CLUSTERS
-		messageOut ="***  TOTALS:   *****   f1list: $f1list averagef1: :$averageF1"
+		def averageF1 = f1list.sum()/ IndexInfo.NUMBER_OF_CLUSTERS
+		def averageRecall = recallList.sum()/ IndexInfo.NUMBER_OF_CLUSTERS
+		def averagePrecision = precisionList.sum()/ IndexInfo.NUMBER_OF_CLUSTERS
+		messageOut ="***  TOTALS:   *****   f1list: $f1list averagef1: :$averageF1  ** average precision: $averagePrecision average recall: $averageRecall"
 		println messageOut
 		
 		resultsOut << "TotalHits: $totalHits Total Docs:  ${IndexInfo.instance.indexReader.maxDoc()} \n"
@@ -136,20 +139,22 @@ public class ClusterFit extends SimpleFitness {
 		resultsOut.flush()
 		resultsOut.close()
 
-		boolean appnd = true //job!=0
+		boolean appnd = job!=0
 		FileWriter fcsv = new FileWriter("results/resultsCluster.csv", appnd)
 		Formatter csvOut = new Formatter(fcsv);
 		if (!appnd){
-			final String fileHead = "gen, job, popSize, fitness, averageF1, query" + '\n';
+			final String fileHead = "gen, job, popSize, fitness, averageF1, averagePrecision, averageRecall, query" + '\n';
 			csvOut.format("%s", fileHead)			
 		}
 		csvOut.format(
-				"%s, %s, %s, %.3f, %.3f, %s",
+				"%s, %s, %s, %.3f, %.3f, %.3f, %.3f, %s",
 				gen,
 				job,
 				popSize,
 				fitness(),
 				averageF1,
+				averagePrecision,
+				averageRecall,
 				queryForCSV(job) );
 
 		csvOut.flush();
