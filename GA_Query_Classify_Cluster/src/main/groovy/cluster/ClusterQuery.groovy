@@ -129,7 +129,12 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 			}
 		}
 
+		
+		fitness.queryMap = qMap.asImmutable()
 		fitness.scoreOnly = fitness.positiveScoreTotal - fitness.negativeScoreTotal
+		fitness.totalHits = allHits.size()
+		fitness.fraction = fitness.totalHits / IndexInfo.instance.indexReader.maxDoc()
+		fitness.missedDocs = IndexInfo.instance.indexReader.maxDoc() - allHits.size()
 
 		//fitness must be positive for ECJ - most runs start with large negative score
 		def final minScore = 1000
@@ -139,28 +144,23 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 				//major penalty for query returning nothing or empty query
 				(fitness.zeroHitsCount * 100) + fitness.coreClusterPenalty + fitness.duplicateCount + fitness.lowSubqHits + 1;
 
-		fitness.totalHits = allHits.size()
-		fitness.fraction = fitness.totalHits / IndexInfo.instance.indexReader.maxDoc()
-		fitness.missedDocs = IndexInfo.instance.indexReader.maxDoc() - allHits.size()
-
 		fitness.baseFitness = fitness.scorePlus1000 / negIndicators
 
-		//rawfitness used by ECJ for evaluation  -- * fraction may improve recall
-		def rawfitness =// fitness.scorePlus1000
-				fitness.baseFitness * fitness.fraction
+		//rawfitness used by ECJ for evaluation 
+		def rawfitness = fitness.baseFitness
 
-		fitness.queryMap = qMap.asImmutable()
+		// to improve improve recall?
+		//fitness.baseFitness * fitness.fraction
+
 		//baseFitness * (1/(Math.log(missedDocs)))
 		//baseFitness * (1/(Math.pow(1.01,missedDocs)))
 
-		//just use positive score?
-		//	fitness.baseFitness = fitness.positiveScoreTotal / negIndicators
 		//force positive
 		//		if (totalScore> 0) {
-		//			baseFitness = totalScore / negIndicators
+		//			baseFitness = scoreOnly / negIndicators
 		//		} else
 		//			baseFitness =
-		//					(posScore + 1) / (negScore + coreClusterPen + emptyPen + duplicateCount + 1)
+		//					(posScore + 1) / (negScore + coreClusterPen + duplicateCount + 1)
 
 
 		((SimpleFitness) intVectorIndividual.fitness).setFitness(state, rawfitness, false)

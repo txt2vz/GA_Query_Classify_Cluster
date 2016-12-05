@@ -18,12 +18,11 @@ class QueryListFromChromosome {
 	private final String[] wordArray = iw.getTFIDFWordList()
 	//terms from previous run  classic4
 	def private final notWords = ["pressure", "layer", "heat", "boundary", "computer", "library", "retrieval", "information", "cells", "patients", "blood", "algorithm"] as String[]
-	def private final notWords20NG5 = ["jesus", "christ", "god", "windows", "high", "nasa", "orbit", 
-		"hockey", "nhl", "players", "sale" ]
-		
+	def private final notWords20NG5 = ["jesus", "christ", "god", "windows", "high", "nasa", "orbit", "hockey", "nhl", "players", "sale"]
+
 	public List getORQueryList(IntegerVectorIndividual intVectorIndividual) {
 
-		//list of queries
+		//list of boolean queries
 		def bqbL = []
 		// set of genes - for duplicate checking
 		def genes = [] as Set
@@ -47,16 +46,21 @@ class QueryListFromChromosome {
 		def duplicateCount = 0
 		def genes =[] as Set
 		def bqbList = []
+		int clusterNumber =  -1
 
 		intVectorIndividual.genome.eachWithIndex {gene, index ->
-
-			int clusterNumber =  index % IndexInfo.NUMBER_OF_CLUSTERS
+		    def z = index % IndexInfo.NUMBER_OF_CLUSTERS
+			if ( z == 0) clusterNumber++
+			//int clusterNumber =  0//index % IndexInfo.NUMBER_OF_CLUSTERS
+			
+			assert clusterNumber < IndexInfo.NUMBER_OF_CLUSTERS
 
 			bqbList[clusterNumber] = bqbList[clusterNumber] ?: new BooleanQuery.Builder()
 
 			if (gene >= 0){
 
-				if (index >=  (intVectorIndividual.genome.size() -  IndexInfo.NUMBER_OF_CLUSTERS )){
+				//if (index >=  (intVectorIndividual.genome.size() -  IndexInfo.NUMBER_OF_CLUSTERS )){
+				if (z==4){
 					//if ()
 					assert gene <= notWords20NG5.size()
 					String wrd = notWords20NG5[gene]
@@ -70,6 +74,7 @@ class QueryListFromChromosome {
 					}
 				}
 			}
+		
 		}
 		return bqbList
 	}
