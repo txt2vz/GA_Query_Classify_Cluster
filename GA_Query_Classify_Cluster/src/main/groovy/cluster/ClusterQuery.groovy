@@ -129,7 +129,7 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 			}
 		}
 
-		
+
 		fitness.queryMap = qMap.asImmutable()
 		fitness.scoreOnly = fitness.positiveScoreTotal - fitness.negativeScoreTotal
 		fitness.totalHits = allHits.size()
@@ -146,24 +146,23 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 
 		fitness.baseFitness = fitness.scorePlus1000 / negIndicators
 
-		//rawfitness used by ECJ for evaluation 
+		//force positive
+//		if (fitness.scoreOnly> 0) {
+//			fitness.baseFitness = fitness.scoreOnly / negIndicators
+//		} else
+//			fitness.baseFitness =
+//					(fitness.positiveScoreTotal + 1) / (fitness.negativeScoreTotal +  negIndicators + 1)
+
+		//rawfitness used by ECJ for evaluation
 		def rawfitness = fitness.baseFitness
+
+		((SimpleFitness) intVectorIndividual.fitness).setFitness(state, rawfitness, false)
+		ind.evaluated = true;		
 
 		// to improve improve recall?
 		//fitness.baseFitness * fitness.fraction
 
 		//baseFitness * (1/(Math.log(missedDocs)))
 		//baseFitness * (1/(Math.pow(1.01,missedDocs)))
-
-		//force positive
-		//		if (totalScore> 0) {
-		//			baseFitness = scoreOnly / negIndicators
-		//		} else
-		//			baseFitness =
-		//					(posScore + 1) / (negScore + coreClusterPen + duplicateCount + 1)
-
-
-		((SimpleFitness) intVectorIndividual.fitness).setFitness(state, rawfitness, false)
-		ind.evaluated = true;
 	}
 }
