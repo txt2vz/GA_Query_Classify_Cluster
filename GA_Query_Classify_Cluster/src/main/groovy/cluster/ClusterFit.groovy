@@ -139,7 +139,7 @@ public class ClusterFit extends SimpleFitness {
 		resultsOut.flush()
 		resultsOut.close()
 
-		boolean appnd = job!=0
+		boolean appnd =  true//job!=0
 		FileWriter fcsv = new FileWriter("results/resultsCluster.csv", appnd)
 		Formatter csvOut = new Formatter(fcsv);
 		if (!appnd){

@@ -25,21 +25,23 @@ import org.apache.lucene.codecs.*
 
 class Index20NG {
 	// Create Lucene index in this directory
-	def indexPath = 
-	   'indexes/20NG3SpaceHockeyChristianL6'
-	//'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6'	
-	
-	// Index files in this directory	
+	def indexPath =
+
+//	'indexes/20NG3SpaceHockeyChristian'
+	'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6'
+
+	// Index files in this directory
 	def docsPath =
-	//  /C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns/	
+	//  /C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns/
 	//  /C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian/
 
-	  /C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian/
+	//  /C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian/
+	/C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian/
 
 	Path path = Paths.get(indexPath)
 	Directory directory = FSDirectory.open(path)
 	Analyzer analyzer = //new EnglishAnalyzer();
-	                 new StandardAnalyzer();
+	new StandardAnalyzer();
 	def catsFreq=[:]
 
 	static main(args) {
@@ -59,16 +61,12 @@ class Index20NG {
 		println("Indexing to directory '" + indexPath + "'...");
 		def catNumber=0;
 		new File(docsPath).eachDir {
-			//it.eachDir{
 			it.eachFileRecurse {
-				if (!it.hidden && it.exists() && it.canRead()  && !it.directory
-				//	&& !it.name.contains("cacm")
-				)
+				if (!it.hidden && it.exists() && it.canRead() && !it.directory)
 				{
 					indexDocs(writer,it, catNumber)
 				}
 			}
-			//}
 			catNumber++;
 		}
 
@@ -85,23 +83,20 @@ class Index20NG {
 	throws IOException {
 
 		def doc = new Document()
-
 		Field pathField = new StringField(IndexInfo.FIELD_PATH, f.getPath(), Field.Store.YES);
 		doc.add(pathField);
+		String parent = f.getParent()
 
-		def catName = f.getCanonicalPath().drop(53).take(30).replaceAll(/[^a-z.]/, "")     //'[0-9]|\ ',"")	
-	//	def catName = f.getCanonicalPath().drop(70).take(30).replaceAll(/[^a-z.]/, "")
-
+		def catName =   parent.substring(parent.lastIndexOf("\\") + 1, parent.length());
+		//f.getCanonicalPath().drop(53).take(30).replaceAll(/[^a-z.]/, "")     //'[0-9]|\ ',"")
+		//	def catName = f.getCanonicalPath().drop(70).take(30).replaceAll(/[^a-z.]/, "")
 
 		def n = catsFreq.get((catName)) ?: 0
 		if (n < 100){
-			catsFreq.put((catName), n + 1)	
+			catsFreq.put((catName), n + 1)
 
 			Field catNameField = new StringField(IndexInfo.FIELD_CATEGORY_NAME, catName, Field.Store.YES);
 			doc.add(catNameField)
-			//f.getParentFile().getName(), Field.Store.YES);
-
-			//doc.add(new TextField(IndexInfoStaticG.FIELD_CONTENTS, new BufferedReader(new InputStreamReader(fis, "UTF-8"))) );
 			doc.add(new TextField(IndexInfo.FIELD_CONTENTS, f.text,  Field.Store.YES)) ;
 
 			//	Field categoryField = new StringField(IndexInfo.FIELD_CATEGORY, categoryNumber.toString(), Field.Store.YES);
@@ -109,11 +104,11 @@ class Index20NG {
 			//doc.add(categoryField)
 
 			//set test train field
-//			String test_train
-//			if ( f.canonicalPath.contains("test")) test_train="test" else test_train="train";
-//
-//			Field ttField = new StringField(IndexInfo.FIELD_TEST_TRAIN, test_train, Field.Store.YES)
-//			doc.add(ttField)
+			//			String test_train
+			//			if ( f.canonicalPath.contains("test")) test_train="test" else test_train="train";
+			//
+			//			Field ttField = new StringField(IndexInfo.FIELD_TEST_TRAIN, test_train, Field.Store.YES)
+			//			doc.add(ttField)
 
 			writer.addDocument(doc);
 		}
