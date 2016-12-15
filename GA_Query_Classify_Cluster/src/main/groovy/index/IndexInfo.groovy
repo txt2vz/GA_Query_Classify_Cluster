@@ -35,6 +35,7 @@ class IndexInfo {
      // 'indexes/crisis3FireBombFloodL6'
 	// 'indexes/classic4_500L6'
 	 'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6'
+	// 'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6Stem'
 
     // 'indexes/20NG3SpaceHockeyChristianL6'
 

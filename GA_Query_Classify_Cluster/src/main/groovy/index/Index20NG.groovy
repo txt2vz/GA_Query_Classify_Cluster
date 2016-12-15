@@ -28,7 +28,7 @@ class Index20NG {
 	def indexPath =
 
 //	'indexes/20NG3SpaceHockeyChristian'
-	'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6'
+	'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6Stem'
 
 	// Index files in this directory
 	def docsPath =
@@ -40,8 +40,8 @@ class Index20NG {
 
 	Path path = Paths.get(indexPath)
 	Directory directory = FSDirectory.open(path)
-	Analyzer analyzer = //new EnglishAnalyzer();
-	new StandardAnalyzer();
+	Analyzer analyzer = new EnglishAnalyzer();
+	//new StandardAnalyzer();
 	def catsFreq=[:]
 
 	static main(args) {

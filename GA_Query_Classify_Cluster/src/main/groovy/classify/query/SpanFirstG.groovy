@@ -82,7 +82,6 @@ public class SpanFirstG extends Problem implements SimpleProblemForm, HitCounts 
 			bqb.add(sfq, BooleanClause.Occur.SHOULD);
 		}
 
-
 		query = bqb.build();
 
 		IndexSearcher searcher = IndexInfo.instance.indexSearcher;

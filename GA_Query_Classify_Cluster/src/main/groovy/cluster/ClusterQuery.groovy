@@ -30,7 +30,7 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 	private QueryListFromChromosome queryListFromChromosome
 
 	enum QueryType {
-		OR, ORNOT, AND, ALLNOT, ORNOTEVOLVED
+		OR, ORNOT, AND, ALLNOT, ORNOTEVOLVED, SpanFirst
 	}
 	final QueryType queryType = QueryType.OR
 
@@ -68,6 +68,9 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 				break;
 			case QueryType.ORNOTEVOLVED :
 				bqbList = queryListFromChromosome.getORNOTfromEvolvedList(intVectorIndividual)
+				break;
+			case QueryType.SpanFirst :
+				(bqbList, duplicateCount)  = queryListFromChromosome.getSpanFirstQL(intVectorIndividual)
 				break;
 		}
 		assert bqbList.size == IndexInfo.NUMBER_OF_CLUSTERS
@@ -147,17 +150,17 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 		fitness.baseFitness = fitness.scorePlus1000 / negIndicators
 
 		//force positive
-//		if (fitness.scoreOnly> 0) {
-//			fitness.baseFitness = fitness.scoreOnly / negIndicators
-//		} else
-//			fitness.baseFitness =
-//					(fitness.positiveScoreTotal + 1) / (fitness.negativeScoreTotal +  negIndicators + 1)
+		//		if (fitness.scoreOnly> 0) {
+		//			fitness.baseFitness = fitness.scoreOnly / negIndicators
+		//		} else
+		//			fitness.baseFitness =
+		//					(fitness.positiveScoreTotal + 1) / (fitness.negativeScoreTotal +  negIndicators + 1)
 
 		//rawfitness used by ECJ for evaluation
 		def rawfitness = fitness.baseFitness
 
 		((SimpleFitness) intVectorIndividual.fitness).setFitness(state, rawfitness, false)
-		ind.evaluated = true;		
+		ind.evaluated = true;
 
 		// to improve improve recall?
 		//fitness.baseFitness * fitness.fraction
