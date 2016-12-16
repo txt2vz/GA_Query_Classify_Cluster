@@ -79,6 +79,8 @@ public class ImportantWords {
 		while((text = termsEnum.next()) != null) {
 
 			def word = text.utf8ToString()
+			
+		
 
 			final Term t = new Term(IndexInfo.FIELD_CONTENTS, word);
 
@@ -155,12 +157,13 @@ public class ImportantWords {
 		println "Important words terms.getDocCount: ${terms.getDocCount()}"
 
 		def wordMap = [:]
-		BytesRef text;
-		while((text = termsEnum.next()) != null) {
-
-			def word = text.utf8ToString()
-			Term t = new Term(IndexInfo.FIELD_CONTENTS, word);
-
+		BytesRef termbr;	
+		
+		while((termbr = termsEnum.next()) != null) {		
+						
+			def word = termbr.utf8ToString()
+			Term t = new Term(IndexInfo.FIELD_CONTENTS, termbr);
+			
 			char firstChar = word.charAt(0)
 			int df = indexSearcher.getIndexReader().docFreq(t)		
 
@@ -181,7 +184,7 @@ public class ImportantWords {
 			//TFIDFSimilarity tfidfSim = new DefaultSimilarity()
 			//For lucene 6
 			TFIDFSimilarity tfidfSim = new ClassicSimilarity()
-			PostingsEnum docsEnum = termsEnum.postings(MultiFields.getTermDocsEnum(indexReader, IndexInfo.FIELD_CONTENTS, text ));
+			PostingsEnum docsEnum = termsEnum.postings(MultiFields.getTermDocsEnum(indexReader, IndexInfo.FIELD_CONTENTS, termbr ));
 			double tfidfTotal=0
 
 			if (docsEnum != null) {
