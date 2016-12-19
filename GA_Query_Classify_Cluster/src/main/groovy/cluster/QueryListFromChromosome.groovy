@@ -7,6 +7,8 @@ import org.apache.lucene.search.IndexSearcher
 import org.apache.lucene.search.MatchAllDocsQuery
 import org.apache.lucene.search.TermQuery
 import org.apache.lucene.search.TotalHitCountCollector
+import org.apache.lucene.search.spans.SpanFirstQuery
+import org.apache.lucene.search.spans.SpanTermQuery
 import ec.vector.IntegerVectorIndividual
 import index.ImportantWords
 import index.IndexInfo
@@ -15,7 +17,7 @@ class QueryListFromChromosome {
 
 	private IndexSearcher searcher = IndexInfo.instance.indexSearcher
 	private final ImportantWords iw = new ImportantWords();
-	private final String[] wordArray = iw.getTFIDFWordList()
+	private final Term[] termArray = iw.getTFIDFWordList()
 	//terms from previous run  classic4
 	def private final notWords = ["pressure", "layer", "heat", "boundary", "computer", "library", "retrieval", "information", "cells", "patients", "blood", "algorithm"] as String[]
 	def private final notWords20NG5 = ["jesus", "christ", "god", "windows", "high", "nasa", "orbit", "hockey", "nhl", "players", "sale"]
@@ -31,14 +33,55 @@ class QueryListFromChromosome {
 			int clusterNumber =  index % IndexInfo.NUMBER_OF_CLUSTERS
 			bqbL[clusterNumber] = bqbL[clusterNumber] ?: new BooleanQuery.Builder()
 
-			if (gene < wordArray.size() && gene >= 0 && genes.add(gene)){
+			if (gene < termArray.size() && gene >= 0 && genes.add(gene)){
 
-				String word = wordArray[gene]
-				TermQuery tq = new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, word))
+				String word = termArray[gene]
+				TermQuery tq = new TermQuery(termArray[gene])
 				bqbL[clusterNumber].add(tq,BooleanClause.Occur.SHOULD)
 			}
 		}
 		return bqbL
+	}
+
+	public List getSpanFirstQL(IntegerVectorIndividual intVectorIndividual) {
+
+		int spanValue, wordInd0
+		//def word=null
+		int qNumber=0;
+		def wordSet = [] as Set
+		def duplicateCount=0
+		def sfMap = [0:50, 1:100, 2:200, 3:400, 4:2000]
+
+		def bqbList = []
+
+		for (int i = 0; i < (intVectorIndividual.genome.length - 1); i = i + 2) {
+
+			int clusterNumber =  qNumber % IndexInfo.NUMBER_OF_CLUSTERS
+			qNumber++
+			bqbList[clusterNumber] = bqbList[clusterNumber] ?: new BooleanQuery.Builder()
+
+			if (intVectorIndividual.genome[i] >= termArray.length || intVectorIndividual.genome[i] < 0
+			|| intVectorIndividual.genome[i + 1] >= termArray.length || intVectorIndividual.genome[i + 1] < 0
+			|| intVectorIndividual.genome[i] == intVectorIndividual.genome[i + 1])
+				continue;
+			else {
+				wordInd0 = intVectorIndividual.genome[i];
+			}
+			
+			def term = termArray[wordInd0];
+
+			if (!wordSet.add(term)) duplicateCount++
+			
+			def sfIndex = intVectorIndividual.genome[i + 1]
+			def sfValue = sfMap[sfIndex]
+
+			SpanFirstQuery sfq = new SpanFirstQuery(new SpanTermQuery( term),
+					sfValue);
+
+			bqbList[clusterNumber].add(sfq, BooleanClause.Occur.SHOULD);
+		}
+
+		return [bqbList, duplicateCount]
 	}
 
 	public List getORNOTfromEvolvedList(IntegerVectorIndividual intVectorIndividual ) {
@@ -49,10 +92,10 @@ class QueryListFromChromosome {
 		int clusterNumber =  -1
 
 		intVectorIndividual.genome.eachWithIndex {gene, index ->
-		    def z = index % IndexInfo.NUMBER_OF_CLUSTERS
+			def z = index % IndexInfo.NUMBER_OF_CLUSTERS
 			if ( z == 0) clusterNumber++
 			//int clusterNumber =  0//index % IndexInfo.NUMBER_OF_CLUSTERS
-			
+
 			assert clusterNumber < IndexInfo.NUMBER_OF_CLUSTERS
 
 			bqbList[clusterNumber] = bqbList[clusterNumber] ?: new BooleanQuery.Builder()
@@ -63,18 +106,18 @@ class QueryListFromChromosome {
 				if (z==4){
 					//if ()
 					assert gene <= notWords20NG5.size()
-					String wrd = notWords20NG5[gene]
-					TermQuery tq = new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, wrd))
+					//String wrd = notWords20NG5[gene]
+					TermQuery tq = new TermQuery(notWords20NG5[gene])
 					bqbList[clusterNumber].add(tq,BooleanClause.Occur.MUST_NOT)
 				} else {
-					if (genes.add(gene) && gene < wordArray.size()) {
-						String wrd = wordArray[gene]
-						TermQuery tq = new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, wrd))
+					if (genes.add(gene) && gene < termArray.size()) {
+						//String wrd = termArray[gene]
+						TermQuery tq = new TermQuery(termArray[gene])
 						bqbList[clusterNumber].add(tq,BooleanClause.Occur.SHOULD)
 					}
 				}
 			}
-		
+
 		}
 		return bqbList
 	}
@@ -88,12 +131,12 @@ class QueryListFromChromosome {
 		intVectorIndividual.genome.eachWithIndex {gene, index ->
 
 			int clusterNumber =  index % IndexInfo.NUMBER_OF_CLUSTERS
-			String wrd = wordArray[gene]
+			//String wrd = termArray[gene]
 			bqbList[clusterNumber] = bqbList[clusterNumber] ?: new BooleanQuery.Builder()
 
-			if (gene < wordArray.size() && gene >= 0){
+			if (gene < termArray.size() && gene >= 0){
 
-				TermQuery tq = new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, wrd))
+				TermQuery tq = new TermQuery( termArray[gene])
 
 				if (index >= (intVectorIndividual.genome.size() -  IndexInfo.NUMBER_OF_CLUSTERS )){
 					bqbList[clusterNumber].add(tq,BooleanClause.Occur.MUST_NOT)
@@ -127,9 +170,9 @@ class QueryListFromChromosome {
 				bqbL[clusterNumber].add(allQ,BooleanClause.Occur.SHOULD)
 			}
 
-			if (gene < wordArray.size() && gene >= 0 && genes.add(gene)){
+			if (gene < termArray.size() && gene >= 0 && genes.add(gene)){
 
-				String word = wordArray[gene]
+				String word = termArray[gene]
 				TermQuery tq = new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, word))
 				bqbL[clusterNumber].add(tq,BooleanClause.Occur.MUST_NOT)
 			}
@@ -149,25 +192,27 @@ class QueryListFromChromosome {
 
 		def andPairSet =[] as Set
 		def clusterSets =[]
-		def word0=null, word1=null
+		def term0=null, term1=null
 		int qNumber=0;
 
 		def bqbList = []
 
 		intVectorIndividual.genome.eachWithIndex {gene, index ->
-			if (gene >wordArray.size() || gene < 0)
-				gene =0;
+			assert gene < termArray.size()
 
-			if (word0==null){
-				word0 = wordArray[gene]
+			//if (gene >termArray.size() || gene < 0)
+			//	gene =0;
+
+			if (term0==null){
+				term0 = termArray[gene]
 			} else {
-				word1 = wordArray[gene]
+				term1 = termArray[gene]
 
 				int clusterNumber =  qNumber % IndexInfo.NUMBER_OF_CLUSTERS
 				qNumber++
 
-				def wrds=[word0, word1] as Set
-				if (word0==word1 || !andPairSet.add(wrds))
+				def wrds=[term0, term1] as Set
+				if (term0==term1 || !andPairSet.add(wrds))
 				{
 					duplicateCount= duplicateCount + 1;
 				}
@@ -176,7 +221,7 @@ class QueryListFromChromosome {
 				if (! clusterSets[clusterNumber]){
 					clusterSets[clusterNumber]= [] as Set
 				}else
-				if (!  (clusterSets[clusterNumber].contains(word0) ||clusterSets[clusterNumber].contains(word1) ) )
+				if (!  (clusterSets[clusterNumber].contains(term0) ||clusterSets[clusterNumber].contains(term1) ) )
 					graphPen = graphPen + 1
 
 				//check that query will be in tree form (for Viz)
@@ -184,12 +229,12 @@ class QueryListFromChromosome {
 				//		if (! ( (clusterSets[clusterNumber].contains(word0) && !clusterSets[clusterNumber].contains(word1))
 				//		|| (clusterSets[clusterNumber].contains(word1) && !clusterSets[clusterNumber].contains(word0)) )) treePen = treePen + 1;
 
-				clusterSets[clusterNumber].add(word0)
-				clusterSets[clusterNumber].add(word1)
+				clusterSets[clusterNumber].add(term0)
+				clusterSets[clusterNumber].add(term1)
 
 				BooleanQuery.Builder subbqb = new BooleanQuery.Builder();
-				subbqb.add(new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, word0)), BooleanClause.Occur.MUST);
-				subbqb.add(new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, word1)), BooleanClause.Occur.MUST);
+				subbqb.add(new TermQuery(term0), BooleanClause.Occur.MUST);
+				subbqb.add(new TermQuery( term1), BooleanClause.Occur.MUST);
 				BooleanQuery subq = subbqb.build();
 
 				bqbList[clusterNumber] = bqbList[clusterNumber] ?: new BooleanQuery.Builder()
@@ -203,7 +248,7 @@ class QueryListFromChromosome {
 				}
 
 				bqbList[clusterNumber].add(subq, BooleanClause.Occur.SHOULD);
-				word0=null;
+				term0=null;
 			}
 		}
 		return [bqbList, duplicateCount, lowSubqHits]

@@ -78,9 +78,7 @@ public class ImportantWords {
 
 		while((text = termsEnum.next()) != null) {
 
-			def word = text.utf8ToString()
-			
-		
+			def word = text.utf8ToString() 		
 
 			final Term t = new Term(IndexInfo.FIELD_CONTENTS, word);
 
@@ -152,7 +150,7 @@ public class ImportantWords {
 		return wordList.toArray();
 	}
 
-	public String[] getTFIDFWordList(){
+	public Term[] getTFIDFWordList(){
 
 		println "Important words terms.getDocCount: ${terms.getDocCount()}"
 
@@ -193,14 +191,12 @@ public class ImportantWords {
 					tfidfTotal +=tfidf
 				}
 			}
-			wordMap+= [(word) : tfidfTotal]
+			wordMap+= [(t) : tfidfTotal]
 		}
 
 		wordMap= wordMap.sort{a, b -> a.value <=> b.value}
-		List wordList = wordMap.keySet().toList().take(MAX_WORDLIST_SIZE)
-
-		println "tfidf map size: ${wordMap.size()}  wordlist size: ${wordList.size()}  wordlist: $wordList"
-
-		return wordList.toArray();
+		List termList = wordMap.keySet().toList().take(MAX_WORDLIST_SIZE)
+		println "tfidf map size: ${wordMap.size()}  wordlist size: ${termList.size()}  wordlist: $termList"
+		return termList.toArray();
 	}
 }

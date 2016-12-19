@@ -27,16 +27,16 @@ class Index20NG {
 	// Create Lucene index in this directory
 	def indexPath =
 
-//	'indexes/20NG3SpaceHockeyChristian'
-	'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6Stem'
+	'indexes/20NG3SpaceHockeyChristianL6Stem'
+//	'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6Stem'
 
 	// Index files in this directory
 	def docsPath =
 	//  /C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns/
 	//  /C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian/
 
-	//  /C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian/
-	/C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian/
+	  /C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian/
+	// /C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian/
 
 	Path path = Paths.get(indexPath)
 	Directory directory = FSDirectory.open(path)
@@ -92,7 +92,7 @@ class Index20NG {
 		//	def catName = f.getCanonicalPath().drop(70).take(30).replaceAll(/[^a-z.]/, "")
 
 		def n = catsFreq.get((catName)) ?: 0
-		if (n < 100){
+		if (n < 1000){
 			catsFreq.put((catName), n + 1)
 
 			Field catNameField = new StringField(IndexInfo.FIELD_CATEGORY_NAME, catName, Field.Store.YES);
