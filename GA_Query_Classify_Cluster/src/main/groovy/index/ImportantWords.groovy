@@ -78,7 +78,7 @@ public class ImportantWords {
 
 		while((text = termsEnum.next()) != null) {
 
-			def word = text.utf8ToString() 		
+			def word = text.utf8ToString()
 
 			final Term t = new Term(IndexInfo.FIELD_CONTENTS, word);
 
@@ -155,23 +155,22 @@ public class ImportantWords {
 		println "Important words terms.getDocCount: ${terms.getDocCount()}"
 
 		def wordMap = [:]
-		BytesRef termbr;	
-		
-		while((termbr = termsEnum.next()) != null) {		
-						
-			def word = termbr.utf8ToString()
+		BytesRef termbr;
+
+		while((termbr = termsEnum.next()) != null) {
+
 			Term t = new Term(IndexInfo.FIELD_CONTENTS, termbr);
-			
+			String word = termbr.utf8ToString()
 			char firstChar = word.charAt(0)
-			int df = indexSearcher.getIndexReader().docFreq(t)		
+			int df = indexSearcher.getIndexReader().docFreq(t)
 
 			if (
-			df < 3
-			|| stopSet.contains(t.text())
-			|| t.text().contains("'")
-			|| t.text().length() < 2
-			|| !firstChar.isLetter()
-			|| t.text().contains(".")		
+			  df < 3
+			  || stopSet.contains(t.text())
+			  || t.text().contains("'")
+			  || t.text().length() < 2
+			  || !firstChar.isLetter()
+			//  || t.text().contains(".")
 			)
 				continue;
 

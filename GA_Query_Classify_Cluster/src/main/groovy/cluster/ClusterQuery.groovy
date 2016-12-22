@@ -32,7 +32,7 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 	enum QueryType {
 		OR, ORNOT, AND, ALLNOT, ORNOTEVOLVED, SpanFirst
 	}
-	final QueryType queryType = QueryType.OR
+	final QueryType queryType = QueryType.ORNOT
 
 	public void setup(final EvolutionState state, final Parameter base) {
 
@@ -85,7 +85,7 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 		fitness.totalHits=0
 		fitness.missedDocs =0
 		fitness.zeroHitsCount =0
-		fitness.duplicateCount = duplicateCount
+		fitness.duplicateCount = 0//duplicateCount
 
 		def qMap = [:]
 		def allHits = [] as Set
@@ -132,7 +132,6 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 			}
 		}
 
-
 		fitness.queryMap = qMap.asImmutable()
 		fitness.scoreOnly = fitness.positiveScoreTotal - fitness.negativeScoreTotal
 		fitness.totalHits = allHits.size()
@@ -147,8 +146,9 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 				//major penalty for query returning nothing or empty query
 				(fitness.zeroHitsCount * 100) + fitness.coreClusterPenalty + fitness.duplicateCount + fitness.lowSubqHits + 1;
 
-		fitness.baseFitness = fitness.scorePlus1000 / negIndicators
-
+				fitness.baseFitness = (fitness.scorePlus1000 / negIndicators) * fitness.fraction * fitness.fraction
+		//fitness.baseFitness = (fitness.scorePlus1000 / negIndicators) 
+		//fitness.baseFitness =  fitness.scoreOnly  //(fitness.scoreOnly / negIndicators)// - fitness.missedDocs
 		//force positive
 		//		if (fitness.scoreOnly> 0) {
 		//			fitness.baseFitness = fitness.scoreOnly / negIndicators

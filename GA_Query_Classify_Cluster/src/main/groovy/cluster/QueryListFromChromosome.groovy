@@ -35,7 +35,7 @@ class QueryListFromChromosome {
 
 			if (gene < termArray.size() && gene >= 0 && genes.add(gene)){
 
-				String word = termArray[gene]
+				//String word = termArray[gene]
 				TermQuery tq = new TermQuery(termArray[gene])
 				bqbL[clusterNumber].add(tq,BooleanClause.Occur.SHOULD)
 			}

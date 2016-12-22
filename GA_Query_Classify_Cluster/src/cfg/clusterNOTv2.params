@@ -39,22 +39,22 @@ pop.subpop.2.species.segment.1.start = 8
 pop.subpop.2.species.segment.2.start = 16
 
 pop.subpop.0.species.segment.0.min-gene = -1
-pop.subpop.0.species.segment.0.max-gene = 50
+pop.subpop.0.species.segment.0.max-gene = 100
 pop.subpop.0.species.segment.1.min-gene = -1
-pop.subpop.0.species.segment.1.max-gene = 200
+pop.subpop.0.species.segment.1.max-gene = 100
 pop.subpop.0.species.segment.2.min-gene = -1
-pop.subpop.0.species.segment.2.max-gene = 11  
+pop.subpop.0.species.segment.2.max-gene = 50  
 
 pop.subpop.1.species.segment.0.min-gene = -1
-pop.subpop.1.species.segment.0.max-gene = 50
+pop.subpop.1.species.segment.0.max-gene = 100
 pop.subpop.1.species.segment.1.min-gene = -1
-pop.subpop.1.species.segment.1.max-gene = 200
+pop.subpop.1.species.segment.1.max-gene = 100
 pop.subpop.1.species.segment.2.min-gene = -1
-pop.subpop.1.species.segment.2.max-gene = 11  
+pop.subpop.1.species.segment.2.max-gene = 50  
 
 pop.subpop.2.species.segment.0.min-gene = -1
 pop.subpop.2.species.segment.0.max-gene = 50
 pop.subpop.2.species.segment.1.min-gene = -1
-pop.subpop.2.species.segment.1.max-gene = 200
+pop.subpop.2.species.segment.1.max-gene = 100
 pop.subpop.2.species.segment.2.min-gene = -1
-pop.subpop.2.species.segment.2.max-gene = 11  
+pop.subpop.2.species.segment.2.max-gene = 50  
