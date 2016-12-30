@@ -17,7 +17,7 @@ class QueryListFromChromosome {
 
 	private IndexSearcher searcher = IndexInfo.instance.indexSearcher
 	private final ImportantWords iw = new ImportantWords();
-	private final Term[] termArray = iw.getTFIDFWordList()
+	private final TermQuery[] termQueryArray = iw.getTFIDFWordList()
 	//terms from previous run  classic4
 	def private final notWords = ["pressure", "layer", "heat", "boundary", "computer", "library", "retrieval", "information", "cells", "patients", "blood", "algorithm"] as String[]
 	def private final notWords20NG5 = ["jesus", "christ", "god", "windows", "high", "nasa", "orbit", "hockey", "nhl", "players", "sale"]
@@ -33,11 +33,8 @@ class QueryListFromChromosome {
 			int clusterNumber =  index % IndexInfo.NUMBER_OF_CLUSTERS
 			bqbL[clusterNumber] = bqbL[clusterNumber] ?: new BooleanQuery.Builder()
 
-			if (gene < termArray.size() && gene >= 0 && genes.add(gene)){
-
-				//String word = termArray[gene]
-				TermQuery tq = new TermQuery(termArray[gene])
-				bqbL[clusterNumber].add(tq,BooleanClause.Occur.SHOULD)
+			if (gene < termQueryArray.size() && gene >= 0 && genes.add(gene)){
+				bqbL[clusterNumber].add(termQueryArray[gene],BooleanClause.Occur.SHOULD)
 			}
 		}
 		return bqbL

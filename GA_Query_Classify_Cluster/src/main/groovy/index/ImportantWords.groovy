@@ -35,7 +35,7 @@ import org.apache.lucene.util.BytesRef
 public class ImportantWords {
 
 	public final static int SPAN_FIRST_MAX_END = 300;
-	private final static int MAX_WORDLIST_SIZE = 300;
+	private final static int MAX_TERMLIST_SIZE = 300;
 
 	private final IndexSearcher indexSearcher
 	private final IndexReader indexReader
@@ -144,13 +144,13 @@ public class ImportantWords {
 
 		wordMap= wordMap.sort{a, b -> b.value <=> a.value}
 
-		List wordList = wordMap.keySet().toList().take(MAX_WORDLIST_SIZE)
+		List wordList = wordMap.keySet().toList().take(MAX_TERMLIST_SIZE)
 		println "map size: ${wordMap.size()}  List size is ${wordList.size()}  list is $wordList"
 
 		return wordList.toArray();
 	}
 
-	public Term[] getTFIDFWordList(){
+	public TermQuery[] getTFIDFWordList(){
 
 		println "Important words terms.getDocCount: ${terms.getDocCount()}"
 
@@ -194,8 +194,8 @@ public class ImportantWords {
 		}
 
 		wordMap= wordMap.sort{a, b -> a.value <=> b.value}
-		List termList = wordMap.keySet().toList().take(MAX_WORDLIST_SIZE)
-		println "tfidf map size: ${wordMap.size()}  wordlist size: ${termList.size()}  wordlist: $termList"
-		return termList.toArray();
+		TermQuery[] termQueryList = wordMap.keySet().toList().take(MAX_TERMLIST_SIZE).collect {new TermQuery(it)}.asImmutable()
+		println "tfidf map size: ${wordMap.size()}  termQuerylist size: ${termQueryList.size()}  termQuerylist: $termQueryList"
+		return termQueryList
 	}
 }

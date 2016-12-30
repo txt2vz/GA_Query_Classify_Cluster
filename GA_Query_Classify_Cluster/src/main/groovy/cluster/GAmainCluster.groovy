@@ -11,8 +11,8 @@ class GAmainCluster extends Evolve {
 	private final String parameterFilePath = 
 //	"src/cfg/clusterWithNOTordC5.params"
 	 //"src/cfg/clusterWithNOTsetC5.params" 
-//	  "src/cfg/cluster.params"
-	'src/cfg/clusterNOTv2.params'
+	  "src/cfg/cluster.params"
+//	'src/cfg/clusterNOTv2.params'
 	
 //	'src/cfg/clusterWithNOTset.params'
 //	"src/cfg/clusterWithSpanFirst.params"

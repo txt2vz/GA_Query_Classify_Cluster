@@ -32,7 +32,7 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 	enum QueryType {
 		OR, ORNOT, AND, ALLNOT, ORNOTEVOLVED, SpanFirst
 	}
-	final QueryType queryType = QueryType.ORNOT
+	final QueryType queryType = QueryType.OR
 
 	public void setup(final EvolutionState state, final Parameter base) {
 
