@@ -26,8 +26,8 @@ class ImportantWordsSpec extends spock.lang.Specification {
 		def tfidfList = iw.getTFIDFWordList()
 
 		then:
-		tfidfList[0] == 'space'
-		tfidfList[2] == 'god'
-		tfidfList[4] == 'jesus'
+		tfidfList[0].getTerm().text() == 'space'
+		tfidfList[2].getTerm().text() == 'god'
+		tfidfList[4].getTerm().text() == 'jesus'
 	}
 }
