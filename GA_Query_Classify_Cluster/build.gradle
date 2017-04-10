@@ -21,6 +21,11 @@ task(runClustering, dependsOn: 'classes', type: JavaExec) {
 	classpath = sourceSets.main.runtimeClasspath
 }
 
+task(runGPClustering, dependsOn: 'classes', type: JavaExec) {
+	main = 'cluster.GPmainCluster'
+	classpath = sourceSets.main.runtimeClasspath
+}
+
 task(runClassifier, dependsOn: 'classes', type: JavaExec) {
 	main = 'classify.GAmainClassify'
 	classpath = sourceSets.main.runtimeClasspath
@@ -33,6 +38,11 @@ configure(runClassifier) {
 configure(runClustering) {
 	group = 'run'
 	description = 'Run GA clustering'
+}
+
+configure(runGPClustering) {
+	group = 'run'
+	description = 'Run GP clustering'
 }
 
 task(indexCrisisData, dependsOn: 'classes', type: JavaExec) {

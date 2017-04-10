@@ -35,7 +35,7 @@ public class OR extends Problem implements SimpleProblemForm, HitCounts {
 
 		super.setup(state, base);
 
-		println("Total train docs in OR for cat:  " + IndexInfo.instance.getCategoryNumber() + " "
+		println("Total train docs in OR2 for cat:  " + IndexInfo.instance.getCategoryNumber() + " "
 				+ IndexInfo.instance.totalTrainDocsInCat + " Total test docs for cat "
 				+ IndexInfo.instance.totalTestDocsInCat);
 

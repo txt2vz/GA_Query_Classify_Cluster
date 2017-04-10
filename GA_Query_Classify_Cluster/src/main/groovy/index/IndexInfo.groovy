@@ -29,17 +29,17 @@ class IndexInfo {
 							   FIELD_PATH = 'path',
 							   FIELD_TEST_TRAIN = 'test_train',
 							   FIELD_CATEGORY_NUMBER = 'categoryNumber';
-	public static final int NUMBER_OF_CLUSTERS =  5 , NUMBER_OF_CATEGORIES = 10
+	public static final int NUMBER_OF_CLUSTERS =  3 , NUMBER_OF_CATEGORIES = 10
 
 	String 	pathToIndex =	
      // 'indexes/crisis3FireBombFloodL6'
 	// 'indexes/classic4_500L6'
-	 'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6'
+//	 'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6'
 //	 'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6Stem'
 	 
 	// 'indexes/20NG3SpaceHockeyChristianL6Stem'
 
-    // 'indexes/20NG3SpaceHockeyChristianL6'
+     'indexes/20NG3SpaceHockeyChristianL6'
 
 	IndexReader indexReader
 	IndexSearcher indexSearcher

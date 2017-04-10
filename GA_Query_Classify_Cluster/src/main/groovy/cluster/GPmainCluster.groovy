@@ -5,26 +5,15 @@ import ec.EvolutionState
 import ec.Evolve
 import ec.Fitness
 import ec.util.ParameterDatabase
+import clusterGP.GPfit
 
-class GAmainCluster extends Evolve {
+class GPmainCluster extends Evolve {
 
-	private final String parameterFilePath = 
-	
-	 'src/cfg/cGP.params'
-	// "src/cfg/cluster.params"
-//	"src/cfg/clusterWithNOTordC5.params"
-	 //"src/cfg/clusterWithNOTsetC5.params" 
-
-//	'src/cfg/clusterNOTv2.params'
-	
-//	'src/cfg/clusterWithNOTset.params'
-//	"src/cfg/clusterWithSpanFirst.params"
-	//  'src/cfg/clusterGP.params'
-	//  'src/cfg/cGP.params'
+	private final String parameterFilePath = 'src/cfg/cGP.params'
 	
 	private final int NUMBER_OF_JOBS = 1   
 
-	public GAmainCluster(){ 
+	public GPmainCluster(){ 
 		EvolutionState state;
 		IndexInfo.instance.setIndex() 
 		ParameterDatabase parameters  = null;
@@ -47,7 +36,8 @@ class GAmainCluster extends Evolve {
 			state.run(EvolutionState.C_STARTED_FRESH);
 			
 			def popSize=0;
-			ClusterFit cfit = (ClusterFit) state.population.subpops.collect {sbp -> 
+		//	GPfit cfit = (GPfit) state.population.subpops.collect {sbp -> 
+			ClusterFit cfit = (ClusterFit) state.population.subpops.collect {sbp ->
 				popSize= popSize + sbp.individuals.size()
 				sbp.individuals.max() {ind ->
 					ind.fitness.fitness()
@@ -66,6 +56,6 @@ class GAmainCluster extends Evolve {
 	}
 
 	static main (args){
-		new GAmainCluster()
+		new GPmainCluster()
 	}
 }

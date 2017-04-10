@@ -1,44 +1,33 @@
-package cluster;
+package clusterGP
 
-import index.ImportantWords
-import index.IndexInfo
-import org.apache.lucene.index.Term
 import org.apache.lucene.search.BooleanClause
 import org.apache.lucene.search.BooleanQuery
 import org.apache.lucene.search.IndexSearcher
 import org.apache.lucene.search.Query
 import org.apache.lucene.search.ScoreDoc
-import org.apache.lucene.search.TermQuery
 import org.apache.lucene.search.TopDocs
 
-import ec.EvolutionState
-import ec.Individual
-import ec.Problem
-import ec.simple.SimpleFitness
-import ec.simple.SimpleProblemForm
-import ec.util.Parameter
-import ec.vector.IntegerVectorIndividual
+import cluster.*
+import ec.*;
+import ec.gp.*;
+import ec.gp.koza.*;
+import ec.simple.*;
+import ec.util.*;
+import index.*
 
-/**
- * To generate sets of queries for clustering
- */
-
-public class ClusterQuery extends Problem implements SimpleProblemForm {
+public class CqGP extends GPProblem implements SimpleProblemForm {
 
 	private IndexSearcher searcher = IndexInfo.instance.indexSearcher;
 	private final int coreClusterSize=20
-	private QueryListFromChromosome queryListFromChromosome
 
-	enum QueryType {
-		OR, ORNOT, AND, ALLNOT, ORNOTEVOLVED, SpanFirst, GP
-	}
-	final QueryType queryType = QueryType.OR
-
-	public void setup(final EvolutionState state, final Parameter base) {
-
+	public void setup(final EvolutionState state,
+			final Parameter base) {
 		super.setup(state, base);
-		println "Total docs for ClusterQuery.groovy   " + IndexInfo.instance.indexReader.maxDoc()
-		queryListFromChromosome = new QueryListFromChromosome()
+
+		// verify our input is the right class (or subclasses from it)
+		if (!(input instanceof QueryData))
+			state.output.fatal("GPData class must subclass from " + QueryData.class,
+					base.push(P_DATA), null);
 	}
 
 	public void evaluate(final EvolutionState state, final Individual ind, final int subpopulation,
@@ -48,51 +37,54 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 			return;
 
 		ClusterFit fitness = (ClusterFit) ind.fitness;
-		IntegerVectorIndividual intVectorIndividual = (IntegerVectorIndividual) ind;
+		GPIndividual gpInd= (GPIndividual) ind;
+		QueryData input = (QueryData)(this.input);
 
-		//list of lucene Boolean Query Builders
-		def bqbList
-		int duplicateCount = 0, lowSubqHits=0
-		switch (queryType) {
-			case QueryType.OR :
-				bqbList = queryListFromChromosome.getORQueryList(intVectorIndividual)
-				break;
-			case QueryType.AND :
-				(bqbList, duplicateCount, lowSubqHits) = queryListFromChromosome.getANDQL(intVectorIndividual)
-				break;
-			case QueryType.ORNOT :
-				(bqbList, duplicateCount) = queryListFromChromosome.getORNOTQL(intVectorIndividual)
-				break;
-			case QueryType.ALLNOT :
-				bqbList = queryListFromChromosome.getALLNOTQL(intVectorIndividual)
-				break;
-			case QueryType.ORNOTEVOLVED :
-				bqbList = queryListFromChromosome.getORNOTfromEvolvedList(intVectorIndividual)
-				break;
-			case QueryType.SpanFirst :
-				(bqbList, duplicateCount)  = queryListFromChromosome.getSpanFirstQL(intVectorIndividual)
-				break;
-		}
-		assert bqbList.size == IndexInfo.NUMBER_OF_CLUSTERS
+//		((GPIndividual)ind).trees[0].child.eval(
+//				state,threadnum,input,stack,((GPIndividual)ind),this);
+			
+			gpInd.trees[0].child.eval(
+				state,threadnum,input,stack,((GPIndividual)ind),this);
+
+		def bqbList = input.bqbArray
+		
+	//	assert bqbList.size == IndexInfo.NUMBER_OF_CLUSTERS
+
+	//	println  "bqblist size " + bqbList.size()
+	//	println "Bqublist $bqbList"
+
 		final int hitsPerPage = IndexInfo.instance.indexReader.maxDoc()
 
 		fitness.positiveScoreTotal=0
 		fitness.negativeScoreTotal=0
 		fitness.positiveHits=0
 		fitness.negativeHits=0
-		fitness.lowSubqHits=lowSubqHits
+		//fitness.lowSubqHits=lowSubqHits
 		fitness.coreClusterPenalty=0
 		fitness.totalHits=0
 		fitness.missedDocs =0
 		fitness.zeroHitsCount =0
 		fitness.duplicateCount = 0//duplicateCount
 
+		boolean dummy = false
+
 		def qMap = [:]
 		def allHits = [] as Set
+		
+		if (bqbList.size() != IndexInfo.NUMBER_OF_CLUSTERS) {
+			println "bqblist size error"
+			dummy = true
+		}
 
 		bqbList.eachWithIndex {bqb, index ->
 
 			def q = bqb.build()
+			
+			if ( q.toString(IndexInfo.FIELD_CONTENTS).contains("DummyXX") || q==null || q.toString(IndexInfo.FIELD_CONTENTS) == '' ){		
+				
+				//println "xxxxxxinfsdl;kj;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"		
+				dummy = true;
+			}
 			def otherdocIdSet= [] as Set
 			def otherQueries = bqbList - bqb
 
@@ -130,9 +122,13 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 					fitness.positiveScoreTotal +=d.score
 				}
 			}
-		}
-
+		}		
+		
 		fitness.queryMap = qMap.asImmutable()
+		if (fitness.queryMap.size() != IndexInfo.NUMBER_OF_CLUSTERS) {
+			dummy = true
+		}		
+		
 		fitness.scoreOnly = fitness.positiveScoreTotal - fitness.negativeScoreTotal
 		fitness.totalHits = allHits.size()
 		fitness.fraction = fitness.totalHits / IndexInfo.instance.indexReader.maxDoc()
@@ -146,8 +142,8 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 				//major penalty for query returning nothing or empty query
 				(fitness.zeroHitsCount * 100) + fitness.coreClusterPenalty + fitness.duplicateCount + fitness.lowSubqHits + 1;
 
-				fitness.baseFitness = (fitness.scorePlus1000 / negIndicators) * fitness.fraction * fitness.fraction
-		//fitness.baseFitness = (fitness.scorePlus1000 / negIndicators) 
+		fitness.baseFitness = (fitness.scorePlus1000 / negIndicators) * fitness.fraction * fitness.fraction
+		//fitness.baseFitness = (fitness.scorePlus1000 / negIndicators)
 		//fitness.baseFitness =  fitness.scoreOnly  //(fitness.scoreOnly / negIndicators)// - fitness.missedDocs
 		//force positive
 		//		if (fitness.scoreOnly> 0) {
@@ -158,14 +154,19 @@ public class ClusterQuery extends Problem implements SimpleProblemForm {
 
 		//rawfitness used by ECJ for evaluation
 		def rawfitness = fitness.baseFitness
+		if (dummy || fitness.zeroHitsCount >0 ) 
+			{
+				rawfitness = 0
+				
+			}
 
-		((SimpleFitness) intVectorIndividual.fitness).setFitness(state, rawfitness, false)
+		//fitness.setFitness(state, rawFitness, false)
+		//((GPIndividual)ind)
+		((SimpleFitness) gpInd.fitness).setFitness(state, rawfitness, false)
+
+		//	((SimpleFitness) intVectorIndividual.fitness).setFitness(state, rawfitness, false)
+	//	gpInd.evaluated = true;
+
 		ind.evaluated = true;
-
-		// to improve improve recall?
-		//fitness.baseFitness * fitness.fraction
-
-		//baseFitness * (1/(Math.log(missedDocs)))
-		//baseFitness * (1/(Math.pow(1.01,missedDocs)))
 	}
 }

@@ -27,7 +27,7 @@ class QueryListFromChromosome {
 		//list of boolean queries
 		def bqbL = []
 		// set of genes - for duplicate checking
-		def genes = [] as Set
+		def genes = [] as Set 
 
 		intVectorIndividual.genome.eachWithIndex {gene, index ->
 			int clusterNumber =  index % IndexInfo.NUMBER_OF_CLUSTERS

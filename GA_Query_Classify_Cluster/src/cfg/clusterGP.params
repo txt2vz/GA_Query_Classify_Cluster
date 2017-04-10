@@ -1,0 +1,105 @@
+parent.0 = koza.params
+
+seed=time
+seed.0=time
+seed.1=time
+seed.2=time
+seed.3=time
+seed.4=time
+seed.5=time
+seed.6=time
+seed.7=time
+
+evalthreads = 				4
+breedthreads = 				4
+
+stat = clusterGP.ClusterGPStatistics
+stat.file = statDump/out.stat
+generations =  10
+
+eval.problem = clusterGP.ClusterQueryGP
+eval.problem.data = clusterGP.QueryData
+
+pop.subpop.0 = ec.Subpopulation
+pop.subpop.0.size = 8
+pop.subpop.0.species.fitness = cluster.ClusterFit
+
+gp.type.a.size = 3
+gp.type.a.0.name = tq
+gp.type.a.1.name = bqb
+gp.type.a.2.name = bqbarray
+
+gp.tc.size = 1
+gp.tc.0 = ec.gp.GPTreeConstraints
+gp.tc.0.name = tc0
+gp.tc.0.fset = f0
+gp.tc.0.returns = bqbarray
+
+gp.nc.size = 7
+
+gp.nc.0 = ec.gp.GPNodeConstraints
+gp.nc.0.name = tq
+gp.nc.0.returns = tq
+gp.nc.0.size = 0
+
+gp.nc.1 = ec.gp.GPNodeConstraints
+gp.nc.1.name = dummybq
+gp.nc.1.returns = bqb
+gp.nc.1.size = 0
+
+gp.nc.2 = ec.gp.GPNodeConstraints
+gp.nc.2.name = bqb2tq
+gp.nc.2.returns = bqb
+gp.nc.2.size = 2
+gp.nc.2.child.0 = tq
+gp.nc.2.child.1 = tq
+
+gp.nc.3 = ec.gp.GPNodeConstraints
+gp.nc.3.name = bq1tq
+gp.nc.3.returns = bqb
+gp.nc.3.size = 1
+gp.nc.3.child.0 = tq
+
+gp.nc.4 = ec.gp.GPNodeConstraints
+gp.nc.4.name = bqb3bqb
+gp.nc.4.returns = bqbarray
+gp.nc.4.size = 3
+gp.nc.4.child.0 = bqb
+gp.nc.4.child.1 = bqb
+gp.nc.4.child.2 = bqb
+
+gp.nc.5 = ec.gp.GPNodeConstraints
+gp.nc.5.name = dummytq
+gp.nc.5.returns = tq
+gp.nc.5.size = 1
+gp.nc.5.child.0 = tq
+
+gp.nc.6 = ec.gp.GPNodeConstraints
+gp.nc.6.name = dummybqbarray
+gp.nc.6.returns = bqbarray
+gp.nc.6.size = 0
+
+
+# We have one function set, of class GPFunctionSet
+gp.fs.size = 1
+gp.fs.0 = ec.gp.GPFunctionSet
+gp.fs.0.name = f0
+gp.fs.0.size = 8 
+
+gp.fs.0.func.0 = clusterGP.TQ0
+gp.fs.0.func.0.nc = tq
+gp.fs.0.func.1 = clusterGP.TQ1
+gp.fs.0.func.1.nc = tq
+gp.fs.0.func.2 = clusterGP.TQ2
+gp.fs.0.func.2.nc = tq
+gp.fs.0.func.3 = clusterGP.DummyBQ
+gp.fs.0.func.3.nc = dummybq
+gp.fs.0.func.4 = clusterGP.OR2
+gp.fs.0.func.4.nc = bqb2tq
+gp.fs.0.func.5 = clusterGP.PROG3
+gp.fs.0.func.5.nc = bqb3bqb
+gp.fs.0.func.6 = clusterGP.DummyTQ
+gp.fs.0.func.6.nc = dummytq
+gp.fs.0.func.7 = clusterGP.DummyBQBArray
+gp.fs.0.func.7.nc = dummybqbarray
+

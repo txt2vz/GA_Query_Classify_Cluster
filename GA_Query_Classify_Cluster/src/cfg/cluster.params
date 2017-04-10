@@ -8,7 +8,8 @@ stat = cluster.ClusterGAStatistics
 
 evalthreads = 4 
 breedthreads = 4
-generations =  1000
+generations = 10
+
 breed.elite.0 = 1
 
 #pop.subpops = 1

@@ -14,9 +14,10 @@ seed.7=time
 
 evalthreads = 				4
 breedthreads = 				4
+generations =  10
 
-eval.problem = ecj.ClusterAnd
-#stat = cluster.ClusterGAStatistics
+eval.problem = cluster.ClusterQuery
+stat = cluster.ClusterGAStatistics
 stat.file = statDump/out.stat
 
 select.tournament.size = 3

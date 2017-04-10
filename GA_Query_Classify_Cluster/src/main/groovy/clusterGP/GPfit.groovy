@@ -1,4 +1,4 @@
-package cluster;
+package clusterGP;
 
 import ec.gp.koza.KozaFitness
 import ec.simple.SimpleFitness
@@ -22,8 +22,7 @@ import org.apache.lucene.search.TotalHitCountCollector
  * @author Laurie 
  */
 
-public class ClusterFit extends SimpleFitness {
-
+public class GPfit extends KozaFitness {
 	def queryMap = [:]
 	def positiveScoreTotal=0 as float
 	def negativeScoreTotal=0 as float
@@ -48,7 +47,7 @@ public class ClusterFit extends SimpleFitness {
 	final int hitsPerPage=IndexInfo.instance.indexReader.maxDoc()
 
 	String queryShort (){
-		def s="queryMap.size ${queryMap.size()} \n"
+		def s=""
 		queryMap.keySet().eachWithIndex {q, index ->
 			if (index>0) s+='\n';
 			s +=  "ClusterQuery: $index :  ${queryMap.get(q)}  ${q.toString(IndexInfo.FIELD_CONTENTS)}"
@@ -99,8 +98,8 @@ public class ClusterFit extends SimpleFitness {
 			println "catsFreq: $catsFreq cats max: $catMax "
 
 			//purity measure - check this is correct?
-            //def purity = (hits.size()==0) ? 0 : (1 / hits.size())  * catMax.value
-	        //println "purity:  $purity"
+			//def purity = (hits.size()==0) ? 0 : (1 / hits.size())  * catMax.value
+			//println "purity:  $purity"
 
 			if (catMax !=0){
 				TotalHitCountCollector totalHitCollector  = new TotalHitCountCollector();
@@ -125,7 +124,7 @@ public class ClusterFit extends SimpleFitness {
 				//resultsOut << "Purity: $purity Job: $job \n"
 			}
 		}
-	    
+		
 		def averageF1 = (f1list) ? f1list.sum()/ IndexInfo.NUMBER_OF_CLUSTERS : 0
 		def averageRecall = (recallList) ? recallList.sum()/ IndexInfo.NUMBER_OF_CLUSTERS : 0
 		def averagePrecision =(precisionList) ? precisionList.sum()/ IndexInfo.NUMBER_OF_CLUSTERS :0
@@ -145,7 +144,7 @@ public class ClusterFit extends SimpleFitness {
 		//Formatter csvOut = new Formatter(fcsv);
 		if (!appnd){
 			final String fileHead = "gen, job, popSize, fitness, averageF1, averagePrecision, averageRecall, query" + '\n';
-		//	csvOut.format("%s", fileHead)			
+		//	csvOut.format("%s", fileHead)
 		}
 //		csvOut.format(
 //				"%s, %s, %s, %.3f, %.3f, %.3f, %.3f, %s",
@@ -175,6 +174,6 @@ public class ClusterFit extends SimpleFitness {
 	}
 
 	public String toString(int gen) {
-		return "Gen: $gen ClusterQuery Fitness: ${this.fitness} qMap: $queryMap}"
+		return "Gen: $gen qMap: $queryMap}"   //  ClusterQuery Fitness: ${this.fitness} qMap: $queryMap}"
 	}
 }
