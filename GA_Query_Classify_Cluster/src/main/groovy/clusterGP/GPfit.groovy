@@ -50,7 +50,7 @@ public class GPfit extends KozaFitness {
 		def s=""
 		queryMap.keySet().eachWithIndex {q, index ->
 			if (index>0) s+='\n';
-			s +=  "ClusterQuery: $index :  ${queryMap.get(q)}  ${q.toString(IndexInfo.FIELD_CONTENTS)}"
+			s +=  "ClusterQueryGA: $index :  ${queryMap.get(q)}  ${q.toString(IndexInfo.FIELD_CONTENTS)}"
 		}
 		return s
 	}
@@ -69,7 +69,7 @@ public class GPfit extends KozaFitness {
 			def qString = q.toString(IndexInfo.FIELD_CONTENTS)
 
 			println "***********************************************************************************"
-			messageOut = "ClusterQuery: $index hits: ${hits.length} Query:  $qString \n"
+			messageOut = "ClusterQueryGA: $index hits: ${hits.length} Query:  $qString \n"
 			println messageOut
 			resultsOut << messageOut
 
@@ -90,7 +90,7 @@ public class GPfit extends KozaFitness {
 //					resultsOut << messageOut + '\n'
 //				}
 			}
-			println "Gen: $gen ClusterQuery: $index catsFreq: $catsFreq for query: $qString "
+			println "Gen: $gen ClusterQueryGA: $index catsFreq: $catsFreq for query: $qString "
 
 			//find the category with maximimum returned docs for this query
 			def catMax = catsFreq?.max{it?.value} ?:0
@@ -164,16 +164,16 @@ public class GPfit extends KozaFitness {
 	private String queryForCSV (int job){
 		def s="Job: $job "
 		queryMap.keySet().eachWithIndex {q, index ->
-			s += "ClusterQuery " + index + ": " + queryMap.get(q) + " " + q.toString(IndexInfo.FIELD_CONTENTS) + " ## "
+			s += "ClusterQueryGA " + index + ": " + queryMap.get(q) + " " + q.toString(IndexInfo.FIELD_CONTENTS) + " ## "
 		}
 		return s + '\n'
 	}
 
 	public String fitnessToStringForHumans() {
-		return  "ClusterQuery Fitness: ${this.fitness()} "
+		return  "ClusterQueryGA Fitness: ${this.fitness()} "
 	}
 
 	public String toString(int gen) {
-		return "Gen: $gen qMap: $queryMap}"   //  ClusterQuery Fitness: ${this.fitness} qMap: $queryMap}"
+		return "Gen: $gen qMap: $queryMap}"   //  ClusterQueryGA Fitness: ${this.fitness} qMap: $queryMap}"
 	}
 }

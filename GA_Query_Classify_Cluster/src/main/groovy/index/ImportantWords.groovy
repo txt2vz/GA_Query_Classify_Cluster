@@ -1,4 +1,4 @@
-package index
+ package index
 
 import org.apache.lucene.index.IndexReader
 import org.apache.lucene.index.MultiFields

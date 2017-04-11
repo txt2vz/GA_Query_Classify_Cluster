@@ -4,7 +4,7 @@ repositories { jcenter() }
 
 dependencies {
 	
-	compile 'org.codehaus.groovy:groovy-all:2.4.7'
+	compile 'org.codehaus.groovy:groovy-all:2.4.10'
 
 	compile 'org.apache.lucene:lucene-core:6.3.0'
 	compile 'org.apache.lucene:lucene-analyzers-common:6.3.0'
@@ -17,19 +17,16 @@ dependencies {
 }
 
 task(runClustering, dependsOn: 'classes', type: JavaExec) {
-	main = 'cluster.GAmainCluster'
+	main = 'cluster.ClusterMain'
 	classpath = sourceSets.main.runtimeClasspath
 }
 
-task(runGPClustering, dependsOn: 'classes', type: JavaExec) {
-	main = 'cluster.GPmainCluster'
-	classpath = sourceSets.main.runtimeClasspath
-}
 
 task(runClassifier, dependsOn: 'classes', type: JavaExec) {
 	main = 'classify.GAmainClassify'
 	classpath = sourceSets.main.runtimeClasspath
 }
+
 
 configure(runClassifier) {
 	group = 'run'
@@ -37,13 +34,9 @@ configure(runClassifier) {
 }
 configure(runClustering) {
 	group = 'run'
-	description = 'Run GA clustering'
+	description = 'Run clustering'
 }
 
-configure(runGPClustering) {
-	group = 'run'
-	description = 'Run GP clustering'
-}
 
 task(indexCrisisData, dependsOn: 'classes', type: JavaExec) {
 	main = 'index.IndexCrisisClusterFromCSV'

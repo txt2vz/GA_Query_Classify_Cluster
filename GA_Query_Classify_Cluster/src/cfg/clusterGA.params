@@ -3,8 +3,8 @@ parent.0 = clusterSubpopTournament.params
 #parent.0 = clusterSinglePop.params
 #parent.0		= simple.params
 
-eval.problem = cluster.ClusterQuery
-stat = cluster.ClusterGAStatistics
+eval.problem = cluster.ClusterQueryGA
+stat = cluster.ClusterStatistics
 
 evalthreads = 4 
 breedthreads = 4

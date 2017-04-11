@@ -5,7 +5,10 @@ import org.apache.lucene.search.BooleanClause
 import org.apache.lucene.search.BooleanQuery
 import org.apache.lucene.search.IndexSearcher
 import org.apache.lucene.search.MatchAllDocsQuery
+import org.apache.lucene.search.Query
+import org.apache.lucene.search.ScoreDoc
 import org.apache.lucene.search.TermQuery
+import org.apache.lucene.search.TopDocs
 import org.apache.lucene.search.TotalHitCountCollector
 import org.apache.lucene.search.spans.SpanFirstQuery
 import org.apache.lucene.search.spans.SpanTermQuery
@@ -27,7 +30,7 @@ class QueryListFromChromosome {
 		//list of boolean queries
 		def bqbL = []
 		// set of genes - for duplicate checking
-		def genes = [] as Set 
+		def genes = [] as Set
 
 		intVectorIndividual.genome.eachWithIndex {gene, index ->
 			int clusterNumber =  index % IndexInfo.NUMBER_OF_CLUSTERS
@@ -64,11 +67,11 @@ class QueryListFromChromosome {
 			else {
 				wordInd0 = intVectorIndividual.genome[i];
 			}
-			
+
 			def term = termArray[wordInd0];
 
 			if (!wordSet.add(term)) duplicateCount++
-			
+
 			def sfIndex = intVectorIndividual.genome[i + 1]
 			def sfValue = sfMap[sfIndex]
 

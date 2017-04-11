@@ -39,6 +39,7 @@ public class ClusterFit extends SimpleFitness {
 	def scorePlus1000 = 0 as float
 	def missedDocs =0
 	def zeroHitsCount =0
+	boolean isDummy = false
 	
 	def treePenalty=0;
 	def graphPenalty=0
@@ -51,7 +52,7 @@ public class ClusterFit extends SimpleFitness {
 		def s="queryMap.size ${queryMap.size()} \n"
 		queryMap.keySet().eachWithIndex {q, index ->
 			if (index>0) s+='\n';
-			s +=  "ClusterQuery: $index :  ${queryMap.get(q)}  ${q.toString(IndexInfo.FIELD_CONTENTS)}"
+			s +=  "ClusterQueryGA: $index :  ${queryMap.get(q)}  ${q.toString(IndexInfo.FIELD_CONTENTS)}"
 		}
 		return s
 	}
@@ -70,7 +71,7 @@ public class ClusterFit extends SimpleFitness {
 			def qString = q.toString(IndexInfo.FIELD_CONTENTS)
 
 			println "***********************************************************************************"
-			messageOut = "ClusterQuery: $index hits: ${hits.length} Query:  $qString \n"
+			messageOut = "ClusterQueryGA: $index hits: ${hits.length} Query:  $qString \n"
 			println messageOut
 			resultsOut << messageOut
 
@@ -91,7 +92,7 @@ public class ClusterFit extends SimpleFitness {
 //					resultsOut << messageOut + '\n'
 //				}
 			}
-			println "Gen: $gen ClusterQuery: $index catsFreq: $catsFreq for query: $qString "
+			println "Gen: $gen ClusterQueryGA: $index catsFreq: $catsFreq for query: $qString "
 
 			//find the category with maximimum returned docs for this query
 			def catMax = catsFreq?.max{it?.value} ?:0
@@ -165,16 +166,16 @@ public class ClusterFit extends SimpleFitness {
 	private String queryForCSV (int job){
 		def s="Job: $job "
 		queryMap.keySet().eachWithIndex {q, index ->
-			s += "ClusterQuery " + index + ": " + queryMap.get(q) + " " + q.toString(IndexInfo.FIELD_CONTENTS) + " ## "
+			s += "ClusterQueryGA " + index + ": " + queryMap.get(q) + " " + q.toString(IndexInfo.FIELD_CONTENTS) + " ## "
 		}
 		return s + '\n'
 	}
 
 	public String fitnessToStringForHumans() {
-		return  "ClusterQuery Fitness: ${this.fitness()} "
+		return  "ClusterQueryGA Fitness: ${this.fitness()} "
 	}
 
 	public String toString(int gen) {
-		return "Gen: $gen ClusterQuery Fitness: ${this.fitness} qMap: $queryMap}"
+		return "Gen: $gen ClusterQueryGA Fitness: ${this.fitness} qMap: $queryMap}"
 	}
 }

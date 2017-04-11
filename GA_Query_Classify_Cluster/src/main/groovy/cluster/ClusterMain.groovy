@@ -6,25 +6,16 @@ import ec.Evolve
 import ec.Fitness
 import ec.util.ParameterDatabase
 
-class GAmainCluster extends Evolve {
+class ClusterMain extends Evolve {
 
 	private final String parameterFilePath = 
 	
-	 'src/cfg/cGP.params'
-	// "src/cfg/cluster.params"
-//	"src/cfg/clusterWithNOTordC5.params"
-	 //"src/cfg/clusterWithNOTsetC5.params" 
-
-//	'src/cfg/clusterNOTv2.params'
-	
-//	'src/cfg/clusterWithNOTset.params'
-//	"src/cfg/clusterWithSpanFirst.params"
-	//  'src/cfg/clusterGP.params'
-	//  'src/cfg/cGP.params'
+	// 'src/cfg/clusterGP.params'
+	 'src/cfg/clusterGA.params'
 	
 	private final int NUMBER_OF_JOBS = 1   
 
-	public GAmainCluster(){ 
+	public ClusterMain(){ 
 		EvolutionState state;
 		IndexInfo.instance.setIndex() 
 		ParameterDatabase parameters  = null;
@@ -66,6 +57,6 @@ class GAmainCluster extends Evolve {
 	}
 
 	static main (args){
-		new GAmainCluster()
+		new ClusterMain()
 	}
 }

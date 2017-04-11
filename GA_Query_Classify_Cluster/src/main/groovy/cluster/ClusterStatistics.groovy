@@ -4,7 +4,7 @@ import ec.EvolutionState
 import ec.simple.SimpleStatistics
 import index.IndexInfo
 
-public class ClusterGAStatistics extends SimpleStatistics {
+public class ClusterStatistics extends SimpleStatistics {
 
 	public void finalStatistics(final EvolutionState state, final int result) {
 		// print out the other statistics
