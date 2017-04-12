@@ -18,7 +18,6 @@ import index.*
 public class ClusterQueryGP extends GPProblem implements SimpleProblemForm {
 
 	private IndexSearcher searcher = IndexInfo.instance.indexSearcher;
-	//private final int coreClusterSize=20
 	private EvalQueryList eql
 
 	public void setup(final EvolutionState state,
@@ -49,8 +48,8 @@ public class ClusterQueryGP extends GPProblem implements SimpleProblemForm {
 		gpInd.trees[0].child.eval(
 				state,threadnum,input,stack,((GPIndividual)ind),this);
 
-			//set fitness based on set of boolean queries
-		eql.cf(fitness, input.bqbArray)
+		//set fitness based on set of boolean queries
+		eql.cf(fitness, input.bqbArray.toList(), true)
 
 
 		//fitness must be positive for ECJ - most runs start with large negative score
@@ -73,19 +72,12 @@ public class ClusterQueryGP extends GPProblem implements SimpleProblemForm {
 
 		//rawfitness used by ECJ for evaluation
 		def rawfitness = fitness.baseFitness
-		if (fitness.isDummy || fitness.zeroHitsCount >0 )
+		if (fitness.isDummy || fitness.emptyQueries || fitness.zeroHitsCount >0 )
 		{
 			rawfitness = 0
 
 		}
-
-		//fitness.setFitness(state, rawFitness, false)
-		//((GPIndividual)ind)
 		((SimpleFitness) gpInd.fitness).setFitness(state, rawfitness, false)
-
-		//	((SimpleFitness) intVectorIndividual.fitness).setFitness(state, rawfitness, false)
-		//	gpInd.evaluated = true;
-
 		ind.evaluated = true;
 	}
 }

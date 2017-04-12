@@ -11,14 +11,13 @@ breedthreads = 				4
 
 stat = cluster.ClusterStatistics
 stat.file = statDump/out.stat
-generations =  78
+generations =  478
 
 eval.problem = clusterGP.ClusterQueryGP
 eval.problem.data = clusterGP.QueryData
 
 pop.subpop.0 = ec.Subpopulation
-pop.subpop.0.size = 238
-#pop.subpop.0.species.fitness = clusterGP.GPfit
+pop.subpop.0.size = 512
 pop.subpop.0.species.fitness = cluster.ClusterFit
 
 gp.type.a.size = 3
@@ -69,7 +68,7 @@ gp.nc.5.size = 0
 gp.fs.size = 1
 gp.fs.0.name = f0
 gp.fs.0.info = ec.gp.GPFuncInfo
-gp.fs.0.size = 25
+gp.fs.0.size = 40
 
 gp.fs.0.func.0 = clusterGP.OR2
 gp.fs.0.func.0.nc = Query2Int
@@ -125,3 +124,40 @@ gp.fs.0.func.23 = clusterGP.terminals.TQ14
 gp.fs.0.func.23.nc = Int
 gp.fs.0.func.24 = clusterGP.terminals.TQ15
 gp.fs.0.func.24.nc = Int
+gp.fs.0.func.25= clusterGP.terminals.TQ16
+gp.fs.0.func.25.nc = Int
+gp.fs.0.func.26 = clusterGP.terminals.TQ17
+gp.fs.0.func.26.nc = Int
+gp.fs.0.func.27 = clusterGP.terminals.TQ18
+gp.fs.0.func.27.nc = Int
+gp.fs.0.func.28 = clusterGP.terminals.TQ19
+gp.fs.0.func.28.nc = Int
+gp.fs.0.func.29 = clusterGP.terminals.TQ20
+gp.fs.0.func.29.nc = Int
+gp.fs.0.func.30 = clusterGP.terminals.TQ21
+gp.fs.0.func.30.nc = Int
+gp.fs.0.func.31 = clusterGP.terminals.TQ22
+gp.fs.0.func.31.nc = Int
+gp.fs.0.func.32= clusterGP.terminals.TQ23
+gp.fs.0.func.32.nc = Int
+gp.fs.0.func.33 = clusterGP.terminals.TQ24
+gp.fs.0.func.33.nc = Int
+gp.fs.0.func.34 = clusterGP.terminals.TQ25
+gp.fs.0.func.34.nc = Int
+gp.fs.0.func.35 = clusterGP.terminals.TQ26
+gp.fs.0.func.35.nc = Int
+gp.fs.0.func.36 = clusterGP.terminals.TQ27
+gp.fs.0.func.36.nc = Int
+gp.fs.0.func.37 = clusterGP.terminals.TQ28
+gp.fs.0.func.37.nc = Int
+gp.fs.0.func.38 = clusterGP.terminals.TQ29
+gp.fs.0.func.38.nc = Int
+gp.fs.0.func.39 = clusterGP.terminals.TQ30
+gp.fs.0.func.39.nc = Int
+gp.fs.0.func.40 = clusterGP.terminals.TQ31
+gp.fs.0.func.40.nc = Int
+gp.fs.0.func.41 = clusterGP.terminals.TQ32
+gp.fs.0.func.41.nc = Int
+gp.fs.0.func.42 = clusterGP.terminals.TQ33
+gp.fs.0.func.42.nc = In
+

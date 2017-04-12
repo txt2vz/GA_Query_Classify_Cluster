@@ -1,28 +1,21 @@
 package cluster
 
-import org.apache.lucene.index.Term
 import org.apache.lucene.search.BooleanClause
 import org.apache.lucene.search.BooleanQuery
 import org.apache.lucene.search.IndexSearcher
-import org.apache.lucene.search.MatchAllDocsQuery
 import org.apache.lucene.search.Query
 import org.apache.lucene.search.ScoreDoc
-import org.apache.lucene.search.TermQuery
 import org.apache.lucene.search.TopDocs
-import org.apache.lucene.search.TotalHitCountCollector
-import org.apache.lucene.search.spans.SpanFirstQuery
-import org.apache.lucene.search.spans.SpanTermQuery
-import ec.vector.IntegerVectorIndividual
-import index.ImportantWords
+
 import index.IndexInfo
 
 class EvalQueryList {
 
 	private IndexSearcher searcher = IndexInfo.instance.indexSearcher
 
-	public void cf (ClusterFit fitness, def bqbArray){
+	public void cf (ClusterFit fitness, List bqbArray, boolean gp){
 
-		//assert bqbArray.size == IndexInfo.NUMBER_OF_CLUSTERS
+		assert bqbArray.size() == IndexInfo.NUMBER_OF_CLUSTERS
 		final int hitsPerPage = IndexInfo.instance.indexReader.maxDoc()
 		final int coreClusterSize=20
 
@@ -49,8 +42,10 @@ class EvalQueryList {
 
 			def q = bqb.build()
 
-			if ( q.toString(IndexInfo.FIELD_CONTENTS).contains("DummyXX") || q==null || q.toString(IndexInfo.FIELD_CONTENTS) == '' ){
-				fitness.isDummy = true;
+			if (gp){
+				if ( q.toString(IndexInfo.FIELD_CONTENTS).contains("DummyXX") || q==null || q.toString(IndexInfo.FIELD_CONTENTS) == '' ){
+					fitness.isDummy = true;
+				}
 			}
 
 			def otherdocIdSet= [] as Set
@@ -92,15 +87,14 @@ class EvalQueryList {
 			}
 		}
 
-		fitness.queryMap = qMap.asImmutable()
+		fitness.queryMap = qMap.asImmutable()		
 
-		if (fitness.queryMap.size() != IndexInfo.NUMBER_OF_CLUSTERS) {
-			fitness.isDummy = true
+		if (gp && fitness.queryMap.size() != IndexInfo.NUMBER_OF_CLUSTERS) {
+			fitness.emptyQueries = true
 		}
 		fitness.scoreOnly = fitness.positiveScoreTotal - fitness.negativeScoreTotal
 		fitness.totalHits = allHits.size()
 		fitness.fraction = fitness.totalHits / IndexInfo.instance.indexReader.maxDoc()
 		fitness.missedDocs = IndexInfo.instance.indexReader.maxDoc() - allHits.size()
-		//return fitness
 	}
 }

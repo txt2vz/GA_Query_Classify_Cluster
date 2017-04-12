@@ -79,7 +79,7 @@ public class ClusterQueryGA extends Problem implements SimpleProblemForm {
 		final int hitsPerPage = IndexInfo.instance.indexReader.maxDoc()
 		
 		//set fitness based on set of boolean queries
-		eql.cf(fitness, bqbList)
+		eql.cf(fitness, bqbList, false)
 
 	
 		//fitness must be positive for ECJ - most runs start with large negative score

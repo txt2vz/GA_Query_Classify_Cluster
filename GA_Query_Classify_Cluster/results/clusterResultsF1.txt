@@ -2501,3 +2501,258 @@ PosHits: 222 NegHits: 210 PosScore: 836.9239467382431 NegScore: 608.384271919727
 ***  TOTALS:   *****   f1list: [0.521008403349, 0.541484716133, 0.45283018865] averagef1: :0.505107769377  ** average precision: 0.4311772936 average recall: 0.6133333333
 ************************************************ 
  
+  ***** Job: 0 Gen: 9 PopSize: 512 Noclusters: 3  pathToIndex: indexes/20NG3SpaceHockeyChristianL6  *********** Wed Apr 12 09:36:13 BST 2017 ***************************************************** 
+ClusterQueryGA: 0 hits: 133 Query:  data god jesus believe 
+categoryTotal: 100 for category: category:soc.religion.christian 
+f1: 0.575107296140 recall: 0.67 precision: 0.5037593985
+ClusterQueryGA: 1 hits: 167 Query:  nhl science something game mission 
+categoryTotal: 100 for category: category:rec.sport.hockey 
+f1: 0.456928838969 recall: 0.61 precision: 0.3652694611
+ClusterQueryGA: 2 hits: 156 Query:  email high system sale 
+categoryTotal: 100 for category: category:misc.forsale 
+f1: 0.539062499994 recall: 0.69 precision: 0.4423076923
+TotalHits: 346 Total Docs:  500 
+PosHits: 256 NegHits: 200 PosScore: 960.498457968235 NegScore: 593.7487223446369 Fitness: 40.90545283747866 
+***  TOTALS:   *****   f1list: [0.575107296140, 0.456928838969, 0.539062499994] averagef1: :0.523699545034  ** average precision: 0.4371121840 average recall: 0.6566666667
+************************************************ 
+ 
+  ***** Job: 0 Gen: 77 PopSize: 238 Noclusters: 3  pathToIndex: indexes/20NG3SpaceHockeyChristianL6  *********** Wed Apr 12 09:36:55 BST 2017 ***************************************************** 
+ClusterQueryGA: 0 hits: 87 Query:  (hockey year) (hockey year) 
+categoryTotal: 100 for category: category:rec.sport.hockey 
+f1: 0.620320855629 recall: 0.58 precision: 0.6666666667
+ClusterQueryGA: 1 hits: 72 Query:  (file information) (file information) 
+categoryTotal: 100 for category: category:comp.os.ms-windows.misc 
+f1: 0.360465116295 recall: 0.31 precision: 0.4305555556
+ClusterQueryGA: 2 hits: 1 Query:  +(+space +jesus) +(hockey year) 
+categoryTotal: 100 for category: category:soc.religion.christian 
+f1: 0.0198019802 recall: 0.01 precision: 1
+TotalHits: 0 Total Docs:  500 
+PosHits: 0 NegHits: 0 PosScore: 0 NegScore: 0 Fitness: 173.75302121913907 
+***  TOTALS:   *****   f1list: [0.620320855629, 0.360465116295, 0.0198019802] averagef1: :0.333529317375  ** average precision: 0.6990740741 average recall: 0.30
+************************************************ 
+ 
+  ***** Job: 0 Gen: 477 PopSize: 256 Noclusters: 3  pathToIndex: indexes/20NG3SpaceHockeyChristianL6  *********** Wed Apr 12 09:43:05 BST 2017 ***************************************************** 
+ClusterQueryGA: 0 hits: 118 Query:  (+file +us) (year space) 
+categoryTotal: 100 for category: category:sci.space 
+f1: 0.596330275213 recall: 0.65 precision: 0.5508474576
+ClusterQueryGA: 1 hits: 62 Query:  (+god +hockey) (file program) 
+categoryTotal: 100 for category: category:comp.os.ms-windows.misc 
+f1: 0.395061728407 recall: 0.32 precision: 0.5161290323
+ClusterQueryGA: 2 hits: 120 Query:  (program shuttle) (year team) 
+categoryTotal: 100 for category: category:rec.sport.hockey 
+f1: 0.472727272707 recall: 0.52 precision: 0.4333333333
+TotalHits: 179 Total Docs:  500 
+PosHits: 246 NegHits: 54 PosScore: 781.3786053359509 NegScore: 213.29222425818443 Fitness: 14.355158781746486 
+***  TOTALS:   *****   f1list: [0.596330275213, 0.395061728407, 0.472727272707] averagef1: :0.488039758776  ** average precision: 0.5001032744 average recall: 0.4966666667
+************************************************ 
+ 
+  ***** Job: 0 Gen: 477 PopSize: 512 Noclusters: 3  pathToIndex: indexes/20NG3SpaceHockeyChristianL6  *********** Wed Apr 12 09:44:17 BST 2017 ***************************************************** 
+ClusterQueryGA: 0 hits: 69 Query:  (earth file) (+team +shuttle) 
+categoryTotal: 100 for category: category:sci.space 
+f1: 0.343195266281 recall: 0.29 precision: 0.4202898551
+ClusterQueryGA: 1 hits: 67 Query:  (earth file) (earth file) 
+categoryTotal: 100 for category: category:comp.os.ms-windows.misc 
+f1: 0.323353293405 recall: 0.27 precision: 0.4029850746
+ClusterQueryGA: 2 hits: 114 Query:  (earth file) (earth team) 
+categoryTotal: 100 for category: category:rec.sport.hockey 
+f1: 0.411214953282 recall: 0.44 precision: 0.3859649123
+TotalHits: 114 Total Docs:  500 
+PosHits: 250 NegHits: 0 PosScore: 1079.0491322278976 NegScore: 0 Fitness: 108.07729008973503 
+***  TOTALS:   *****   f1list: [0.343195266281, 0.323353293405, 0.411214953282] averagef1: :0.359254504323  ** average precision: 0.4030799473 average recall: 0.3333333333
+************************************************ 
+ 
+  ***** Job: 0 Gen: 9 PopSize: 512 Noclusters: 3  pathToIndex: indexes/20NG3SpaceHockeyChristianL6  *********** Wed Apr 12 09:55:57 BST 2017 ***************************************************** 
+ClusterQueryGA: 0 hits: 142 Query:  mail sale christians 
+categoryTotal: 100 for category: category:misc.forsale 
+f1: 0.628099173550 recall: 0.76 precision: 0.5352112676
+ClusterQueryGA: 1 hits: 208 Query:  question etc windows last access 
+categoryTotal: 100 for category: category:comp.os.ms-windows.misc 
+f1: 0.461038960997 recall: 0.71 precision: 0.3413461538
+ClusterQueryGA: 2 hits: 138 Query:  team shuttle man station around 
+categoryTotal: 100 for category: category:sci.space 
+f1: 0.428571428577 recall: 0.51 precision: 0.3695652174
+TotalHits: 358 Total Docs:  500 
+PosHits: 248 NegHits: 240 PosScore: 911.3200877904892 NegScore: 688.6179984509945 Fitness: 36.87209190073105 
+***  TOTALS:   *****   f1list: [0.628099173550, 0.461038960997, 0.428571428577] averagef1: :0.505903187708  ** average precision: 0.4153742129 average recall: 0.66
+************************************************ 
+ 
+  ***** Job: 0 Gen: 477 PopSize: 512 Noclusters: 3  pathToIndex: indexes/20NG3SpaceHockeyChristianL6  *********** Wed Apr 12 10:15:30 BST 2017 ***************************************************** 
+ClusterQueryGA: 0 hits: 58 Query:  (play hockey) (hockey hockey) 
+categoryTotal: 100 for category: category:rec.sport.hockey 
+f1: 0.670886075936 recall: 0.53 precision: 0.9137931034
+ClusterQueryGA: 1 hits: 86 Query:  (orbit god) (god god) 
+categoryTotal: 100 for category: category:soc.religion.christian 
+f1: 0.53763440859 recall: 0.5 precision: 0.5813953488
+ClusterQueryGA: 2 hits: 83 Query:  (windows windows) (file windows) 
+categoryTotal: 100 for category: category:comp.os.ms-windows.misc 
+f1: 0.808743169415 recall: 0.74 precision: 0.8915662651
+TotalHits: 221 Total Docs:  500 
+PosHits: 215 NegHits: 12 PosScore: 1780.0492436885834 NegScore: 32.01371532678604 Fitness: 536.8672129628742 
+***  TOTALS:   *****   f1list: [0.670886075936, 0.53763440859, 0.808743169415] averagef1: :0.672421217980  ** average precision: 0.7955849058 average recall: 0.59
+************************************************ 
+ 
+  ***** Job: 0 Gen: 477 PopSize: 512 Noclusters: 3  pathToIndex: indexes/20NG3SpaceHockeyChristianL6  *********** Wed Apr 12 10:20:36 BST 2017 ***************************************************** 
+ClusterQueryGA: 0 hits: 44 Query:  +(hockey hockey) +(hockey hockey) 
+categoryTotal: 100 for category: category:rec.sport.hockey 
+f1: 0.597222222227 recall: 0.43 precision: 0.9772727273
+ClusterQueryGA: 1 hits: 62 Query:  +(earth nasa) +(earth nasa) 
+categoryTotal: 100 for category: category:sci.space 
+f1: 0.592592592596 recall: 0.48 precision: 0.7741935484
+ClusterQueryGA: 2 hits: 70 Query:  +(+windows +windows) +(+windows +windows) 
+categoryTotal: 100 for category: category:comp.os.ms-windows.misc 
+f1: 0.776470588250 recall: 0.66 precision: 0.9428571429
+TotalHits: 175 Total Docs:  500 
+PosHits: 174 NegHits: 2 PosScore: 1766.5554382801056 NegScore: 18.879881858825684 Fitness: 336.59025566160676 
+***  TOTALS:   *****   f1list: [0.597222222227, 0.592592592596, 0.776470588250] averagef1: :0.655428467691  ** average precision: 0.8981078062 average recall: 0.5233333333
+************************************************ 
+ 
+  ***** Job: 0 Gen: 477 PopSize: 512 Noclusters: 3  pathToIndex: indexes/20NG3SpaceHockeyChristianL6  *********** Wed Apr 12 10:32:48 BST 2017 ***************************************************** 
+ClusterQueryGA: 0 hits: 53 Query:  (+god +god) (+god +god) 
+categoryTotal: 100 for category: category:soc.religion.christian 
+f1: 0.65359477124 recall: 0.5 precision: 0.9433962264
+ClusterQueryGA: 1 hits: 111 Query:  (year play) (nasa play) 
+categoryTotal: 100 for category: category:rec.sport.hockey 
+f1: 0.483412322297 recall: 0.51 precision: 0.4594594595
+ClusterQueryGA: 2 hits: 83 Query:  (windows windows) (file windows) 
+categoryTotal: 100 for category: category:comp.os.ms-windows.misc 
+f1: 0.808743169415 recall: 0.74 precision: 0.8915662651
+TotalHits: 236 Total Docs:  500 
+PosHits: 225 NegHits: 22 PosScore: 1735.5665846467018 NegScore: 94.21145063638687 Fitness: 588.4516621753539 
+***  TOTALS:   *****   f1list: [0.65359477124, 0.483412322297, 0.808743169415] averagef1: :0.648583420984  ** average precision: 0.7648073170 average recall: 0.5833333333
+************************************************ 
+ 
+  ***** Job: 0 Gen: 9 PopSize: 512 Noclusters: 3  pathToIndex: indexes/20NG3SpaceHockeyChristianL6  *********** Wed Apr 12 10:35:27 BST 2017 ***************************************************** 
+ClusterQueryGA: 0 hits: 193 Query:  windows end using play work 
+categoryTotal: 100 for category: category:comp.os.ms-windows.misc 
+f1: 0.532423208174 recall: 0.78 precision: 0.4041450777
+ClusterQueryGA: 1 hits: 184 Query:  mail sale north research orbit 
+categoryTotal: 100 for category: category:misc.forsale 
+f1: 0.542253521152 recall: 0.77 precision: 0.4184782609
+ClusterQueryGA: 2 hits: 89 Query:  god send 
+categoryTotal: 100 for category: category:soc.religion.christian 
+f1: 0.539682539698 recall: 0.51 precision: 0.5730337079
+TotalHits: 354 Total Docs:  500 
+PosHits: 258 NegHits: 208 PosScore: 926.3052265644073 NegScore: 598.1365182101727 Fitness: 35.04016628549879 
+***  TOTALS:   *****   f1list: [0.532423208174, 0.542253521152, 0.539682539698] averagef1: :0.538119756341  ** average precision: 0.4652190155 average recall: 0.6866666667
+************************************************ 
+ 
+  ***** Job: 0 Gen: 9 PopSize: 512 Noclusters: 3  pathToIndex: indexes/20NG3SpaceHockeyChristianL6  *********** Wed Apr 12 11:33:37 BST 2017 ***************************************************** 
+ClusterQueryGA: 0 hits: 219 Query:  sale launch windows please science 
+categoryTotal: 100 for category: category:misc.forsale 
+f1: 0.457680250752 recall: 0.73 precision: 0.3333333333
+ClusterQueryGA: 1 hits: 70 Query:  station hockey 
+categoryTotal: 100 for category: category:rec.sport.hockey 
+f1: 0.505882352946 recall: 0.43 precision: 0.6142857143
+ClusterQueryGA: 2 hits: 98 Query:  faq christians god earth 
+categoryTotal: 100 for category: category:soc.religion.christian 
+f1: 0.626262626251 recall: 0.62 precision: 0.6326530612
+TotalHits: 324 Total Docs:  500 
+PosHits: 270 NegHits: 117 PosScore: 962.1308457255363 NegScore: 358.91658568382263 Fitness: 37.3997822582531 
+***  TOTALS:   *****   f1list: [0.457680250752, 0.505882352946, 0.626262626251] averagef1: :0.529941743316  ** average precision: 0.5267573696 average recall: 0.5933333333
+************************************************ 
+ 
+  ***** Job: 0 Gen: 477 PopSize: 512 Noclusters: 3  pathToIndex: indexes/20NG3SpaceHockeyChristianL6  *********** Wed Apr 12 11:35:38 BST 2017 ***************************************************** 
+ClusterQueryGA: 0 hits: 86 Query:  (orbit god) (orbit god) 
+categoryTotal: 100 for category: category:soc.religion.christian 
+f1: 0.53763440859 recall: 0.5 precision: 0.5813953488
+ClusterQueryGA: 1 hits: 70 Query:  +(team hockey) +(team hockey) 
+categoryTotal: 100 for category: category:rec.sport.hockey 
+f1: 0.729411764701 recall: 0.62 precision: 0.8857142857
+ClusterQueryGA: 2 hits: 83 Query:  (windows windows) (windows file) 
+categoryTotal: 100 for category: category:comp.os.ms-windows.misc 
+f1: 0.808743169415 recall: 0.74 precision: 0.8915662651
+TotalHits: 229 Total Docs:  500 
+PosHits: 220 NegHits: 19 PosScore: 1700.9909349679947 NegScore: 67.02839064598083 Fitness: 276.25525957358144 
+***  TOTALS:   *****   f1list: [0.53763440859, 0.729411764701, 0.808743169415] averagef1: :0.691929780902  ** average precision: 0.7862252999 average recall: 0.62
+************************************************ 
+ 
+  ***** Job: 0 Gen: 477 PopSize: 512 Noclusters: 3  pathToIndex: indexes/20NG3SpaceHockeyChristianL6  *********** Wed Apr 12 12:07:32 BST 2017 ***************************************************** 
+ClusterQueryGA: 0 hits: 160 Query:  (center space) (windows space) 
+categoryTotal: 100 for category: category:comp.os.ms-windows.misc 
+f1: 0.5384615385 recall: 0.7 precision: 0.4375
+ClusterQueryGA: 1 hits: 2 Query:  (+jesus +available) (+jesus +available) 
+categoryTotal: 100 for category: category:soc.religion.christian 
+f1: 0.0392156863 recall: 0.02 precision: 1
+ClusterQueryGA: 2 hits: 44 Query:  (hockey hockey) (hockey hockey) 
+categoryTotal: 100 for category: category:rec.sport.hockey 
+f1: 0.597222222227 recall: 0.43 precision: 0.9772727273
+TotalHits: 204 Total Docs:  500 
+PosHits: 202 NegHits: 4 PosScore: 1231.6812753677368 NegScore: 23.705739498138428 Fitness: 367.5484396029968 
+***  TOTALS:   *****   f1list: [0.5384615385, 0.0392156863, 0.597222222227] averagef1: :0.391633149009  ** average precision: 0.8049242424 average recall: 0.3833333333
+************************************************ 
+ 
+  ***** Job: 0 Gen: 477 PopSize: 512 Noclusters: 3  pathToIndex: indexes/20NG3SpaceHockeyChristianL6  *********** Wed Apr 12 12:07:52 BST 2017 ***************************************************** 
+ClusterQueryGA: 0 hits: 2 Query:  +(+file +believe) +(name name) 
+categoryTotal: 100 for category: category:sci.space 
+f1: 0.0392156863 recall: 0.02 precision: 1
+ClusterQueryGA: 1 hits: 133 Query:  (earth team) (believe team) 
+categoryTotal: 100 for category: category:rec.sport.hockey 
+f1: 0.403433476364 recall: 0.47 precision: 0.3533834586
+ClusterQueryGA: 2 hits: 62 Query:  +(name name) +(name name) 
+categoryTotal: 100 for category: category:sci.space 
+f1: 0.24691358026 recall: 0.2 precision: 0.3225806452
+TotalHits: 0 Total Docs:  500 
+PosHits: 0 NegHits: 0 PosScore: 0 NegScore: 0 Fitness: 28.66031967379173 
+***  TOTALS:   *****   f1list: [0.0392156863, 0.403433476364, 0.24691358026] averagef1: :0.229854247641  ** average precision: 0.5586547013 average recall: 0.23
+************************************************ 
+ 
+  ***** Job: 0 Gen: 477 PopSize: 512 Noclusters: 3  pathToIndex: indexes/20NG3SpaceHockeyChristianL6  *********** Wed Apr 12 12:09:16 BST 2017 ***************************************************** 
+ClusterQueryGA: 0 hits: 72 Query:  (nasa christians) (christians christians) 
+categoryTotal: 100 for category: category:sci.space 
+f1: 0.453488372105 recall: 0.39 precision: 0.5416666667
+ClusterQueryGA: 1 hits: 4 Query:  +(nasa christians) +(file windows) 
+categoryTotal: 100 for category: category:sci.space 
+f1: 0.0769230769 recall: 0.04 precision: 1
+ClusterQueryGA: 2 hits: 83 Query:  (windows windows) (file windows) 
+categoryTotal: 100 for category: category:comp.os.ms-windows.misc 
+f1: 0.808743169415 recall: 0.74 precision: 0.8915662651
+TotalHits: 151 Total Docs:  500 
+PosHits: 147 NegHits: 12 PosScore: 1150.0833018422127 NegScore: 36.13100332021713 Fitness: 38.560181086880014 
+***  TOTALS:   *****   f1list: [0.453488372105, 0.0769230769, 0.808743169415] averagef1: :0.446384872807  ** average precision: 0.8110776439 average recall: 0.39
+************************************************ 
+ 
+  ***** Job: 0 Gen: 477 PopSize: 512 Noclusters: 3  pathToIndex: indexes/20NG3SpaceHockeyChristianL6  *********** Wed Apr 12 12:11:22 BST 2017 ***************************************************** 
+ClusterQueryGA: 0 hits: 65 Query:  (hockey hockey) (game hockey) 
+categoryTotal: 100 for category: category:rec.sport.hockey 
+f1: 0.703030303028 recall: 0.58 precision: 0.8923076923
+ClusterQueryGA: 1 hits: 107 Query:  (earth christians) (christ nasa) 
+categoryTotal: 100 for category: category:soc.religion.christian 
+f1: 0.550724637695 recall: 0.57 precision: 0.5327102804
+ClusterQueryGA: 2 hits: 70 Query:  (windows windows) (windows windows) 
+categoryTotal: 100 for category: category:comp.os.ms-windows.misc 
+f1: 0.776470588250 recall: 0.66 precision: 0.9428571429
+TotalHits: 238 Total Docs:  500 
+PosHits: 234 NegHits: 8 PosScore: 1734.709810256958 NegScore: 41.11725926399231 Fitness: 610.3034258337822 
+***  TOTALS:   *****   f1list: [0.703030303028, 0.550724637695, 0.776470588250] averagef1: :0.676741842991  ** average precision: 0.7892917052 average recall: 0.6033333333
+************************************************ 
+ 
+  ***** Job: 0 Gen: 477 PopSize: 512 Noclusters: 3  pathToIndex: indexes/20NG3SpaceHockeyChristianL6  *********** Wed Apr 12 12:18:34 BST 2017 ***************************************************** 
+ClusterQuery: 0 hits: 53 Query:  +(+god +god) +(+god +god) 
+categoryTotal: 100 for category: category:soc.religion.christian 
+f1: 0.65359477124 recall: 0.5 precision: 0.9433962264
+ClusterQuery: 1 hits: 56 Query:  +(center nasa) +(center nasa) 
+categoryTotal: 100 for category: category:sci.space 
+f1: 0.551282051293 recall: 0.43 precision: 0.7678571429
+ClusterQuery: 2 hits: 136 Query:  (windows nhl) (windows hockey) 
+categoryTotal: 100 for category: category:comp.os.ms-windows.misc 
+f1: 0.559322033867 recall: 0.66 precision: 0.4852941176
+TotalHits: 239 Total Docs:  500 
+PosHits: 233 NegHits: 12 PosScore: 1619.1113488674164 NegScore: 49.14282166957855 Fitness: 587.1966889682707 
+***  TOTALS:   *****   f1list: [0.65359477124, 0.551282051293, 0.559322033867] averagef1: :0.588066285467  ** average precision: 0.7321824956 average recall: 0.53
+************************************************ 
+ 
+  ***** Job: 0 Gen: 9 PopSize: 512 Noclusters: 3  pathToIndex: indexes/20NG3SpaceHockeyChristianL6  *********** Wed Apr 12 12:19:11 BST 2017 ***************************************************** 
+ClusterQuery: 0 hits: 132 Query:  email send technology sale 
+categoryTotal: 100 for category: category:misc.forsale 
+f1: 0.586206896583 recall: 0.68 precision: 0.5151515152
+ClusterQuery: 1 hits: 130 Query:  games give team players hockey 
+categoryTotal: 100 for category: category:rec.sport.hockey 
+f1: 0.686956521744 recall: 0.79 precision: 0.6076923077
+ClusterQuery: 2 hits: 144 Query:  file using science windows 
+categoryTotal: 100 for category: category:comp.os.ms-windows.misc 
+f1: 0.647540983599 recall: 0.79 precision: 0.5486111111
+TotalHits: 315 Total Docs:  500 
+PosHits: 237 NegHits: 169 PosScore: 1032.5805914998055 NegScore: 603.7089830338955 Fitness: 35.44494633750748 
+***  TOTALS:   *****   f1list: [0.586206896583, 0.686956521744, 0.647540983599] averagef1: :0.640234800642  ** average precision: 0.5571516447 average recall: 0.7533333333
+************************************************ 
+ 
