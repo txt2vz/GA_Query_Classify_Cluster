@@ -27,7 +27,6 @@ public class ClassifyFit extends SimpleFitness {
 	def noHitsCount=0;
 
 	public void setQuery(Query q) {
-
 		query = q;
 	}
 
