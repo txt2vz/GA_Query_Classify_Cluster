@@ -18,6 +18,7 @@ import classify.ClassifyFit;
 import groovy.transform.CompileStatic
 import index.ImportantWords
 import index.IndexInfo;;
+import classify.HitCounts
 
 /**
  * To generate queries to perform binary text classification using GA string of

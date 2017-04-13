@@ -19,6 +19,7 @@ import org.apache.lucene.search.spans.SpanFirstQuery
 import org.apache.lucene.search.spans.SpanTermQuery
 import org.apache.lucene.util.BytesRef
 import classify.HitCounts
+import groovy.util.ObjectGraphBuilder.DefaultNewInstanceResolver
 
 /**
  * GAs return words by selecting form word lists provided by this
@@ -42,10 +43,10 @@ public class ImportantWords implements HitCounts {
 
 	public static void main(String[] args){
 		IndexInfo.instance.setCategoryName("cru")
-		IndexInfo.instance.categoryNumber = '3'
+		IndexInfo.instance.categoryNumber = '2'
 		IndexInfo.instance.setIndex()
 		def iw = new ImportantWords()
-		iw.getF1WordList(false, true)
+		iw.getF1WordList()
 	//	iw.getTFIDFWordList()
 	}
 
@@ -62,8 +63,7 @@ public class ImportantWords implements HitCounts {
 	 * create a set of words based on F1 measure of the word as a classify.query
 	 * create new for each category
 	 */
-	public TermQuery[] getF1WordList(boolean spanFirstQ, boolean positiveList)
-	throws IOException{
+	public TermQuery[] getF1WordList(){
 
 		println "Important words terms.getDocCount: ${terms.getDocCount()}"
 		println "Important words terms.size ${terms.size()}"
@@ -88,35 +88,30 @@ public class ImportantWords implements HitCounts {
 			)
 				continue;
 
-			Query q;
-			if (spanFirstQ){
-				q = new SpanFirstQuery(new SpanTermQuery(t),
-						SPAN_FIRST_MAX_END);
-			}
-			else
-			{
-				q = new TermQuery(t);
-			}
-
+			Query q = new TermQuery(t)
+			
 			//Filter filter0, filter1;
-			BooleanQuery filter0, filter1;
-			int totalDocs;
+		//	BooleanQuery filter0, filter1;
+//			int totalDocs;
+//
+//			if (positiveList) {
+//				filter0 = IndexInfo.instance.catTrainBQ;
+//				filter1 = IndexInfo.instance.othersTrainBQ;
+//				totalDocs = IndexInfo.instance.totalTrainDocsInCat;
+//			} else {
+//				filter0 = IndexInfo.instance.othersTrainBQ;
+//				filter1 = IndexInfo.instance.catTrainBQ;
+//				totalDocs = IndexInfo.instance.totalOthersTrainDocs;
+//			}
 
-			if (positiveList) {
-				filter0 = IndexInfo.instance.catTrainBQ;
-				filter1 = IndexInfo.instance.othersTrainBQ;
-				totalDocs = IndexInfo.instance.totalTrainDocsInCat;
-			} else {
-				filter0 = IndexInfo.instance.othersTrainBQ;
-				filter1 = IndexInfo.instance.catTrainBQ;
-				totalDocs = IndexInfo.instance.totalOthersTrainDocs;
-			}
-
-			final int positiveHits = getPositiveMatch(indexSearcher, q)
-			final int negativeHits = getNegativeMatch(indexSearcher, q)
+			final int positiveHits = IndexInfo.instance.getQueryHitsWithFilter(indexSearcher,IndexInfo.instance.catTrainBQ, q) 
+			//getPositiveMatch(indexSearcher, q)
+			final int negativeHits = IndexInfo.instance.getQueryHitsWithFilter(indexSearcher,IndexInfo.instance.othersTrainBQ, q) 
+			//getNegativeMatch(indexSearcher, q)
 			
 			def F1 = classify.Effectiveness.f1(positiveHits, negativeHits,
-					totalDocs);
+				IndexInfo.instance.totalTrainDocsInCat)
+				//totalDocs);
 
 			if (F1 > 0.02) {
 				wordMap += [(t): F1]

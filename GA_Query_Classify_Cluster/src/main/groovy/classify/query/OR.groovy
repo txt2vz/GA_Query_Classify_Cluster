@@ -41,7 +41,7 @@ public class OR extends Problem implements SimpleProblemForm, HitCounts {
 				+ IndexInfo.instance.totalTrainDocsInCat + " Total test docs for cat "
 				+ IndexInfo.instance.totalTestDocsInCat)
 
-		termQueryArray = iw.getF1WordList(false, true);
+		termQueryArray = iw.getF1WordList()
 	}
 
 	public void evaluate(final EvolutionState state, final Individual ind,
@@ -65,9 +65,14 @@ public class OR extends Problem implements SimpleProblemForm, HitCounts {
 			}
 
 			fitness.query = bqb.build();
+			
+			
+			fitness.positiveMatchTrain = IndexInfo.instance.getQueryHitsWithFilter(searcher,IndexInfo.instance.catTrainBQ, fitness.query)
+		
+			fitness.negativeMatchTrain = IndexInfo.instance.getQueryHitsWithFilter(searcher,IndexInfo.instance.othersTrainBQ, fitness.query)
 
-			fitness.positiveMatchTrain = getPositiveMatch(searcher, fitness.query)
-			fitness.negativeMatchTrain = getNegativeMatch(searcher, fitness.query)
+			//fitness.positiveMatchTrain = getPositiveMatch(searcher, fitness.query)
+			//fitness.negativeMatchTrain = getNegativeMatch(searcher, fitness.query)
 			fitness.f1train = Effectiveness.f1(fitness.positiveMatchTrain, fitness.negativeMatchTrain, IndexInfo.instance.totalTrainDocsInCat);
 
 			((SimpleFitness) intVectorIndividual.fitness).setFitness(state, fitness.f1train, false)
