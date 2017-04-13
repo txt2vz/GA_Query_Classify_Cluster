@@ -21,26 +21,27 @@ import classify.ClassifyFit;
 
 /**
  * To generate queries to perform binary text classification using GA string of
- * integer pairs which are translated into spanFirst queries
+ * integer pairs which are translated into OR (lucene SHOULD) queries
  * 
  * @author Laurie
  */
 
+//HitCounts is a groovy trait for counting query hits in a category
 public class OR extends Problem implements SimpleProblemForm, HitCounts {
 
-	private String[] wordArray;
-	Query query;
+	private IndexSearcher searcher = IndexInfo.instance.indexSearcher
+	private final ImportantWords iw = new ImportantWords();
+	private TermQuery[] termQueryArray
 
 	public void setup(final EvolutionState state, final Parameter base) {
 
 		super.setup(state, base);
 
-		println("Total train docs in OR2 for cat:  " + IndexInfo.instance.getCategoryNumber() + " "
+		println("Total train docs in OR for cat:  " + IndexInfo.instance.getCategoryNumber() + " "
 				+ IndexInfo.instance.totalTrainDocsInCat + " Total test docs for cat "
-				+ IndexInfo.instance.totalTestDocsInCat);
+				+ IndexInfo.instance.totalTestDocsInCat)
 
-		ImportantWords iw = new ImportantWords();
-		wordArray = iw.getF1WordList(false, true);
+		termQueryArray = iw.getF1WordList(false, true);
 	}
 
 	public void evaluate(final EvolutionState state, final Individual ind,
@@ -52,36 +53,24 @@ public class OR extends Problem implements SimpleProblemForm, HitCounts {
 		ClassifyFit fitness = (ClassifyFit) ind.fitness;
 		BooleanQuery.Builder bqb = new BooleanQuery.Builder();
 		IntegerVectorIndividual intVectorIndividual = (IntegerVectorIndividual) ind;
-		
+
 		def genes =[] as Set
 		int duplicateCount=0;
 
 		intVectorIndividual.genome.each {gene ->
-			if (!genes.add(gene)) duplicateCount = duplicateCount + 1;
-
-			if (gene < wordArray.size() && gene >= 0){
-				String wrd = wordArray[gene]
-
-				bqb.add(new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, wrd)), BooleanClause.Occur.SHOULD);
+			
+			//no duplicates
+			if (gene < termQueryArray.size() && gene >= 0 && genes.add(gene)){				
+				bqb.add (termQueryArray[gene],BooleanClause.Occur.SHOULD)
 			}
 
-			query = bqb.build();
+			fitness.query = bqb.build();
 
-			IndexSearcher searcher = IndexInfo.instance.indexSearcher;
-			int positiveMatch = getPositiveMatch(searcher, query)
-			int negativeMatch = getNegativeMatch(searcher, query)		
+			fitness.positiveMatchTrain = getPositiveMatch(searcher, fitness.query)
+			fitness.negativeMatchTrain = getNegativeMatch(searcher, fitness.query)
+			fitness.f1train = Effectiveness.f1(fitness.positiveMatchTrain, fitness.negativeMatchTrain, IndexInfo.instance.totalTrainDocsInCat);
 
-			def F1train = Effectiveness.f1(positiveMatch, negativeMatch, IndexInfo.instance.totalTrainDocsInCat);
-
-			fitness.setTrainValues(positiveMatch, negativeMatch);
-			fitness.setF1Train(F1train);
-			fitness.setQuery(query);
-
-			float rawfitness = F1train / (duplicateCount +1);
-
-			((SimpleFitness) intVectorIndividual.fitness).setFitness(state,
-					rawfitness, false);
-
+			((SimpleFitness) intVectorIndividual.fitness).setFitness(state, fitness.f1train, false)
 			ind.evaluated = true;
 		}
 	}

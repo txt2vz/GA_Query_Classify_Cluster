@@ -9,7 +9,7 @@ class GAmainClassify extends Evolve {
  
 	private final String parameterFilePath ='src/cfg/classify.params'
 	private int totPosMatchedTest = 0, totTest = 0, totNegMatchTest = 0;
-	private final static int NUMBER_OF_JOBS = 2;
+	private final static int NUMBER_OF_JOBS = 2
 	private double microF1AllRunsTotal = 0, macroF1AllRunsTotal = 0, microBEPAllRunsTotal = 0;		
 
 	public GAmainClassify(){
@@ -18,10 +18,11 @@ class GAmainClassify extends Evolve {
 
 		Formatter bestResultsOut = new Formatter('results/resultsClassify.csv');
 		final String fileHead = "category, job, f1train, f1test, bepTest, totPositiveTest, totNegativeTest, totTestDocsInCat, query" + '\n';
-		bestResultsOut.format("%s", fileHead);
-
+	
 		ParameterDatabase parameters = null;
 		final Date startRun = new Date();
+		bestResultsOut.format("Start time: %s \n", startRun);
+		bestResultsOut.format("%s", fileHead);
 
 		NUMBER_OF_JOBS.times{job ->
 			parameters = new ParameterDatabase(new File(parameterFilePath));
@@ -57,13 +58,13 @@ class GAmainClassify extends Evolve {
 				println "pop size $popSize"
 
 				//final GAFit cfit = (GAFit) bestFitInAllSubPops;
-				final float testF1 = cfit.getF1Test();
-				final float trainF1 = cfit.getF1Train();
-				final float testBEP = cfit.getBEPTest();
+				def final testF1 = cfit.f1test
+				def final trainF1 = cfit.f1train
+				def final testBEP = cfit.BEPTest
 				macroF1 += testF1;
 
-				totPosMatchedTest += cfit.getPositiveMatchTest();
-				totNegMatchTest += cfit.getNegativeMatchTest();
+				totPosMatchedTest += cfit.positiveMatchTest
+				totNegMatchTest += cfit.negativeMatchTest
 				totTest += IndexInfo.instance.totalTestDocsInCat;
 
 				println "cfit.getQueryMinimal: ${cfit.getQueryMinimal()}"
@@ -71,8 +72,8 @@ class GAmainClassify extends Evolve {
 				bestResultsOut.format(
 						"%s, %d, %.3f, %.3f, %.3f, %d, %d, %d, %s \n",
 						categoryNumber, job, trainF1, testF1, testBEP,
-						cfit.getPositiveMatchTest(),
-						cfit.getNegativeMatchTest(),
+						cfit.positiveMatchTest,
+						cfit.negativeMatchTest,
 						IndexInfo.instance.totalTestDocsInCat,
 						//cfit.getQuery(),
 						//cfit.getQueryMinimal());
@@ -91,7 +92,7 @@ class GAmainClassify extends Evolve {
 			println "OVERALL: micro f1:  $microF1  macroF1: $macroF1 microBEP: $microBEP";
 
 			bestResultsOut.format(" \n");
-			bestResultsOut.format("Run Number, %d", job);
+			bestResultsOut.format("Run Number, %d", job );
 
 			bestResultsOut
 					.format(", Micro F1: , %.4f,  Macro F1: , %.4f, Micro BEP:, %.4f, Total Positive Matches , %d, Total Negative Matches, %d, Total Docs,  %d \n",

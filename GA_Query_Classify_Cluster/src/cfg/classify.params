@@ -1,5 +1,5 @@
 parent.0		= simple.params
-generations =	400       
+generations =	240       
 seed=time
 seed.0=time
 seed.1=time
@@ -13,7 +13,6 @@ eval.problem = classify.query.OR
 #eval.problem = query.SpanFirstG
 
 stat = classify.ClassifyGAStatistics
-#stat = ecj.ClusterGAStatistics
 stat.file = statDump/out.stat
 select.tournament.size = 5
 #breed.elite.0 = 2
@@ -27,7 +26,7 @@ pop.subpop.0.species = ec.vector.IntegerVectorSpecies
 pop.subpop.0.species.ind = ec.vector.IntegerVectorIndividual
 pop.subpop.0.species.fitness = classify.ClassifyFit
 
-pop.subpop.0.species.min-gene = -10
+pop.subpop.0.species.min-gene = -1
 pop.subpop.0.species.max-gene = 100
 
 pop.subpop.0.species.genome-size = 8

@@ -2756,3 +2756,33 @@ PosHits: 237 NegHits: 169 PosScore: 1032.5805914998055 NegScore: 603.70898303389
 ***  TOTALS:   *****   f1list: [0.586206896583, 0.686956521744, 0.647540983599] averagef1: :0.640234800642  ** average precision: 0.5571516447 average recall: 0.7533333333
 ************************************************ 
  
+  ***** Job: 0 Gen: 9 PopSize: 512 Noclusters: 3  pathToIndex: indexes/20NG3SpaceHockeyChristianL6  *********** Wed Apr 12 16:51:11 BST 2017 ***************************************************** 
+ClusterQuery: 0 hits: 80 Query:  mission jesus orbit lunar 
+categoryTotal: 100 for category: category:soc.religion.christian 
+f1: 0.4666666667 recall: 0.42 precision: 0.525
+ClusterQuery: 1 hits: 173 Query:  second even period file game 
+categoryTotal: 100 for category: category:rec.sport.hockey 
+f1: 0.36630036627 recall: 0.5 precision: 0.2890173410
+ClusterQuery: 2 hits: 236 Query:  please used mail sale windows 
+categoryTotal: 100 for category: category:misc.forsale 
+f1: 0.523809523778 recall: 0.88 precision: 0.3728813559
+TotalHits: 365 Total Docs:  500 
+PosHits: 262 NegHits: 227 PosScore: 976.8935869336128 NegScore: 693.2348724901676 Fitness: 28.50257203862133 
+***  TOTALS:   *****   f1list: [0.4666666667, 0.36630036627, 0.523809523778] averagef1: :0.452258852249  ** average precision: 0.3956328990 average recall: 0.60
+************************************************ 
+ 
+  ***** Job: 0 Gen: 9 PopSize: 512 Noclusters: 3  pathToIndex: indexes/20NG3SpaceHockeyChristianL6  *********** Wed Apr 12 19:50:16 BST 2017 ***************************************************** 
+ClusterQuery: 0 hits: 150 Query:  windows space station 
+categoryTotal: 100 for category: category:comp.os.ms-windows.misc 
+f1: 0.543999999976 recall: 0.68 precision: 0.4533333333
+ClusterQuery: 1 hits: 175 Query:  game nhl problem find jesus 
+categoryTotal: 100 for category: category:rec.sport.hockey 
+f1: 0.4581818182 recall: 0.63 precision: 0.36
+ClusterQuery: 2 hits: 139 Query:  computer sale orbit 
+categoryTotal: 100 for category: category:misc.forsale 
+f1: 0.577405857742 recall: 0.69 precision: 0.4964028777
+TotalHits: 356 Total Docs:  500 
+PosHits: 271 NegHits: 193 PosScore: 957.3533416390419 NegScore: 560.2414921224117 Fitness: 35.41287347206793 
+***  TOTALS:   *****   f1list: [0.543999999976, 0.4581818182, 0.577405857742] averagef1: :0.526529225306  ** average precision: 0.4365787370 average recall: 0.6666666667
+************************************************ 
+ 

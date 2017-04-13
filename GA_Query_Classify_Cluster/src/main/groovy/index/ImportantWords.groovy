@@ -45,11 +45,12 @@ public class ImportantWords {
 	private Set<String> stopSet
 
 	public static void main(String[] args){
-		//IndexInfo.instance.setCategoryName("cru")
+		IndexInfo.instance.setCategoryName("cru")
+		IndexInfo.instance.categoryNumber = '3'
 		IndexInfo.instance.setIndex()
 		def iw = new ImportantWords()
-		//iw.getF1WordList(false, true)
-		iw.getTFIDFWordList()
+		iw.getF1WordList(false, true)
+	//	iw.getTFIDFWordList()
 	}
 
 	public ImportantWords() throws IOException {
@@ -65,34 +66,29 @@ public class ImportantWords {
 	 * create a set of words based on F1 measure of the word as a classify.query
 	 * create new for each category
 	 */
-	public String[] getF1WordList(boolean spanFirstQ, boolean positiveList)
+	public TermQuery[] getF1WordList(boolean spanFirstQ, boolean positiveList)
 	throws IOException{
 
 		println "Important words terms.getDocCount: ${terms.getDocCount()}"
 		println "Important words terms.size ${terms.size()}"
 
-		BytesRef text;
-		termsEnum = terms.iterator();
-
+		BytesRef termbr
 		def wordMap = [:]
 
-		while((text = termsEnum.next()) != null) {
+		while((termbr = termsEnum.next()) != null) {
 
-			def word = text.utf8ToString()
+			Term t = new Term(IndexInfo.FIELD_CONTENTS, termbr);
+			String word = termbr.utf8ToString()
+			char firstChar = word.charAt(0)
+			int df = indexSearcher.getIndexReader().docFreq(t)
 
-			final Term t = new Term(IndexInfo.FIELD_CONTENTS, word);
-
-			if (word=="") continue
-
-				char c = word.charAt(0)
-
-			if (indexSearcher.getIndexReader().docFreq(t) < 3
-			//|| StopSet.stopSet.contains(t.text())
-			|| stopSet.contains(t.text())
-			|| t.text().contains("'")
-			//  ||t.text().contains(".")
-			||!c.isLetter()
-			//|| stopSet.contains(t.text()))
+			if (
+			  df < 3
+			  || stopSet.contains(t.text())
+			  || t.text().contains("'")
+			  || t.text().length() < 2
+			  || !firstChar.isLetter()
+			//  || t.text().contains(".")
 			)
 				continue;
 
@@ -138,16 +134,16 @@ public class ImportantWords {
 					totalDocs);
 
 			if (F1 > 0.02) {
-				wordMap += [(word): F1]
+				wordMap += [(t): F1]
 			}
 		}
-
-		wordMap= wordMap.sort{a, b -> b.value <=> a.value}
-
-		List wordList = wordMap.keySet().toList().take(MAX_TERMLIST_SIZE)
-		println "map size: ${wordMap.size()}  List size is ${wordList.size()}  list is $wordList"
-
-		return wordList.toArray();
+		
+		//wordMap= wordMap.sort{a, b -> a.value <=> b.value}
+		wordMap= wordMap.sort{-it.value}
+		println "wordMap $wordMap"
+		TermQuery[] termQueryList = wordMap.keySet().toList().take(MAX_TERMLIST_SIZE).collect {new TermQuery(it)}.asImmutable()
+		println "f1 map size: ${wordMap.size()}  termQuerylist size: ${termQueryList.size()}  termQuerylist: $termQueryList"
+		return termQueryList
 	}
 
 	public TermQuery[] getTFIDFWordList(){
@@ -194,7 +190,7 @@ public class ImportantWords {
 		}
 
 		wordMap= wordMap.sort{a, b -> a.value <=> b.value}
-		TermQuery[] termQueryList = wordMap.keySet().toList().take(MAX_TERMLIST_SIZE).collect {new TermQuery(it)}.asImmutable()
+		TermQuery[] termQueryList = wordMap.keySet().toList().take(MAX_TERMLIST_SIZE).collect {new TermQuery(it)}.asImmutable()	
 		println "tfidf map size: ${wordMap.size()}  termQuerylist size: ${termQueryList.size()}  termQuerylist: $termQueryList"
 		return termQueryList
 	}

@@ -43,7 +43,7 @@ public class ClassifyGAStatistics extends SimpleStatistics {
 
 
 		// get test results on best individual
-		Query q = gaFit.getQuery()
+		Query q = gaFit.query
 		IndexSearcher searcher = IndexInfo.instance.indexSearcher;
 
 		TotalHitCountCollector collector = new TotalHitCountCollector()
@@ -53,7 +53,7 @@ public class ClassifyGAStatistics extends SimpleStatistics {
 		bqb.add(IndexInfo.instance.catTestBQ, BooleanClause.Occur.FILTER);
 
 		searcher.search(bqb.build(), collector);
-		final int positiveMatchTest = collector.getTotalHits();
+		gaFit.positiveMatchTest = collector.getTotalHits();
 
 		collector = new TotalHitCountCollector();
 		bqb = new BooleanQuery.Builder();
@@ -61,19 +61,17 @@ public class ClassifyGAStatistics extends SimpleStatistics {
 		bqb.add(IndexInfo.instance.othersTestBQ, BooleanClause.Occur.FILTER);
 		searcher.search(bqb.build(), collector);
 
-		final int negativeMatchTest = collector.getTotalHits();
+		gaFit.negativeMatchTest = collector.getTotalHits();
 
-		gaFit.setTestValues(positiveMatchTest, negativeMatchTest);
+		gaFit.f1test = Effectiveness.f1(gaFit.positiveMatchTest, gaFit.negativeMatchTest,
+				IndexInfo.instance.totalTestDocsInCat)
 
-		gaFit.setF1Test(Effectiveness.f1(positiveMatchTest, negativeMatchTest,
-				IndexInfo.instance.totalTestDocsInCat));
+		gaFit.BEPTest = Effectiveness.bep(gaFit.positiveMatchTest, gaFit.negativeMatchTest,
+				IndexInfo.instance.totalTestDocsInCat)
 
-		gaFit.setBEPTest(Effectiveness.bep(positiveMatchTest, negativeMatchTest,
-				IndexInfo.instance.totalTestDocsInCat));
-
-		println   "Fitness: " + gaFit.fitness() + "F1Test: " + gaFit.getF1Test() +
-				" F1Train: " + gaFit.getF1Train() + " positive match test: " + positiveMatchTest +
-				" negative match test: " + negativeMatchTest
+		println "Fitness: " + gaFit.fitness() + " F1Test: " + gaFit.f1test +
+				" F1Train: " + gaFit.f1train + " positive match test: " + gaFit.positiveMatchTest +
+				" negative match test: " + gaFit.negativeMatchTest
 
 		//println "Query: " + gaFit.getQuery()
 		//println "QueryMinimal: " + gaFit.getQueryMinimal()
