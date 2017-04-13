@@ -1,12 +1,13 @@
 package classify.query
 
-import org.apache.lucene.index.Term
 import org.apache.lucene.search.BooleanClause
 import org.apache.lucene.search.BooleanQuery
 import org.apache.lucene.search.IndexSearcher
 import org.apache.lucene.search.Query
 import org.apache.lucene.search.TermQuery
 
+import classify.ClassifyFit;
+import classify.Effectiveness;
 import ec.EvolutionState
 import ec.Individual
 import ec.Problem
@@ -16,8 +17,6 @@ import ec.util.Parameter
 import ec.vector.IntegerVectorIndividual
 import index.ImportantWords
 import index.IndexInfo
-import classify.Effectiveness;
-import classify.ClassifyFit;
 
 /**
  * To generate queries to perform binary text classification using GA string of

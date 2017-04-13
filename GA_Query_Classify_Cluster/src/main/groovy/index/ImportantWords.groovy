@@ -14,19 +14,14 @@ import org.apache.lucene.search.Query
 import org.apache.lucene.search.TermQuery
 import org.apache.lucene.search.TotalHitCountCollector
 import org.apache.lucene.search.similarities.ClassicSimilarity
-import org.apache.lucene.search.similarities.Similarity
 import org.apache.lucene.search.similarities.TFIDFSimilarity
-//import org.apache.lucene.search.similarities.DefaultSimilarity
 import org.apache.lucene.search.spans.SpanFirstQuery
 import org.apache.lucene.search.spans.SpanTermQuery
 import org.apache.lucene.util.BytesRef
 
-//import query.*
-//import classify.Effectiveness
-
 /**
  * GAs return words by selecting form word lists provided by this
- * class. The words should be as far as possible in order of their likely
+ * class. The words should be in order of their likely
  * usefulness in classify.query building
  * 
  * @author Laurie 
