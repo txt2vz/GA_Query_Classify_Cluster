@@ -9,7 +9,7 @@ class GAmainClassify extends Evolve {
  
 	private final String parameterFilePath ='src/cfg/classify.params'
 	private int totPosMatchedTest = 0, totTest = 0, totNegMatchTest = 0;
-	private final static int NUMBER_OF_JOBS = 1
+	private final static int NUMBER_OF_JOBS = 3
 	private double microF1AllRunsTotal = 0, macroF1AllRunsTotal = 0, microBEPAllRunsTotal = 0;		
 
 	public GAmainClassify(){
@@ -24,7 +24,7 @@ class GAmainClassify extends Evolve {
 		bestResultsOut.format("Start time: %s \n", startRun);
 		bestResultsOut.format("%s", fileHead);
 
-		NUMBER_OF_JOBS.times{job ->
+		(1..NUMBER_OF_JOBS).each{job ->
 			parameters = new ParameterDatabase(new File(parameterFilePath));
 
 			double macroF1 = 0;

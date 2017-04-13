@@ -21,7 +21,7 @@ pop.subpops = 1
 pop.default-subpop =0
 
 pop.subpop.0 = ec.Subpopulation
-pop.subpop.0.size = 128
+pop.subpop.0.size = 256
 pop.subpop.0.species = ec.vector.IntegerVectorSpecies
 pop.subpop.0.species.ind = ec.vector.IntegerVectorIndividual
 pop.subpop.0.species.fitness = classify.ClassifyFit

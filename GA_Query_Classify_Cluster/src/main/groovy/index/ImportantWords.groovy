@@ -6,20 +6,13 @@ import org.apache.lucene.index.PostingsEnum
 import org.apache.lucene.index.Term
 import org.apache.lucene.index.Terms
 import org.apache.lucene.index.TermsEnum
-import org.apache.lucene.search.BooleanClause
-import org.apache.lucene.search.BooleanQuery
 import org.apache.lucene.search.DocIdSetIterator
 import org.apache.lucene.search.IndexSearcher
 import org.apache.lucene.search.Query
 import org.apache.lucene.search.TermQuery
-import org.apache.lucene.search.TotalHitCountCollector
 import org.apache.lucene.search.similarities.ClassicSimilarity
 import org.apache.lucene.search.similarities.TFIDFSimilarity
-import org.apache.lucene.search.spans.SpanFirstQuery
-import org.apache.lucene.search.spans.SpanTermQuery
 import org.apache.lucene.util.BytesRef
-import classify.HitCounts
-import groovy.util.ObjectGraphBuilder.DefaultNewInstanceResolver
 
 /**
  * GAs return words by selecting form word lists provided by this
@@ -29,7 +22,7 @@ import groovy.util.ObjectGraphBuilder.DefaultNewInstanceResolver
  * @author Laurie 
  */
 
-public class ImportantWords implements HitCounts {
+public class ImportantWords  {
 
 	public final static int SPAN_FIRST_MAX_END = 300;
 	private final static int MAX_TERMLIST_SIZE = 300;
@@ -88,31 +81,14 @@ public class ImportantWords implements HitCounts {
 			)
 				continue;
 
-			Query q = new TermQuery(t)
-			
-			//Filter filter0, filter1;
-		//	BooleanQuery filter0, filter1;
-//			int totalDocs;
-//
-//			if (positiveList) {
-//				filter0 = IndexInfo.instance.catTrainBQ;
-//				filter1 = IndexInfo.instance.othersTrainBQ;
-//				totalDocs = IndexInfo.instance.totalTrainDocsInCat;
-//			} else {
-//				filter0 = IndexInfo.instance.othersTrainBQ;
-//				filter1 = IndexInfo.instance.catTrainBQ;
-//				totalDocs = IndexInfo.instance.totalOthersTrainDocs;
-//			}
+			Query q = new TermQuery(t)		
 
-			final int positiveHits = IndexInfo.instance.getQueryHitsWithFilter(indexSearcher,IndexInfo.instance.catTrainBQ, q) 
-			//getPositiveMatch(indexSearcher, q)
+			final int positiveHits = IndexInfo.instance.getQueryHitsWithFilter(indexSearcher,IndexInfo.instance.catTrainBQ, q) 	
 			final int negativeHits = IndexInfo.instance.getQueryHitsWithFilter(indexSearcher,IndexInfo.instance.othersTrainBQ, q) 
-			//getNegativeMatch(indexSearcher, q)
 			
 			def F1 = classify.Effectiveness.f1(positiveHits, negativeHits,
 				IndexInfo.instance.totalTrainDocsInCat)
-				//totalDocs);
-
+		
 			if (F1 > 0.02) {
 				wordMap += [(t): F1]
 			}

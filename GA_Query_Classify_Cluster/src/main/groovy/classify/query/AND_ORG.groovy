@@ -17,8 +17,7 @@ import classify.Effectiveness;
 import classify.ClassifyFit;
 import groovy.transform.CompileStatic
 import index.ImportantWords
-import index.IndexInfo;;
-import classify.HitCounts
+import index.IndexInfo;
 
 /**
  * To generate queries to perform binary text classification using GA string of
@@ -27,7 +26,8 @@ import classify.HitCounts
  * @author Laurie
  */
 
-public class AND_ORG extends Problem implements SimpleProblemForm, HitCounts {
+@Deprecated  //needs reformulating for termquery array
+public class AND_ORG extends Problem implements SimpleProblemForm {
 
 	private String[] wordArray;
 	BooleanQuery query;

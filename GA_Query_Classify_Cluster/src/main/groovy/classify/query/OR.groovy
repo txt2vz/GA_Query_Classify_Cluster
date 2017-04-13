@@ -8,7 +8,7 @@ import org.apache.lucene.search.TermQuery
 
 import classify.ClassifyFit;
 import classify.Effectiveness;
-import classify.HitCounts
+
 import ec.EvolutionState
 import ec.Individual
 import ec.Problem
@@ -27,7 +27,7 @@ import index.IndexInfo
  */
 
 //HitCounts is a groovy trait for counting query hits in a category
-public class OR extends Problem implements SimpleProblemForm, HitCounts {
+public class OR extends Problem implements SimpleProblemForm {
 
 	private IndexSearcher searcher = IndexInfo.instance.indexSearcher
 	private final ImportantWords iw = new ImportantWords();
