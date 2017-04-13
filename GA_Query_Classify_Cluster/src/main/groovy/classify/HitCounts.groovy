@@ -1,4 +1,4 @@
-package classify.query;
+package classify;
 
 import org.apache.lucene.search.BooleanClause
 import org.apache.lucene.search.BooleanQuery
@@ -13,8 +13,7 @@ trait HitCounts {
 	public double getPositiveMatch(IndexSearcher searcher, Query q) {
 		
 		TotalHitCountCollector collector = new TotalHitCountCollector();
-		BooleanQuery.Builder  bqb = new BooleanQuery.Builder();	
-		bqb = new BooleanQuery.Builder()
+		BooleanQuery.Builder  bqb = new BooleanQuery.Builder();			
 		bqb.add(q, BooleanClause.Occur.MUST)
 		bqb.add(IndexInfo.instance.catTrainBQ, BooleanClause.Occur.FILTER)
 		searcher.search(bqb.build(), collector);

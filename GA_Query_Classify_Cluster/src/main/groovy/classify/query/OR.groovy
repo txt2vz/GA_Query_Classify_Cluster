@@ -8,6 +8,7 @@ import org.apache.lucene.search.TermQuery
 
 import classify.ClassifyFit;
 import classify.Effectiveness;
+import classify.HitCounts
 import ec.EvolutionState
 import ec.Individual
 import ec.Problem

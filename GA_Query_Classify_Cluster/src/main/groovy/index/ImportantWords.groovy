@@ -18,6 +18,7 @@ import org.apache.lucene.search.similarities.TFIDFSimilarity
 import org.apache.lucene.search.spans.SpanFirstQuery
 import org.apache.lucene.search.spans.SpanTermQuery
 import org.apache.lucene.util.BytesRef
+import classify.HitCounts
 
 /**
  * GAs return words by selecting form word lists provided by this
@@ -27,7 +28,7 @@ import org.apache.lucene.util.BytesRef
  * @author Laurie 
  */
 
-public class ImportantWords {
+public class ImportantWords implements HitCounts {
 
 	public final static int SPAN_FIRST_MAX_END = 300;
 	private final static int MAX_TERMLIST_SIZE = 300;
@@ -48,7 +49,7 @@ public class ImportantWords {
 	//	iw.getTFIDFWordList()
 	}
 
-	public ImportantWords() throws IOException {
+	public ImportantWords() {
 		indexSearcher = IndexInfo.instance.indexSearcher;
 		indexReader = indexSearcher.getIndexReader()
 		terms = MultiFields.getTerms(indexReader, IndexInfo.FIELD_CONTENTS)
@@ -111,20 +112,9 @@ public class ImportantWords {
 				totalDocs = IndexInfo.instance.totalOthersTrainDocs;
 			}
 
-			TotalHitCountCollector collector  = new TotalHitCountCollector();
-			BooleanQuery.Builder bqb = new BooleanQuery.Builder()
-			bqb.add(q, BooleanClause.Occur.MUST)
-			bqb.add(filter0, BooleanClause.Occur.FILTER)
-			indexSearcher.search(bqb.build(), collector);
-			final int positiveHits = collector.getTotalHits();
-
-			collector  = new TotalHitCountCollector();
-			bqb = new BooleanQuery.Builder()
-			bqb.add(q, BooleanClause.Occur.MUST)
-			bqb.add(filter1, BooleanClause.Occur.FILTER)
-			indexSearcher.search(bqb.build(), collector);
-			final int negativeHits = collector.getTotalHits();
-
+			final int positiveHits = getPositiveMatch(indexSearcher, q)
+			final int negativeHits = getNegativeMatch(indexSearcher, q)
+			
 			def F1 = classify.Effectiveness.f1(positiveHits, negativeHits,
 					totalDocs);
 

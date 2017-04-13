@@ -108,5 +108,5 @@ class IndexInfo {
 
 		println "Total train docs: $totalTrain"
 		println "IndexInfo   CategoryNumber: $categoryNumber Total train in cat: $totalTrainDocsInCat  Total others tain: $totalOthersTrainDocs   Total test in cat : $totalTestDocsInCat  "
-	}
+	}	
 }

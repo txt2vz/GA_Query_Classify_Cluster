@@ -1,30 +1,16 @@
-Start time: Thu Apr 13 12:27:56 BST 2017 
+Start time: Thu Apr 13 13:12:37 BST 2017 
 category, job, f1train, f1test, bepTest, totPositiveTest, totNegativeTest, totTestDocsInCat, query
-0, 0, 0.782, 0.808, 0.814, 535, 70, 719, acquisition acquire takeover stake acquired disclosed undisclosed merger 
+0, 0, 0.782, 0.808, 0.814, 535, 70, 719, undisclosed acquired disclosed merger acquire stake takeover acquisition 
 1, 0, 0.562, 0.544, 0.687, 56, 94, 56, maize corn 
-2, 0, 0.764, 0.708, 0.716, 121, 32, 189, opec gasoline bbl barrel bpd barrels exploration refinery 
-3, 0, 0.556, 0.549, 0.683, 70, 114, 71, durum wheat 
-4, 0, 0.936, 0.938, 0.940, 1060, 112, 1087, profit vs earnings revs dividend qtr payout split 
-5, 0, 0.509, 0.542, 0.617, 109, 162, 131, bundesbank fed rate band 
-6, 0, 0.658, 0.641, 0.680, 151, 141, 179, dollar intervene currencies money fed monetary 
-7, 0, 0.656, 0.624, 0.646, 68, 61, 89, loading shipping vessel seamen vessels tankers warships port 
-8, 0, 0.632, 0.568, 0.604, 88, 105, 117, protectionism protectionist deficit dumping gatt retaliation surplus bilateral 
-9, 0, 0.642, 0.655, 0.736, 146, 151, 149, grain barley cereals rice wheat maize crop corn 
+2, 0, 0.764, 0.708, 0.716, 121, 32, 189, opec bpd barrel gasoline exploration bbl refinery barrels 
+3, 0, 0.556, 0.549, 0.683, 70, 114, 71, wheat durum 
+4, 0, 0.936, 0.938, 0.940, 1060, 112, 1087, revs payout split vs earnings profit qtr dividend 
+5, 0, 0.509, 0.542, 0.617, 109, 162, 131, fed band bundesbank rate 
+6, 0, 0.658, 0.641, 0.680, 151, 141, 179, intervene monetary currencies dollar money fed 
+7, 0, 0.656, 0.624, 0.646, 68, 61, 89, tankers vessels vessel loading shipping warships port seamen 
+8, 0, 0.602, 0.542, 0.657, 109, 176, 117, yeutter trade retaliation 
+9, 0, 0.642, 0.655, 0.736, 146, 151, 149, crop corn maize wheat rice grain barley cereals 
  
-Run Number, 0, Micro F1: , 0.7714,  Macro F1: , 0.6577, Micro BEP:, 0.7801, Total Positive Matches , 2404, Total Negative Matches, 1042, Total Docs,  2787 
+Run Number, 0, Micro F1: , 0.7668,  Macro F1: , 0.6551, Micro BEP:, 0.7778, Total Positive Matches , 2425, Total Negative Matches, 1113, Total Docs,  2787 
 ,, Overall Micro F1 , Infinity,  Overall Macro F1, Infinity, Overall MicroBEP, Infinity 
- 
-0, 1, 0.782, 0.808, 0.814, 535, 70, 719, disclosed acquired undisclosed takeover merger acquire acquisition stake 
-1, 1, 0.562, 0.544, 0.687, 56, 94, 56, corn maize 
-2, 1, 0.764, 0.708, 0.716, 121, 32, 189, exploration refinery barrel opec bpd bbl gasoline barrels 
-3, 1, 0.556, 0.549, 0.683, 70, 114, 71, wheat durum 
-4, 1, 0.936, 0.938, 0.940, 1060, 112, 1087, vs split revs dividend earnings profit payout qtr 
-5, 1, 0.509, 0.542, 0.617, 109, 162, 131, fed bundesbank band rate 
-6, 1, 0.658, 0.641, 0.680, 151, 141, 179, currencies fed dollar intervene monetary money 
-7, 1, 0.656, 0.624, 0.646, 68, 61, 89, loading vessels shipping tankers seamen port warships vessel 
-8, 1, 0.602, 0.586, 0.680, 109, 146, 117, trade yeutter 
-9, 1, 0.642, 0.655, 0.736, 146, 151, 149, crop corn grain rice cereals wheat barley maize 
- 
-Run Number, 1, Micro F1: , 0.7705,  Macro F1: , 0.6595, Micro BEP:, 0.7807, Total Positive Matches , 2425, Total Negative Matches, 1083, Total Docs,  2787 
-,, Overall Micro F1 , 1.5418,  Overall Macro F1, 1.3172, Overall MicroBEP, 1.5608 
  
