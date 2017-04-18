@@ -28,7 +28,7 @@ import index.IndexInfo
 public class OR extends Problem implements SimpleProblemForm {
 
 	private IndexSearcher searcher = IndexInfo.instance.indexSearcher
-	private final ImportantTerms importantTerms = new ImportantTerms();
+	private final ImportantTerms importantTerms = new ImportantTerms()
 	private TermQuery[] termQueryArray
 
 	public void setup(final EvolutionState state, final Parameter base) {
