@@ -13,11 +13,11 @@ class ImportantTermsSpec extends spock.lang.Specification {
 		def oilList = iw.getF1TermQueryList ()
 
 		then:
-		oilList[0].toString((IndexInfo.FIELD_CONTENTS)) == "oil"
+		oilList[0].toString((IndexInfo.FIELD_CONTENTS)) == 'oil'
 		oilList[3].getTerm().text() == 'petroleum'
 	}
 
-	def "ImportantTerms 20News3 tfidf"	(){
+	def "ImportantTerms 20News3 tfidf"(){
 		setup:
 		IndexInfo.instance.setPathToIndex('indexes/20NG3SpaceHockeyChristianL6')
 		IndexInfo.instance.setIndex()

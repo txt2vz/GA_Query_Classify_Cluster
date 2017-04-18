@@ -6,8 +6,8 @@ dependencies {
 	
 	compile 'org.codehaus.groovy:groovy-all:2.4.10'
 
-	compile 'org.apache.lucene:lucene-core:6.3.0'
-	compile 'org.apache.lucene:lucene-analyzers-common:6.3.0'
+	compile group: 'org.apache.lucene', name: 'lucene-core', version: '6.5.0'
+	compile group: 'org.apache.lucene', name: 'lucene-analyzers-common', version: '6.5.0'
 	
 	testCompile "org.spockframework:spock-core:1.0-groovy-2.4"	
 
@@ -21,12 +21,10 @@ task(runClustering, dependsOn: 'classes', type: JavaExec) {
 	classpath = sourceSets.main.runtimeClasspath
 }
 
-
 task(runClassifier, dependsOn: 'classes', type: JavaExec) {
 	main = 'classify.GAmainClassify'
 	classpath = sourceSets.main.runtimeClasspath
 }
-
 
 configure(runClassifier) {
 	group = 'run'
@@ -36,7 +34,6 @@ configure(runClustering) {
 	group = 'run'
 	description = 'Run clustering'
 }
-
 
 task(indexCrisisData, dependsOn: 'classes', type: JavaExec) {
 	main = 'index.IndexCrisisClusterFromCSV'

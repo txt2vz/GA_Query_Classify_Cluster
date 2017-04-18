@@ -31,7 +31,7 @@ import org.apache.lucene.store.FSDirectory
 
 class IndexR10 {
 	// Create Lucene index in this directory
-	def indexPath = "indexes/r10L6"
+	def indexPath = 'indexes/r10L6'
 
 	// Index files in this directory
 	def docsPath =  /C:\Users\Laurie\Dataset\reuters-top10/
@@ -129,12 +129,12 @@ class IndexR10 {
 
 		IndexReader reader = DirectoryReader.open(FSDirectory.open(Paths.get(indexPath)));
 
-		BooleanQuery.Builder finalQuery = new BooleanQuery.Builder();
-		BooleanQuery.Builder q1 = new BooleanQuery.Builder();
-		q1.add(new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, "ship")), Occur.MUST);
-		q1.add(new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, "wheat")), Occur.MUST);
+		//BooleanQuery.Builder finalQuery = new BooleanQuery.Builder();
+		BooleanQuery.Builder bqb = new BooleanQuery.Builder();
+		bqb.add(new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, "ship")), Occur.MUST);
+		bqb.add(new TermQuery(new Term(IndexInfo.FIELD_CONTENTS, "wheat")), Occur.MUST);
 		//finalQuery.add(q1.build(), Occur.MUST);
-		Query q =  q1.build() 
+		Query q =  bqb.build() 
 		
 		IndexSearcher searcher = new IndexSearcher(reader);
 		TopScoreDocCollector collector = TopScoreDocCollector.create(10);
