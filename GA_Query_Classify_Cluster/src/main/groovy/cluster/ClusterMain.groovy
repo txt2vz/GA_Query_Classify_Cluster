@@ -22,7 +22,7 @@ class ClusterMain extends Evolve {
  
 		final Date startRun = new Date();
 
-		NUMBER_OF_JOBS.times{job ->
+			(1..NUMBER_OF_JOBS).each{job ->
 			parameters = new ParameterDatabase(new File(parameterFilePath));
 
 			state = initialize(parameters, job);

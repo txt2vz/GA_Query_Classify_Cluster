@@ -9,7 +9,7 @@ class GAmainClassify extends Evolve {
  
 	private final String parameterFilePath ='src/cfg/classify.params'
 	private int totPosMatchedTest = 0, totTest = 0, totNegMatchTest = 0;
-	private final static int NUMBER_OF_JOBS = 3
+	private final static int NUMBER_OF_JOBS = 2
 	private double microF1AllRunsTotal = 0, macroF1AllRunsTotal = 0, microBEPAllRunsTotal = 0;		
 
 	public GAmainClassify(){
@@ -18,7 +18,7 @@ class GAmainClassify extends Evolve {
 
 		Formatter bestResultsOut = new Formatter('results/resultsClassify.csv');
 		final String fileHead = "category, job, f1train, f1test, bepTest, totPositiveTest, totNegativeTest, totTestDocsInCat, query" + '\n';
-	
+	 
 		ParameterDatabase parameters = null;
 		final Date startRun = new Date();
 		bestResultsOut.format("Start time: %s \n", startRun);
@@ -41,10 +41,9 @@ class GAmainClassify extends Evolve {
 				state.job[0] = new Integer(job + categoryNumber);
 
 				if (NUMBER_OF_JOBS >= 1) {
-					final String jobFilePrefix = "job." + job + "." + categoryNumber;
-					state.output.setFilePrefix(jobFilePrefix);
-
-					state.checkpointPrefix = jobFilePrefix 	+ state.checkpointPrefix;
+					final String jobFilePrefix = "job." + job + "." + categoryNumber
+					state.output.setFilePrefix(jobFilePrefix)
+					state.checkpointPrefix = jobFilePrefix 	+ state.checkpointPrefix
 				}
 				state.run(EvolutionState.C_STARTED_FRESH);
 

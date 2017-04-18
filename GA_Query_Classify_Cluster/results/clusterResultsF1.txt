@@ -2786,3 +2786,33 @@ PosHits: 271 NegHits: 193 PosScore: 957.3533416390419 NegScore: 560.241492122411
 ***  TOTALS:   *****   f1list: [0.543999999976, 0.4581818182, 0.577405857742] averagef1: :0.526529225306  ** average precision: 0.4365787370 average recall: 0.6666666667
 ************************************************ 
  
+  ***** Job: 1 Gen: 9 PopSize: 512 Noclusters: 3  pathToIndex: indexes/20NG3SpaceHockeyChristianL6  *********** Tue Apr 18 10:31:54 BST 2017 ***************************************************** 
+ClusterQuery: 0 hits: 107 Query:  period shuttle data god 
+categoryTotal: 100 for category: category:soc.religion.christian 
+f1: 0.502415458931 recall: 0.52 precision: 0.4859813084
+ClusterQuery: 1 hits: 146 Query:  orbit team go players 
+categoryTotal: 100 for category: category:rec.sport.hockey 
+f1: 0.577235772384 recall: 0.71 precision: 0.4863013699
+ClusterQuery: 2 hits: 167 Query:  programs sale using email software 
+categoryTotal: 100 for category: category:misc.forsale 
+f1: 0.501872659184 recall: 0.67 precision: 0.4011976048
+TotalHits: 337 Total Docs:  500 
+PosHits: 270 NegHits: 150 PosScore: 997.8152759075165 NegScore: 487.2527240514755 Fitness: 28.592179741956453 
+***  TOTALS:   *****   f1list: [0.502415458931, 0.577235772384, 0.501872659184] averagef1: :0.527174630166  ** average precision: 0.4578267610 average recall: 0.6333333333
+************************************************ 
+ 
+  ***** Job: 1 Gen: 9 PopSize: 512 Noclusters: 3  pathToIndex: indexes/crisis3FireBombFloodL6  *********** Tue Apr 18 12:27:36 BST 2017 ***************************************************** 
+ClusterQuery: 0 hits: 419 Query:  friends homes fire state wildfire 
+categoryTotal: 1000 for category: category:Colorado_w 
+f1: 0.5102184636994 recall: 0.362 precision: 0.8639618138
+ClusterQuery: 1 hits: 674 Query:  day bombing boston bostonmarathon 
+categoryTotal: 1000 for category: category:Boston_bom 
+f1: 0.7741935483728 recall: 0.648 precision: 0.9614243323
+ClusterQuery: 2 hits: 633 Query:  river bigwet flood photos 
+categoryTotal: 1000 for category: category:Queensland 
+f1: 0.7434170238839 recall: 0.607 precision: 0.9589257504
+TotalHits: 1685 Total Docs:  3000 
+PosHits: 1644 NegHits: 82 PosScore: 4391.157502055168 NegScore: 247.097820520401 Fitness: 1622.7936501154552 
+***  TOTALS:   *****   f1list: [0.5102184636994, 0.7741935483728, 0.7434170238839] averagef1: :0.6759430119854  ** average precision: 0.9281039655 average recall: 0.539
+************************************************ 
+ 

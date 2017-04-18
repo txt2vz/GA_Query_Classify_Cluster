@@ -1,4 +1,4 @@
- package index
+package index
 
 import org.apache.lucene.index.IndexReader
 import org.apache.lucene.index.MultiFields
@@ -15,17 +15,15 @@ import org.apache.lucene.search.similarities.TFIDFSimilarity
 import org.apache.lucene.util.BytesRef
 
 /**
- * GAs return words by selecting form word lists provided by this
- * class. The words should be in order of their likely
- * usefulness in classify.query building
- * 
+ * Return a list of termqueries likely to be useful for building queries for classification or clustering
+ * Terms should be in order of their likely usefulness query building 
  * @author Laurie 
  */
 
 public class ImportantWords  {
 
 	public final static int SPAN_FIRST_MAX_END = 300;
-	private final static int MAX_TERMLIST_SIZE = 300;
+	private final static int MAX_TERMQUERYLIST_SIZE = 300;
 
 	private final IndexSearcher indexSearcher
 	private final IndexReader indexReader
@@ -40,7 +38,7 @@ public class ImportantWords  {
 		IndexInfo.instance.setIndex()
 		def iw = new ImportantWords()
 		iw.getF1WordList()
-	//	iw.getTFIDFWordList()
+		//iw.getTFIDFWordList()
 	}
 
 	public ImportantWords() {
@@ -52,9 +50,23 @@ public class ImportantWords  {
 		stopSet = StopSet.getStopSetFromFile()
 	}
 
+	//screen terms likely to be ineffective
+	private boolean isEffectiveTerm(Term t) {
+		int df = indexSearcher.getIndexReader().docFreq(t)
+		def word = t.text()
+
+		return (
+				df > 2
+				&& !stopSet.contains(word)
+				&& !word.contains("'")
+				&& word.length() > 1
+				&& word.charAt(0).isLetter()
+				//  && !word.contains(".")
+				)
+	}
+
 	/**
-	 * create a set of words based on F1 measure of the word as a classify.query
-	 * create new for each category
+	 * create a set of words based on F1 measure of the term when used to classify current category
 	 */
 	public TermQuery[] getF1WordList(){
 
@@ -62,92 +74,65 @@ public class ImportantWords  {
 		println "Important words terms.size ${terms.size()}"
 
 		BytesRef termbr
-		def wordMap = [:]
+		def termQueryMap = [:]
 
 		while((termbr = termsEnum.next()) != null) {
 
 			Term t = new Term(IndexInfo.FIELD_CONTENTS, termbr);
-			String word = termbr.utf8ToString()
-			char firstChar = word.charAt(0)
-			int df = indexSearcher.getIndexReader().docFreq(t)
+			if ( isEffectiveTerm(t) ){
 
-			if (
-			  df < 3
-			  || stopSet.contains(t.text())
-			  || t.text().contains("'")
-			  || t.text().length() < 2
-			  || !firstChar.isLetter()
-			//  || t.text().contains(".")
-			)
-				continue;
+				Query tq = new TermQuery(t)
+				final int positiveHits = IndexInfo.instance.getQueryHitsWithFilter(indexSearcher,IndexInfo.instance.catTrainBQ, tq)
+				final int negativeHits = IndexInfo.instance.getQueryHitsWithFilter(indexSearcher,IndexInfo.instance.othersTrainBQ, tq)
 
-			Query q = new TermQuery(t)		
+				def F1 = classify.Effectiveness.f1(positiveHits, negativeHits,
+						IndexInfo.instance.totalTrainDocsInCat)
 
-			final int positiveHits = IndexInfo.instance.getQueryHitsWithFilter(indexSearcher,IndexInfo.instance.catTrainBQ, q) 	
-			final int negativeHits = IndexInfo.instance.getQueryHitsWithFilter(indexSearcher,IndexInfo.instance.othersTrainBQ, q) 
-			
-			def F1 = classify.Effectiveness.f1(positiveHits, negativeHits,
-				IndexInfo.instance.totalTrainDocsInCat)
-		
-			if (F1 > 0.02) {
-				wordMap += [(t): F1]
+				if (F1 > 0.02) {
+					termQueryMap += [(tq): F1]
+				}
 			}
 		}
-		
-		//wordMap= wordMap.sort{a, b -> a.value <=> b.value}
-		wordMap= wordMap.sort{-it.value}
-		println "wordMap $wordMap"
-		TermQuery[] termQueryList = wordMap.keySet().toList().take(MAX_TERMLIST_SIZE).collect {new TermQuery(it)}.asImmutable()
-		println "f1 map size: ${wordMap.size()}  termQuerylist size: ${termQueryList.size()}  termQuerylist: $termQueryList"
+
+		termQueryMap= termQueryMap.sort{-it.value}
+		println "termQueryMap: $termQueryMap"
+		TermQuery[] termQueryList = termQueryMap.keySet().take(MAX_TERMQUERYLIST_SIZE).asImmutable()
+		println "f1 map size: ${termQueryMap.size()}  termQuerylist size: ${termQueryList.size()}  termQuerylist: $termQueryList"
 		return termQueryList
 	}
 
 	public TermQuery[] getTFIDFWordList(){
 
 		println "Important words terms.getDocCount: ${terms.getDocCount()}"
-
-		def wordMap = [:]
+		def termMap = [:]
 		BytesRef termbr;
 
 		while((termbr = termsEnum.next()) != null) {
 
 			Term t = new Term(IndexInfo.FIELD_CONTENTS, termbr);
-			String word = termbr.utf8ToString()
-			char firstChar = word.charAt(0)
-			int df = indexSearcher.getIndexReader().docFreq(t)
+			if (isEffectiveTerm(t)){
 
-			if (
-			  df < 3
-			  || stopSet.contains(t.text())
-			  || t.text().contains("'")
-			  || t.text().length() < 2
-			  || !firstChar.isLetter()
-			//  || t.text().contains(".")
-			)
-				continue;
+				long indexDf = indexReader.docFreq(t);
+				int docCount = indexReader.numDocs()
 
-			long indexDf = indexReader.docFreq(t);
-			int docCount = indexReader.numDocs()
+				//for lucene 5 : TFIDFSimilarity tfidfSim = new DefaultSimilarity()				
+				TFIDFSimilarity tfidfSim = new ClassicSimilarity()
+				PostingsEnum docsEnum = termsEnum.postings(MultiFields.getTermDocsEnum(indexReader, IndexInfo.FIELD_CONTENTS, termbr ))
+				double tfidfTotal=0
 
-			//for lucene 5
-			//TFIDFSimilarity tfidfSim = new DefaultSimilarity()
-			//For lucene 6
-			TFIDFSimilarity tfidfSim = new ClassicSimilarity()
-			PostingsEnum docsEnum = termsEnum.postings(MultiFields.getTermDocsEnum(indexReader, IndexInfo.FIELD_CONTENTS, termbr ));
-			double tfidfTotal=0
-
-			if (docsEnum != null) {
-				while (docsEnum.nextDoc() != DocIdSetIterator.NO_MORE_DOCS) {
-					double tfidf = tfidfSim.tf(docsEnum.freq()) * tfidfSim.idf(docCount, indexDf);
-					tfidfTotal +=tfidf
+				if (docsEnum != null) {
+					while (docsEnum.nextDoc() != DocIdSetIterator.NO_MORE_DOCS) {
+						double tfidf = tfidfSim.tf(docsEnum.freq()) * tfidfSim.idf(docCount, indexDf)
+						tfidfTotal +=tfidf
+					}
 				}
+				termMap+= [(t) : tfidfTotal]
 			}
-			wordMap+= [(t) : tfidfTotal]
 		}
 
-		wordMap= wordMap.sort{a, b -> a.value <=> b.value}
-		TermQuery[] termQueryList = wordMap.keySet().toList().take(MAX_TERMLIST_SIZE).collect {new TermQuery(it)}.asImmutable()	
-		println "tfidf map size: ${wordMap.size()}  termQuerylist size: ${termQueryList.size()}  termQuerylist: $termQueryList"
+		termMap= termMap.sort{a, b -> a.value <=> b.value}
+		TermQuery[] termQueryList = termMap.keySet().take(MAX_TERMQUERYLIST_SIZE).collect {new TermQuery(it)}.asImmutable()
+		println "tfidf map size: ${termMap.size()}  termQuerylist size: ${termQueryList.size()}  termQuerylist: $termQueryList"
 		return termQueryList
 	}
 }

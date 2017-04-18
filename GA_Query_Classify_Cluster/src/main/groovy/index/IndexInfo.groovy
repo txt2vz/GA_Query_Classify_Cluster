@@ -33,12 +33,10 @@ class IndexInfo {
 
 	String 	pathToIndex =	
     'indexes/r10L6' 
-	// 'indexes/crisis3FireBombFloodL6'
+//	 'indexes/crisis3FireBombFloodL6'
 	// 'indexes/classic4_500L6'
 //	 'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6'
-//	 'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6Stem'	 
-	// 'indexes/20NG3SpaceHockeyChristianL6Stem'
-   //  'indexes/20NG3SpaceHockeyChristianL6'
+  //   'indexes/20NG3SpaceHockeyChristianL6'
 
 	IndexReader indexReader
 	IndexSearcher indexSearcher
