@@ -3,12 +3,10 @@ package classify.query
 import org.apache.lucene.search.BooleanClause
 import org.apache.lucene.search.BooleanQuery
 import org.apache.lucene.search.IndexSearcher
-import org.apache.lucene.search.Query
 import org.apache.lucene.search.TermQuery
 
 import classify.ClassifyFit;
 import classify.Effectiveness;
-
 import ec.EvolutionState
 import ec.Individual
 import ec.Problem
@@ -64,15 +62,10 @@ public class OR extends Problem implements SimpleProblemForm {
 				bqb.add (termQueryArray[gene],BooleanClause.Occur.SHOULD)
 			}
 
-			fitness.query = bqb.build();
-			
-			
-			fitness.positiveMatchTrain = IndexInfo.instance.getQueryHitsWithFilter(searcher,IndexInfo.instance.catTrainBQ, fitness.query)
-		
+			fitness.query = bqb.build()			
+			fitness.positiveMatchTrain = IndexInfo.instance.getQueryHitsWithFilter(searcher,IndexInfo.instance.catTrainBQ, fitness.query)		
 			fitness.negativeMatchTrain = IndexInfo.instance.getQueryHitsWithFilter(searcher,IndexInfo.instance.othersTrainBQ, fitness.query)
 
-			//fitness.positiveMatchTrain = getPositiveMatch(searcher, fitness.query)
-			//fitness.negativeMatchTrain = getNegativeMatch(searcher, fitness.query)
 			fitness.f1train = Effectiveness.f1(fitness.positiveMatchTrain, fitness.negativeMatchTrain, IndexInfo.instance.totalTrainDocsInCat);
 
 			((SimpleFitness) intVectorIndividual.fitness).setFitness(state, fitness.f1train, false)
