@@ -1,29 +1,30 @@
 package index
 
-class ImportantWordsSpec extends spock.lang.Specification {
+class ImportantTermsSpec extends spock.lang.Specification {
 
-	def "importantWords F1 oil"() {
+	def "importantTerms F1 oil"() {
 		setup:
 		IndexInfo.instance.setPathToIndex('indexes/r10L6')
 		IndexInfo.instance.setCategoryNumber('2')
 		IndexInfo.instance.setIndex()
-		ImportantWords iw = new ImportantWords()
+		ImportantTerms iw = new ImportantTerms()
 
 		when:
-		def oilList = iw.getF1WordList (false, true)
+		def oilList = iw.getF1TermQueryList ()
 
 		then:
-		oilList[0] == "oil"
+		oilList[0].toString((IndexInfo.FIELD_CONTENTS)) == "oil"
+		oilList[3].getTerm().text() == 'petroleum'
 	}
 
-	def "ImportantWords 20News3 tfidf"	(){
+	def "ImportantTerms 20News3 tfidf"	(){
 		setup:
 		IndexInfo.instance.setPathToIndex('indexes/20NG3SpaceHockeyChristianL6')
 		IndexInfo.instance.setIndex()
-		ImportantWords iw = new ImportantWords()
+		ImportantTerms iw = new ImportantTerms()
 
 		when:
-		def tfidfList = iw.getTFIDFWordList()
+		def tfidfList = iw.getTFIDFTermQueryList()
 
 		then:
 		tfidfList[0].getTerm().text() == 'space'

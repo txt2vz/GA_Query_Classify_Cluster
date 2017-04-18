@@ -13,14 +13,14 @@ import org.apache.lucene.search.TotalHitCountCollector
 import org.apache.lucene.search.spans.SpanFirstQuery
 import org.apache.lucene.search.spans.SpanTermQuery
 import ec.vector.IntegerVectorIndividual
-import index.ImportantWords
+import index.ImportantTerms
 import index.IndexInfo
 
 class QueryListFromChromosome {
 
 	private IndexSearcher searcher = IndexInfo.instance.indexSearcher
-	private final ImportantWords iw = new ImportantWords();
-	private final TermQuery[] termQueryArray = iw.getTFIDFWordList()
+	private final ImportantTerms iw = new ImportantTerms();
+	private final TermQuery[] termQueryArray = iw.getTFIDFTermQueryList()
 	//terms from previous run  classic4
 	def private final notWords = ["pressure", "layer", "heat", "boundary", "computer", "library", "retrieval", "information", "cells", "patients", "blood", "algorithm"] as String[]
 	def private final notWords20NG5 = ["jesus", "christ", "god", "windows", "high", "nasa", "orbit", "hockey", "nhl", "players", "sale"]

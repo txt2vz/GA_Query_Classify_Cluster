@@ -53,8 +53,7 @@ class IndexInfo {
 	categoryNumber))
 	
 	//get hits for a particular query using filter (e.g. a particular category)
-	public int getQueryHitsWithFilter(IndexSearcher searcher, Query filter, Query q ) {
-		
+	public int getQueryHitsWithFilter(IndexSearcher searcher, Query filter, Query q ) {		
 		TotalHitCountCollector collector = new TotalHitCountCollector();
 		BooleanQuery.Builder  bqb = new BooleanQuery.Builder();
 		bqb.add(q, BooleanClause.Occur.MUST)
@@ -63,7 +62,6 @@ class IndexInfo {
 		return collector.getTotalHits();
 	}
 	
-
 	public void setIndex()  {
 		catQ = new TermQuery(new Term(FIELD_CATEGORY_NUMBER,
 				categoryNumber));

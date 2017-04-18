@@ -1,6 +1,6 @@
 package cluster;
 
-import index.ImportantWords
+import index.ImportantTerms
 import index.IndexInfo
 import org.apache.lucene.index.Term
 import org.apache.lucene.search.BooleanClause

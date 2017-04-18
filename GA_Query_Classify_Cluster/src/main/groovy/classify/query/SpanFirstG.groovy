@@ -18,7 +18,7 @@ import ec.vector.IntegerVectorIndividual
 import classify.Effectiveness;
 import classify.ClassifyFit;
 import groovy.transform.CompileStatic
-import index.ImportantWords
+import index.ImportantTerms
 import index.IndexInfo;
 
 
@@ -42,8 +42,8 @@ public class SpanFirstG extends Problem implements SimpleProblemForm {
 				+ IndexInfo.instance.totalTrainDocsInCat + " Total test docs for cat "
 				+ IndexInfo.instance.totalTestDocsInCat);
 
-		ImportantWords iw = new ImportantWords();
-		wordArray = iw.getF1WordList(false, true);
+		ImportantTerms iw = new ImportantTerms();
+		wordArray = iw.getF1TermQueryList(false, true);
 	}
 
 

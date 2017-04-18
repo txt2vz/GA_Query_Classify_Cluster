@@ -20,7 +20,7 @@ import org.apache.lucene.util.BytesRef
  * @author Laurie 
  */
 
-public class ImportantWords  {
+public class ImportantTerms  {
 
 	public final static int SPAN_FIRST_MAX_END = 300;
 	private final static int MAX_TERMQUERYLIST_SIZE = 300;
@@ -36,12 +36,12 @@ public class ImportantWords  {
 		IndexInfo.instance.setCategoryName("cru")
 		IndexInfo.instance.categoryNumber = '2'
 		IndexInfo.instance.setIndex()
-		def iw = new ImportantWords()
-		iw.getF1WordList()
-		//iw.getTFIDFWordList()
+		def iw = new ImportantTerms()
+		iw.getF1TermQueryList()
+		//iw.getTFIDFTermQueryList()
 	}
 
-	public ImportantWords() {
+	public ImportantTerms() {
 		indexSearcher = IndexInfo.instance.indexSearcher;
 		indexReader = indexSearcher.getIndexReader()
 		terms = MultiFields.getTerms(indexReader, IndexInfo.FIELD_CONTENTS)
@@ -68,7 +68,7 @@ public class ImportantWords  {
 	/**
 	 * create a set of words based on F1 measure of the term when used to classify current category
 	 */
-	public TermQuery[] getF1WordList(){
+	public TermQuery[] getF1TermQueryList(){
 
 		println "Important words terms.getDocCount: ${terms.getDocCount()}"
 		println "Important words terms.size ${terms.size()}"
@@ -101,7 +101,7 @@ public class ImportantWords  {
 		return termQueryList
 	}
 
-	public TermQuery[] getTFIDFWordList(){
+	public TermQuery[] getTFIDFTermQueryList(){
 
 		println "Important words terms.getDocCount: ${terms.getDocCount()}"
 		def termMap = [:]
@@ -115,7 +115,7 @@ public class ImportantWords  {
 				long indexDf = indexReader.docFreq(t);
 				int docCount = indexReader.numDocs()
 
-				//for lucene 5 : TFIDFSimilarity tfidfSim = new DefaultSimilarity()				
+				//for lucene 5 : TFIDFSimilarity tfidfSim = new DefaultSimilarity()
 				TFIDFSimilarity tfidfSim = new ClassicSimilarity()
 				PostingsEnum docsEnum = termsEnum.postings(MultiFields.getTermDocsEnum(indexReader, IndexInfo.FIELD_CONTENTS, termbr ))
 				double tfidfTotal=0

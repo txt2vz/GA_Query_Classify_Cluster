@@ -16,7 +16,7 @@ import ec.simple.SimpleFitness
 import ec.simple.SimpleProblemForm
 import ec.util.Parameter
 import ec.vector.IntegerVectorIndividual
-import index.ImportantWords
+import index.ImportantTerms
 import index.IndexInfo
 
 /**
@@ -30,7 +30,7 @@ import index.IndexInfo
 public class OR extends Problem implements SimpleProblemForm {
 
 	private IndexSearcher searcher = IndexInfo.instance.indexSearcher
-	private final ImportantWords iw = new ImportantWords();
+	private final ImportantTerms iw = new ImportantTerms();
 	private TermQuery[] termQueryArray
 
 	public void setup(final EvolutionState state, final Parameter base) {
@@ -41,7 +41,7 @@ public class OR extends Problem implements SimpleProblemForm {
 				+ IndexInfo.instance.totalTrainDocsInCat + " Total test docs for cat "
 				+ IndexInfo.instance.totalTestDocsInCat)
 
-		termQueryArray = iw.getF1WordList()
+		termQueryArray = iw.getF1TermQueryList()
 	}
 
 	public void evaluate(final EvolutionState state, final Individual ind,

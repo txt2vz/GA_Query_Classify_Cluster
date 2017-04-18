@@ -1,7 +1,7 @@
 package clusterGP
 
 import ec.gp.*;
-import index.ImportantWords
+import index.ImportantTerms
 
 import org.apache.lucene.search.BooleanQuery
 import org.apache.lucene.search.TermQuery
@@ -13,7 +13,7 @@ public class QueryData extends GPData {
 	public TermQuery tq;    // return value
 	public Boolean dummy
 
-	final TermQuery[] termQueryArray = new ImportantWords().getTFIDFWordList()
+	final TermQuery[] termQueryArray = new ImportantTerms().getTFIDFTermQueryList()
 
 	public void copyTo(final GPData gpd)   // copy my stuff to another DoubleData
 	{
