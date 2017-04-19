@@ -24,18 +24,30 @@ class TestR10 extends spock.lang.Specification {
 	DirectoryReader ireader = DirectoryReader.open(directory);
 	IndexSearcher isearcher = new IndexSearcher(ireader);
 
-	def 'total r10 docs and grain category'() {
+	def 'total r10 docs in category'() {
 		setup:
-
-		TotalHitCountCollector thcollector  = new TotalHitCountCollector();
-		final TermQuery catQ = new TermQuery(new Term(IndexInfo.FIELD_CATEGORY_NAME, '14_grain'))
+		
+		final TermQuery catQgrain = new TermQuery(new Term(IndexInfo.FIELD_CATEGORY_NAME, 'grain'))		
+		final TermQuery catQcrudeName = new TermQuery(new Term(IndexInfo.FIELD_CATEGORY_NAME, 'crude'))		
+		final TermQuery catQcrudeNumber = new TermQuery(new Term(IndexInfo.FIELD_CATEGORY_NUMBER, '2'))
 
 		when:
-		isearcher.search(catQ, thcollector);
-		def grainTotal = thcollector.getTotalHits();
+		TotalHitCountCollector thcollector  = new TotalHitCountCollector();
+		isearcher.search(catQgrain, thcollector)
+		def grainTotal = thcollector.getTotalHits()
+		
+		thcollector  = new TotalHitCountCollector();
+		isearcher.search(catQcrudeName, thcollector)
+		def crudeNameTotal = thcollector.getTotalHits()
+		
+		thcollector  = new TotalHitCountCollector();
+		isearcher.search(catQcrudeNumber, thcollector)
+		def crudeNumberTotal = thcollector.getTotalHits()
 
 		then:
 		grainTotal == 582
+		crudeNameTotal == 578
+		crudeNumberTotal == crudeNameTotal
 		
 		cleanup:
 		ireader.close()		

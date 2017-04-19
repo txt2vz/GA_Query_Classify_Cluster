@@ -28,14 +28,20 @@ class Test20NG extends spock.lang.Specification {
 		setup:
 
 		TotalHitCountCollector thcollector  = new TotalHitCountCollector();
-		final TermQuery catQ = new TermQuery(new Term(IndexInfo.FIELD_CATEGORY_NAME, 'comp.graphics'))
+		final TermQuery graphicsNameQ = new TermQuery(new Term(IndexInfo.FIELD_CATEGORY_NAME, 'comp.graphics'))
+		final TermQuery graphicsNumberQ = new TermQuery(new Term(IndexInfo.FIELD_CATEGORY_NUMBER, '1'))
 
 		when:
-		isearcher.search(catQ, thcollector);
-		def grainTotal = thcollector.getTotalHits();
+		isearcher.search(graphicsNameQ, thcollector)
+		def graphicsNameTotal = thcollector.getTotalHits()
+		
+		thcollector  = new TotalHitCountCollector();
+		isearcher.search(graphicsNumberQ, thcollector)
+		def graphicsNumberTotal = thcollector.getTotalHits();
 
 		then:
-		grainTotal == 973
+		graphicsNameTotal == 973
+		graphicsNumberTotal == graphicsNameTotal
 		
 		cleanup:
 		ireader.close()		

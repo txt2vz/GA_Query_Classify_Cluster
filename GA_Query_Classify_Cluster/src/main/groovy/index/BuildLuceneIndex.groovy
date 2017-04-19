@@ -23,18 +23,18 @@ import org.apache.lucene.store.FSDirectory
 
 // Index text files found in this directory
 def docsPath =
-			/C:\Users\Laurie\Dataset\20bydate/
-	//	/C:\Users\Laurie\Dataset\reuters-top10/
+	//  /C:\Users\Laurie\Dataset\20bydate/
+	/C:\Users\Laurie\Dataset\reuters-top10/
 
 //build index here
-def indexPath = //'indexes/R10'
-               'indexes/20NG'
+def indexPath = 'indexes/R10'
+//		'indexes/20NG'
 //  /C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns/
 //  /C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian/
 //  /C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian/
 
 //set to true when indexing R10 - different directory structure.
-boolean reuters = false
+boolean reuters = true
 
 Path path = Paths.get(indexPath)
 Directory directory = FSDirectory.open(path)
@@ -54,10 +54,14 @@ IndexSearcher indexSearcher = new IndexSearcher(writer.getReader())
 Date start = new Date();
 println("Indexing to directory: $indexPath  from: $docsPath ...")
 
-def categoryNumber=0
+def categoryNumber=-1
 new File(docsPath).eachDir {
+	if (reuters) categoryNumber++
+	if (!reuters) categoryNumber=-1  //reset for 20NG for test and train directories
 	it.eachFileRecurse {file ->
-		if (!file.hidden && file.exists() && file.canRead() && !file.directory) // && categoryNumber <3)
+		if (!reuters && file.isDirectory()) categoryNumber++
+		if (!file.hidden && file.exists() && file.canRead() && !file.isDirectory()) // && categoryNumber <3)
+
 		{
 			def doc = new Document()
 
@@ -92,7 +96,6 @@ new File(docsPath).eachDir {
 			writer.addDocument(doc)
 		}
 	}
-	categoryNumber++;
 }
 
 TotalHitCountCollector trainCollector  = new TotalHitCountCollector();
