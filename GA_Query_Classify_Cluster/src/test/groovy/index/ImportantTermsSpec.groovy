@@ -16,6 +16,21 @@ class ImportantTermsSpec extends spock.lang.Specification {
 		oilList[0].toString((IndexInfo.FIELD_CONTENTS)) == 'oil'
 		oilList[3].getTerm().text() == 'petroleum'
 	}
+	
+	def "importantTerms F1 20NG graphics"() {
+		setup:
+		IndexInfo.instance.setPathToIndex('indexes/20NG')
+		IndexInfo.instance.setCategoryNumber('2')
+		IndexInfo.instance.setIndex()
+		ImportantTerms iw = new ImportantTerms()
+
+		when:
+		def graphicsList = iw.getF1TermQueryList ()
+
+		then:
+		graphicsList[0].toString((IndexInfo.FIELD_CONTENTS)) == 'windows'
+		graphicsList[4].getTerm().text() == 'files'
+	}
 
 	def "ImportantTerms 20News3 tfidf"(){
 		setup:
