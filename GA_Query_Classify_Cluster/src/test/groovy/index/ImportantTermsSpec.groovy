@@ -4,7 +4,7 @@ class ImportantTermsSpec extends spock.lang.Specification {
 
 	def "importantTerms F1 oil"() {
 		setup:
-		IndexInfo.instance.setPathToIndex('indexes/r10L6')
+		IndexInfo.instance.setPathToIndex('indexes/R10')
 		IndexInfo.instance.setCategoryNumber('2')
 		IndexInfo.instance.setIndex()
 		ImportantTerms iw = new ImportantTerms()

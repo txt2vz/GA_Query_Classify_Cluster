@@ -2816,3 +2816,63 @@ PosHits: 1644 NegHits: 82 PosScore: 4391.157502055168 NegScore: 247.097820520401
 ***  TOTALS:   *****   f1list: [0.5102184636994, 0.7741935483728, 0.7434170238839] averagef1: :0.6759430119854  ** average precision: 0.9281039655 average recall: 0.539
 ************************************************ 
  
+  ***** Job: 1 Gen: 9 PopSize: 512 Noclusters: 3  pathToIndex: indexes/20NG3SpaceHockeyChristianL6  *********** Tue Apr 18 20:51:05 BST 2017 ***************************************************** 
+ClusterQuery: 0 hits: 206 Query:  believe game life team people 
+categoryTotal: 100 for category: category:soc.religion.christian 
+f1: 0.431372549006 recall: 0.66 precision: 0.3203883495
+ClusterQuery: 1 hits: 199 Query:  mail send email sale windows 
+categoryTotal: 100 for category: category:misc.forsale 
+f1: 0.541806020085 recall: 0.81 precision: 0.4070351759
+ClusterQuery: 2 hits: 97 Query:  access period data orbit 
+categoryTotal: 100 for category: category:sci.space 
+f1: 0.517766497473 recall: 0.51 precision: 0.5257731959
+TotalHits: 376 Total Docs:  500 
+PosHits: 271 NegHits: 231 PosScore: 1045.3468433618546 NegScore: 718.2819783091545 Fitness: 41.692249413709 
+***  TOTALS:   *****   f1list: [0.431372549006, 0.541806020085, 0.517766497473] averagef1: :0.496981688855  ** average precision: 0.4177322404 average recall: 0.66
+************************************************ 
+ 
+  ***** Job: 1 Gen: 119 PopSize: 512 Noclusters: 3  pathToIndex: indexes/20NG3SpaceHockeyChristianL6  *********** Tue Apr 18 20:53:07 BST 2017 ***************************************************** 
+ClusterQuery: 0 hits: 153 Query:  god high sale christians 
+categoryTotal: 100 for category: category:soc.religion.christian 
+f1: 0.482213438766 recall: 0.61 precision: 0.3986928105
+ClusterQuery: 1 hits: 97 Query:  nhl hockey team game play 
+categoryTotal: 100 for category: category:rec.sport.hockey 
+f1: 0.81218274110 recall: 0.8 precision: 0.8247422680
+ClusterQuery: 2 hits: 126 Query:  shuttle windows file faq access 
+categoryTotal: 100 for category: category:comp.os.ms-windows.misc 
+f1: 0.663716814136 recall: 0.75 precision: 0.5952380952
+TotalHits: 336 Total Docs:  500 
+PosHits: 303 NegHits: 73 PosScore: 1483.3068553805351 NegScore: 224.9732282459736 Fitness: 1019.8273326759339 
+***  TOTALS:   *****   f1list: [0.482213438766, 0.81218274110, 0.663716814136] averagef1: :0.652704331334  ** average precision: 0.6062243912 average recall: 0.72
+************************************************ 
+ 
+  ***** Job: 1 Gen: 319 PopSize: 512 Noclusters: 3  pathToIndex: indexes/20NG3SpaceHockeyChristianL6  *********** Tue Apr 18 20:56:30 BST 2017 ***************************************************** 
+ClusterQuery: 0 hits: 106 Query:  christ life man jesus god 
+categoryTotal: 100 for category: category:soc.religion.christian 
+f1: 0.766990291279 recall: 0.79 precision: 0.7452830189
+ClusterQuery: 1 hits: 183 Query:  windows orbit file access sale 
+categoryTotal: 100 for category: category:comp.os.ms-windows.misc 
+f1: 0.530035335711 recall: 0.75 precision: 0.4098360656
+ClusterQuery: 2 hits: 94 Query:  team play hockey players nhl 
+categoryTotal: 100 for category: category:rec.sport.hockey 
+f1: 0.835051546411 recall: 0.81 precision: 0.8617021277
+TotalHits: 356 Total Docs:  500 
+PosHits: 331 NegHits: 52 PosScore: 1741.196055173874 NegScore: 147.74295023083687 Fitness: 1314.7354908322427 
+***  TOTALS:   *****   f1list: [0.766990291279, 0.530035335711, 0.835051546411] averagef1: :0.710692391134  ** average precision: 0.6722737374 average recall: 0.7833333333
+************************************************ 
+ 
+  ***** Job: 1 Gen: 319 PopSize: 512 Noclusters: 3  pathToIndex: indexes/20NG3SpaceHockeyChristianL6  *********** Wed Apr 19 10:00:12 BST 2017 ***************************************************** 
+ClusterQuery: 0 hits: 187 Query:  windows using file sale orbit 
+categoryTotal: 100 for category: category:comp.os.ms-windows.misc 
+f1: 0.550522648043 recall: 0.79 precision: 0.4224598930
+ClusterQuery: 1 hits: 88 Query:  hockey play nhl team 
+categoryTotal: 100 for category: category:rec.sport.hockey 
+f1: 0.808510638282 recall: 0.76 precision: 0.8636363636
+ClusterQuery: 2 hits: 98 Query:  christians christ jesus god man 
+categoryTotal: 100 for category: category:soc.religion.christian 
+f1: 0.787878787856 recall: 0.78 precision: 0.7959183673
+TotalHits: 352 Total Docs:  500 
+PosHits: 332 NegHits: 41 PosScore: 1685.0807576179504 NegScore: 123.367013245821 Fitness: 1269.626319130737 
+***  TOTALS:   *****   f1list: [0.550522648043, 0.808510638282, 0.787878787856] averagef1: :0.715637358060  ** average precision: 0.6940048746 average recall: 0.7766666667
+************************************************ 
+ 

@@ -3,162 +3,4812 @@ Generation: 0
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-ClusterQuery Fitness: 221.0104145781484 
--1 35 37 17 97 51 21 36 18 14 2 5 13 94 51
+ClusterQuery Fitness: 21.992670736474267 
+84 96 3 82 50 57 32 50 72 66 50 45 82 66 42
 Subpopulation 1:
 Evaluated: T
-ClusterQuery Fitness: 189.11174274998103 
-98 83 100 -1 41 75 99 13 69 5 18 92 6 73 35
+ClusterQuery Fitness: 13.081314928826185 
+91 24 34 55 27 47 97 19 6 86 27 97 87 44 34
 Subpopulation 2:
 Evaluated: T
-ClusterQuery Fitness: 90.95300095059261 
-80 15 22 26 11 100 43 10 20 50 39 7 74 41 85
+ClusterQuery Fitness: 12.387428078643405 
+78 66 55 66 50 4 71 34 53 66 100 84 85 3 45
 
 Generation: 1
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-ClusterQuery Fitness: 564.2246523026537 
-69 8 95 -1 72 32 99 0 75 34 18 53 23 76 22
+ClusterQuery Fitness: 21.992670736474267 
+84 96 3 82 50 57 32 50 72 66 50 45 82 66 42
 Subpopulation 1:
 Evaluated: T
-ClusterQuery Fitness: 189.11174274998103 
-98 83 100 -1 41 75 99 13 69 5 18 92 6 73 35
+ClusterQuery Fitness: 17.486556878239803 
+34 100 59 96 18 8 71 36 3 46 2 3 18 63 33
 Subpopulation 2:
 Evaluated: T
-ClusterQuery Fitness: 129.79520711774865 
-63 50 58 19 36 0 59 56 39 8 -1 99 95 59 83
+ClusterQuery Fitness: 12.387428078643405 
+78 66 55 66 50 4 71 34 53 66 100 84 85 3 45
 
 Generation: 2
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-ClusterQuery Fitness: 564.2246523026537 
-69 8 95 -1 72 32 99 0 75 34 18 53 23 76 22
+ClusterQuery Fitness: 21.992670736474267 
+84 96 3 82 50 57 32 50 72 66 50 45 82 66 42
 Subpopulation 1:
 Evaluated: T
-ClusterQuery Fitness: 251.6214128193392 
-98 83 46 -1 41 75 99 13 69 5 1 30 3 1 56
+ClusterQuery Fitness: 20.563169348831785 
+34 100 59 96 18 6 71 36 3 44 2 84 96 39 28
 Subpopulation 2:
 Evaluated: T
-ClusterQuery Fitness: 148.13194727721927 
-99 57 39 99 51 1 6 69 48 36 8 -1 57 51 46
+ClusterQuery Fitness: 12.387428078643405 
+78 66 55 66 50 4 71 34 53 66 100 84 85 3 45
 
 Generation: 3
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-ClusterQuery Fitness: 564.2246523026537 
-69 8 95 -1 72 32 99 0 75 34 18 53 23 76 22
+ClusterQuery Fitness: 21.992670736474267 
+84 96 3 82 50 57 32 50 72 66 50 45 82 66 42
 Subpopulation 1:
 Evaluated: T
-ClusterQuery Fitness: 420.3521931667218 
-52 15 10 100 41 75 36 13 69 5 18 92 6 73 35
+ClusterQuery Fitness: 30.483964842196208 
+96 19 30 40 27 47 97 19 6 89 14 22 34 8 56
 Subpopulation 2:
 Evaluated: T
-ClusterQuery Fitness: 185.5400190710297 
-72 21 72 91 20 1 6 10 20 50 75 39 7 41 85
+ClusterQuery Fitness: 15.71904980208442 
+81 96 58 44 14 89 81 58 13 9 72 9 92 50 12
 
 Generation: 4
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-ClusterQuery Fitness: 564.2246523026537 
-69 8 95 -1 72 32 99 0 75 34 18 53 23 76 22
+ClusterQuery Fitness: 21.992670736474267 
+84 96 3 82 50 57 32 50 72 66 50 45 82 66 42
 Subpopulation 1:
 Evaluated: T
-ClusterQuery Fitness: 653.1809062829163 
-6 18 28 79 26 97 7 13 69 5 18 92 18 11 5
+ClusterQuery Fitness: 30.483964842196208 
+96 19 30 40 27 47 97 19 6 89 14 22 34 8 56
 Subpopulation 2:
 Evaluated: T
-ClusterQuery Fitness: 266.12713697272 
-99 57 39 99 51 1 6 69 15 50 39 7 75 47 88
+ClusterQuery Fitness: 16.35550280683407 
+61 13 30 92 6 80 50 83 50 60 66 80 85 19 -1
 
 Generation: 5
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-ClusterQuery Fitness: 564.2246523026537 
-69 8 95 -1 72 32 99 0 75 34 18 53 23 76 22
+ClusterQuery Fitness: 28.53038916737572 
+-1 86 59 82 8 50 62 59 34 52 14 97 26 52 70
 Subpopulation 1:
 Evaluated: T
-ClusterQuery Fitness: 653.1809062829163 
-6 18 28 79 26 97 7 13 69 5 18 92 18 11 5
+ClusterQuery Fitness: 30.483964842196208 
+96 19 30 40 27 47 97 19 6 89 14 22 34 8 56
 Subpopulation 2:
 Evaluated: T
-ClusterQuery Fitness: 403.9858709052123 
-99 57 39 99 51 1 6 69 15 50 39 7 23 90 12
+ClusterQuery Fitness: 18.47279583581531 
+81 66 19 53 50 4 6 34 53 9 72 38 4 33 10
 
 Generation: 6
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-ClusterQuery Fitness: 564.2246523026537 
-69 8 95 -1 72 32 99 0 75 34 18 53 23 76 22
+ClusterQuery Fitness: 28.53038916737572 
+-1 86 59 82 8 50 62 59 34 52 14 97 26 52 70
 Subpopulation 1:
 Evaluated: T
-ClusterQuery Fitness: 818.6806963293153 
-52 15 10 15 80 31 99 13 69 5 18 92 18 60 9
+ClusterQuery Fitness: 30.483964842196208 
+96 19 30 40 27 47 97 19 6 89 14 22 34 8 56
 Subpopulation 2:
 Evaluated: T
-ClusterQuery Fitness: 403.9858709052123 
-99 57 39 99 51 1 6 69 15 50 39 7 23 90 12
+ClusterQuery Fitness: 22.44801926964095 
+61 13 30 92 6 36 34 -1 13 6 72 9 85 94 41
 
 Generation: 7
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-ClusterQuery Fitness: 564.2246523026537 
-69 8 95 -1 72 32 99 0 75 34 18 53 23 76 22
+ClusterQuery Fitness: 28.53038916737572 
+-1 86 59 82 8 50 62 59 34 52 14 97 26 52 70
 Subpopulation 1:
 Evaluated: T
-ClusterQuery Fitness: 818.6806963293153 
-52 15 10 15 80 31 99 13 69 5 18 92 18 60 9
+ClusterQuery Fitness: 38.391766756356134 
+18 99 30 40 27 47 44 84 6 89 14 22 34 8 56
 Subpopulation 2:
 Evaluated: T
-ClusterQuery Fitness: 502.7416305148887 
-0 90 72 29 3 1 12 42 20 19 75 39 7 41 85
+ClusterQuery Fitness: 28.441197848092358 
+61 13 30 92 30 66 50 95 47 34 29 11 96 23 26
 
 Generation: 8
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-ClusterQuery Fitness: 564.2246523026537 
-69 8 95 -1 72 32 99 0 75 34 18 53 23 76 22
+ClusterQuery Fitness: 28.53038916737572 
+-1 86 59 82 8 50 62 59 34 52 14 97 26 52 70
 Subpopulation 1:
 Evaluated: T
-ClusterQuery Fitness: 818.6806963293153 
-52 15 10 15 80 31 99 13 69 5 18 92 18 60 9
+ClusterQuery Fitness: 38.391766756356134 
+18 99 30 40 27 47 44 84 6 89 14 22 34 8 56
 Subpopulation 2:
 Evaluated: T
-ClusterQuery Fitness: 502.7416305148887 
-0 90 72 29 3 1 12 42 20 19 75 39 7 41 85
+ClusterQuery Fitness: 28.441197848092358 
+61 13 30 92 30 66 50 95 47 34 29 11 96 23 26
 
 Generation: 9
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-ClusterQuery Fitness: 564.2246523026537 
-69 8 95 -1 72 32 99 0 75 34 18 53 23 76 22
+ClusterQuery Fitness: 28.53038916737572 
+-1 86 59 82 8 50 62 59 34 52 14 97 26 52 70
 Subpopulation 1:
 Evaluated: T
-ClusterQuery Fitness: 1289.5046465034777 
-52 15 10 15 80 31 99 13 69 5 18 0 6 18 1
+ClusterQuery Fitness: 38.391766756356134 
+18 99 30 40 27 47 44 84 6 89 14 22 34 8 56
 Subpopulation 2:
 Evaluated: T
-ClusterQuery Fitness: 1622.7936501154552 
-99 57 72 33 33 1 6 10 20 68 0 1 7 16 70
+ClusterQuery Fitness: 31.71069758057376 
+61 13 30 92 30 66 50 95 47 34 83 11 96 23 80
+
+Generation: 10
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 28.53038916737572 
+-1 86 59 82 8 50 62 59 34 52 14 97 26 52 70
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 39.53331550159134 
+96 19 30 40 27 47 97 3 3 89 25 22 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 31.71069758057376 
+61 13 30 92 30 66 50 95 47 34 83 11 96 23 80
+
+Generation: 11
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 28.53038916737572 
+-1 86 59 82 8 50 62 59 34 52 14 97 26 52 70
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 40.78380556749868 
+89 49 6 96 27 47 97 19 6 44 2 92 34 8 34
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 31.71069758057376 
+61 13 30 92 30 66 50 95 47 34 83 11 96 23 80
+
+Generation: 12
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 28.53038916737572 
+-1 86 59 82 8 50 62 59 34 52 14 97 26 52 70
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 42.46920480230815 
+18 99 30 40 27 47 97 30 3 89 23 66 34 8 92
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 32.27048565541839 
+61 13 30 92 30 66 50 95 47 34 83 11 89 23 80
+
+Generation: 13
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 28.53038916737572 
+-1 86 59 82 8 50 62 59 34 52 14 97 26 52 70
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 42.46920480230815 
+18 99 30 40 27 47 97 30 3 89 23 66 34 8 92
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 35.205983410984246 
+61 59 61 95 3 28 36 34 61 30 18 6 18 13 -1
+
+Generation: 14
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 28.53038916737572 
+-1 86 59 82 8 50 62 59 34 52 14 97 26 52 70
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 44.266694780557025 
+18 99 30 40 27 47 97 30 3 89 23 22 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 35.205983410984246 
+61 59 61 95 3 28 36 34 61 30 18 6 18 13 -1
+
+Generation: 15
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 34.20471579416702 
+61 1 50 54 75 34 72 21 50 3 32 83 38 73 67
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 45.00426830138587 
+3 99 30 40 27 47 97 30 6 89 23 22 75 8 8
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 35.205983410984246 
+61 59 61 95 3 28 36 34 61 30 18 6 18 13 -1
+
+Generation: 16
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 37.25291542250034 
+29 72 59 82 10 50 -1 59 34 21 76 34 82 52 34
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 51.30373673890201 
+18 99 30 40 27 47 44 81 70 89 14 22 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 39.762766294491044 
+3 13 30 76 6 21 83 34 67 30 23 6 1 23 57
+
+Generation: 17
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 43.909346173260666 
+81 34 34 21 68 91 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 51.30373673890201 
+18 99 30 40 27 47 44 81 70 89 14 22 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 87.28607670396568 
+3 13 30 13 6 21 83 34 67 30 23 5 23 24 -1
+
+Generation: 18
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 43.909346173260666 
+81 34 34 21 68 91 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 51.30373673890201 
+18 99 30 40 27 47 44 81 70 89 14 22 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 87.28607670396568 
+3 13 30 13 6 21 83 34 67 30 23 5 23 24 -1
+
+Generation: 19
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 43.909346173260666 
+81 34 34 21 68 91 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 51.30373673890201 
+18 99 30 40 27 47 44 81 70 89 14 22 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 87.28607670396568 
+3 13 30 13 6 21 83 34 67 30 23 5 23 24 -1
+
+Generation: 20
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 43.909346173260666 
+81 34 34 21 68 91 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 58.71796640055254 
+34 15 30 6 27 47 97 13 3 89 23 19 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 87.28607670396568 
+3 13 30 13 6 21 83 34 67 30 23 5 23 24 -1
+
+Generation: 21
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 43.909346173260666 
+81 34 34 21 68 91 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 58.71796640055254 
+34 15 30 6 27 47 97 13 3 89 23 19 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 159.79234622707082 
+3 13 30 92 30 3 50 34 47 30 23 6 18 13 -1
+
+Generation: 22
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 43.909346173260666 
+81 34 34 21 68 91 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 58.71796640055254 
+34 15 30 6 27 47 97 13 3 89 23 19 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 159.79234622707082 
+3 13 30 92 30 3 50 34 47 30 23 6 18 13 92
+
+Generation: 23
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 43.909346173260666 
+81 34 34 21 68 91 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 66.81345074045817 
+96 19 30 40 27 47 50 30 3 89 27 22 34 8 70
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 159.79234622707082 
+3 13 30 92 30 3 50 34 47 30 23 6 18 13 92
+
+Generation: 24
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 86.18066111357672 
+34 15 30 6 27 47 97 13 3 89 23 72 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 159.79234622707082 
+3 13 30 92 30 3 50 34 47 30 23 6 18 13 92
+
+Generation: 25
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 98.6480982994482 
+34 15 30 6 27 47 97 30 3 89 23 72 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 159.79234622707082 
+3 13 30 92 30 3 50 34 47 30 23 6 18 13 92
+
+Generation: 26
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 98.6480982994482 
+34 15 30 6 27 47 97 30 3 89 23 72 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 159.79234622707082 
+3 13 30 92 30 3 50 34 47 30 23 6 18 13 92
+
+Generation: 27
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 98.6480982994482 
+34 15 30 6 27 47 97 30 3 89 23 72 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 159.79234622707082 
+3 13 30 92 30 3 50 34 47 30 23 6 18 13 92
+
+Generation: 28
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 98.6480982994482 
+34 15 30 6 27 47 97 30 3 89 23 72 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 159.79234622707082 
+3 13 30 92 30 3 50 34 47 30 23 6 18 13 92
+
+Generation: 29
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 98.6480982994482 
+34 15 30 6 27 47 97 30 3 89 23 72 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 159.79234622707082 
+3 13 30 92 30 3 50 34 47 30 23 6 18 13 92
+
+Generation: 30
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 98.6480982994482 
+34 15 30 6 27 47 97 30 3 89 23 72 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 159.79234622707082 
+3 13 30 92 30 3 50 34 47 30 23 6 18 13 92
+
+Generation: 31
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 98.6480982994482 
+34 15 30 6 27 47 97 30 3 89 23 72 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 159.79234622707082 
+3 13 30 92 30 3 50 34 47 30 23 6 18 13 92
+
+Generation: 32
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 98.6480982994482 
+34 15 30 6 27 47 97 30 3 89 23 72 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 159.79234622707082 
+3 13 30 92 30 3 50 34 47 30 23 6 18 13 92
+
+Generation: 33
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 98.6480982994482 
+34 15 30 6 27 47 97 30 3 89 23 72 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 159.79234622707082 
+3 13 30 92 30 3 50 34 47 30 23 6 18 13 92
+
+Generation: 34
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 98.6480982994482 
+34 15 30 6 27 47 97 30 3 89 23 72 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 159.79234622707082 
+3 13 30 92 30 3 50 34 47 30 23 6 18 13 92
+
+Generation: 35
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 98.6480982994482 
+34 15 30 6 27 47 97 30 3 89 23 72 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 159.79234622707082 
+3 -1 30 92 30 3 50 34 47 30 23 6 18 13 92
+
+Generation: 36
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 98.6480982994482 
+34 15 30 6 27 47 97 30 3 89 23 72 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 159.79234622707082 
+3 -1 30 92 30 3 50 34 47 30 23 6 18 13 92
+
+Generation: 37
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 98.6480982994482 
+34 15 30 6 27 47 97 30 3 89 23 72 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 159.79234622707082 
+3 -1 30 92 30 3 50 34 47 30 23 6 18 13 92
+
+Generation: 38
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 159.11879531502484 
+34 8 3 68 27 47 50 6 3 89 23 70 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 159.79234622707082 
+3 -1 30 92 30 3 50 34 47 30 23 6 18 13 92
+
+Generation: 39
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 159.11879531502484 
+34 8 3 68 27 47 50 6 3 89 23 70 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 159.79234622707082 
+3 -1 30 92 30 3 50 34 47 30 23 6 18 13 92
+
+Generation: 40
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 159.11879531502484 
+34 8 3 68 27 47 50 6 3 89 23 70 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 159.79234622707082 
+3 -1 30 92 30 3 50 34 47 30 23 6 18 13 92
+
+Generation: 41
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 159.11879531502484 
+34 8 3 68 27 47 50 6 3 89 23 70 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 159.79234622707082 
+3 -1 30 92 30 3 50 34 47 30 23 6 18 13 92
+
+Generation: 42
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 159.11879531502484 
+34 8 3 68 27 47 50 6 3 89 23 70 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 159.79234622707082 
+3 -1 30 92 30 3 50 34 47 30 23 6 18 13 92
+
+Generation: 43
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 159.4478469123884 
+34 15 30 6 27 47 50 30 3 89 10 62 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 165.89700993621346 
+3 -1 30 92 27 3 50 -1 2 34 23 6 25 24 6
+
+Generation: 44
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 159.4478469123884 
+34 15 30 6 27 47 50 30 3 89 10 62 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 167.54172613804434 
+3 -1 30 92 27 3 50 -1 2 34 23 6 54 13 92
+
+Generation: 45
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 159.4478469123884 
+34 15 30 6 27 47 50 30 3 89 10 62 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 211.95915707219945 
+3 13 30 92 30 3 50 10 92 87 23 6 18 13 -1
+
+Generation: 46
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 179.30070942190147 
+34 34 30 6 27 47 50 30 3 89 10 62 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 211.95915707219945 
+3 13 30 92 30 3 50 10 92 87 23 6 18 13 -1
+
+Generation: 47
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 179.30070942190147 
+34 34 30 6 27 47 50 30 3 89 10 62 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 211.95915707219945 
+3 -1 30 92 30 3 50 10 92 87 23 6 18 13 -1
+
+Generation: 48
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 250.59180884572103 
+34 34 30 6 27 47 50 30 3 89 10 -1 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 239.1003517332967 
+3 13 30 92 27 3 50 10 92 87 23 6 67 13 -1
+
+Generation: 49
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 250.59180884572103 
+34 34 30 6 27 47 50 30 3 89 10 -1 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 239.1003517332967 
+3 13 30 92 27 3 50 10 92 87 23 6 67 13 6
+
+Generation: 50
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 250.59180884572103 
+34 34 30 6 27 47 50 30 3 89 10 -1 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 642.9780458378793 
+3 13 30 92 30 3 50 10 6 34 10 30 6 -1 34
+
+Generation: 51
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 250.59180884572103 
+34 34 30 6 27 47 50 30 3 89 10 -1 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 642.9780458378793 
+3 13 30 92 30 3 50 10 6 34 10 30 6 -1 34
+
+Generation: 52
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 250.59180884572103 
+34 34 30 6 27 47 50 30 3 89 10 -1 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 642.9780458378793 
+3 13 30 92 30 3 50 10 6 34 10 30 6 13 -1
+
+Generation: 53
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 250.59180884572103 
+34 34 30 6 27 47 50 30 3 89 10 -1 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 642.9780458378793 
+3 13 30 92 30 3 50 10 6 34 10 30 6 -1 34
+
+Generation: 54
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 48.03356777481886 
+81 34 23 21 68 69 72 21 47 3 34 15 -1 -1 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 250.59180884572103 
+34 34 30 6 27 47 50 30 3 89 10 -1 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 642.9780458378793 
+3 13 30 92 30 3 50 10 6 34 10 30 6 -1 34
+
+Generation: 55
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 250.59180884572103 
+34 34 30 6 27 47 50 30 3 89 10 -1 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 642.9780458378793 
+3 13 30 92 30 3 50 10 6 34 10 30 6 -1 34
+
+Generation: 56
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 250.59180884572103 
+34 34 30 6 27 47 50 30 3 89 10 -1 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 642.9780458378793 
+3 13 30 92 30 3 50 10 6 34 10 30 6 -1 34
+
+Generation: 57
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 250.59180884572103 
+34 34 30 6 27 47 50 30 3 89 10 -1 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 642.9780458378793 
+3 13 30 92 30 3 50 10 6 34 10 30 6 -1 34
+
+Generation: 58
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 250.59180884572103 
+34 34 30 6 27 47 50 30 3 89 10 -1 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 642.9780458378793 
+3 13 30 92 30 3 50 10 6 34 10 30 6 -1 6
+
+Generation: 59
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 250.59180884572103 
+34 34 30 6 27 47 50 30 3 89 10 -1 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 642.9780458378793 
+3 13 30 92 30 3 50 10 6 34 10 30 6 -1 6
+
+Generation: 60
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 250.59180884572103 
+34 34 30 6 27 47 50 30 3 89 10 -1 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 714.5774358415739 
+3 13 30 92 30 3 50 10 6 34 10 6 92 27 6
+
+Generation: 61
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 250.59180884572103 
+34 34 30 6 27 47 50 30 3 89 10 -1 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 714.5774358415739 
+3 13 30 92 30 3 50 10 6 34 10 6 92 27 6
+
+Generation: 62
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 250.59180884572103 
+34 34 30 6 27 47 50 30 3 89 10 -1 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 714.5774358415739 
+3 13 30 92 30 3 50 10 6 34 10 6 92 27 6
+
+Generation: 63
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 250.59180884572103 
+34 34 30 6 27 47 50 30 3 89 10 -1 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 754.8560110343017 
+3 13 30 92 30 3 50 10 6 34 23 6 6 -1 34
+
+Generation: 64
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 250.59180884572103 
+34 34 30 6 27 47 50 30 3 89 10 -1 34 8 21
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 754.8560110343017 
+3 13 30 92 30 3 50 10 -1 34 23 6 3 -1 6
+
+Generation: 65
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 341.6512283472325 
+34 34 30 6 27 47 50 3 3 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 754.8560110343017 
+3 13 30 92 30 3 50 10 6 34 23 6 6 -1 3
+
+Generation: 66
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 341.6512283472325 
+34 34 30 6 27 47 50 3 3 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 792.8780128273397 
+3 13 30 72 55 3 13 10 6 34 23 2 6 -1 6
+
+Generation: 67
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 341.6512283472325 
+34 34 30 6 27 47 50 3 3 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 792.8780128273397 
+3 13 30 72 55 3 13 10 6 34 23 2 6 -1 6
+
+Generation: 68
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 341.6512283472325 
+34 34 30 6 27 47 50 3 3 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 818.361348643467 
+3 13 30 72 55 3 13 10 2 34 23 2 6 24 6
+
+Generation: 69
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 341.6512283472325 
+34 34 30 6 27 47 50 3 3 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 818.361348643467 
+3 13 30 72 55 3 13 10 2 34 23 2 6 24 6
+
+Generation: 70
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 341.6512283472325 
+34 34 30 6 27 47 50 3 3 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 818.361348643467 
+3 13 30 72 55 3 13 10 2 34 23 2 6 24 6
+
+Generation: 71
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 341.6512283472325 
+34 34 30 6 27 47 50 3 3 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 818.361348643467 
+3 13 30 72 55 3 13 10 2 34 23 2 6 24 6
+
+Generation: 72
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 341.6512283472325 
+34 34 30 6 27 47 50 3 3 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 818.361348643467 
+3 13 30 72 55 3 13 10 2 34 23 2 6 24 6
+
+Generation: 73
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 341.6512283472325 
+34 34 30 6 27 47 50 3 3 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 818.361348643467 
+3 13 30 72 55 3 13 10 2 34 23 2 6 24 6
+
+Generation: 74
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 341.6512283472325 
+34 34 30 6 27 47 50 3 3 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 818.361348643467 
+3 13 30 72 55 3 13 10 2 34 23 2 6 24 6
+
+Generation: 75
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 341.6512283472325 
+34 34 30 6 27 47 50 3 3 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 818.361348643467 
+3 13 30 72 55 3 13 10 2 34 23 2 6 24 6
+
+Generation: 76
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 341.6512283472325 
+34 34 30 6 27 47 50 3 3 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 818.361348643467 
+3 13 30 72 55 3 13 10 2 34 23 2 6 24 34
+
+Generation: 77
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 341.6512283472325 
+34 34 30 6 27 47 50 3 3 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 818.361348643467 
+3 13 30 72 55 3 13 10 2 34 23 2 6 24 6
+
+Generation: 78
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 341.6512283472325 
+34 34 30 6 27 47 50 3 3 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 818.361348643467 
+3 13 30 72 55 3 13 10 2 34 23 2 6 24 34
+
+Generation: 79
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 341.6512283472325 
+34 34 30 6 27 47 50 3 3 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 818.361348643467 
+3 13 30 72 55 72 13 10 2 34 23 2 6 24 34
+
+Generation: 80
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 341.6512283472325 
+34 34 30 6 27 47 50 3 3 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 818.361348643467 
+3 13 30 72 55 72 13 10 2 34 23 2 6 24 34
+
+Generation: 81
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 341.6512283472325 
+34 34 30 6 27 47 50 3 3 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 818.361348643467 
+3 13 30 72 55 3 13 10 2 34 23 2 6 24 34
+
+Generation: 82
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 341.6512283472325 
+34 34 30 6 27 47 50 3 3 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 818.361348643467 
+3 13 30 72 55 3 13 10 2 34 23 2 6 24 34
+
+Generation: 83
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 341.6512283472325 
+34 34 30 6 27 47 50 3 3 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 841.407915576172 
+3 13 4 72 55 3 13 10 2 34 23 2 6 13 34
+
+Generation: 84
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 892.3340918629303 
+3 13 30 72 55 72 13 10 2 34 23 2 6 -1 21
+
+Generation: 85
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 892.3340918629303 
+3 13 30 72 55 72 13 10 2 34 23 2 6 -1 21
+
+Generation: 86
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 892.3340918629303 
+3 13 30 72 55 72 13 10 2 34 23 2 6 -1 21
+
+Generation: 87
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 892.3340918629303 
+3 13 30 72 55 72 13 10 2 34 23 2 6 -1 21
+
+Generation: 88
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 892.3340918629303 
+3 13 30 72 55 72 13 10 2 34 23 2 6 -1 21
+
+Generation: 89
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 75 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 30 21 13 10 2 34 23 2 6 -1 21
+
+Generation: 90
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 30 21 13 10 2 34 23 2 6 -1 21
+
+Generation: 91
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 30 21 13 10 2 34 23 2 6 72 21
+
+Generation: 92
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 30 21 13 10 2 34 23 2 6 -1 21
+
+Generation: 93
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 30 21 13 10 2 34 23 2 6 72 21
+
+Generation: 94
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 30 21 13 10 2 34 23 2 6 72 21
+
+Generation: 95
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 30 21 13 10 2 34 23 2 6 72 21
+
+Generation: 96
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 30 21 13 10 2 34 23 2 6 72 21
+
+Generation: 97
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 30 21 13 10 2 34 23 2 6 72 21
+
+Generation: 98
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 30 21 13 10 2 34 23 2 6 72 21
+
+Generation: 99
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 30 21 13 10 2 34 23 2 6 72 21
+
+Generation: 100
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 30 21 13 10 2 34 23 2 6 72 21
+
+Generation: 101
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 30 21 13 10 2 34 23 2 6 72 21
+
+Generation: 102
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 30 21 13 10 2 34 23 2 6 13 21
+
+Generation: 103
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 30 21 13 10 2 34 23 2 6 13 21
+
+Generation: 104
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 30 21 13 10 2 34 23 -1 6 72 21
+
+Generation: 105
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 30 21 13 10 2 34 23 -1 6 72 21
+
+Generation: 106
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 30 21 13 10 2 34 23 -1 6 72 21
+
+Generation: 107
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 30 21 13 10 2 34 23 -1 6 72 21
+
+Generation: 108
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 30 21 13 10 2 34 23 -1 6 72 21
+
+Generation: 109
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 30 21 13 10 2 34 23 -1 6 72 21
+
+Generation: 110
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 30 21 13 10 2 34 23 -1 6 72 21
+
+Generation: 111
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 30 21 13 10 2 34 23 -1 6 72 21
+
+Generation: 112
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 30 21 30 10 2 34 23 -1 6 72 21
+
+Generation: 113
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 10 21 30 10 2 34 23 -1 6 72 21
+
+Generation: 114
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 67.86354898057525 
+3 34 23 25 68 18 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 6 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 10 21 30 10 2 34 23 -1 6 72 21
+
+Generation: 115
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 114.9248755362447 
+3 34 23 50 68 99 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 10 21 30 10 2 34 23 -1 6 72 21
+
+Generation: 116
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 114.9248755362447 
+3 34 23 50 68 99 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 6 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 929.0621993070431 
+3 13 30 72 10 21 30 10 2 34 23 -1 6 72 21
+
+Generation: 117
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 114.9248755362447 
+3 34 23 50 68 99 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 6 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 961.6511210853653 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 72 21
+
+Generation: 118
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 114.9248755362447 
+3 34 23 50 68 99 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 6 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 961.6511210853653 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 72 21
+
+Generation: 119
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 114.9248755362447 
+3 34 23 50 68 99 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 6 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 961.6511210853653 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 72 21
+
+Generation: 120
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 114.9248755362447 
+3 34 23 50 68 99 80 21 39 70 34 33 39 34 13
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 6 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1002.360931986786 
+3 13 30 72 30 21 21 10 2 68 23 -1 34 8 75
+
+Generation: 121
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 961.6511210853653 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 72 21
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 3 30 6 27 47 50 3 4 89 10 -1 6 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1002.360931986786 
+3 13 30 72 30 21 21 10 2 68 23 -1 34 8 75
+
+Generation: 122
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 961.6511210853653 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 72 21
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 3 30 6 27 47 50 3 4 89 10 -1 6 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1002.360931986786 
+3 13 30 72 30 21 21 10 2 68 23 -1 34 8 75
+
+Generation: 123
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 961.6511210853653 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 72 21
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 3 30 6 27 47 50 3 4 89 10 -1 6 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1002.360931986786 
+3 13 30 72 30 21 21 10 2 68 23 -1 34 8 75
+
+Generation: 124
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 961.6511210853653 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 72 21
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 3 30 6 27 47 50 3 4 89 10 -1 6 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1002.360931986786 
+3 13 30 72 30 21 21 10 2 68 23 -1 34 8 75
+
+Generation: 125
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 961.6511210853653 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 72 21
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 6 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1002.360931986786 
+3 13 30 72 30 21 21 10 2 68 23 -1 34 8 75
+
+Generation: 126
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 961.6511210853653 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 72 21
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 6 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1002.360931986786 
+3 13 30 72 30 21 21 10 2 68 23 -1 34 8 75
+
+Generation: 127
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 961.6511210853653 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 72 21
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 6 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1002.360931986786 
+3 13 30 72 30 21 21 10 2 68 23 -1 34 8 75
+
+Generation: 128
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 961.6511210853653 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 72 21
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 3 30 6 27 47 50 3 4 89 10 -1 6 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1002.360931986786 
+3 13 30 72 30 21 21 10 2 68 23 -1 34 8 75
+
+Generation: 129
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 961.6511210853653 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 72 21
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1002.360931986786 
+3 13 30 72 30 21 21 10 2 68 23 -1 34 8 75
+
+Generation: 130
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 961.6511210853653 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 72 21
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 3 30 6 27 47 50 3 4 89 10 -1 6 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1002.360931986786 
+3 13 30 72 30 21 21 10 2 68 23 -1 34 8 75
+
+Generation: 131
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 961.6511210853653 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 72 21
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1002.360931986786 
+3 13 30 72 30 21 21 10 2 68 23 -1 34 8 75
+
+Generation: 132
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 961.6511210853653 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 72 21
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 3 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 133
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 961.6511210853653 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 72 21
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 134
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 961.6511210853653 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 72 21
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 34 30 6 27 47 50 3 4 89 10 -1 6 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 135
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 961.6511210853653 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 72 21
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 3 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 136
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 961.6511210853653 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 72 21
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 3 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 137
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 961.6511210853653 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 72 21
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 359.8506169337779 
+34 3 30 6 27 47 50 3 4 89 10 -1 34 8 75
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 138
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 961.6511210853653 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 72 21
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 387.0455552287309 
+34 34 30 24 27 47 50 6 4 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 139
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 961.6511210853653 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 72 21
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 387.0455552287309 
+34 34 30 24 27 47 50 6 4 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 140
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1031.2664408803703 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 34 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 387.0455552287309 
+34 34 30 24 27 47 50 6 4 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 141
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1031.2664408803703 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 34 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 387.0455552287309 
+34 34 30 24 27 47 50 6 4 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 142
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1031.2664408803703 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 34 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 387.0455552287309 
+34 34 30 24 27 47 50 6 4 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 143
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1031.2664408803703 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 34 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 387.0455552287309 
+34 34 30 24 27 47 50 6 4 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 144
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1031.2664408803703 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 34 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 387.0455552287309 
+34 34 30 24 27 47 50 6 4 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 145
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1031.2664408803703 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 34 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 387.0455552287309 
+34 34 30 24 27 47 50 6 4 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 146
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1031.2664408803703 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 34 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 387.0455552287309 
+34 34 30 24 27 47 50 6 4 89 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 147
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1031.2664408803703 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 34 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 401.7391301330567 
+34 34 30 14 27 47 50 6 4 -1 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 148
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1031.2664408803703 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 34 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 401.7391301330567 
+34 34 30 14 27 47 50 6 4 -1 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 149
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1031.2664408803703 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 34 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 401.7391301330567 
+34 34 30 14 27 47 50 6 4 -1 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 3 21 14 10 2 34 23 2 6 8 75
+
+Generation: 150
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1031.2664408803703 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 34 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 401.7391301330567 
+34 34 30 14 27 47 50 6 4 -1 10 -1 34 8 4
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 3 21 14 10 2 34 23 2 6 8 75
+
+Generation: 151
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1031.2664408803703 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 34 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1008.0080969449125 
+3 13 30 72 23 21 13 10 2 34 23 -1 6 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 3 21 14 10 2 34 23 2 6 8 75
+
+Generation: 152
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1031.2664408803703 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 34 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1008.0080969449125 
+3 13 30 72 23 21 13 10 2 34 23 -1 6 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 153
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1031.2664408803703 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 34 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1008.0080969449125 
+3 13 30 72 23 21 13 10 2 34 23 -1 6 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 154
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1031.2664408803703 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 34 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1008.0080969449125 
+3 13 30 72 23 21 13 10 2 34 23 -1 6 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 155
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1031.2664408803703 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 34 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1008.0080969449125 
+3 13 30 72 23 21 13 10 2 34 23 -1 6 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 156
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1031.2664408803703 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 34 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1008.0080969449125 
+3 13 30 72 23 21 13 10 2 34 23 -1 6 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 157
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1031.2664408803703 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 34 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1008.0080969449125 
+3 13 30 72 23 21 13 10 2 34 23 -1 6 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 158
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1031.2664408803703 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 34 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1008.0080969449125 
+3 13 30 72 23 21 13 10 2 34 23 -1 6 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 159
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1031.2664408803703 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 34 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1013.8791878755342 
+3 13 30 72 8 21 13 10 2 34 23 55 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 160
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1031.2664408803703 
+3 13 30 72 30 21 55 10 2 34 23 -1 6 34 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1013.8791878755342 
+3 13 30 72 8 21 13 10 2 34 23 55 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 161
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1036.2881439885905 
+14 13 30 3 6 21 72 10 2 34 23 -1 6 34 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1013.8791878755342 
+3 13 30 72 8 21 13 10 2 34 23 55 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 162
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1053.4982038060784 
+14 13 30 3 6 21 72 10 2 34 23 -1 6 68 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1013.8791878755342 
+3 13 30 72 8 21 13 10 2 34 23 55 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 163
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1076.304432733315 
+14 13 30 3 13 21 72 10 2 34 23 -1 6 68 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1013.8791878755342 
+3 13 30 72 8 21 13 10 2 34 23 55 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 30 21 14 10 2 34 23 2 6 8 75
+
+Generation: 164
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1076.304432733315 
+14 13 30 3 13 21 72 10 2 34 23 -1 6 68 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1013.8791878755342 
+3 13 30 72 8 21 13 10 2 34 23 55 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 -1 21 14 10 2 34 23 2 6 8 75
+
+Generation: 165
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1076.304432733315 
+14 13 30 3 13 21 72 10 2 34 23 -1 6 68 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1013.8791878755342 
+3 13 30 72 8 21 13 10 2 34 23 55 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 -1 21 14 10 2 34 23 2 6 8 75
+
+Generation: 166
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1076.304432733315 
+14 13 30 3 13 21 72 10 2 34 23 -1 6 68 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1013.8791878755342 
+3 13 30 72 8 21 13 10 2 34 23 55 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 -1 21 14 10 2 34 23 2 6 8 75
+
+Generation: 167
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1082.1538845575892 
+14 13 30 3 13 21 72 10 2 34 23 -1 6 34 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 13 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 -1 21 14 10 2 34 23 2 6 8 75
+
+Generation: 168
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1082.1538845575892 
+14 13 30 3 13 21 72 10 2 34 23 -1 6 34 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 13 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 -1 21 14 10 2 34 23 2 6 8 75
+
+Generation: 169
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1082.1538845575892 
+14 13 30 3 13 21 72 10 2 34 23 -1 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 13 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 -1 21 14 10 2 34 23 2 6 8 75
+
+Generation: 170
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1082.1538845575892 
+14 13 30 3 13 21 72 10 2 34 23 -1 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 34 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 -1 21 14 10 2 34 23 75 6 8 75
+
+Generation: 171
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1082.1538845575892 
+14 13 30 3 13 21 72 10 2 34 23 -1 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 34 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 -1 21 14 10 2 34 23 75 6 8 75
+
+Generation: 172
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1082.1538845575892 
+14 13 30 3 13 21 72 10 2 34 23 -1 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 34 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 -1 21 14 10 2 34 23 75 6 8 75
+
+Generation: 173
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1082.1538845575892 
+14 13 30 3 13 21 72 10 2 34 23 -1 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 34 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 -1 21 14 10 2 34 23 75 6 8 75
+
+Generation: 174
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1082.1538845575892 
+14 13 30 3 13 21 72 10 2 34 23 -1 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 34 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 -1 21 14 10 2 34 23 75 6 8 75
+
+Generation: 175
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1082.1538845575892 
+14 13 30 3 13 21 72 10 2 34 23 -1 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 34 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 -1 21 14 10 2 34 23 2 6 8 75
+
+Generation: 176
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1083.0565755509856 
+14 13 30 3 13 21 72 10 2 34 8 -1 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 34 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 -1 21 14 10 2 34 23 2 6 8 75
+
+Generation: 177
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1083.0565755509856 
+14 13 30 3 13 21 72 10 2 34 8 -1 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 34 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 -1 21 14 10 2 34 23 2 6 8 75
+
+Generation: 178
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1083.0565755509856 
+14 13 30 3 13 21 72 10 2 34 8 -1 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 34 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1161.7259841802716 
+3 13 30 72 -1 21 14 10 2 34 23 2 6 8 75
+
+Generation: 179
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1083.0565755509856 
+14 13 30 3 13 21 72 10 2 34 8 -1 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 34 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 3 6 8 75
+
+Generation: 180
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1083.0565755509856 
+14 13 30 3 13 21 72 10 2 34 8 -1 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 34 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 3 6 8 75
+
+Generation: 181
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1083.0565755509856 
+14 13 30 3 13 21 72 10 2 34 8 -1 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 34 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 3 6 8 75
+
+Generation: 182
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1083.0565755509856 
+14 13 30 3 13 21 72 10 2 34 8 -1 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 34 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 3 6 8 75
+
+Generation: 183
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1083.0565755509856 
+14 13 30 3 13 21 72 10 2 34 8 -1 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 34 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 3 6 8 75
+
+Generation: 184
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1083.0565755509856 
+14 13 30 3 13 21 72 10 2 34 8 -1 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 34 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 3 6 8 75
+
+Generation: 185
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1083.0565755509856 
+14 13 30 3 13 21 72 10 2 34 8 -1 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 34 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 2 6 8 14
+
+Generation: 186
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1083.0565755509856 
+14 13 30 3 13 21 72 10 2 34 8 -1 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 34 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 2 6 8 14
+
+Generation: 187
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1083.0565755509856 
+14 13 30 3 13 21 72 10 2 34 8 -1 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 34 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 2 6 8 14
+
+Generation: 188
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1083.0565755509856 
+14 13 30 3 13 21 72 10 2 34 8 -1 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 34 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 2 6 8 14
+
+Generation: 189
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1083.0565755509856 
+14 13 30 3 13 21 72 10 2 34 8 -1 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 34 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 2 6 8 14
+
+Generation: 190
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1083.0565755509856 
+14 13 30 3 13 21 72 10 2 34 8 -1 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 34 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 2 6 8 14
+
+Generation: 191
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1083.0565755509856 
+14 13 30 3 13 21 72 10 2 34 8 -1 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 34 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 2 6 8 14
+
+Generation: 192
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1083.0565755509856 
+14 13 30 3 13 21 72 10 2 34 8 -1 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 34 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 2 6 8 14
+
+Generation: 193
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1083.0565755509856 
+14 13 30 3 13 21 72 10 2 34 8 -1 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1026.8397005271122 
+3 13 30 72 8 21 34 10 2 34 23 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 2 6 8 14
+
+Generation: 194
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1087.3905271672288 
+14 13 30 3 13 21 72 10 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 2 6 8 21
+
+Generation: 195
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1087.3905271672288 
+14 13 30 3 13 21 72 10 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 23 6 8 21
+
+Generation: 196
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1087.3905271672288 
+14 13 30 3 13 21 72 10 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 34 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 23 6 8 21
+
+Generation: 197
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1087.3905271672288 
+14 13 30 3 13 21 72 10 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 23 6 8 21
+
+Generation: 198
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1087.3905271672288 
+14 13 30 3 13 21 72 10 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 23 6 8 21
+
+Generation: 199
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1087.3905271672288 
+14 13 30 3 13 21 72 10 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 23 6 8 21
+
+Generation: 200
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1087.3905271672288 
+14 13 30 3 13 21 72 10 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 23 6 8 21
+
+Generation: 201
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1087.3905271672288 
+14 13 30 3 13 21 72 10 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 23 6 8 21
+
+Generation: 202
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1087.3905271672288 
+14 13 30 3 13 21 72 10 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 23 6 8 21
+
+Generation: 203
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1087.3905271672288 
+14 13 30 3 13 21 72 10 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 23 6 8 21
+
+Generation: 204
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1087.3905271672288 
+14 13 30 3 13 21 72 10 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 23 6 8 21
+
+Generation: 205
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1087.3905271672288 
+14 13 30 3 13 21 72 10 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 23 6 8 21
+
+Generation: 206
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1087.3905271672288 
+14 13 30 3 13 21 72 10 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 23 6 8 21
+
+Generation: 207
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1087.3905271672288 
+14 10 30 3 13 21 72 10 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 2 6 8 21
+
+Generation: 208
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1087.3905271672288 
+14 13 30 3 13 21 72 10 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 23 6 8 21
+
+Generation: 209
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 23 6 8 21
+
+Generation: 210
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 23 6 8 21
+
+Generation: 211
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 23 6 8 21
+
+Generation: 212
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1164.8533135700225 
+3 13 30 72 75 21 14 10 2 34 23 23 6 8 21
+
+Generation: 213
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1170.2087710808212 
+3 13 30 72 8 21 14 10 2 34 23 2 6 8 82
+
+Generation: 214
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1170.2087710808212 
+3 13 30 72 8 21 14 10 2 34 23 2 6 8 82
+
+Generation: 215
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1179.9025242590678 
+3 13 30 72 8 21 34 10 2 44 23 2 6 8 82
+
+Generation: 216
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1179.9025242590678 
+3 13 30 72 8 21 34 10 2 44 23 2 6 8 82
+
+Generation: 217
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1179.9025242590678 
+3 13 30 72 8 21 34 10 2 44 23 2 6 8 82
+
+Generation: 218
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1179.9025242590678 
+3 13 30 72 8 21 34 10 2 44 23 2 6 8 82
+
+Generation: 219
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1179.9025242590678 
+3 13 30 72 8 82 34 10 2 44 23 2 6 8 21
+
+Generation: 220
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1179.9025242590678 
+3 13 30 72 8 82 34 10 2 44 23 2 6 8 21
+
+Generation: 221
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1179.9025242590678 
+3 13 30 72 8 82 34 10 2 44 23 2 6 8 21
+
+Generation: 222
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 223
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 224
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 225
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 226
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 227
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 228
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 229
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1044.2364202802848 
+3 13 30 72 8 21 34 10 2 44 6 9 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 230
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1045.4473102660545 
+3 13 30 72 8 21 34 10 2 44 6 5 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 231
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1045.4473102660545 
+3 13 30 72 8 21 34 10 2 44 6 5 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 232
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1045.4473102660545 
+3 13 30 72 8 21 34 10 2 44 6 5 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 233
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1045.4473102660545 
+3 13 30 72 8 21 34 10 2 44 6 5 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 234
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1045.4473102660545 
+3 13 30 72 8 21 34 10 2 44 6 5 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 235
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1045.4473102660545 
+3 13 30 72 8 21 34 10 2 44 6 5 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 236
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1045.4473102660545 
+3 13 30 72 8 21 34 10 2 44 6 5 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 237
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1045.4473102660545 
+3 13 30 72 8 21 34 10 2 44 6 5 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 238
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1045.4473102660545 
+3 13 30 72 8 21 34 10 2 44 6 5 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 239
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1045.4473102660545 
+3 13 30 72 8 21 34 10 2 44 6 5 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 240
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1045.4473102660545 
+3 13 30 72 8 21 34 10 2 44 6 5 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 241
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1045.4473102660545 
+3 13 30 72 8 21 34 10 2 44 6 5 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 242
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1045.4473102660545 
+3 13 30 72 8 21 34 10 2 44 6 5 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 243
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1045.4473102660545 
+3 13 30 72 8 21 34 10 2 44 6 5 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 244
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1045.4473102660545 
+3 13 30 72 8 21 34 10 2 44 6 5 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 245
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1045.4473102660545 
+3 13 30 72 8 21 34 10 2 44 6 5 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 246
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1045.4473102660545 
+3 13 30 72 8 21 34 10 2 44 6 5 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 247
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1045.4473102660545 
+3 13 30 72 8 21 34 10 2 44 6 5 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 248
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1045.4473102660545 
+3 13 30 72 8 21 34 10 2 44 6 5 44 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 249
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1175.8952371091298 
+14 23 30 3 13 21 72 14 2 34 8 68 6 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1045.4473102660545 
+3 13 30 72 8 21 34 10 2 44 6 5 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1234.249424622345 
+3 13 30 72 75 21 14 10 72 34 23 2 6 8 82
+
+Generation: 250
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1087.4218684562534 
+3 13 30 72 8 21 34 10 2 44 10 5 13 34 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1252.3103986881101 
+3 13 30 72 34 21 14 10 4 34 23 2 6 8 82
+
+Generation: 251
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1252.3103986881101 
+3 13 30 72 34 21 14 10 4 34 23 2 6 8 82
+
+Generation: 252
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1252.3103986881101 
+3 13 30 72 34 21 14 10 4 34 23 2 6 8 82
+
+Generation: 253
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1252.3103986881101 
+3 13 30 72 34 21 14 10 4 34 23 2 6 8 82
+
+Generation: 254
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1252.3103986881101 
+3 13 30 72 34 21 14 10 4 34 23 2 6 8 82
+
+Generation: 255
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1252.3103986881101 
+3 13 30 72 34 21 14 10 4 34 23 2 6 8 82
+
+Generation: 256
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1252.3103986881101 
+3 13 30 72 34 21 14 10 4 34 23 2 6 8 82
+
+Generation: 257
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1252.3103986881101 
+3 13 30 72 34 21 14 10 4 72 23 2 6 8 82
+
+Generation: 258
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1252.3103986881101 
+3 13 30 72 34 21 14 10 4 34 23 2 6 8 82
+
+Generation: 259
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1252.3103986881101 
+3 13 30 30 34 21 14 10 4 72 23 2 6 8 82
+
+Generation: 260
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1252.3103986881101 
+3 13 30 72 34 21 14 10 4 34 23 2 6 8 82
+
+Generation: 261
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1252.3103986881101 
+3 13 30 72 34 21 14 10 4 34 23 2 6 8 82
+
+Generation: 262
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 263
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 264
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 265
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 266
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 267
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 268
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 269
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 270
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 271
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 272
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 273
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 274
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 275
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 34 2 6 8 82
+
+Generation: 276
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 34 2 6 8 82
+
+Generation: 277
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 14 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 278
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 279
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 280
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 281
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 282
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 283
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 284
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 285
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 286
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 287
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 288
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 289
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 290
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 291
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 292
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 293
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 294
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 295
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1189.9463700058452 
+14 23 30 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 296
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 4 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 297
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 4 3 13 21 72 21 2 34 8 68 44 10 82
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 298
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 4 3 13 21 72 21 82 34 8 68 44 10 2
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 299
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 4 3 13 21 72 21 82 34 8 68 44 10 2
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 300
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 4 3 13 21 72 21 82 34 8 68 44 10 2
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 301
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 4 3 13 21 72 21 82 34 8 68 44 10 2
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 302
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 4 3 13 21 72 21 82 34 8 68 44 10 2
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 303
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 4 3 13 21 72 21 82 34 8 68 44 10 2
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 304
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 4 3 13 21 72 21 82 34 8 68 44 10 2
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 305
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 4 3 13 21 72 21 82 34 8 68 44 10 2
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 306
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 4 3 13 21 72 21 82 34 8 68 44 10 2
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 3 21 14 10 4 34 23 2 6 8 82
+
+Generation: 307
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 4 3 13 21 72 21 82 34 8 68 44 10 2
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 3 21 14 10 4 34 23 2 6 8 82
+
+Generation: 308
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 4 3 13 21 72 21 82 34 8 68 44 10 2
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 3 21 14 10 4 34 23 2 6 8 82
+
+Generation: 309
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 4 3 13 21 72 21 82 34 8 68 44 10 2
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82
+
+Generation: 310
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 4 3 13 21 72 21 82 34 8 68 44 10 2
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 3 21 14 10 4 34 23 2 6 8 82
+
+Generation: 311
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1206.043136623413 
+14 23 30 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 4 3 13 21 72 21 82 34 8 68 44 10 2
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 3 21 14 10 4 34 23 2 6 8 82
+
+Generation: 312
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 21 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 4 3 13 21 72 21 82 34 8 68 44 10 2
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 3 21 14 10 4 34 23 2 6 8 82
+
+Generation: 313
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 21 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 4 3 13 21 72 21 82 34 8 68 44 10 2
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 3 21 14 10 4 34 23 2 6 8 82
+
+Generation: 314
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 21 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 4 3 13 21 72 21 82 34 8 68 44 10 2
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 3 21 14 10 4 34 23 2 6 8 82
+
+Generation: 315
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 21 3 13 4 72 10 2 34 8 68 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 4 3 13 21 72 21 82 34 8 68 44 10 2
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 3 21 14 10 4 34 23 2 6 8 82
+
+Generation: 316
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1263.1564374414463 
+14 23 30 3 13 5 72 10 2 34 8 4 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 4 3 13 21 72 21 82 34 8 68 44 10 2
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 3 21 14 10 4 34 23 2 6 8 82
+
+Generation: 317
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1263.1564374414463 
+14 23 30 3 13 5 72 10 2 34 8 4 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 4 3 13 21 72 21 82 34 8 68 44 10 2
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 3 21 14 10 4 34 23 2 6 8 82
+
+Generation: 318
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1263.1564374414463 
+14 23 30 3 13 5 72 10 2 34 8 4 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 4 3 13 21 72 21 82 34 8 68 44 10 2
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 3 21 14 10 4 34 23 2 6 8 82
+
+Generation: 319
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+ClusterQuery Fitness: 1263.1564374414463 
+14 23 30 3 13 5 72 10 2 34 8 4 44 10 82
+Subpopulation 1:
+Evaluated: T
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 4 3 13 21 72 21 82 34 8 68 44 10 2
+Subpopulation 2:
+Evaluated: T
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 3 21 14 10 4 34 23 2 6 8 82
 
 Best Individual of Run:
 Subpopulation 0:
 Evaluated: T
-ClusterQuery Fitness: 564.2246523026537 
-69 8 95 -1 72 32 99 0 75 34 18 53 23 76 22
+ClusterQuery Fitness: 1263.1564374414463 
+14 23 30 3 13 5 72 10 2 34 8 4 44 10 82
 Subpopulation 1:
 Evaluated: T
-ClusterQuery Fitness: 1289.5046465034777 
-52 15 10 15 80 31 99 13 69 5 18 0 6 18 1
+ClusterQuery Fitness: 1236.3069952135752 
+14 23 4 3 13 21 72 21 2 34 8 68 44 10 82
 Subpopulation 2:
 Evaluated: T
-ClusterQuery Fitness: 1622.7936501154552 
-99 57 72 33 33 1 6 10 20 68 0 1 7 16 70
+ClusterQuery Fitness: 1269.626319130737 
+3 13 30 72 23 21 14 10 4 34 23 2 6 8 82

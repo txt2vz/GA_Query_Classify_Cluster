@@ -35,17 +35,14 @@ configure(runClustering) {
 	description = 'Run clustering'
 }
 
-task(indexCrisisData, dependsOn: 'classes', type: JavaExec) {
-	main = 'index.IndexCrisisClusterFromCSV'
-	classpath = sourceSets.main.runtimeClasspath
-}
-task(indexR10, dependsOn: 'classes', type: JavaExec) {
-	main = 'index.IndexR10'
+task buildIndex(type: JavaExec){
+	description "build lucene index"
+	main = 'index.BuildLuceneIndex'
 	classpath = sourceSets.main.runtimeClasspath
 }
 
-task(index20NG, dependsOn: 'classes', type: JavaExec) {
-	main = 'index.Index20NG'
+task(indexCrisisData, dependsOn: 'classes', type: JavaExec) {
+	main = 'index.IndexCrisisClusterFromCSV'
 	classpath = sourceSets.main.runtimeClasspath
 }
 
@@ -54,24 +51,19 @@ task(indexClassic, dependsOn: 'classes', type: JavaExec) {
 	classpath = sourceSets.main.runtimeClasspath
 }
 
-task(importantWords, dependsOn: 'classes', type: JavaExec) {
-	main = 'index.ImportantWords'
+task(importantTerms, dependsOn: 'classes', type: JavaExec) {
+	main = 'index.ImportantTerms'
 	classpath = sourceSets.main.runtimeClasspath
 }
 
-configure(indexR10) {
+configure(buildIndex) {
 	group = 'index'
-	description = 'IndexR10 dataset'
-}
-
-configure(index20NG) {
-	group = 'index'
-	description = 'Index20NG dataset'
+	description = 'Build Lucene index from dataset'
 }
 
 configure(indexClassic) {
 	group = 'index'
-	description = 'Index20NG dataset'
+	description = 'Index classic dataset'
 }
 
 configure(indexCrisisData) {

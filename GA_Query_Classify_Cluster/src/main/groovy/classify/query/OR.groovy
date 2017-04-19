@@ -5,8 +5,8 @@ import org.apache.lucene.search.BooleanQuery
 import org.apache.lucene.search.IndexSearcher
 import org.apache.lucene.search.TermQuery
 
-import classify.ClassifyFit;
-import classify.Effectiveness;
+import classify.ClassifyFit
+import classify.Effectiveness
 import ec.EvolutionState
 import ec.Individual
 import ec.Problem
@@ -57,7 +57,7 @@ public class OR extends Problem implements SimpleProblemForm {
 
 		intVectorIndividual.genome.each {gene ->
 			
-			//no duplicates
+			//use gene set to prevent duplicates
 			if (gene < termQueryArray.size() && gene >= 0 && genes.add(gene)){				
 				bqb.add (termQueryArray[gene],BooleanClause.Occur.SHOULD)
 			}

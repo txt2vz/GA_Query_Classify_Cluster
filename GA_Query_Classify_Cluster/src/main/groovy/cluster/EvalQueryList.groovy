@@ -11,13 +11,13 @@ import index.IndexInfo
 
 class EvalQueryList {
 
-	private IndexSearcher searcher = IndexInfo.instance.indexSearcher
+	private static final IndexSearcher searcher = IndexInfo.instance.indexSearcher
+	private static final int hitsPerPage = IndexInfo.instance.indexReader.maxDoc()
+	private static final int coreClusterSize=20
 
 	public void cf (ClusterFit fitness, List bqbArray, boolean gp){
 
 		assert bqbArray.size() == IndexInfo.NUMBER_OF_CLUSTERS
-		final int hitsPerPage = IndexInfo.instance.indexReader.maxDoc()
-		final int coreClusterSize=20
 
 		fitness.positiveScoreTotal=0
 		fitness.negativeScoreTotal=0
@@ -32,11 +32,6 @@ class EvalQueryList {
 
 		def qMap = [:]
 		def allHits = [] as Set
-
-		//		if (bqbArray.size() != IndexInfo.NUMBER_OF_CLUSTERS) {
-		//			println "bqblist size error"
-		//			fitness.isDummy = true
-		//		}
 
 		bqbArray.eachWithIndex {bqb, index ->
 
@@ -87,7 +82,7 @@ class EvalQueryList {
 			}
 		}
 
-		fitness.queryMap = qMap.asImmutable()		
+		fitness.queryMap = qMap.asImmutable()
 
 		if (gp && fitness.queryMap.size() != IndexInfo.NUMBER_OF_CLUSTERS) {
 			fitness.emptyQueries = true

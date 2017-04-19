@@ -15,8 +15,8 @@ import org.apache.lucene.search.similarities.TFIDFSimilarity
 import org.apache.lucene.util.BytesRef
 
 /**
- * Return a list of termqueries likely to be useful for building queries for classification or clustering
- * Terms should be in order of their likely usefulness query building 
+ * Return a list of termqueries likely to be useful for building boolean queries for classification or clustering
+ * Terms should be in order of their likely usefulness in query building 
  * @author Laurie 
  */
 
@@ -25,33 +25,30 @@ public class ImportantTerms  {
 	public final static int SPAN_FIRST_MAX_END = 300;
 	private final static int MAX_TERMQUERYLIST_SIZE = 300;
 
-	private final IndexSearcher indexSearcher
-	private final IndexReader indexReader
+	private final IndexSearcher indexSearcher= IndexInfo.instance.indexSearcher;
+	private final IndexReader indexReader = indexSearcher.getIndexReader()
 	private Terms terms
 	private TermsEnum termsEnum
 	private int maxDoc
-	private Set<String> stopSet
+	private Set<String> stopSet= StopSet.getStopSetFromFile()
 
 	public static void main(String[] args){
 		IndexInfo.instance.setCategoryName("cru")
 		IndexInfo.instance.categoryNumber = '2'
 		IndexInfo.instance.setIndex()
 		def iw = new ImportantTerms()
-		iw.getF1TermQueryList()
-		//iw.getTFIDFTermQueryList()
+	//	iw.getF1TermQueryList()
+		iw.getTFIDFTermQueryList()
 	}
 
-	public ImportantTerms() {
-		indexSearcher = IndexInfo.instance.indexSearcher;
-		indexReader = indexSearcher.getIndexReader()
+	public ImportantTerms() {		
 		terms = MultiFields.getTerms(indexReader, IndexInfo.FIELD_CONTENTS)
 		termsEnum = terms.iterator();
-		maxDoc = indexReader.maxDoc();
-		stopSet = StopSet.getStopSetFromFile()
+		maxDoc = indexReader.maxDoc();	
 	}
 
 	//screen terms likely to be ineffective
-	private boolean isEffectiveTerm(Term t) {
+	private boolean isUsefulTerm(Term t) {
 		int df = indexSearcher.getIndexReader().docFreq(t)
 		def word = t.text()
 
@@ -79,7 +76,7 @@ public class ImportantTerms  {
 		while((termbr = termsEnum.next()) != null) {
 
 			Term t = new Term(IndexInfo.FIELD_CONTENTS, termbr);
-			if ( isEffectiveTerm(t) ){
+			if ( isUsefulTerm(t) ){
 
 				Query tq = new TermQuery(t)
 				final int positiveHits = IndexInfo.instance.getQueryHitsWithFilter(indexSearcher,IndexInfo.instance.catTrainBQ, tq)
@@ -103,14 +100,14 @@ public class ImportantTerms  {
 	public TermQuery[] getTFIDFTermQueryList(){
 
 		println "Important words terms.getDocCount: ${terms.getDocCount()}"
-		def termMap = [:]
+		def termQueryMap = [:]
 		BytesRef termbr;
 
 		while((termbr = termsEnum.next()) != null) {
 
 			Term t = new Term(IndexInfo.FIELD_CONTENTS, termbr);
-			if (isEffectiveTerm(t)){
-
+			if (isUsefulTerm(t)){
+				
 				long indexDf = indexReader.docFreq(t);
 				int docCount = indexReader.numDocs()
 
@@ -125,13 +122,13 @@ public class ImportantTerms  {
 						tfidfTotal +=tfidf
 					}
 				}
-				termMap+= [(t) : tfidfTotal]
+				termQueryMap+= [(new TermQuery(t)) : tfidfTotal]
 			}
 		}
 
-		termMap= termMap.sort{a, b -> a.value <=> b.value}
-		TermQuery[] termQueryList = termMap.keySet().take(MAX_TERMQUERYLIST_SIZE).collect {new TermQuery(it)}.asImmutable()
-		println "tfidf map size: ${termMap.size()}  termQuerylist size: ${termQueryList.size()}  termQuerylist: $termQueryList"
+		termQueryMap= termQueryMap.sort{a, b -> a.value <=> b.value}
+		TermQuery[] termQueryList = termQueryMap.keySet().take(MAX_TERMQUERYLIST_SIZE)		
+		println "tfidf map size: ${termQueryMap.size()}  termQuerylist size: ${termQueryList.size()}  termQuerylist: $termQueryList"
 		return termQueryList
 	}
 }

@@ -6,3 +6,5 @@
 .settings
 gradle.prefs
 .gradle
+/src/cfg/statDump
+/results

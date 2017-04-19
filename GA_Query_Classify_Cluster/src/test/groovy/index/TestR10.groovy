@@ -19,16 +19,16 @@ import org.apache.lucene.store.FSDirectory
 import spock.lang.*
 
 class TestR10 extends spock.lang.Specification {
-	Path path = Paths.get("indexes/r10L6")
+	Path path = Paths.get("indexes/R10")
 	Directory directory = FSDirectory.open(path)
 	DirectoryReader ireader = DirectoryReader.open(directory);
 	IndexSearcher isearcher = new IndexSearcher(ireader);
 
-	def "total r10 docs and grain category"() {
+	def 'total r10 docs and grain category'() {
 		setup:
 
 		TotalHitCountCollector thcollector  = new TotalHitCountCollector();
-		final TermQuery catQ = new TermQuery(new Term(IndexInfo.FIELD_CATEGORY_NAME,	"gra"))
+		final TermQuery catQ = new TermQuery(new Term(IndexInfo.FIELD_CATEGORY_NAME, '14_grain'))
 
 		when:
 		isearcher.search(catQ, thcollector);
