@@ -7,10 +7,10 @@ class ImportantTermsSpec extends spock.lang.Specification {
 		IndexInfo.instance.setPathToIndex('indexes/R10')
 		IndexInfo.instance.setCategoryNumber('2')
 		IndexInfo.instance.setIndex()
-		ImportantTerms iw = new ImportantTerms()
+		ImportantTerms impTerms = new ImportantTerms()
 
 		when:
-		def oilList = iw.getF1TermQueryList ()
+		def oilList = impTerms.getF1TermQueryList ()
 
 		then:
 		oilList[0].toString((IndexInfo.FIELD_CONTENTS)) == 'oil'
@@ -22,10 +22,10 @@ class ImportantTermsSpec extends spock.lang.Specification {
 		IndexInfo.instance.setPathToIndex('indexes/20NG')
 		IndexInfo.instance.setCategoryNumber('2')
 		IndexInfo.instance.setIndex()
-		ImportantTerms iw = new ImportantTerms()
+		ImportantTerms impTerms = new ImportantTerms()
 
 		when:
-		def graphicsList = iw.getF1TermQueryList ()
+		def graphicsList = impTerms.getF1TermQueryList ()
 
 		then:
 		graphicsList[0].toString((IndexInfo.FIELD_CONTENTS)) == 'windows'
@@ -36,10 +36,10 @@ class ImportantTermsSpec extends spock.lang.Specification {
 		setup:
 		IndexInfo.instance.setPathToIndex('indexes/20NG3SpaceHockeyChristianL6')
 		IndexInfo.instance.setIndex()
-		ImportantTerms iw = new ImportantTerms()
+		ImportantTerms impTerms = new ImportantTerms()
 
 		when:
-		def tfidfList = iw.getTFIDFTermQueryList()
+		def tfidfList = impTerms.getTFIDFTermQueryList()
 
 		then:
 		tfidfList[0].getTerm().text() == 'space'

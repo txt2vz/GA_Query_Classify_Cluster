@@ -2,7 +2,7 @@ package index
 
 import java.nio.file.Path
 import java.nio.file.Paths
-
+import org.apache.lucene.document.Document
 import org.apache.lucene.index.DirectoryReader
 import org.apache.lucene.index.IndexReader
 import org.apache.lucene.index.Term
@@ -10,7 +10,9 @@ import org.apache.lucene.search.BooleanClause
 import org.apache.lucene.search.BooleanQuery
 import org.apache.lucene.search.IndexSearcher
 import org.apache.lucene.search.Query
+import org.apache.lucene.search.ScoreDoc
 import org.apache.lucene.search.TermQuery
+import org.apache.lucene.search.TopScoreDocCollector
 import org.apache.lucene.search.TotalHitCountCollector
 import org.apache.lucene.store.Directory
 import org.apache.lucene.store.FSDirectory
@@ -25,22 +27,23 @@ class IndexInfo {
 
 	// Lucene field names
 	public static final String FIELD_CATEGORY_NAME = 'category',
-	                           FIELD_CONTENTS = 'contents', 
-							   FIELD_PATH = 'path',
-							   FIELD_TEST_TRAIN = 'test_train',
-							   FIELD_CATEGORY_NUMBER = 'categoryNumber';
-	public static final int NUMBER_OF_CLUSTERS =  3 , NUMBER_OF_CATEGORIES = 10
+	FIELD_CONTENTS = 'contents',
+	FIELD_PATH = 'path',
+	FIELD_TEST_TRAIN = 'test_train',
+	FIELD_CATEGORY_NUMBER = 'categoryNumber';
+	public static final int NUMBER_OF_CLUSTERS =  3 , NUMBER_OF_CATEGORIES = 20
 
-	String 	pathToIndex =	
-//    'indexes/r10L6' 
-//	 'indexes/crisis3FireBombFloodL6'
+	String 	pathToIndex =
+	 //   'indexes/R10'
+	'indexes/20NG'
+	//	 'indexes/crisis3FireBombFloodL6'
 	// 'indexes/classic4_500L6'
-//	 'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6'
-     'indexes/20NG3SpaceHockeyChristianL6'
+	//	 'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6'
+	//'indexes/20NG3SpaceHockeyChristianL6'
 
 	IndexReader indexReader
 	IndexSearcher indexSearcher
-	String categoryNumber='0', categoryName='cru';
+	String categoryNumber='0', categoryName='crude';
 	Query catTrainBQ, othersTrainBQ, catTestBQ, othersTestBQ;
 	int totalTrainDocsInCat, totalTestDocsInCat, totalOthersTrainDocs, totalTestDocs;
 
@@ -51,9 +54,9 @@ class IndexInfo {
 
 	TermQuery catQ 	= new TermQuery(new Term(FIELD_CATEGORY_NUMBER,
 	categoryNumber))
-	
+
 	//get hits for a particular query using filter (e.g. a particular category)
-	public int getQueryHitsWithFilter(IndexSearcher searcher, Query filter, Query q ) {		
+	public int getQueryHitsWithFilter(IndexSearcher searcher, Query filter, Query q ) {
 		TotalHitCountCollector collector = new TotalHitCountCollector();
 		BooleanQuery.Builder  bqb = new BooleanQuery.Builder();
 		bqb.add(q, BooleanClause.Occur.MUST)
@@ -61,7 +64,20 @@ class IndexInfo {
 		searcher.search(bqb.build(), collector);
 		return collector.getTotalHits();
 	}
-	
+
+	public String getCategoryName (){
+
+		TopScoreDocCollector collector = TopScoreDocCollector.create(1)
+		indexSearcher.search(catQ, collector);
+		ScoreDoc[] hits = collector.topDocs().scoreDocs
+		
+		hits.each {h ->
+			Document d = indexSearcher.doc(h.doc);
+			categoryName = d.get(IndexInfo.FIELD_CATEGORY_NAME)
+		}
+		return categoryName		
+	}
+
 	public void setIndex()  {
 		catQ = new TermQuery(new Term(FIELD_CATEGORY_NUMBER,
 				categoryNumber));
@@ -114,5 +130,5 @@ class IndexInfo {
 
 		println "Total train docs: $totalTrain"
 		println "IndexInfo   CategoryNumber: $categoryNumber Total train in cat: $totalTrainDocsInCat  Total others tain: $totalOthersTrainDocs   Total test in cat : $totalTestDocsInCat  "
-	}	
+	}
 }

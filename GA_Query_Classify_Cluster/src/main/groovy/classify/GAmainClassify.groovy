@@ -17,7 +17,7 @@ class GAmainClassify extends Evolve {
 		EvolutionState state;
 
 		Formatter bestResultsOut = new Formatter('results/resultsClassify.csv');
-		final String fileHead = "category, job, f1train, f1test, bepTest, totPositiveTest, totNegativeTest, totTestDocsInCat, query" + '\n';
+		final String fileHead = "categoryName, categoryNumber job, f1train, f1test, bepTest, totPositiveTest, totNegativeTest, totTestDocsInCat, query" + '\n';
 	 
 		ParameterDatabase parameters = null;
 		final Date startRun = new Date();
@@ -67,10 +67,10 @@ class GAmainClassify extends Evolve {
 				totTest += IndexInfo.instance.totalTestDocsInCat;
 
 				println "cfit.getQueryMinimal: ${cfit.getQueryMinimal()}"
-
+			 
 				bestResultsOut.format(
-						"%s, %d, %.3f, %.3f, %.3f, %d, %d, %d, %s \n",
-						categoryNumber, job, trainF1, testF1, testBEP,
+						"%s, %s, %d, %.3f, %.3f, %.3f, %d, %d, %d, %s \n",
+						IndexInfo.instance.getCategoryName(), categoryNumber, job, trainF1, testF1, testBEP,
 						cfit.positiveMatchTest,
 						cfit.negativeMatchTest,
 						IndexInfo.instance.totalTestDocsInCat,

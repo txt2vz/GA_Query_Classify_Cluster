@@ -10,7 +10,6 @@ import org.apache.lucene.document.Document
 import org.apache.lucene.document.Field
 import org.apache.lucene.document.StringField
 import org.apache.lucene.document.TextField
-import org.apache.lucene.index.DirectoryReader
 import org.apache.lucene.index.IndexWriter
 import org.apache.lucene.index.IndexWriterConfig
 import org.apache.lucene.index.Term
@@ -23,28 +22,25 @@ import org.apache.lucene.store.FSDirectory
 
 // Index text files found in this directory
 def docsPath =
-	//  /C:\Users\Laurie\Dataset\20bydate/
-	/C:\Users\Laurie\Dataset\reuters-top10/
+		/C:\Users\Laurie\Dataset\20bydate/
+// /C:\Users\Laurie\Dataset\reuters-top10/
 
 //build index here
-def indexPath = 'indexes/R10'
-//		'indexes/20NG'
-//  /C:\Users\Laurie\Dataset\20NG6GraphicsHockeyCryptSpaceChristianGuns/
-//  /C:\Users\Laurie\Dataset\20NG5WindowsmiscForsaleHockeySpaceChristian/
-//  /C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian/
+def indexPath =
+		//       'indexes/R10'
+		'indexes/20NG'
 
 //set to true when indexing R10 - different directory structure.
-boolean reuters = true
+boolean reuters = false
 
 Path path = Paths.get(indexPath)
 Directory directory = FSDirectory.open(path)
 Analyzer analyzer = //new EnglishAnalyzer();  //with stemming
 		new StandardAnalyzer()
+IndexWriterConfig iwc = new IndexWriterConfig(analyzer)
 
 //store doc counts for each category
 def catsFreq=[:]
-
-IndexWriterConfig iwc = new IndexWriterConfig(analyzer)
 
 // Create a new index in the directory, removing any
 // previously indexed documents:
@@ -57,7 +53,7 @@ println("Indexing to directory: $indexPath  from: $docsPath ...")
 def categoryNumber=-1
 new File(docsPath).eachDir {
 	if (reuters) categoryNumber++
-	if (!reuters) categoryNumber=-1  //reset for 20NG for test and train directories
+	else categoryNumber=-1  //reset for 20NG for test and train directories
 	it.eachFileRecurse {file ->
 		if (!reuters && file.isDirectory()) categoryNumber++
 		if (!file.hidden && file.exists() && file.canRead() && !file.isDirectory()) // && categoryNumber <3)

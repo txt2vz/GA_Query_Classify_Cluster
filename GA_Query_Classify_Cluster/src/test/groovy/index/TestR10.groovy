@@ -6,12 +6,15 @@ import java.nio.file.Paths
 
 import org.apache.lucene.analysis.Analyzer
 import org.apache.lucene.analysis.standard.StandardAnalyzer
+import org.apache.lucene.document.Document
 import org.apache.lucene.index.DirectoryReader
 import org.apache.lucene.index.IndexWriter
 import org.apache.lucene.index.IndexWriterConfig
 import org.apache.lucene.index.Term
 import org.apache.lucene.search.IndexSearcher
+import org.apache.lucene.search.ScoreDoc
 import org.apache.lucene.search.TermQuery
+import org.apache.lucene.search.TopScoreDocCollector
 import org.apache.lucene.search.TotalHitCountCollector
 import org.apache.lucene.store.Directory
 import org.apache.lucene.store.FSDirectory
@@ -19,11 +22,33 @@ import org.apache.lucene.store.FSDirectory
 import spock.lang.*
 
 class TestR10 extends spock.lang.Specification {
-	Path path = Paths.get("indexes/R10")
+	Path path = Paths.get('indexes/R10')
 	Directory directory = FSDirectory.open(path)
 	DirectoryReader ireader = DirectoryReader.open(directory);
 	IndexSearcher isearcher = new IndexSearcher(ireader);
+	
+	def 'categoryName R10' (){
 
+		def Document d
+		def categoryNumber= '7'
+		
+		setup:
+		TermQuery catQ 	= new TermQuery(new Term(IndexInfo.FIELD_CATEGORY_NUMBER,
+				categoryNumber))
+
+		when:
+		TopScoreDocCollector collector = TopScoreDocCollector.create(1)
+		isearcher.search(catQ, collector);
+		ScoreDoc[] hits = collector.topDocs().scoreDocs
+
+		hits.each {h ->
+			d = isearcher.doc(h.doc)			
+		}
+
+		then:
+		d.get(IndexInfo.FIELD_CATEGORY_NAME)== 'ship'		
+	}
+	
 	def 'total r10 docs in category'() {
 		setup:
 		

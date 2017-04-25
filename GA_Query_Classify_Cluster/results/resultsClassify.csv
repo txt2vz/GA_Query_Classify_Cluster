@@ -1,0 +1,50 @@
+Start time: Tue Apr 25 13:06:01 BST 2017 
+categoryName, categoryNumber job, f1train, f1test, bepTest, totPositiveTest, totNegativeTest, totTestDocsInCat, query
+alt.atheism, 0, 1, 0.760, 0.613, 0.638, 163, 50, 319, saturn.wwc.edu benedikt beauchaine kmr4 atheists atheism wingate rushdie 
+comp.graphics, 1, 1, 0.544, 0.527, 0.527, 208, 193, 389, polygon graphics viewer images pov tiff animation sphere 
+comp.os.ms-windows.misc, 2, 1, 0.629, 0.599, 0.618, 286, 275, 394, windows win3.1 bmp bj ftp.cica.indiana.edu cica 
+comp.sys.ibm.pc.hardware, 3, 1, 0.526, 0.459, 0.459, 177, 202, 392, isa vlb bios jumpers ide floppy ati gateway 
+comp.sys.mac.hardware, 4, 1, 0.687, 0.643, 0.651, 279, 204, 385, centris iisi quadra apple mac powerbook macs lciii 
+comp.windows.x, 5, 1, 0.736, 0.656, 0.694, 210, 35, 395, xlib expo.lcs.mit.edu motif x11 xterm widget pixmap x11r5 
+misc.forsale, 6, 1, 0.716, 0.735, 0.736, 279, 90, 390, cod forsale obo sale 
+rec.autos, 7, 1, 0.660, 0.644, 0.645, 269, 171, 396, cars toyota automotive taurus boyle frost callison car 
+rec.motorcycles, 8, 1, 0.837, 0.808, 0.808, 317, 70, 398, harley bikes bike yamaha biker motorcycle dod maven 
+rec.sport.baseball, 9, 1, 0.723, 0.704, 0.721, 243, 50, 397, phillies yankees baseball jays sox pitchers cubs pitching 
+rec.sport.hockey, 10, 1, 0.869, 0.826, 0.836, 297, 23, 399, leafs hockey goalie nhl lindros playoff devils playoffs 
+sci.crypt, 11, 1, 0.899, 0.849, 0.851, 324, 43, 396, nsa cryptography clipper wiretap tapped encrypted encryption crypto 
+sci.electronics, 12, 1, 0.472, 0.384, 0.390, 134, 171, 393, voltage wiring radar amp electronics receiver circuit circuits 
+sci.med, 13, 1, 0.710, 0.430, 0.477, 130, 78, 396, symptoms foods diet superstition cs.pitt.edu doctor homeopathy disease 
+sci.space, 14, 1, 0.765, 0.710, 0.737, 235, 33, 394, prb moon spacecraft shuttle sci.space orbit zoo.toronto.edu nsmca 
+soc.religion.christian, 15, 1, 0.726, 0.729, 0.734, 269, 71, 398, athos.rutgers.edu geneva.rutgers.edu resurrection clh revelation romans scripture catholic 
+talk.politics.guns, 16, 1, 0.766, 0.676, 0.690, 286, 196, 364, waco atf tavares handguns gnv.ifas.ufl.edu gun firearms firearm 
+talk.politics.mideast, 17, 1, 0.857, 0.647, 0.689, 195, 32, 376, arabs armenian armenia israeli cpr holocaust serdar hezbollah 
+talk.politics.misc, 18, 1, 0.564, 0.499, 0.518, 130, 81, 310, employment gay deficit republicans thor.isc kaldis cramer reform 
+talk.religion.misc, 19, 1, 0.554, 0.412, 0.414, 112, 181, 251, biblical morality mormons weiss kendig pharvey ch981 sandvik 
+ 
+Run Number, 1, Micro F1: , 0.6343,  Macro F1: , 0.6275, Micro BEP:, 0.6360, Total Positive Matches , 4543, Total Negative Matches, 2249, Total Docs,  7532 
+,, Overall Micro F1 , 0.6343,  Overall Macro F1, 0.6275, Overall MicroBEP, 0.6360 
+ 
+alt.atheism, 0, 2, 0.760, 0.613, 0.638, 163, 50, 319, atheism kmr4 bobbe atheists wingate saturn.wwc.edu benedikt rushdie 
+comp.graphics, 1, 2, 0.544, 0.527, 0.527, 208, 193, 389, tiff polygon animation pov graphics images viewer sphere 
+comp.os.ms-windows.misc, 2, 2, 0.629, 0.599, 0.618, 286, 275, 394, windows bmp win3.1 ftp.cica.indiana.edu bj cica 
+comp.sys.ibm.pc.hardware, 3, 2, 0.526, 0.459, 0.459, 177, 202, 392, floppy ide vlb gateway jumpers isa ati bios 
+comp.sys.mac.hardware, 4, 2, 0.687, 0.643, 0.651, 279, 204, 385, mac iisi powerbook centris apple lciii macs quadra 
+comp.windows.x, 5, 2, 0.736, 0.656, 0.694, 210, 35, 395, x11 xterm motif widget pixmap x11r5 expo.lcs.mit.edu xlib 
+misc.forsale, 6, 2, 0.716, 0.735, 0.736, 279, 90, 390, sale cod obo forsale 
+rec.autos, 7, 2, 0.660, 0.644, 0.645, 269, 171, 396, taurus toyota frost cars boyle automotive callison car 
+rec.motorcycles, 8, 2, 0.837, 0.809, 0.809, 317, 69, 398, harley hamer motorcycle bike biker yamaha dod bikes 
+rec.sport.baseball, 9, 2, 0.723, 0.704, 0.721, 243, 50, 397, cubs pitching jays baseball pitchers sox yankees phillies 
+rec.sport.hockey, 10, 2, 0.869, 0.833, 0.842, 301, 23, 399, playoff leafs playoffs nhl hockey lindros devils bruins 
+sci.crypt, 11, 2, 0.899, 0.849, 0.851, 324, 43, 396, crypto tapped nsa wiretap encryption clipper cryptography encrypted 
+sci.electronics, 12, 2, 0.472, 0.384, 0.390, 134, 171, 393, wiring radar receiver amp circuits circuit voltage electronics 
+sci.med, 13, 2, 0.710, 0.430, 0.477, 130, 78, 396, diet cs.pitt.edu symptoms foods superstition homeopathy doctor disease 
+sci.space, 14, 2, 0.765, 0.710, 0.737, 235, 33, 394, moon nsmca shuttle orbit zoo.toronto.edu sci.space spacecraft prb 
+soc.religion.christian, 15, 2, 0.726, 0.729, 0.734, 269, 71, 398, catholic romans clh geneva.rutgers.edu revelation scripture athos.rutgers.edu resurrection 
+talk.politics.guns, 16, 2, 0.766, 0.676, 0.690, 286, 196, 364, waco firearm gun tavares gnv.ifas.ufl.edu atf firearms handguns 
+talk.politics.mideast, 17, 2, 0.857, 0.647, 0.689, 195, 32, 376, hezbollah armenian serdar arabs cpr israeli holocaust armenia 
+talk.politics.misc, 18, 2, 0.564, 0.499, 0.518, 130, 81, 310, gay deficit reform employment thor.isc cramer republicans kaldis 
+talk.religion.misc, 19, 2, 0.554, 0.412, 0.414, 112, 181, 251, pharvey sandvik morality kendig mormons weiss ch981 biblical 
+ 
+Run Number, 2, Micro F1: , 0.6347,  Macro F1: , 0.6279, Micro BEP:, 0.6364, Total Positive Matches , 4547, Total Negative Matches, 2248, Total Docs,  7532 
+,, Overall Micro F1 , 0.6345,  Overall Macro F1, 0.6277, Overall MicroBEP, 0.6362 
+ 
