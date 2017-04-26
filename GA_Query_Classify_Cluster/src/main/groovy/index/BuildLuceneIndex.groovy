@@ -20,6 +20,9 @@ import org.apache.lucene.search.TotalHitCountCollector
 import org.apache.lucene.store.Directory
 import org.apache.lucene.store.FSDirectory
 
+
+//to build an index you must set the docsPath, indexPath and iName
+
 // Index text files found in this directory
 def docsPath =
 		/C:\Users\Laurie\Dataset\20bydate/
@@ -28,10 +31,11 @@ def docsPath =
 //build index here
 def indexPath =
 		//       'indexes/R10'
-		'indexes/20NG'
+		'indexes/NG20'
 
-//set to true when indexing R10 - different directory structure.
-boolean reuters = false
+//R10 - different directory structure
+enum IndexName { R10, NG20 }
+IndexName iName = IndexName.NG20
 
 Path path = Paths.get(indexPath)
 Directory directory = FSDirectory.open(path)
@@ -52,10 +56,11 @@ println("Indexing to directory: $indexPath  from: $docsPath ...")
 
 def categoryNumber=-1
 new File(docsPath).eachDir {
-	if (reuters) categoryNumber++
+	if (iName == IndexName.R10) categoryNumber++
 	else categoryNumber=-1  //reset for 20NG for test and train directories
+	
 	it.eachFileRecurse {file ->
-		if (!reuters && file.isDirectory()) categoryNumber++
+		if (iName != IndexName.R10 && file.isDirectory()) categoryNumber++
 		if (!file.hidden && file.exists() && file.canRead() && !file.isDirectory()) // && categoryNumber <3)
 
 		{
@@ -72,7 +77,7 @@ new File(docsPath).eachDir {
 
 			def catName
 			//reuters dataset has different directory structure
-			if (reuters)
+			if (iName == IndexName.R10)
 				catName =   grandParent.substring(grandParent.lastIndexOf("\\") + 1, grandParent.length())
 			else
 				catName =   parent.substring(parent.lastIndexOf("\\") + 1, parent.length())

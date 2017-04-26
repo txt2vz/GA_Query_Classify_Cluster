@@ -43,7 +43,7 @@ class IndexInfo {
 
 	IndexReader indexReader
 	IndexSearcher indexSearcher
-	String categoryNumber='0', categoryName='crude';
+	String categoryNumber='0', categoryName=''
 	Query catTrainBQ, othersTrainBQ, catTestBQ, othersTestBQ;
 	int totalTrainDocsInCat, totalTestDocsInCat, totalOthersTrainDocs, totalTestDocs;
 
@@ -66,13 +66,12 @@ class IndexInfo {
 	}
 
 	public String getCategoryName (){
-
 		TopScoreDocCollector collector = TopScoreDocCollector.create(1)
 		indexSearcher.search(catQ, collector);
 		ScoreDoc[] hits = collector.topDocs().scoreDocs
 		
 		hits.each {h ->
-			Document d = indexSearcher.doc(h.doc);
+			Document d = indexSearcher.doc(h.doc)
 			categoryName = d.get(IndexInfo.FIELD_CATEGORY_NAME)
 		}
 		return categoryName		
