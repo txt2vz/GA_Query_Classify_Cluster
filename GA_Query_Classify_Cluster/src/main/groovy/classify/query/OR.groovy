@@ -63,8 +63,8 @@ public class OR extends Problem implements SimpleProblemForm {
 			}
 
 			fitness.query = bqb.build()			
-			fitness.positiveMatchTrain = IndexInfo.instance.getQueryHitsWithFilter(searcher,IndexInfo.instance.catTrainBQ, fitness.query)		
-			fitness.negativeMatchTrain = IndexInfo.instance.getQueryHitsWithFilter(searcher,IndexInfo.instance.othersTrainBQ, fitness.query)
+			fitness.positiveMatchTrain = IndexInfo.getQueryHitsWithFilter(searcher,IndexInfo.instance.catTrainBQ, fitness.query)		
+			fitness.negativeMatchTrain = IndexInfo.getQueryHitsWithFilter(searcher,IndexInfo.instance.othersTrainBQ, fitness.query)
 
 			fitness.f1train = Effectiveness.f1(fitness.positiveMatchTrain, fitness.negativeMatchTrain, IndexInfo.instance.totalTrainDocsInCat);
 

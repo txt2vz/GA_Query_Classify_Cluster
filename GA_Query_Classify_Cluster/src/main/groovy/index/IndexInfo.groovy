@@ -35,7 +35,7 @@ class IndexInfo {
 
 	String 	pathToIndex =
 	 //   'indexes/R10'
-	'indexes/20NG'
+	'indexes/NG20'
 	//	 'indexes/crisis3FireBombFloodL6'
 	// 'indexes/classic4_500L6'
 	//	 'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6'
@@ -56,7 +56,7 @@ class IndexInfo {
 	categoryNumber))
 
 	//get hits for a particular query using filter (e.g. a particular category)
-	public int getQueryHitsWithFilter(IndexSearcher searcher, Query filter, Query q ) {
+	public static int getQueryHitsWithFilter(IndexSearcher searcher, Query filter, Query q ) {
 		TotalHitCountCollector collector = new TotalHitCountCollector();
 		BooleanQuery.Builder  bqb = new BooleanQuery.Builder();
 		bqb.add(q, BooleanClause.Occur.MUST)

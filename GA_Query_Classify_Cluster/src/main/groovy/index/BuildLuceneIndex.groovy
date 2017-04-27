@@ -78,9 +78,9 @@ new File(docsPath).eachDir {
 			def catName
 			//reuters dataset has different directory structure
 			if (iName == IndexName.R10)
-				catName =   grandParent.substring(grandParent.lastIndexOf("\\") + 1, grandParent.length())
+				catName =   grandParent.substring(grandParent.lastIndexOf(File.separator) + 1, grandParent.length())
 			else
-				catName =   parent.substring(parent.lastIndexOf("\\") + 1, parent.length())
+				catName =   parent.substring(parent.lastIndexOf(File.separator) + 1, parent.length())
 
 			Field catNameField = new StringField(IndexInfo.FIELD_CATEGORY_NAME, catName, Field.Store.YES);
 			doc.add(catNameField)

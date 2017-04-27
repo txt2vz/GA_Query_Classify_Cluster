@@ -22,12 +22,12 @@ import org.apache.lucene.store.FSDirectory
 import spock.lang.*
 
 class Test20NG extends spock.lang.Specification {
-	Path path = Paths.get('indexes/20NG')
+	Path path = Paths.get('indexes/NG20')
 	Directory directory = FSDirectory.open(path)
 	DirectoryReader ireader = DirectoryReader.open(directory);
 	IndexSearcher isearcher = new IndexSearcher(ireader)
 
-	def 'categoryName20NG' (){
+	def 'categoryNameNG20' (){
 		def Document d
 		def categoryNumber= '3'
 		setup:
@@ -47,7 +47,7 @@ class Test20NG extends spock.lang.Specification {
 		d.get(IndexInfo.FIELD_CATEGORY_NAME) == 'comp.sys.ibm.pc.hardware'		
 	}
 
-	def 'total 20NG docs in comp.graphics categroy'() {
+	def 'total NG20 docs in comp.graphics categroy'() {
 		setup:
 
 		TotalHitCountCollector thcollector  = new TotalHitCountCollector();

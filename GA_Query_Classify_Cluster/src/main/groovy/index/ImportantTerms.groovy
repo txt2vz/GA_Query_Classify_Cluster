@@ -79,8 +79,8 @@ public class ImportantTerms  {
 			if ( isUsefulTerm(t) ){
 
 				Query tq = new TermQuery(t)
-				final int positiveHits = IndexInfo.instance.getQueryHitsWithFilter(indexSearcher,IndexInfo.instance.catTrainBQ, tq)
-				final int negativeHits = IndexInfo.instance.getQueryHitsWithFilter(indexSearcher,IndexInfo.instance.othersTrainBQ, tq)
+				final int positiveHits = IndexInfo.getQueryHitsWithFilter(indexSearcher,IndexInfo.instance.catTrainBQ, tq)
+				final int negativeHits = IndexInfo.getQueryHitsWithFilter(indexSearcher,IndexInfo.instance.othersTrainBQ, tq)
 				def F1 = classify.Effectiveness.f1(positiveHits, negativeHits,
 						IndexInfo.instance.totalTrainDocsInCat)
 
