@@ -35,7 +35,7 @@ class IndexInfo {
 
 	String 	pathToIndex =
 	 //   'indexes/R10'
-	'indexes/NG20'
+	      'indexes/NG20'
 	//	 'indexes/crisis3FireBombFloodL6'
 	// 'indexes/classic4_500L6'
 	//	 'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6'
@@ -64,7 +64,7 @@ class IndexInfo {
 		searcher.search(bqb.build(), collector);
 		return collector.getTotalHits();
 	}
-
+ 
 	public String getCategoryName (){
 		TopScoreDocCollector collector = TopScoreDocCollector.create(1)
 		indexSearcher.search(catQ, collector);

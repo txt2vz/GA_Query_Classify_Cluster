@@ -19,7 +19,7 @@ class ImportantTermsSpec extends spock.lang.Specification {
 	
 	def "importantTerms F1 20NG graphics"() {
 		setup:
-		IndexInfo.instance.setPathToIndex('indexes/20NG')
+		IndexInfo.instance.setPathToIndex('indexes/NG20')
 		IndexInfo.instance.setCategoryNumber('2')
 		IndexInfo.instance.setIndex()
 		ImportantTerms impTerms = new ImportantTerms()
