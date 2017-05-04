@@ -7,7 +7,7 @@ public class Effectiveness {
 		if (totalRetrieved > 0)
 			return (double) positiveMatch / totalRetrieved;
 		else
-			return 0;
+			return 0.0;
 	}
 
 	public static double recall(final int positiveMatch, final int totalPositive) {
@@ -15,7 +15,7 @@ public class Effectiveness {
 		if (totalPositive > 0)
 			return (double) positiveMatch / totalPositive;
 		else
-			return 0;
+			return 0.0;
 	}
 
 	/**
@@ -24,7 +24,7 @@ public class Effectiveness {
 	public static double f1(final int positiveMatch, final int negativeMatch, final int totalPositive) {
 
 		if (positiveMatch <= 0 || totalPositive <= 0) {
-			return 0;
+			return 0.0;
 		}
 
 		final double recall = recall(positiveMatch, totalPositive);
@@ -39,7 +39,7 @@ public class Effectiveness {
 	public static double bep(int positiveMatch, int negativeMatch, int totalPositive) {
 
 		if (positiveMatch <= 0 || totalPositive <= 0) {
-			return 0;
+			return 0.0;
 		}
 		final double recall = recall(positiveMatch, totalPositive);
 		final double precision = precision(positiveMatch, negativeMatch);

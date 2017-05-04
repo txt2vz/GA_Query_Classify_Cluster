@@ -1,5 +1,6 @@
 package cluster
 
+import org.apache.lucene.document.Document
 import org.apache.lucene.search.BooleanClause
 import org.apache.lucene.search.BooleanQuery
 import org.apache.lucene.search.IndexSearcher
@@ -9,13 +10,16 @@ import org.apache.lucene.search.TopDocs
 
 import index.IndexInfo
 
+@groovy.transform.CompileStatic
+@groovy.transform.TypeChecked
 class EvalQueryList {
 
-	private static final IndexSearcher searcher = IndexInfo.instance.indexSearcher
-	private static final int hitsPerPage = IndexInfo.instance.indexReader.maxDoc()
+	private static final IndexSearcher searcher = IndexInfo.indexSearcher
+	private static final int hitsPerPage = IndexInfo.indexReader.maxDoc()
 	private static final int coreClusterSize=20
 
-	public void cf (ClusterFit fitness, List bqbArray, boolean gp){
+
+	public void cf (ClusterFit fitness, List <BooleanQuery.Builder> bqbArray, boolean gp){
 
 		assert bqbArray.size() == IndexInfo.NUMBER_OF_CLUSTERS
 
@@ -33,9 +37,9 @@ class EvalQueryList {
 		def qMap = [:]
 		def allHits = [] as Set
 
-		bqbArray.eachWithIndex {bqb, index ->
+		bqbArray.eachWithIndex {BooleanQuery.Builder bqb, index ->
 
-			def q = bqb.build()
+			Query q = bqb.build()
 
 			if (gp){
 				if ( q.toString(IndexInfo.FIELD_CONTENTS).contains("DummyXX") || q==null || q.toString(IndexInfo.FIELD_CONTENTS) == '' ){
@@ -54,7 +58,7 @@ class EvalQueryList {
 
 			TopDocs otherTopDocs = searcher.search(otherBQ, hitsPerPage)
 			ScoreDoc[] hitsOthers = otherTopDocs.scoreDocs;
-			hitsOthers.each {otherHit -> otherdocIdSet << otherHit.doc }
+			hitsOthers.each {ScoreDoc otherHit -> otherdocIdSet << otherHit.doc }
 
 			TopDocs docs = searcher.search(q, hitsPerPage)
 			ScoreDoc[] hits = docs.scoreDocs;
@@ -62,7 +66,7 @@ class EvalQueryList {
 
 			if (hits.size()<1)   fitness.zeroHitsCount ++
 
-			hits.eachWithIndex {d, position ->
+			hits.eachWithIndex {ScoreDoc d, int position ->
 				allHits << d.doc
 
 				if (otherdocIdSet.contains(d.doc)){
@@ -89,7 +93,7 @@ class EvalQueryList {
 		}
 		fitness.scoreOnly = fitness.positiveScoreTotal - fitness.negativeScoreTotal
 		fitness.totalHits = allHits.size()
-		fitness.fraction = fitness.totalHits / IndexInfo.instance.indexReader.maxDoc()
-		fitness.missedDocs = IndexInfo.instance.indexReader.maxDoc() - allHits.size()
+		fitness.fraction = fitness.totalHits / IndexInfo.indexReader.maxDoc()   //IndexInfo.instance.indexReader.maxDoc()
+		fitness.missedDocs = IndexInfo.indexReader.maxDoc()  - allHits.size()   //  IndexInfo.instance.indexReader.maxDoc() - allHits.size()
 	}
 }

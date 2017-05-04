@@ -24,26 +24,27 @@ import org.apache.lucene.search.TotalHitCountCollector
 
 public class ClusterFit extends SimpleFitness {
 
-	def queryMap = [:]
-	def positiveScoreTotal=0 as float
-	def negativeScoreTotal=0 as float
-	def positiveHits=0
-	def negativeHits=0
-	def duplicateCount
-	def lowSubqHits=0
-	def coreClusterPenalty=0
-	def scoreOnly=0 as float
-	def totalHits=0
-	def fraction = 0 as float
-	def baseFitness = 0 as float
-	def scorePlus1000 = 0 as float
-	def missedDocs =0
-	def zeroHitsCount =0
+	Map queryMap = [:]
+	double positiveScoreTotal=0.0 
+	double negativeScoreTotal=0.0 
+	double fraction = 0.0
+	double baseFitness = 0.0
+	double scorePlus1000 = 0.0
+	double scoreOnly=0.0
+	
+	int positiveHits=0
+	int negativeHits=0
+	int duplicateCount
+	int lowSubqHits=0
+	int coreClusterPenalty=0
+	int totalHits=0 
+	int missedDocs =0
+	int zeroHitsCount =0
 	boolean isDummy = false
 	boolean emptyQueries = false
 	
-	def treePenalty=0;
-	def graphPenalty=0
+	int treePenalty=0;
+	int graphPenalty=0
 	
 	Formatter bestResultsOut
 	IndexSearcher searcher = IndexInfo.instance.indexSearcher;
@@ -59,7 +60,7 @@ public class ClusterFit extends SimpleFitness {
 	}
 
 	public void queryStats (int job, int gen, int popSize){
-		def messageOut=""
+		String messageOut=""
 		FileWriter resultsOut = new FileWriter("results/clusterResultsF1.txt", true)
 		resultsOut <<"  ***** Job: $job Gen: $gen PopSize: $popSize Noclusters: ${IndexInfo.NUMBER_OF_CLUSTERS}  pathToIndex: ${IndexInfo.instance.pathToIndex}  *********** ${new Date()} ***************************************************** \n"
 
@@ -109,14 +110,14 @@ public class ClusterFit extends SimpleFitness {
 				TermQuery catQ = new TermQuery(new Term(IndexInfo.FIELD_CATEGORY_NAME,
 						catMax.key));
 				searcher.search(catQ, totalHitCollector);
-				def categoryTotal = totalHitCollector.getTotalHits();
+				int categoryTotal = totalHitCollector.getTotalHits();
 				messageOut = "categoryTotal: $categoryTotal for category: $catQ \n"
 				println messageOut
 				resultsOut << messageOut
 
-				def recall = catMax.value / categoryTotal;
-				def precision = catMax.value / hits.size()
-				def f1 = (2 * precision * recall) / (precision + recall);
+				double recall = catMax.value / categoryTotal;
+				double precision = catMax.value / hits.size()
+				double f1 = (2 * precision * recall) / (precision + recall);
 				
 				f1list << f1
 				precisionList << precision
@@ -128,9 +129,9 @@ public class ClusterFit extends SimpleFitness {
 			}
 		}
 	    
-		def averageF1 = (f1list) ? f1list.sum()/ IndexInfo.NUMBER_OF_CLUSTERS : 0
-		def averageRecall = (recallList) ? recallList.sum()/ IndexInfo.NUMBER_OF_CLUSTERS : 0
-		def averagePrecision =(precisionList) ? precisionList.sum()/ IndexInfo.NUMBER_OF_CLUSTERS :0
+		double averageF1 = (f1list) ? f1list.sum()/ IndexInfo.NUMBER_OF_CLUSTERS : 0
+		double averageRecall = (recallList) ? recallList.sum()/ IndexInfo.NUMBER_OF_CLUSTERS : 0
+		double averagePrecision =(precisionList) ? precisionList.sum()/ IndexInfo.NUMBER_OF_CLUSTERS :0
 		messageOut ="***  TOTALS:   *****   f1list: $f1list averagef1: :$averageF1  ** average precision: $averagePrecision average recall: $averageRecall"
 		println messageOut
 		

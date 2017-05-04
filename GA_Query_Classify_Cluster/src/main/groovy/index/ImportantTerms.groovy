@@ -81,7 +81,7 @@ public class ImportantTerms  {
 				Query tq = new TermQuery(t)
 				final int positiveHits = IndexInfo.getQueryHitsWithFilter(indexSearcher,IndexInfo.instance.catTrainBQ, tq)
 				final int negativeHits = IndexInfo.getQueryHitsWithFilter(indexSearcher,IndexInfo.instance.othersTrainBQ, tq)
-				def F1 = classify.Effectiveness.f1(positiveHits, negativeHits,
+				double F1 = classify.Effectiveness.f1(positiveHits, negativeHits,
 						IndexInfo.instance.totalTrainDocsInCat)
 
 				if (F1 > 0.02) {
@@ -99,7 +99,7 @@ public class ImportantTerms  {
 
 	public TermQuery[] getTFIDFTermQueryList(){
 
-		println "Important words terms.getDocCount: ${terms.getDocCount()}"
+		println "Important terms terms.getDocCount: ${terms.getDocCount()}"
 		def termQueryMap = [:]
 		BytesRef termbr;
 

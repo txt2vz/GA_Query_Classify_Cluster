@@ -19,12 +19,12 @@ public class ClassifyFit extends SimpleFitness {
 	private int positiveMatchTest, negativeMatchTest, numberOfTerms = 0;
 	private Query query;
 
-	def totalPositiveScore=0
-	def totalNegativeScore=0;
-	def totalPosHits=0
-	def totalNegHits=0
-	def duplicateCount=0;
-	def noHitsCount=0;
+	int totalPositiveScore=0
+	int totalNegativeScore=0;
+	int totalPosHits=0
+	int totalNegHits=0
+	int duplicateCount=0;
+	int noHitsCount=0;
 	
 	public String getQueryString(){
 		return query.toString(IndexInfo.FIELD_CONTENTS)
@@ -37,31 +37,6 @@ public class ClassifyFit extends SimpleFitness {
 	public String getQueryJSONForViz(){
 		return QueryReadable.getQueryJSONForViz(query);
 	}
-
-//
-//	public void setNumberOfTerms(int numberOfTerms) {
-//		this.numberOfTerms = numberOfTerms;
-//	}
-//
-//	public void setPositiveMatchTest(int positiveMatchTest) {
-//		this.positiveMatchTest = positiveMatchTest;
-//	}
-//
-//	public int getPositiveMatchTest() {
-//		return positiveMatchTest;
-//	}
-//
-//	public void setNegativeMatchTest(int negativeMatchTest) {
-//		this.negativeMatchTest = negativeMatchTest;
-//	}
-//
-//	public int getNegativeMatchTest() {
-//		return negativeMatchTest;
-//	}
-//
-//	public int getNumberOfTerms() {
-//		return numberOfTerms;
-//	}
 
 	public String fitnessToStringForHumans() {
 		return  "F1train: $f1train  fitness: " + this.fitness();

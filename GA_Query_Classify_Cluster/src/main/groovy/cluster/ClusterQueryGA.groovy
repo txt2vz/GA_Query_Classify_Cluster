@@ -18,17 +18,20 @@ import ec.simple.SimpleFitness
 import ec.simple.SimpleProblemForm
 import ec.util.Parameter
 import ec.vector.IntegerVectorIndividual
-
+import groovy.transform.TypeChecked
+import groovy.transform.TypeCheckingMode
 /**
  * To generate sets of queries for clustering
  */
 
+@groovy.transform.CompileStatic
+@groovy.transform.TypeChecked
 public class ClusterQueryGA extends Problem implements SimpleProblemForm {
 
-	private IndexSearcher searcher = IndexInfo.instance.indexSearcher;
+	private IndexSearcher searcher = IndexInfo.indexSearcher;
 	//private final int coreClusterSize=20
 	private QueryListFromChromosome queryListFromChromosome
-	private EvalQueryList eql
+	private EvalQueryList evalQueryList
 
 	enum QueryType {
 		OR, ORNOT, AND, ALLNOT, ORNOTEVOLVED, SpanFirst, GP
@@ -38,11 +41,12 @@ public class ClusterQueryGA extends Problem implements SimpleProblemForm {
 	public void setup(final EvolutionState state, final Parameter base) {
 
 		super.setup(state, base);
-		println "Total docs for ClusterQueryGA.groovy   " + IndexInfo.instance.indexReader.maxDoc()
+		println "Total docs for ClusterQueryGA.groovy   " + IndexInfo.indexReader.maxDoc()
 		queryListFromChromosome = new QueryListFromChromosome()
-		eql = new EvalQueryList();
+		evalQueryList = new EvalQueryList();
 	}
 
+	@TypeChecked(TypeCheckingMode.SKIP)
 	public void evaluate(final EvolutionState state, final Individual ind, final int subpopulation,
 			final int threadnum) {
 
@@ -53,12 +57,14 @@ public class ClusterQueryGA extends Problem implements SimpleProblemForm {
 		IntegerVectorIndividual intVectorIndividual = (IntegerVectorIndividual) ind;
 
 		//list of lucene Boolean Query Builders
-		def bqbList
+		List bqbList
 		int duplicateCount = 0, lowSubqHits=0
+
 		switch (queryType) {
 			case QueryType.OR :
 				bqbList = queryListFromChromosome.getORQueryList(intVectorIndividual)
 				break;
+				//@TypeChecked(TypeCheckingMode.SKIP)
 			case QueryType.AND :
 				(bqbList, duplicateCount, lowSubqHits) = queryListFromChromosome.getANDQL(intVectorIndividual)
 				break;
@@ -79,11 +85,11 @@ public class ClusterQueryGA extends Problem implements SimpleProblemForm {
 		final int hitsPerPage = IndexInfo.instance.indexReader.maxDoc()
 		
 		//set fitness based on set of boolean queries
-		eql.cf(fitness, bqbList, false)
+		evalQueryList.cf(fitness, bqbList, false)
 
 	
 		//fitness must be positive for ECJ - most runs start with large negative score
-		def final minScore = 1000
+		int minScore = 1000
 		fitness.scorePlus1000 = (fitness.scoreOnly < -minScore) ? 0 : fitness.scoreOnly + minScore
 
 		def negIndicators =

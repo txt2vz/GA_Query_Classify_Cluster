@@ -22,6 +22,7 @@ import org.apache.lucene.store.FSDirectory
  * Set the path to the lucene index here
  */
 
+@groovy.transform.TypeChecked
 @Singleton
 class IndexInfo {
 
@@ -31,18 +32,19 @@ class IndexInfo {
 	FIELD_PATH = 'path',
 	FIELD_TEST_TRAIN = 'test_train',
 	FIELD_CATEGORY_NUMBER = 'categoryNumber';
-	public static final int NUMBER_OF_CLUSTERS =  3 , NUMBER_OF_CATEGORIES = 20
+	
+	static final int NUMBER_OF_CLUSTERS =  3 , NUMBER_OF_CATEGORIES = 10
+	static IndexReader indexReader
+	static IndexSearcher indexSearcher
 
-	String 	pathToIndex =
-	 //   'indexes/R10'
-	      'indexes/NG20'
+	final String pathToIndex =
+	    'indexes/R10'
+	 //     'indexes/NG20'
 	//	 'indexes/crisis3FireBombFloodL6'
 	// 'indexes/classic4_500L6'
 	//	 'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6'
 	//'indexes/20NG3SpaceHockeyChristianL6'
 
-	IndexReader indexReader
-	IndexSearcher indexSearcher
 	String categoryNumber='0', categoryName=''
 	Query catTrainBQ, othersTrainBQ, catTestBQ, othersTestBQ;
 	int totalTrainDocsInCat, totalTestDocsInCat, totalOthersTrainDocs, totalTestDocs;
@@ -56,6 +58,7 @@ class IndexInfo {
 	categoryNumber))
 
 	//get hits for a particular query using filter (e.g. a particular category)
+	@groovy.transform.CompileStatic
 	public static int getQueryHitsWithFilter(IndexSearcher searcher, Query filter, Query q ) {
 		TotalHitCountCollector collector = new TotalHitCountCollector();
 		BooleanQuery.Builder  bqb = new BooleanQuery.Builder();
@@ -70,9 +73,9 @@ class IndexInfo {
 		indexSearcher.search(catQ, collector);
 		ScoreDoc[] hits = collector.topDocs().scoreDocs
 		
-		hits.each {h ->
+		hits.each {ScoreDoc h ->
 			Document d = indexSearcher.doc(h.doc)
-			categoryName = d.get(IndexInfo.FIELD_CATEGORY_NAME)
+			categoryName = d.get(FIELD_CATEGORY_NAME)
 		}
 		return categoryName		
 	}
@@ -128,6 +131,6 @@ class IndexInfo {
 		totalTestDocs = collector.getTotalHits();
 
 		println "Total train docs: $totalTrain"
-		println "IndexInfo   CategoryNumber: $categoryNumber Total train in cat: $totalTrainDocsInCat  Total others tain: $totalOthersTrainDocs   Total test in cat : $totalTestDocsInCat  "
+		println "IndexInfo CategoryNumber: $categoryNumber Total train in cat: $totalTrainDocsInCat  Total others tain: $totalOthersTrainDocs   Total test in cat : $totalTestDocsInCat  "
 	}
 }

@@ -1,4 +1,4 @@
- package cluster
+package cluster
 
 import index.IndexInfo
 import ec.EvolutionState
@@ -6,6 +6,7 @@ import ec.Evolve
 import ec.Fitness
 import ec.util.ParameterDatabase
 
+//@groovy.transform.TypeChecked
 class ClusterMain extends Evolve {
 
 	private final String parameterFilePath = 
@@ -16,7 +17,7 @@ class ClusterMain extends Evolve {
 	private final int NUMBER_OF_JOBS = 1   
 
 	public ClusterMain(){ 
-		EvolutionState state;
+		EvolutionState state;	
 		IndexInfo.instance.setIndex() 
 		ParameterDatabase parameters  = null;
  

@@ -15,24 +15,29 @@ import org.apache.lucene.search.spans.SpanTermQuery
 import ec.vector.IntegerVectorIndividual
 import index.ImportantTerms
 import index.IndexInfo
+//import groovy.transform.TypeChecked
+
+
 
 class QueryListFromChromosome {
 
-	private IndexSearcher searcher = IndexInfo.instance.indexSearcher
+	private IndexSearcher searcher = IndexInfo.indexSearcher
 	private final ImportantTerms iw = new ImportantTerms();
 	private final TermQuery[] termQueryArray = iw.getTFIDFTermQueryList()
 	//terms from previous run  classic4
-	def private final notWords = ["pressure", "layer", "heat", "boundary", "computer", "library", "retrieval", "information", "cells", "patients", "blood", "algorithm"] as String[]
-	def private final notWords20NG5 = ["jesus", "christ", "god", "windows", "high", "nasa", "orbit", "hockey", "nhl", "players", "sale"]
-
+	private final String[] notWords = ["pressure", "layer", "heat", "boundary", "computer", "library", "retrieval", "information", "cells", "patients", "blood", "algorithm"] as String[]
+	private final String[] notWords20NG5 = ["jesus", "christ", "god", "windows", "high", "nasa", "orbit", "hockey", "nhl", "players", "sale"] as String[]
+	
+	@groovy.transform.CompileStatic	
+	@groovy.transform.TypeChecked
 	public List getORQueryList(IntegerVectorIndividual intVectorIndividual) {
 
 		//list of boolean queries
-		def bqbL = []
+		List <BooleanQuery.Builder> bqbL = []
 		// set of genes - for duplicate checking
-		def genes = [] as Set
+		Set genes = [] as Set
 
-		intVectorIndividual.genome.eachWithIndex {gene, index ->
+		intVectorIndividual.genome.eachWithIndex {int gene, int index ->
 			int clusterNumber =  index % IndexInfo.NUMBER_OF_CLUSTERS
 			bqbL[clusterNumber] = bqbL[clusterNumber] ?: new BooleanQuery.Builder()
 
@@ -52,8 +57,8 @@ class QueryListFromChromosome {
 		def duplicateCount=0
 		def sfMap = [0:50, 1:100, 2:200, 3:400, 4:2000]
 
-		def bqbList = []
-
+		def bqbList = []		
+		
 		for (int i = 0; i < (intVectorIndividual.genome.length - 1); i = i + 2) {
 
 			int clusterNumber =  qNumber % IndexInfo.NUMBER_OF_CLUSTERS
