@@ -4,14 +4,16 @@ import org.apache.lucene.search.Query
 
 import ec.simple.SimpleFitness
 import index.IndexInfo;
-
+import groovy.transform.TypeChecked
+import groovy.transform.TypeCheckingMode
 /**
  * Store information about classification classify.query and test/train values
  * 
  * @author Laurie
  * 
  */
-
+@groovy.transform.CompileStatic
+@groovy.transform.TypeChecked
 public class ClassifyFit extends SimpleFitness {
 
 	private double f1train, f1test, BEPTest, tree;
@@ -42,6 +44,7 @@ public class ClassifyFit extends SimpleFitness {
 		return  "F1train: $f1train  fitness: " + this.fitness();
 	}
 
+	@TypeChecked(TypeCheckingMode.SKIP)
 	public String toString(int gen) {
 		return "Gen: $gen  F1: $f1train  Positive Match: $positiveMatchTrain Negative Match: $negativeMatchTrain "
 		+ " Total positive Docs: " + IndexInfo.instance.totalTrainDocsInCat

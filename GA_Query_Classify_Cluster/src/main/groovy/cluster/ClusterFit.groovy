@@ -10,11 +10,15 @@ import java.util.Formatter;
 import org.apache.lucene.document.Document
 import org.apache.lucene.index.Term
 import org.apache.lucene.search.IndexSearcher;
+import org.apache.lucene.search.Query
 import org.apache.lucene.search.ScoreDoc
 import org.apache.lucene.search.TermQuery
 import org.apache.lucene.search.TopDocs
 import org.apache.lucene.search.TopScoreDocCollector
 import org.apache.lucene.search.TotalHitCountCollector
+
+import groovy.transform.TypeChecked
+import groovy.transform.TypeCheckingMode
 
 /**
  * Store cluster fitness information
@@ -22,9 +26,12 @@ import org.apache.lucene.search.TotalHitCountCollector
  * @author Laurie 
  */
 
+@groovy.transform.CompileStatic
+@groovy.transform.TypeChecked
+
 public class ClusterFit extends SimpleFitness {
 
-	Map queryMap = [:]
+	Map <Query, Integer> queryMap  = [:]
 	double positiveScoreTotal=0.0 
 	double negativeScoreTotal=0.0 
 	double fraction = 0.0
@@ -47,22 +54,23 @@ public class ClusterFit extends SimpleFitness {
 	int graphPenalty=0
 	
 	Formatter bestResultsOut
-	IndexSearcher searcher = IndexInfo.instance.indexSearcher;
-	final int hitsPerPage=IndexInfo.instance.indexReader.maxDoc()
+	IndexSearcher searcher = IndexInfo.indexSearcher;
+	final int hitsPerPage=IndexInfo.indexReader.maxDoc()
 
 	String queryShort (){
 		def s="queryMap.size ${queryMap.size()} \n"
-		queryMap.keySet().eachWithIndex {q, index ->
+		queryMap.keySet().eachWithIndex {Query q, int index ->
 			if (index>0) s+='\n';
 			s +=  "ClusterQuery: $index :  ${queryMap.get(q)}  ${q.toString(IndexInfo.FIELD_CONTENTS)}"
 		}
 		return s
 	}
 
+	@TypeChecked(TypeCheckingMode.SKIP)
 	public void queryStats (int job, int gen, int popSize){
 		String messageOut=""
 		FileWriter resultsOut = new FileWriter("results/clusterResultsF1.txt", true)
-		resultsOut <<"  ***** Job: $job Gen: $gen PopSize: $popSize Noclusters: ${IndexInfo.NUMBER_OF_CLUSTERS}  pathToIndex: ${IndexInfo.instance.pathToIndex}  *********** ${new Date()} ***************************************************** \n"
+		resultsOut <<"  ***** Job: $job Gen: $gen PopSize: $popSize Noclusters: ${IndexInfo.NUMBER_OF_CLUSTERS}  pathToIndex: ${IndexInfo.pathToIndex}  *********** ${new Date()} ***************************************************** \n"
 
 		def f1list = [], precisionList =[], recallList =[]
 		queryMap.keySet().eachWithIndex {q, index ->
@@ -79,12 +87,12 @@ public class ClusterFit extends SimpleFitness {
 
 			//map of categories (ground truth) and their frequencies
 			def catsFreq=[:]
-			hits.eachWithIndex{ h, i ->
+			hits.eachWithIndex{ScoreDoc h, int i ->
 				int docId = h.doc;
 				def scr = h.score
 				Document d = searcher.doc(docId);
-				def catName = d.get(IndexInfo.FIELD_CATEGORY_NAME)
-				def n = catsFreq.get((catName)) ?: 0
+				String catName = d.get(IndexInfo.FIELD_CATEGORY_NAME)
+				int n = catsFreq.get((catName)) ?: 0
 				catsFreq.put((catName), n + 1)
 
 //view top 5 results

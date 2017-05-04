@@ -34,8 +34,8 @@ class EvalQueryList {
 		fitness.zeroHitsCount =0
 		fitness.duplicateCount = 0
 
-		def qMap = [:]
-		def allHits = [] as Set
+		Map <Query, Integer> qMap = [:]
+		Set allHits = [] as Set
 
 		bqbArray.eachWithIndex {BooleanQuery.Builder bqb, index ->
 
@@ -86,7 +86,7 @@ class EvalQueryList {
 			}
 		}
 
-		fitness.queryMap = qMap.asImmutable()
+		fitness.queryMap = qMap  //.asImmutable()
 
 		if (gp && fitness.queryMap.size() != IndexInfo.NUMBER_OF_CLUSTERS) {
 			fitness.emptyQueries = true

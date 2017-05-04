@@ -46,7 +46,7 @@ public class ClusterQueryGA extends Problem implements SimpleProblemForm {
 		evalQueryList = new EvalQueryList();
 	}
 
-	@TypeChecked(TypeCheckingMode.SKIP)
+	//@TypeChecked(TypeCheckingMode.SKIP)
 	public void evaluate(final EvolutionState state, final Individual ind, final int subpopulation,
 			final int threadnum) {
 
@@ -65,24 +65,24 @@ public class ClusterQueryGA extends Problem implements SimpleProblemForm {
 				bqbList = queryListFromChromosome.getORQueryList(intVectorIndividual)
 				break;
 				//@TypeChecked(TypeCheckingMode.SKIP)
-			case QueryType.AND :
-				(bqbList, duplicateCount, lowSubqHits) = queryListFromChromosome.getANDQL(intVectorIndividual)
-				break;
-			case QueryType.ORNOT :
-				(bqbList, duplicateCount) = queryListFromChromosome.getORNOTQL(intVectorIndividual)
-				break;
-			case QueryType.ALLNOT :
-				bqbList = queryListFromChromosome.getALLNOTQL(intVectorIndividual)
-				break;
-			case QueryType.ORNOTEVOLVED :
-				bqbList = queryListFromChromosome.getORNOTfromEvolvedList(intVectorIndividual)
-				break;
-			case QueryType.SpanFirst :
-				(bqbList, duplicateCount)  = queryListFromChromosome.getSpanFirstQL(intVectorIndividual)
-				break;
+//			case QueryType.AND :
+//				(bqbList, duplicateCount, lowSubqHits) = queryListFromChromosome.getANDQL(intVectorIndividual)
+//				break;
+//			case QueryType.ORNOT :
+//				(bqbList, duplicateCount) = queryListFromChromosome.getORNOTQL(intVectorIndividual)
+//				break;
+//			case QueryType.ALLNOT :
+//				bqbList = queryListFromChromosome.getALLNOTQL(intVectorIndividual)
+//				break;
+//			case QueryType.ORNOTEVOLVED :
+//				bqbList = queryListFromChromosome.getORNOTfromEvolvedList(intVectorIndividual)
+//				break;
+//			case QueryType.SpanFirst :
+//				(bqbList, duplicateCount)  = queryListFromChromosome.getSpanFirstQL(intVectorIndividual)
+//				break;
 		}
-		assert bqbList.size == IndexInfo.NUMBER_OF_CLUSTERS
-		final int hitsPerPage = IndexInfo.instance.indexReader.maxDoc()
+		assert bqbList.size() == IndexInfo.NUMBER_OF_CLUSTERS
+		final int hitsPerPage = IndexInfo.indexReader.maxDoc()
 		
 		//set fitness based on set of boolean queries
 		evalQueryList.cf(fitness, bqbList, false)
