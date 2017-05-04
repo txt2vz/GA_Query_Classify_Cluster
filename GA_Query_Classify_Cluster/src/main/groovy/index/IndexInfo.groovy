@@ -23,6 +23,7 @@ import org.apache.lucene.store.FSDirectory
  */
 
 @groovy.transform.TypeChecked
+@groovy.transform.CompileStatic
 @Singleton
 class IndexInfo {
 
@@ -45,7 +46,7 @@ class IndexInfo {
 	//	 'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6'
 	//'indexes/20NG3SpaceHockeyChristianL6'
 
-	String categoryNumber='0', categoryName=''
+	static String categoryNumber='0'	
 	Query catTrainBQ, othersTrainBQ, catTestBQ, othersTestBQ;
 	int totalTrainDocsInCat, totalTestDocsInCat, totalOthersTrainDocs, totalTestDocs;
 
@@ -54,7 +55,7 @@ class IndexInfo {
 	TermQuery testQ = new TermQuery(new Term(
 	FIELD_TEST_TRAIN, 'test'));
 
-	TermQuery catQ 	= new TermQuery(new Term(FIELD_CATEGORY_NUMBER,
+	static TermQuery catQ 	= new TermQuery(new Term(FIELD_CATEGORY_NUMBER,
 	categoryNumber))
 
 	//get hits for a particular query using filter (e.g. a particular category)
@@ -68,7 +69,8 @@ class IndexInfo {
 		return collector.getTotalHits();
 	}
  
-	public String getCategoryName (){
+	public static String getCategoryName (){
+		String categoryName
 		TopScoreDocCollector collector = TopScoreDocCollector.create(1)
 		indexSearcher.search(catQ, collector);
 		ScoreDoc[] hits = collector.topDocs().scoreDocs

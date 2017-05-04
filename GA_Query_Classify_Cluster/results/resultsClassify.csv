@@ -1,50 +1,30 @@
-Start time: Thu Apr 27 14:57:03 BST 2017 
+Start time: Thu May 04 20:24:36 BST 2017 
 categoryName, categoryNumber job, f1train, f1test, bepTest, totPositiveTest, totNegativeTest, totTestDocsInCat, query
-alt.atheism, 0, 1, 0.760, 0.613, 0.638, 163, 50, 319, kmr4 beauchaine atheists rushdie benedikt saturn.wwc.edu atheism wingate 
-comp.graphics, 1, 1, 0.544, 0.527, 0.527, 208, 193, 389, viewer images pov sphere polygon animation tiff graphics 
-comp.os.ms-windows.misc, 2, 1, 0.629, 0.599, 0.618, 286, 275, 394, ftp.cica.indiana.edu bj bmp win3.1 cica windows 
-comp.sys.ibm.pc.hardware, 3, 1, 0.526, 0.459, 0.459, 177, 202, 392, floppy gateway ati bios ide vlb isa jumpers 
-comp.sys.mac.hardware, 4, 1, 0.687, 0.643, 0.651, 279, 204, 385, powerbook apple lciii mac quadra macs iisi centris 
-comp.windows.x, 5, 1, 0.736, 0.656, 0.694, 210, 35, 395, motif widget pixmap expo.lcs.mit.edu x11 xlib x11r5 xterm 
-misc.forsale, 6, 1, 0.716, 0.735, 0.736, 279, 90, 390, cod sale obo forsale 
-rec.autos, 7, 1, 0.660, 0.644, 0.645, 269, 171, 396, taurus car cars boyle frost toyota automotive callison 
-rec.motorcycles, 8, 1, 0.837, 0.809, 0.809, 317, 69, 398, motorcycle hamer yamaha harley biker bike bikes dod 
-rec.sport.baseball, 9, 1, 0.723, 0.704, 0.721, 243, 50, 397, pitching yankees sox baseball phillies cubs jays pitchers 
-rec.sport.hockey, 10, 1, 0.869, 0.826, 0.836, 297, 23, 399, goalie leafs nhl lindros hockey playoff devils playoffs 
-sci.crypt, 11, 1, 0.899, 0.849, 0.851, 324, 43, 396, cryptography encryption tapped encrypted clipper nsa wiretap crypto 
-sci.electronics, 12, 1, 0.472, 0.384, 0.390, 134, 171, 393, circuits amp electronics voltage receiver wiring circuit radar 
-sci.med, 13, 1, 0.710, 0.430, 0.477, 130, 78, 396, doctor foods diet symptoms disease homeopathy superstition cs.pitt.edu 
-sci.space, 14, 1, 0.765, 0.710, 0.737, 235, 33, 394, sci.space orbit shuttle spacecraft prb moon nsmca zoo.toronto.edu 
-soc.religion.christian, 15, 1, 0.726, 0.729, 0.734, 269, 71, 398, athos.rutgers.edu scripture revelation romans geneva.rutgers.edu catholic clh resurrection 
-talk.politics.guns, 16, 1, 0.766, 0.676, 0.690, 286, 196, 364, firearms tavares gun gnv.ifas.ufl.edu firearm atf handguns waco 
-talk.politics.mideast, 17, 1, 0.857, 0.647, 0.689, 195, 32, 376, holocaust cpr armenia israeli arabs hezbollah serdar armenian 
-talk.politics.misc, 18, 1, 0.564, 0.499, 0.518, 130, 81, 310, kaldis cramer gay reform republicans employment thor.isc deficit 
-talk.religion.misc, 19, 1, 0.554, 0.412, 0.414, 112, 181, 251, sandvik ch981 kendig weiss pharvey biblical mormons morality 
+acq, 0, 1, 0.777, 0.808, 0.812, 546, 86, 719, acquired acquisition acquire disclosed stake sell undisclosed merger 
+corn, 1, 1, 0.561, 0.528, 0.679, 56, 100, 56, sorghum maize corn 
+crude, 2, 1, 0.749, 0.736, 0.739, 131, 36, 189, barrels barrel exploration opec refinery crude bpd 
+earn, 3, 1, 0.934, 0.936, 0.937, 1060, 119, 1087, payable dividend profit split earnings shr qtr vs 
+grain, 4, 1, 0.636, 0.646, 0.723, 143, 151, 149, corn soybeans rice enhancement crops maize grain wheat 
+interest, 5, 1, 0.509, 0.542, 0.617, 109, 162, 131, rate fed band bundesbank 
+money-fx, 6, 1, 0.658, 0.641, 0.680, 151, 141, 179, currencies money intervene fed monetary dollar 
+ship, 7, 1, 0.651, 0.629, 0.635, 62, 46, 89, vessel warships ferry port vessels janeiro tankers ships 
+trade, 8, 1, 0.623, 0.504, 0.519, 71, 94, 117, bilateral deficit dumping protectionism protectionist retaliation gatt 
+wheat, 9, 1, 0.556, 0.549, 0.683, 70, 114, 71, durum wheat 
  
-Run Number, 1, Micro F1: , 0.6344,  Macro F1: , 0.6275, Micro BEP:, 0.6361, Total Positive Matches , 4543, Total Negative Matches, 2248, Total Docs,  7532 
-,, Overall Micro F1 , 0.6344,  Overall Macro F1, 0.6275, Overall MicroBEP, 0.6361 
+Run Number, 1, Micro F1: , 0.7695,  Macro F1: , 0.6519, Micro BEP:, 0.7783, Total Positive Matches , 2399, Total Negative Matches, 1049, Total Docs,  2787 
+,, Overall Micro F1 , 0.7695,  Overall Macro F1, 0.6519, Overall MicroBEP, 0.7783 
  
-alt.atheism, 0, 2, 0.760, 0.613, 0.638, 163, 50, 319, wingate saturn.wwc.edu rushdie bobbe kmr4 atheism benedikt atheists 
-comp.graphics, 1, 2, 0.544, 0.527, 0.527, 208, 193, 389, images polygon graphics pov viewer animation tiff sphere 
-comp.os.ms-windows.misc, 2, 2, 0.629, 0.599, 0.618, 286, 275, 394, bj bmp cica win3.1 ftp.cica.indiana.edu windows 
-comp.sys.ibm.pc.hardware, 3, 2, 0.526, 0.459, 0.459, 177, 202, 392, vlb bios gateway jumpers ide isa floppy ati 
-comp.sys.mac.hardware, 4, 2, 0.687, 0.643, 0.651, 279, 204, 385, lciii macs mac powerbook apple iisi quadra centris 
-comp.windows.x, 5, 2, 0.736, 0.656, 0.694, 210, 35, 395, xlib x11 motif pixmap widget xterm x11r5 expo.lcs.mit.edu 
-misc.forsale, 6, 2, 0.716, 0.735, 0.736, 279, 90, 390, sale forsale obo cod 
-rec.autos, 7, 2, 0.660, 0.644, 0.645, 269, 171, 396, boyle cars callison car taurus toyota frost automotive 
-rec.motorcycles, 8, 2, 0.837, 0.809, 0.809, 317, 69, 398, bike hamer bikes motorcycle dod biker harley yamaha 
-rec.sport.baseball, 9, 2, 0.723, 0.704, 0.721, 243, 50, 397, phillies sox cubs pitching jays yankees baseball pitchers 
-rec.sport.hockey, 10, 2, 0.869, 0.826, 0.836, 297, 23, 399, playoff playoffs goalie hockey nhl devils leafs lindros 
-sci.crypt, 11, 2, 0.899, 0.849, 0.851, 324, 43, 396, encrypted encryption crypto cryptography wiretap nsa tapped clipper 
-sci.electronics, 12, 2, 0.472, 0.384, 0.390, 134, 171, 393, circuit voltage electronics receiver radar amp wiring circuits 
-sci.med, 13, 2, 0.710, 0.430, 0.477, 130, 78, 396, diet disease doctor symptoms foods superstition cs.pitt.edu homeopathy 
-sci.space, 14, 2, 0.765, 0.710, 0.737, 235, 33, 394, moon shuttle spacecraft orbit zoo.toronto.edu sci.space nsmca prb 
-soc.religion.christian, 15, 2, 0.726, 0.729, 0.734, 269, 71, 398, catholic geneva.rutgers.edu romans resurrection athos.rutgers.edu clh scripture revelation 
-talk.politics.guns, 16, 2, 0.766, 0.676, 0.690, 286, 196, 364, tavares firearm handguns firearms atf waco gun gnv.ifas.ufl.edu 
-talk.politics.mideast, 17, 2, 0.851, 0.721, 0.743, 231, 34, 376, israeli cpr turkish holocaust serdar arabs arab hezbollah 
-talk.politics.misc, 18, 2, 0.564, 0.499, 0.518, 130, 81, 310, reform gay deficit republicans kaldis cramer employment thor.isc 
-talk.religion.misc, 19, 2, 0.554, 0.412, 0.414, 112, 181, 251, pharvey kendig morality weiss mormons sandvik ch981 biblical 
+acq, 0, 2, 0.782, 0.817, 0.822, 548, 74, 719, stake undisclosed disclosed takeover merger sell acquisition acquire 
+corn, 1, 2, 0.562, 0.544, 0.687, 56, 94, 56, maize corn 
+crude, 2, 2, 0.753, 0.734, 0.736, 131, 37, 189, crude barrels bpd refinery barrel opec exploration gasoline 
+earn, 3, 2, 0.934, 0.938, 0.939, 1058, 112, 1087, profit qtr earnings vs dividend revs split 
+grain, 4, 2, 0.640, 0.631, 0.700, 137, 148, 149, crop maize grain barley crops corn wheat cereals 
+interest, 5, 2, 0.509, 0.542, 0.617, 109, 162, 131, bundesbank fed rate band 
+money-fx, 6, 2, 0.658, 0.641, 0.680, 151, 141, 179, fed money dollar intervene monetary currencies 
+ship, 7, 2, 0.651, 0.599, 0.600, 56, 42, 89, ferry port vessel tanker ships missiles seamen vessels 
+trade, 8, 2, 0.602, 0.542, 0.657, 109, 176, 117, trade retaliation yeutter 
+wheat, 9, 2, 0.556, 0.549, 0.683, 70, 114, 71, durum wheat 
  
-Run Number, 2, Micro F1: , 0.6377,  Macro F1: , 0.6312, Micro BEP:, 0.6392, Total Positive Matches , 4579, Total Negative Matches, 2250, Total Docs,  7532 
-,, Overall Micro F1 , 0.6360,  Overall Macro F1, 0.6294, Overall MicroBEP, 0.6376 
+Run Number, 2, Micro F1: , 0.7684,  Macro F1: , 0.6537, Micro BEP:, 0.7790, Total Positive Matches , 2425, Total Negative Matches, 1100, Total Docs,  2787 
+,, Overall Micro F1 , 0.7690,  Overall Macro F1, 0.6528, Overall MicroBEP, 0.7787 
  
