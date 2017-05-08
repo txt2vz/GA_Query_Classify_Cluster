@@ -7,6 +7,7 @@ import org.apache.lucene.search.IndexSearcher
 import org.apache.lucene.search.Query
 import org.apache.lucene.search.ScoreDoc
 import org.apache.lucene.search.TopDocs
+import java.util.HashMap
 
 import index.IndexInfo
 
@@ -31,7 +32,7 @@ class EvalQueryList {
 		fitness.zeroHitsCount =0
 		fitness.duplicateCount = 0
 
-		Map <Query, Integer> qMap = [:]
+		Map <Query, Integer> qMap = new HashMap<Query, Integer>() 
 		Set allHits = [] as Set
 
 		bqbArray.eachWithIndex {BooleanQuery.Builder bqb, index ->

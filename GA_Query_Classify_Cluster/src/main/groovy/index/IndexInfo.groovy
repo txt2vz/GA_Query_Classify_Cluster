@@ -92,7 +92,7 @@ class IndexInfo {
 		return categoryName
 	}
 
-	//
+	//set the filters and totals for the index
 	public void setIndex()  {
 		catQ = new TermQuery(new Term(FIELD_CATEGORY_NUMBER,
 				categoryNumber));

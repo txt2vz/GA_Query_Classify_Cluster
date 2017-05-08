@@ -16,7 +16,7 @@ class ClusterMain extends Evolve {
 	
 	private final int NUMBER_OF_JOBS = 1   
 
-	public ClusterMain(){ 
+	public ClusterMain(){  
 		EvolutionState state;	
 		IndexInfo.instance.setIndex() 
 		ParameterDatabase parameters  = null;
