@@ -49,7 +49,7 @@ public class ClusterQueryGP extends GPProblem implements SimpleProblemForm {
 				state,threadnum,input,stack,((GPIndividual)ind),this);
 
 		//set fitness based on set of boolean queries
-		eql.cf(fitness, input.bqbArray.toList(), true)
+		eql.setClusterFitness(fitness, input.bqbArray.toList(), true)
 
 
 		//fitness must be positive for ECJ - most runs start with large negative score

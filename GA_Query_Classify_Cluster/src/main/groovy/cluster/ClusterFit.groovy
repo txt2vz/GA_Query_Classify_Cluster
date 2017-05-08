@@ -32,21 +32,21 @@ import groovy.transform.TypeCheckingMode
 public class ClusterFit extends SimpleFitness {
 
 	Map <Query, Integer> queryMap  = [:]
-	double positiveScoreTotal=0.0 
-	double negativeScoreTotal=0.0 
+	double positiveScoreTotal = 0.0 
+	double negativeScoreTotal = 0.0 
 	double fraction = 0.0
 	double baseFitness = 0.0
 	double scorePlus1000 = 0.0
-	double scoreOnly=0.0
+	double scoreOnly = 0.0
 	
-	int positiveHits=0
-	int negativeHits=0
-	int duplicateCount
-	int lowSubqHits=0
-	int coreClusterPenalty=0
-	int totalHits=0 
-	int missedDocs =0
-	int zeroHitsCount =0
+	int positiveHits = 0
+	int negativeHits = 0
+	int duplicateCount = 0
+	int lowSubqHits = 0
+	int coreClusterPenalty = 0
+	int totalHits = 0 
+	int missedDocs = 0
+	int zeroHitsCount = 0
 	boolean isDummy = false
 	boolean emptyQueries = false
 	

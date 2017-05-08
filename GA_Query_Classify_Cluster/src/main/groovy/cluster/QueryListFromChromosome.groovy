@@ -15,10 +15,11 @@ import org.apache.lucene.search.spans.SpanTermQuery
 import ec.vector.IntegerVectorIndividual
 import index.ImportantTerms
 import index.IndexInfo
-//import groovy.transform.TypeChecked
+import groovy.transform.TypeChecked
+import groovy.transform.TypeCheckingMode
 
-
-
+@groovy.transform.CompileStatic
+@groovy.transform.TypeChecked
 class QueryListFromChromosome {
 
 	private IndexSearcher searcher = IndexInfo.indexSearcher
@@ -28,8 +29,6 @@ class QueryListFromChromosome {
 	private final String[] notWords = ["pressure", "layer", "heat", "boundary", "computer", "library", "retrieval", "information", "cells", "patients", "blood", "algorithm"] as String[]
 	private final String[] notWords20NG5 = ["jesus", "christ", "god", "windows", "high", "nasa", "orbit", "hockey", "nhl", "players", "sale"] as String[]
 	
-	@groovy.transform.CompileStatic	
-	@groovy.transform.TypeChecked
 	public List getORQueryList(IntegerVectorIndividual intVectorIndividual) {
 
 		//list of boolean queries
@@ -47,7 +46,8 @@ class QueryListFromChromosome {
 		}
 		return bqbL
 	}
-
+	
+	@TypeChecked(TypeCheckingMode.SKIP)
 	public List getSpanFirstQL(IntegerVectorIndividual intVectorIndividual) {
 
 		int spanValue, wordInd0
@@ -89,6 +89,7 @@ class QueryListFromChromosome {
 		return [bqbList, duplicateCount]
 	}
 
+	@TypeChecked(TypeCheckingMode.SKIP)
 	public List getORNOTfromEvolvedList(IntegerVectorIndividual intVectorIndividual ) {
 
 		def duplicateCount = 0
@@ -127,6 +128,7 @@ class QueryListFromChromosome {
 		return bqbList
 	}
 
+	@TypeChecked(TypeCheckingMode.SKIP)
 	public List getORNOTQL(IntegerVectorIndividual intVectorIndividual ) {
 
 		def duplicateCount = 0
@@ -156,6 +158,7 @@ class QueryListFromChromosome {
 		return [bqbList, duplicateCount]
 	}
 
+	@TypeChecked(TypeCheckingMode.SKIP)
 	public List getALLNOTQL(IntegerVectorIndividual intVectorIndividual ) {
 
 
@@ -186,6 +189,7 @@ class QueryListFromChromosome {
 		return bqbL
 	}
 
+	@TypeChecked(TypeCheckingMode.SKIP)
 	//query in DNF format - could be used to generate graph for cluster visualisation?
 	public List getANDQL(IntegerVectorIndividual intVectorIndividual) {
 

@@ -50,7 +50,7 @@ public class ClassifyGAStatistics extends SimpleStatistics {
 		BooleanQuery.Builder bqb = new BooleanQuery.Builder()
 
 		bqb.add(q, BooleanClause.Occur.MUST);
-		bqb.add(IndexInfo.instance.catTestBQ, BooleanClause.Occur.FILTER);
+		bqb.add(IndexInfo.instance.testDocsInCategoryFilter, BooleanClause.Occur.FILTER);
 
 		searcher.search(bqb.build(), collector);
 		gaFit.positiveMatchTest = collector.getTotalHits();
@@ -58,7 +58,7 @@ public class ClassifyGAStatistics extends SimpleStatistics {
 		collector = new TotalHitCountCollector();
 		bqb = new BooleanQuery.Builder();
 		bqb.add(q, BooleanClause.Occur.MUST);
-		bqb.add(IndexInfo.instance.othersTestBQ, BooleanClause.Occur.FILTER);
+		bqb.add(IndexInfo.instance.otherTestDocsFilter, BooleanClause.Occur.FILTER);
 		searcher.search(bqb.build(), collector);
 
 		gaFit.negativeMatchTest = collector.getTotalHits();

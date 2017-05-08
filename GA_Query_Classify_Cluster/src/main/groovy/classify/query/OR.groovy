@@ -14,8 +14,13 @@ import ec.simple.SimpleFitness
 import ec.simple.SimpleProblemForm
 import ec.util.Parameter
 import ec.vector.IntegerVectorIndividual
+import groovy.transform.TypeChecked
+import groovy.transform.TypeCheckingMode
 import index.ImportantTerms
 import index.IndexInfo
+
+@groovy.transform.CompileStatic
+@groovy.transform.TypeChecked
 
 /**
  * To generate queries to perform binary text classification using GA string of
@@ -27,10 +32,12 @@ import index.IndexInfo
 //HitCounts is a groovy trait for counting query hits in a category
 public class OR extends Problem implements SimpleProblemForm {
 
-	private IndexSearcher searcher = IndexInfo.instance.indexSearcher
+	private IndexSearcher searcher = IndexInfo.indexSearcher
 	private final ImportantTerms importantTerms = new ImportantTerms()
 	private TermQuery[] termQueryArray
 
+	
+	@TypeChecked(TypeCheckingMode.SKIP)
 	public void setup(final EvolutionState state, final Parameter base) {
 
 		super.setup(state, base);
@@ -55,7 +62,7 @@ public class OR extends Problem implements SimpleProblemForm {
 		def genes =[] as Set
 		int duplicateCount=0;
 
-		intVectorIndividual.genome.each {gene ->
+		intVectorIndividual.genome.each {int gene ->
 			
 			//use gene set to prevent duplicates
 			if (gene < termQueryArray.size() && gene >= 0 && genes.add(gene)){				
@@ -63,10 +70,10 @@ public class OR extends Problem implements SimpleProblemForm {
 			}
 
 			fitness.query = bqb.build()			
-			fitness.positiveMatchTrain = IndexInfo.getQueryHitsWithFilter(searcher,IndexInfo.instance.catTrainBQ, fitness.query)		
-			fitness.negativeMatchTrain = IndexInfo.getQueryHitsWithFilter(searcher,IndexInfo.instance.othersTrainBQ, fitness.query)
+			fitness.positiveMatchTrain = IndexInfo.getQueryHitsWithFilter(searcher,IndexInfo.trainDocsInCategoryFilter, fitness.query)		
+			fitness.negativeMatchTrain = IndexInfo.getQueryHitsWithFilter(searcher,IndexInfo.otherTrainDocsFilter, fitness.query)
 
-			fitness.f1train = Effectiveness.f1(fitness.positiveMatchTrain, fitness.negativeMatchTrain, IndexInfo.instance.totalTrainDocsInCat);
+			fitness.f1train = Effectiveness.f1(fitness.positiveMatchTrain, fitness.negativeMatchTrain, IndexInfo.totalTrainDocsInCat);
 
 			((SimpleFitness) intVectorIndividual.fitness).setFitness(state, fitness.f1train, false)
 			ind.evaluated = true;

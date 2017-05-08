@@ -1,5 +1,5 @@
-#parent.0 = clusterSubpop.params
-parent.0 = clusterSubpopTournament.params
+parent.0 = clusterSubpop.params
+#parent.0 = clusterSubpopTournament.params
 #parent.0 = clusterSinglePop.params
 #parent.0		= simple.params
 
@@ -8,7 +8,7 @@ stat = cluster.ClusterStatistics
 
 evalthreads = 4 
 breedthreads = 4
-generations = 20
+generations = 420
 
 breed.elite.0 = 1
 

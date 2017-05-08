@@ -14,13 +14,10 @@ import index.IndexInfo
 @groovy.transform.TypeChecked
 class EvalQueryList {
 
-	private static final IndexSearcher searcher = IndexInfo.indexSearcher
-	private static final int hitsPerPage = IndexInfo.indexReader.maxDoc()
-	private static final int coreClusterSize=20
+	public static void setClusterFitness (ClusterFit fitness, List <BooleanQuery.Builder> bqbArray, boolean gp){
 
-
-	public void cf (ClusterFit fitness, List <BooleanQuery.Builder> bqbArray, boolean gp){
-
+		final int hitsPerPage = IndexInfo.indexReader.maxDoc()
+		final int coreClusterSize = 20
 		assert bqbArray.size() == IndexInfo.NUMBER_OF_CLUSTERS
 
 		fitness.positiveScoreTotal=0
@@ -56,11 +53,11 @@ class EvalQueryList {
 			}
 			Query otherBQ = bqbOthers.build()
 
-			TopDocs otherTopDocs = searcher.search(otherBQ, hitsPerPage)
+			TopDocs otherTopDocs = IndexInfo.indexSearcher.search(otherBQ, hitsPerPage)
 			ScoreDoc[] hitsOthers = otherTopDocs.scoreDocs;
 			hitsOthers.each {ScoreDoc otherHit -> otherdocIdSet << otherHit.doc }
 
-			TopDocs docs = searcher.search(q, hitsPerPage)
+			TopDocs docs = IndexInfo.indexSearcher.search(q, hitsPerPage)
 			ScoreDoc[] hits = docs.scoreDocs;
 			qMap.put(q,hits.size())
 
@@ -86,14 +83,14 @@ class EvalQueryList {
 			}
 		}
 
-		fitness.queryMap = qMap  //.asImmutable()
+		fitness.queryMap = qMap.asImmutable()
 
 		if (gp && fitness.queryMap.size() != IndexInfo.NUMBER_OF_CLUSTERS) {
 			fitness.emptyQueries = true
 		}
 		fitness.scoreOnly = fitness.positiveScoreTotal - fitness.negativeScoreTotal
 		fitness.totalHits = allHits.size()
-		fitness.fraction = fitness.totalHits / IndexInfo.indexReader.maxDoc()   //IndexInfo.instance.indexReader.maxDoc()
-		fitness.missedDocs = IndexInfo.indexReader.maxDoc()  - allHits.size()   //  IndexInfo.instance.indexReader.maxDoc() - allHits.size()
+		fitness.fraction = fitness.totalHits / IndexInfo.indexReader.maxDoc()   
+		fitness.missedDocs = IndexInfo.indexReader.maxDoc()  - allHits.size() 
 	}
 }

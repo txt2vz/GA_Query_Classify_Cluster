@@ -16,10 +16,10 @@ import groovy.transform.TypeCheckingMode
 @groovy.transform.TypeChecked
 public class ClassifyFit extends SimpleFitness {
 
-	private double f1train, f1test, BEPTest, tree;
-	private int positiveMatchTrain, negativeMatchTrain;
-	private int positiveMatchTest, negativeMatchTest, numberOfTerms = 0;
-	private Query query;
+	double f1train, f1test, BEPTest, tree;
+	int positiveMatchTrain, negativeMatchTrain;
+	int positiveMatchTest, negativeMatchTest, numberOfTerms = 0;
+	Query query;
 
 	int totalPositiveScore=0
 	int totalNegativeScore=0;

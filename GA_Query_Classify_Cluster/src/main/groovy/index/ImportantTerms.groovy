@@ -20,36 +20,34 @@ import org.apache.lucene.util.BytesRef
  * @author Laurie 
  */
 
+
 public class ImportantTerms  {
 
 	public final static int SPAN_FIRST_MAX_END = 300;
 	private final static int MAX_TERMQUERYLIST_SIZE = 300;
 
-	private final IndexSearcher indexSearcher= IndexInfo.instance.indexSearcher;
-	private final IndexReader indexReader = indexSearcher.getIndexReader()
+	private final IndexSearcher indexSearcher= IndexInfo.indexSearcher;
+	private final IndexReader indexReader = indexSearcher.indexReader
 	private Terms terms
 	private TermsEnum termsEnum
-	private int maxDoc
 	private Set<String> stopSet= StopSet.getStopSetFromFile()
 
 	public static void main(String[] args){
-		IndexInfo.instance.setCategoryName("cru")
 		IndexInfo.instance.categoryNumber = '2'
 		IndexInfo.instance.setIndex()
 		def iw = new ImportantTerms()
-	//	iw.getF1TermQueryList()
+		//	iw.getF1TermQueryList()
 		iw.getTFIDFTermQueryList()
 	}
 
-	public ImportantTerms() {		
+	public ImportantTerms() {
 		terms = MultiFields.getTerms(indexReader, IndexInfo.FIELD_CONTENTS)
 		termsEnum = terms.iterator();
-		maxDoc = indexReader.maxDoc();	
 	}
 
 	//screen terms likely to be ineffective
 	private boolean isUsefulTerm(Term t) {
-		int df = indexSearcher.getIndexReader().docFreq(t)
+		int df = indexReader.docFreq(t)
 		def word = t.text()
 
 		return (
@@ -79,10 +77,10 @@ public class ImportantTerms  {
 			if ( isUsefulTerm(t) ){
 
 				Query tq = new TermQuery(t)
-				final int positiveHits = IndexInfo.getQueryHitsWithFilter(indexSearcher,IndexInfo.instance.catTrainBQ, tq)
-				final int negativeHits = IndexInfo.getQueryHitsWithFilter(indexSearcher,IndexInfo.instance.othersTrainBQ, tq)
+				final int positiveHits = IndexInfo.getQueryHitsWithFilter(indexSearcher,IndexInfo.trainDocsInCategoryFilter, tq)
+				final int negativeHits = IndexInfo.getQueryHitsWithFilter(indexSearcher,IndexInfo.otherTrainDocsFilter, tq)
 				double F1 = classify.Effectiveness.f1(positiveHits, negativeHits,
-						IndexInfo.instance.totalTrainDocsInCat)
+						IndexInfo.totalTrainDocsInCat)
 
 				if (F1 > 0.02) {
 					termQueryMap += [(tq): F1]
@@ -107,7 +105,7 @@ public class ImportantTerms  {
 
 			Term t = new Term(IndexInfo.FIELD_CONTENTS, termbr);
 			if (isUsefulTerm(t)){
-				
+
 				long indexDf = indexReader.docFreq(t);
 				int docCount = indexReader.numDocs()
 
@@ -127,7 +125,7 @@ public class ImportantTerms  {
 		}
 
 		termQueryMap= termQueryMap.sort{a, b -> a.value <=> b.value}
-		TermQuery[] termQueryList = termQueryMap.keySet().take(MAX_TERMQUERYLIST_SIZE)		
+		TermQuery[] termQueryList = termQueryMap.keySet().take(MAX_TERMQUERYLIST_SIZE)
 		println "tfidf map size: ${termQueryMap.size()}  termQuerylist size: ${termQueryList.size()}  termQuerylist: $termQueryList"
 		return termQueryList
 	}
