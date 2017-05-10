@@ -9,7 +9,7 @@ class GAmainClassify extends Evolve {
  
 	private final String parameterFilePath ='src/cfg/classify.params'
 	private int totPosMatchedTest = 0, totTest = 0, totNegMatchTest = 0;
-	private final static int NUMBER_OF_JOBS = 1
+	private final static int NUMBER_OF_JOBS = 2
 	private double microF1AllRunsTotal = 0, macroF1AllRunsTotal = 0, microBEPAllRunsTotal = 0;		
 
 	public GAmainClassify(){
@@ -17,17 +17,17 @@ class GAmainClassify extends Evolve {
 		EvolutionState state;
 
 		Formatter bestResultsOut = new Formatter('results/resultsClassify.csv');
-		final String fileHead = "categoryName, categoryNumber job, f1train, f1test, bepTest, totPositiveTest, totNegativeTest, totTestDocsInCat, query" + '\n';
+		final String fileHead = "categoryName, categoryNumber, f1train, f1test, totPositiveTest, totNegativeTest, totTestDocsInCat, query" + '\n';
 	 
 		ParameterDatabase parameters = null;
 		final Date startRun = new Date();
-		bestResultsOut.format("Start time: %s \n", startRun);
+		bestResultsOut.format("%s \n", startRun);
 		bestResultsOut.format("%s", fileHead);
 
 		(1..NUMBER_OF_JOBS).each{job ->
 			parameters = new ParameterDatabase(new File(parameterFilePath));
 
-			double macroF1 = 0;
+			double sumF1test = 0;
 
 			IndexInfo.NUMBER_OF_CATEGORIES.times{ categoryNumber ->
 
@@ -59,8 +59,8 @@ class GAmainClassify extends Evolve {
 				//final GAFit cfit = (GAFit) bestFitInAllSubPops;
 				def final testF1 = cfit.f1test
 				def final trainF1 = cfit.f1train
-				def final testBEP = cfit.BEPTest
-				macroF1 += testF1;
+				//def final testBEP = cfit.BEPTest
+				sumF1test += testF1;
 
 				totPosMatchedTest += cfit.positiveMatchTest
 				totNegMatchTest += cfit.negativeMatchTest
@@ -69,8 +69,8 @@ class GAmainClassify extends Evolve {
 				println "cfit.getQueryMinimal: ${cfit.getQueryMinimal()}"
 			 
 				bestResultsOut.format(
-						"%s, %s, %d, %.3f, %.3f, %.3f, %d, %d, %d, %s \n",
-						IndexInfo.instance.getCategoryName(), categoryNumber, job, trainF1, testF1, testBEP,
+						"%s, %d, %.3f, %.3f, %d, %d, %d, %s \n",
+						IndexInfo.instance.getCategoryName(), categoryNumber, trainF1, testF1,
 						cfit.positiveMatchTest,
 						cfit.negativeMatchTest,
 						IndexInfo.instance.totalTestDocsInCat,
@@ -82,35 +82,36 @@ class GAmainClassify extends Evolve {
 				cleanup(state);
 			}
 
-			final double microF1 = Effectiveness.f1(totPosMatchedTest,
+			final double microF1test = Effectiveness.f1(totPosMatchedTest,
 					totNegMatchTest, totTest);
-			final double microBEP = Effectiveness.bep(totPosMatchedTest,
-					totNegMatchTest, totTest);
+			//final double microBEP = Effectiveness.bep(totPosMatchedTest,
+			//		totNegMatchTest, totTest);
 
-			macroF1 = macroF1 / IndexInfo.NUMBER_OF_CATEGORIES;
-			println "OVERALL: micro f1:  $microF1  macroF1: $macroF1 microBEP: $microBEP";
+			final double macroF1test = sumF1test / IndexInfo.NUMBER_OF_CATEGORIES;
+			println "OVERALL test: micro f1: $microF1test  macroF1: $macroF1test "
 
 			bestResultsOut.format(" \n");
 			bestResultsOut.format("Run Number, %d", job );
 
 			bestResultsOut
-					.format(", Micro F1: , %.4f,  Macro F1: , %.4f, Micro BEP:, %.4f, Total Positive Matches , %d, Total Negative Matches, %d, Total Docs,  %d \n",
-					microF1, macroF1, microBEP, totPosMatchedTest,
+					.format(", Micro F1test: , %.4f,  Macro F1test: , %.4f, Total Positive Matches , %d, Total Negative Matches, %d, Total Docs,  %d \n",
+					microF1test, macroF1test, totPosMatchedTest,
 					totNegMatchTest, totTest);
 
-			macroF1AllRunsTotal = macroF1AllRunsTotal + macroF1;
-			microF1AllRunsTotal = microF1AllRunsTotal + microF1;
-			microBEPAllRunsTotal = microBEPAllRunsTotal + microBEP;
+			macroF1AllRunsTotal = macroF1AllRunsTotal + macroF1test;
+			microF1AllRunsTotal = microF1AllRunsTotal + microF1test;
+			//microBEPAllRunsTotal = microBEPAllRunsTotal + microBEP;
 
 			final double microAverageF1AllRuns = microF1AllRunsTotal / (job);
-			final double microAverageBEPAllRuns = microBEPAllRunsTotal / (job);
+			//final double microAverageBEPAllRuns = microBEPAllRunsTotal / (job);
 			final double macroAverageF1AllRuns = macroF1AllRunsTotal / (job);
 
 			bestResultsOut
-					.format(",, Overall Micro F1 , %.4f,  Overall Macro F1, %.4f, Overall MicroBEP, %.4f",
+					.format(",, Overall Test Micro F1 , %.4f, Macro F1, %.4f",
 					microAverageF1AllRuns,
 					macroAverageF1AllRuns,
-					microAverageBEPAllRuns);
+					//microAverageBEPAllRuns
+					);
 
 			totPosMatchedTest = 0;
 			totNegMatchTest = 0;
