@@ -57,9 +57,8 @@ class GAmainClassify extends Evolve {
 				println "pop size $popSize"
 
 				//final GAFit cfit = (GAFit) bestFitInAllSubPops;
-				def final testF1 = cfit.f1test
-				def final trainF1 = cfit.f1train
-				//def final testBEP = cfit.BEPTest
+				final double testF1 = cfit.f1test
+				final double trainF1 = cfit.f1train			
 				sumF1test += testF1;
 
 				totPosMatchedTest += cfit.positiveMatchTest
@@ -83,9 +82,7 @@ class GAmainClassify extends Evolve {
 			}
 
 			final double microF1test = Effectiveness.f1(totPosMatchedTest,
-					totNegMatchTest, totTest);
-			//final double microBEP = Effectiveness.bep(totPosMatchedTest,
-			//		totNegMatchTest, totTest);
+					totNegMatchTest, totTest);		
 
 			final double macroF1test = sumF1test / IndexInfo.NUMBER_OF_CATEGORIES;
 			println "OVERALL test: micro f1: $microF1test  macroF1: $macroF1test "
@@ -99,18 +96,14 @@ class GAmainClassify extends Evolve {
 					totNegMatchTest, totTest);
 
 			macroF1AllRunsTotal = macroF1AllRunsTotal + macroF1test;
-			microF1AllRunsTotal = microF1AllRunsTotal + microF1test;
-			//microBEPAllRunsTotal = microBEPAllRunsTotal + microBEP;
+			microF1AllRunsTotal = microF1AllRunsTotal + microF1test;		
 
-			final double microAverageF1AllRuns = microF1AllRunsTotal / (job);
-			//final double microAverageBEPAllRuns = microBEPAllRunsTotal / (job);
+			final double microAverageF1AllRuns = microF1AllRunsTotal / (job);		
 			final double macroAverageF1AllRuns = macroF1AllRunsTotal / (job);
 
 			bestResultsOut
 					.format(",, Overall Test Micro F1 , %.4f, Macro F1, %.4f",
-					microAverageF1AllRuns,
-					macroAverageF1AllRuns,
-					//microAverageBEPAllRuns
+					microAverageF1AllRuns, macroAverageF1AllRuns					
 					);
 
 			totPosMatchedTest = 0;

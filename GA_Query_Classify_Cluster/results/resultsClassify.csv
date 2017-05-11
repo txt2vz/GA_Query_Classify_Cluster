@@ -1,30 +1,30 @@
-Wed May 10 12:45:02 BST 2017 
+Thu May 11 10:15:29 BST 2017 
 categoryName, categoryNumber, f1train, f1test, totPositiveTest, totNegativeTest, totTestDocsInCat, query
-acq, 0, 0.780, 0.825, 562, 82, 719, merger undisclosed takeover sell stake acquisition acquire acquired 
+acq, 0, 0.782, 0.808, 535, 70, 719, takeover stake undisclosed acquisition merger acquire acquired disclosed 
+corn, 1, 0.561, 0.528, 56, 100, 56, maize sorghum corn 
+crude, 2, 0.759, 0.705, 130, 50, 189, barrel bbl kuwait gasoline opec refinery barrels exploration 
+earn, 3, 0.934, 0.941, 1055, 101, 1087, earnings dividend results revs qtr vs split payout 
+grain, 4, 0.641, 0.661, 147, 149, 149, barley maize wheat rice crop grain corn crops 
+interest, 5, 0.509, 0.542, 109, 162, 131, bundesbank rate fed band 
+money-fx, 6, 0.657, 0.623, 154, 161, 179, fed dollar yen money currencies monetary 
+ship, 7, 0.652, 0.603, 63, 57, 89, escort vessel shipping port vessels tankers seamen loading 
+trade, 8, 0.602, 0.542, 109, 176, 117, retaliation trade 
+wheat, 9, 0.549, 0.545, 70, 116, 71, wheat subsidized durum 
+ 
+Run Number, 1, Micro F1test: , 0.7639,  Macro F1test: , 0.6498, Total Positive Matches , 2428, Total Negative Matches, 1142, Total Docs,  2787 
+,, Overall Test Micro F1 , 0.7639, Macro F1, 0.6498 
+ 
+acq, 0, 0.778, 0.823, 564, 87, 719, merger acquire stake acquired sell disclosed acquisition takeover 
 corn, 1, 0.562, 0.544, 56, 94, 56, corn maize 
-crude, 2, 0.753, 0.734, 131, 37, 189, barrels gasoline refinery barrel exploration bpd opec crude 
-earn, 3, 0.936, 0.938, 1060, 112, 1087, split vs earnings qtr profit payout dividend revs 
-grain, 4, 0.640, 0.631, 137, 148, 149, cereals wheat maize grain crops barley corn crop 
-interest, 5, 0.517, 0.453, 72, 115, 131, prime lending customer bundesbank bills discount 
-money-fx, 6, 0.658, 0.641, 151, 141, 179, intervene dollar currencies fed monetary money 
-ship, 7, 0.652, 0.603, 63, 57, 89, tankers loading shipping vessels port vessel seamen 
-trade, 8, 0.602, 0.542, 109, 176, 117, yeutter trade retaliation 
-wheat, 9, 0.553, 0.545, 70, 116, 71, feedgrains wheat durum 
+crude, 2, 0.753, 0.734, 131, 37, 189, exploration barrel bpd crude opec gasoline barrels refinery 
+earn, 3, 0.936, 0.938, 1060, 112, 1087, vs qtr profit revs split earnings payout dividend 
+grain, 4, 0.639, 0.650, 142, 146, 149, rice corn cereals wheat barley crops grain crop 
+interest, 5, 0.509, 0.542, 109, 162, 131, band fed rate bundesbank 
+money-fx, 6, 0.658, 0.641, 151, 141, 179, intervene dollar currencies money monetary fed 
+ship, 7, 0.656, 0.624, 68, 61, 89, vessels vessel seamen warships shipping tankers loading port 
+trade, 8, 0.623, 0.566, 86, 101, 117, protectionism semiconductors surplus deficit retaliation protectionist gatt 
+wheat, 9, 0.556, 0.549, 70, 114, 71, wheat durum 
  
-Run Number, 1, Micro F1test: , 0.7683,  Macro F1test: , 0.6456, Total Positive Matches , 2411, Total Negative Matches, 1078, Total Docs,  2787 
-,, Overall Test Micro F1 , 0.7683, Macro F1, 0.6456 
- 
-acq, 0, 0.767, 0.833, 573, 84, 719, acquisition transaction undisclosed takeover unit stake merger acquire 
-corn, 1, 0.562, 0.544, 56, 94, 56, corn maize 
-crude, 2, 0.748, 0.730, 143, 60, 189, opec bbl iraq exploration barrel refinery crude barrels 
-earn, 3, 0.934, 0.938, 1059, 112, 1087, dividend earnings split vs qtr profit payout 
-grain, 4, 0.641, 0.661, 147, 149, 149, rice corn wheat crop crops maize grain barley 
-interest, 5, 0.509, 0.542, 109, 162, 131, rate fed band bundesbank 
-money-fx, 6, 0.658, 0.641, 151, 141, 179, fed monetary dollar intervene money currencies 
-ship, 7, 0.646, 0.627, 68, 60, 89, shipping janeiro loading ships port tankers vessel vessels 
-trade, 8, 0.602, 0.586, 109, 146, 117, trade 
-wheat, 9, 0.553, 0.545, 70, 116, 71, feedgrains durum wheat 
- 
-Run Number, 2, Micro F1test: , 0.7770,  Macro F1test: , 0.6646, Total Positive Matches , 2485, Total Negative Matches, 1124, Total Docs,  2787 
-,, Overall Test Micro F1 , 0.7727, Macro F1, 0.6551 
+Run Number, 2, Micro F1test: , 0.7762,  Macro F1test: , 0.6611, Total Positive Matches , 2437, Total Negative Matches, 1055, Total Docs,  2787 
+,, Overall Test Micro F1 , 0.7701, Macro F1, 0.6555 
  
