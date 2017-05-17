@@ -35,7 +35,7 @@ class EvalQueryList {
 		Map <Query, Integer> qMap = new HashMap<Query, Integer>() 
 		Set allHits = [] as Set
 
-		bqbArray.eachWithIndex {BooleanQuery.Builder bqb, index ->
+		bqbArray.each {BooleanQuery.Builder bqb ->
 
 			Query q = bqb.build()
 
