@@ -34,7 +34,7 @@ public class ImportantTerms  {
 
 	public static void main(String[] args){
 		IndexInfo.instance.categoryNumber = '2'
-		IndexInfo.instance.setIndex()
+		IndexInfo.instance.setIndexFieldsAndTotals()
 		def iw = new ImportantTerms()
 		//	iw.getF1TermQueryList()
 		iw.getTFIDFTermQueryList()

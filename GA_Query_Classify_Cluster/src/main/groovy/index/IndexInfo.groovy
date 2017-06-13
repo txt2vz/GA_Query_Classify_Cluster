@@ -36,10 +36,10 @@ class IndexInfo {
 	FIELD_CATEGORY_NUMBER = 'categoryNumber';
 
 	static final int NUMBER_OF_CLUSTERS =  3 , NUMBER_OF_CATEGORIES = 10
-	static final IndexReader indexReader
-	static final IndexSearcher indexSearcher
+	static IndexReader indexReader
+	static IndexSearcher indexSearcher
 
-	static final String pathToIndex =
+	static String pathToIndex =
 	   'indexes/R10'
 	//     'indexes/NG20'
 	//	 'indexes/crisis3FireBombFloodL6'
@@ -92,8 +92,15 @@ class IndexInfo {
 		return categoryName
 	}
 
+	public static void setIndex(){
+		Path path = Paths.get(pathToIndex)
+		Directory directory = FSDirectory.open(path)
+		indexReader = DirectoryReader.open(directory)
+		indexSearcher = new IndexSearcher(indexReader);
+	}
+	
 	//set the filters and totals for the index
-	public void setIndex()  {
+	public void setIndexFieldsAndTotals()  {
 		catQ = new TermQuery(new Term(FIELD_CATEGORY_NUMBER,
 				categoryNumber));
 		println "Index info catQ: $catQ"

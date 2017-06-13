@@ -9,7 +9,7 @@ class GAmainClassify extends Evolve {
  
 	private final String parameterFilePath ='src/cfg/classify.params'
 	private int totPosMatchedTest = 0, totTest = 0, totNegMatchTest = 0;
-	private final static int NUMBER_OF_JOBS = 2
+	private final int NUMBER_OF_JOBS = 2
 	private double microF1AllRunsTotal = 0, macroF1AllRunsTotal = 0, microBEPAllRunsTotal = 0;		
 
 	public GAmainClassify(){
@@ -32,7 +32,7 @@ class GAmainClassify extends Evolve {
 			IndexInfo.NUMBER_OF_CATEGORIES.times{ categoryNumber ->
 
 				IndexInfo.instance.setCategoryNumber(String.valueOf(categoryNumber))			
-				IndexInfo.instance.setIndex()
+				IndexInfo.instance.setIndexFieldsAndTotals()
 
 				state = initialize(parameters, job);
 
@@ -55,8 +55,7 @@ class GAmainClassify extends Evolve {
 					}.fitness
 				}.max  {it.fitness()}
 				println "pop size $popSize"
-
-				//final GAFit cfit = (GAFit) bestFitInAllSubPops;
+			
 				final double testF1 = cfit.f1test
 				final double trainF1 = cfit.f1train			
 				sumF1test += testF1;
@@ -72,9 +71,7 @@ class GAmainClassify extends Evolve {
 						IndexInfo.instance.getCategoryName(), categoryNumber, trainF1, testF1,
 						cfit.positiveMatchTest,
 						cfit.negativeMatchTest,
-						IndexInfo.instance.totalTestDocsInCat,
-						//cfit.getQuery(),
-						//cfit.getQueryMinimal());
+						IndexInfo.instance.totalTestDocsInCat,				
 						cfit.getQueryString() )
 				bestResultsOut.flush();
 				println "Test F1 for cat $categoryNumber : $testF1 *******************************"

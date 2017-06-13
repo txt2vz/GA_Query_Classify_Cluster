@@ -18,7 +18,7 @@ class ClusterMain extends Evolve {
 
 	public ClusterMain(){  
 		EvolutionState state;	
-		IndexInfo.instance.setIndex() 
+		IndexInfo.instance.setIndexFieldsAndTotals() 
 		ParameterDatabase parameters  = null;
  
 		final Date startRun = new Date();
