@@ -21,22 +21,28 @@ import org.apache.lucene.store.Directory
 import org.apache.lucene.store.FSDirectory
 
 
-//to build an index you must set the docsPath, indexPath and iName
-
-// Index text files found in this directory
-def docsPath =
-		/C:\Users\Laurie\Dataset\20bydate/
-// /C:\Users\Laurie\Dataset\reuters-top10/
-
-//build index here
-def indexPath =
-		//       'indexes/R10'
-		'indexes/NG20'
-
-//R10 - different directory structure
-enum IndexName { R10, NG20 }
+enum IndexName {
+	R10, NG20
+}
 IndexName iName = IndexName.NG20
 
+final String r10DocsPath = /C:\Users\Laurie\Dataset\reuters-top10/
+final String NG20DocsPath = /C:\Users\Laurie\Dataset\20bydate/
+final String r10IndexPath = 'indexes/R10'
+final String NG20IndexPath = 'indexes/NG20'
+
+String docsPath, indexPath
+
+if (iName == IndexName.R10) {
+	docsPath = r10DocsPath
+	indexPath = r10IndexPath
+} else
+if (iName == IndexName.NG20){
+	docsPath = NG20DocsPath
+	indexPath = NG20IndexPath
+}
+
+//Note: R10 - different directory structure
 Path path = Paths.get(indexPath)
 Directory directory = FSDirectory.open(path)
 Analyzer analyzer = //new EnglishAnalyzer();  //with stemming
@@ -58,7 +64,7 @@ def categoryNumber=-1
 new File(docsPath).eachDir {
 	if (iName == IndexName.R10) categoryNumber++
 	else categoryNumber=-1  //reset for 20NG for test and train directories
-	
+
 	it.eachFileRecurse {file ->
 		if (iName != IndexName.R10 && file.isDirectory()) categoryNumber++
 		if (!file.hidden && file.exists() && file.canRead() && !file.isDirectory()) // && categoryNumber <3)
