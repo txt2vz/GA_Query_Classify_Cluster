@@ -40,9 +40,9 @@ class IndexInfo {
 	static IndexSearcher indexSearcher
 
 	static String pathToIndex =
-	   'indexes/R10'
+	 //  'indexes/R10'
 	//     'indexes/NG20'
-	//	 'indexes/crisis3FireBombFloodL6'
+		 'indexes/crisis3FireBombFloodL6'
 	// 'indexes/classic4_500L6'
 	//	 'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6'
 	//'indexes/20NG3SpaceHockeyChristianL6'
