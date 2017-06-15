@@ -4,7 +4,8 @@ class ImportantTermsSpec extends spock.lang.Specification {
 
 	def "importantTerms F1 oil"() {
 		setup:
-		IndexInfo.pathToIndex = 'indexes/R10'//  instance.setPathToIndex('indexes/R10')
+		IndexInfo.pathToIndex = 'indexes/R10'
+		IndexInfo.setIndex()
 		IndexInfo.instance.setCategoryNumber('2')
 		IndexInfo.instance.setIndexFieldsAndTotals()
 		ImportantTerms impTerms = new ImportantTerms()
@@ -20,8 +21,7 @@ class ImportantTermsSpec extends spock.lang.Specification {
 	def "importantTerms F1 20NG graphics"() {
 		setup:
 		IndexInfo.pathToIndex = 'indexes/NG20'
-		IndexInfo.setIndex()
-		//IndexInfo.instance.setPathToIndex('indexes/NG20')
+		IndexInfo.setIndex()	
 		IndexInfo.instance.setCategoryNumber('2')
 		IndexInfo.instance.setIndexFieldsAndTotals()
 		ImportantTerms impTerms = new ImportantTerms()
