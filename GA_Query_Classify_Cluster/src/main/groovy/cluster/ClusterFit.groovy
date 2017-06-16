@@ -70,7 +70,7 @@ public class ClusterFit extends SimpleFitness {
 	public void queryStats (int job, int gen, int popSize){
 		String messageOut=""
 		FileWriter resultsOut = new FileWriter("results/clusterResultsF1.txt", true)
-		resultsOut <<"  ***** Job: $job Gen: $gen PopSize: $popSize Noclusters: ${IndexInfo.NUMBER_OF_CLUSTERS}  pathToIndex: ${IndexInfo.pathToIndex}  *********** ${new Date()} ***************************************************** \n"
+		resultsOut <<"${new Date()}  ***** Job: $job Gen: $gen PopSize: $popSize Noclusters: ${IndexInfo.NUMBER_OF_CLUSTERS}  pathToIndex: ${IndexInfo.pathToIndex}  *********** ${new Date()} ***************************************************** \n"
 
 		def f1list = [], precisionList =[], recallList =[]
 		queryMap.keySet().eachWithIndex {q, index ->
@@ -151,26 +151,28 @@ public class ClusterFit extends SimpleFitness {
 		resultsOut.flush()
 		resultsOut.close()
 
-		boolean appnd =  true//job!=0
+		boolean appnd =  job > 1
 		FileWriter fcsv = new FileWriter("results/resultsCluster.csv", appnd)
-		//Formatter csvOut = new Formatter(fcsv);
+		Formatter csvOut = new Formatter(fcsv);
 		if (!appnd){
 			final String fileHead = "gen, job, popSize, fitness, averageF1, averagePrecision, averageRecall, query" + '\n';
-		//	csvOut.format("%s", fileHead)			
+			csvOut.format("%s", fileHead)			
 		}
-//		csvOut.format(
-//				"%s, %s, %s, %.3f, %.3f, %.3f, %.3f, %s",
-//				gen,
-//				job,
-//				popSize,
-//				fitness(),
-//				averageF1,
-//				averagePrecision,
-//				averageRecall)//,
-//			//	queryForCSV(job) );
+		csvOut.format(
+				"%s, %s, %s, %.3f, %.3f, %.3f, %.3f, %s, %s, %s \n",
+				gen,
+				job,
+				popSize,
+				fitness(),
+				averageF1,
+				averagePrecision,
+				averageRecall,//)//,
+				queryForCSV(job),
+				new Date(),
+				IndexInfo.pathToIndex );
 
-		//csvOut.flush();
-		//csvOut.close()
+		csvOut.flush();
+		csvOut.close()
 	}
 
 	private String queryForCSV (int job){
@@ -178,7 +180,7 @@ public class ClusterFit extends SimpleFitness {
 		queryMap.keySet().eachWithIndex {q, index ->
 			s += "ClusterQuery " + index + ": " + queryMap.get(q) + " " + q.toString(IndexInfo.FIELD_CONTENTS) + " ## "
 		}
-		return s + '\n'
+		return s
 	}
 
 	public String fitnessToStringForHumans() {
