@@ -19,6 +19,9 @@ import org.apache.lucene.search.IndexSearcher
 import org.apache.lucene.search.Query
 import org.apache.lucene.search.ScoreDoc
 import org.apache.lucene.search.TopScoreDocCollector
+import org.apache.lucene.search.similarities.ClassicSimilarity
+import org.apache.lucene.search.similarities.Similarity
+import org.apache.lucene.search.similarities.TFIDFSimilarity
 import org.apache.lucene.store.Directory
 import org.apache.lucene.store.FSDirectory
 import org.apache.lucene.codecs.*
@@ -26,11 +29,11 @@ import org.apache.lucene.codecs.*
 class IndexCrisisClusterFromCSV {
 
 	// Create Lucene index in this directory
-	Path indexPath = Paths.get('indexes/crisis3FireBombFloodL6')
+	Path indexPath = Paths.get('indexes/crisis3FireBombFloodL6.6Classic')
 	Path docsPath = Paths.get('Datasets/crisisData')
 	Directory directory = FSDirectory.open(indexPath)
 	Analyzer analyzer = //new EnglishAnalyzer();  //with stemming
-	new StandardAnalyzer();
+	              new StandardAnalyzer();
 	def catsFreq=[:]
 
 	static main(args) {
@@ -40,6 +43,8 @@ class IndexCrisisClusterFromCSV {
 
 	def buildIndex() {
 		IndexWriterConfig iwc = new IndexWriterConfig(analyzer);
+		Similarity tfidf = new ClassicSimilarity()
+		iwc.setSimilarity(tfidf)
 
 		// Create a new index in the directory, removing any
 		// previously indexed documents:

@@ -15,8 +15,11 @@ import org.apache.lucene.search.ScoreDoc
 import org.apache.lucene.search.TermQuery
 import org.apache.lucene.search.TopScoreDocCollector
 import org.apache.lucene.search.TotalHitCountCollector
+import org.apache.lucene.search.similarities.Similarity
 import org.apache.lucene.store.Directory
 import org.apache.lucene.store.FSDirectory
+import org.apache.lucene.search.similarities.ClassicSimilarity
+import org.apache.lucene.search.similarities.BM25Similarity
 
 /**
  * Singleton class to store index information.
@@ -38,21 +41,27 @@ class IndexInfo {
 	static final int NUMBER_OF_CLUSTERS =  3 , NUMBER_OF_CATEGORIES = 10
 	static IndexReader indexReader
 	static IndexSearcher indexSearcher
+	
+	static Similarity similarity = new BM25Similarity() 
+		             //new ClassicSimilarity()
 
 	static String pathToIndex =
 	 //  'indexes/R10'
 	//     'indexes/NG20'
-		 'indexes/crisis3FireBombFloodL6'
+	//	 'indexes/crisis3FireBombFloodL6'
+		 //'indexes/crisis3FireBombFloodL6.6Classic'
+		 'indexes/crisis3FireBombFloodL6.6'
 	// 'indexes/classic4_500L6'
 	//	 'indexes/20NG5WindowsmiscForsaleHockeySpaceChristianL6'
 	//'indexes/20NG3SpaceHockeyChristianL6'
 	
 	// set the index
-	static {
+	static {	
 		Path path = Paths.get(pathToIndex)
 		Directory directory = FSDirectory.open(path)
 		indexReader = DirectoryReader.open(directory)
-		indexSearcher = new IndexSearcher(indexReader);
+		indexSearcher = new IndexSearcher(indexReader)
+		indexSearcher.setSimilarity(similarity)
 	}
 	static BooleanQuery trainDocsInCategoryFilter, otherTrainDocsFilter, testDocsInCategoryFilter, otherTestDocsFilter;
 	static int totalTrainDocsInCat, totalTestDocsInCat, totalOthersTrainDocs, totalTestDocs;
