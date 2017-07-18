@@ -8,7 +8,7 @@ stat = cluster.ClusterStatistics
 
 evalthreads = 4 
 breedthreads = 4
-generations = 8
+generations = 420
 
 breed.elite.0 = 1
 

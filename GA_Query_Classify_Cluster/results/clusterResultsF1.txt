@@ -628,3 +628,123 @@ PosHits: 1506 NegHits: 212 PosScore: 156.79351438768208 NegScore: 21.77547197602
 ***  TOTALS:   *****   f1list: [0.6822372464614826, 0.7948285553757656, 0.37347560976102767] averagef1: :0.6168471371994253  ** average precision: 0.8593325623333334 average recall: 0.5023333333333334
 ************************************************ 
  
+Fri Jun 16 17:58:59 BST 2017  ***** Job: 1 Gen: 419 PopSize: 512 Noclusters: 3  pathToIndex: indexes/crisis3FireBombFloodL6.6Classic  *********** Fri Jun 16 17:58:59 BST 2017 ***************************************************** 
+ClusterQuery: 0 hits: 937 Query:  highparkfire boston marathon prayforboston tsarnaev 
+categoryTotal: 1000 for category: category:Boston_bom 
+f1: 0.816726897278894 recall: 0.791 precision: 0.8441835646
+ClusterQuery: 1 hits: 820 Query:  qldfloods floods flooding bigwet 
+categoryTotal: 1000 for category: category:Queensland 
+f1: 0.898901098897138 recall: 0.818 precision: 0.9975609756
+ClusterQuery: 2 hits: 649 Query:  colorado 
+categoryTotal: 1000 for category: category:Colorado_w 
+f1: 0.7871437234687689 recall: 0.649 precision: 1.0
+TotalHits: 2397 Total Docs:  3000 
+PosHits: 2388 NegHits: 18 PosScore: 748.1615603789687 NegScore: 6.907630853354931 Fitness: 1111.6182498630815 
+***  TOTALS:   *****   f1list: [0.816726897278894, 0.898901098897138, 0.7871437234687689] averagef1: :0.8342572398816003  ** average precision: 0.9472481800666667 average recall: 0.7526666666666667
+************************************************ 
+ 
+Fri Jun 16 18:03:47 BST 2017  ***** Job: 2 Gen: 419 PopSize: 512 Noclusters: 3  pathToIndex: indexes/crisis3FireBombFloodL6.6Classic  *********** Fri Jun 16 18:03:47 BST 2017 ***************************************************** 
+ClusterQuery: 0 hits: 828 Query:  flooding qld australia bigwet qldfloods 
+categoryTotal: 1000 for category: category:Queensland 
+f1: 0.9048140043634826 recall: 0.827 precision: 0.9987922705
+ClusterQuery: 1 hits: 953 Query:  bostonmarathon marathon highparkfire prayforboston boston 
+categoryTotal: 1000 for category: category:Boston_bom 
+f1: 0.8264208909499624 recall: 0.807 precision: 0.8467995803
+ClusterQuery: 2 hits: 649 Query:  colorado 
+categoryTotal: 1000 for category: category:Colorado_w 
+f1: 0.7871437234687689 recall: 0.649 precision: 1.0
+TotalHits: 2421 Total Docs:  3000 
+PosHits: 2412 NegHits: 18 PosScore: 749.2571828179061 NegScore: 6.862457484006882 Fitness: 1134.7328224789767 
+***  TOTALS:   *****   f1list: [0.9048140043634826, 0.8264208909499624, 0.7871437234687689] averagef1: :0.8394595395940713  ** average precision: 0.9485306169333333 average recall: 0.761
+************************************************ 
+ 
+Fri Jun 16 18:08:16 BST 2017  ***** Job: 3 Gen: 419 PopSize: 512 Noclusters: 3  pathToIndex: indexes/crisis3FireBombFloodL6.6Classic  *********** Fri Jun 16 18:08:16 BST 2017 ***************************************************** 
+ClusterQuery: 0 hits: 854 Query:  qld floods qldfloods flooding bigwet 
+categoryTotal: 1000 for category: category:Queensland 
+f1: 0.919093851121953 recall: 0.852 precision: 0.9976580796
+ClusterQuery: 1 hits: 837 Query:  colorado springs highparkfire fire 
+categoryTotal: 1000 for category: category:Colorado_w 
+f1: 0.9025585193423485 recall: 0.829 precision: 0.990442055
+ClusterQuery: 2 hits: 857 Query:  tsarnaev prayforboston bombing boston bostonmarathon 
+categoryTotal: 1000 for category: category:Boston_bom 
+f1: 0.9229940764674206 recall: 0.857 precision: 1.0
+TotalHits: 2543 Total Docs:  3000 
+PosHits: 2538 NegHits: 10 PosScore: 461.1803265400231 NegScore: 1.1496436037123203 Fitness: 1049.0886625176188 
+***  TOTALS:   *****   f1list: [0.919093851121953, 0.9025585193423485, 0.9229940764674206] averagef1: :0.9148821489772407  ** average precision: 0.9960333781999999 average recall: 0.8460000000000001
+************************************************ 
+ 
+Fri Jun 16 18:12:50 BST 2017  ***** Job: 4 Gen: 419 PopSize: 512 Noclusters: 3  pathToIndex: indexes/crisis3FireBombFloodL6.6Classic  *********** Fri Jun 16 18:12:50 BST 2017 ***************************************************** 
+ClusterQuery: 0 hits: 991 Query:  boston prayforboston highparkfire bostonmarathon tsarnaev 
+categoryTotal: 1000 for category: category:Boston_bom 
+f1: 0.8488196885989941 recall: 0.845 precision: 0.8526740666
+ClusterQuery: 1 hits: 778 Query:  queensland floods bigwet qldfloods 
+categoryTotal: 1000 for category: category:Queensland 
+f1: 0.874015748048231 recall: 0.777 precision: 0.998714653
+ClusterQuery: 2 hits: 649 Query:  colorado 
+categoryTotal: 1000 for category: category:Colorado_w 
+f1: 0.7871437234687689 recall: 0.649 precision: 1.0
+TotalHits: 2410 Total Docs:  3000 
+PosHits: 2402 NegHits: 16 PosScore: 722.7994853779674 NegScore: 5.8910979107022285 Fitness: 1107.9972893801191 
+***  TOTALS:   *****   f1list: [0.8488196885989941, 0.874015748048231, 0.7871437234687689] averagef1: :0.8366597200386647  ** average precision: 0.9504629065333333 average recall: 0.757
+************************************************ 
+ 
+Fri Jun 16 19:11:30 BST 2017  ***** Job: 1 Gen: 419 PopSize: 512 Noclusters: 3  pathToIndex: indexes/crisis3FireBombFloodL6.6  *********** Fri Jun 16 19:11:30 BST 2017 ***************************************************** 
+ClusterQuery: 0 hits: 857 Query:  fire colorado wildfires highparkfire wildfire 
+categoryTotal: 1000 for category: category:Colorado_w 
+f1: 0.9143780290996875 recall: 0.849 precision: 0.9906651109
+ClusterQuery: 1 hits: 863 Query:  australia queensland qldfloods bigwet qld 
+categoryTotal: 1000 for category: category:Queensland 
+f1: 0.9264626945786366 recall: 0.863 precision: 1.0
+ClusterQuery: 2 hits: 870 Query:  boston marathon bostonmarathon prayforboston tsarnaev 
+categoryTotal: 1000 for category: category:Boston_bom 
+f1: 0.9304812834224598 recall: 0.87 precision: 1.0
+TotalHits: 2586 Total Docs:  3000 
+PosHits: 2582 NegHits: 8 PosScore: 7580.8840191960335 NegScore: 21.624210238456726 Fitness: 6359.906645487074 
+***  TOTALS:   *****   f1list: [0.9143780290996875, 0.9264626945786366, 0.9304812834224598] averagef1: :0.9237740023669279  ** average precision: 0.9968883703000001 average recall: 0.8606666666666666
+************************************************ 
+ 
+Fri Jun 16 19:16:06 BST 2017  ***** Job: 2 Gen: 419 PopSize: 512 Noclusters: 3  pathToIndex: indexes/crisis3FireBombFloodL6.6  *********** Fri Jun 16 19:16:06 BST 2017 ***************************************************** 
+ClusterQuery: 0 hits: 854 Query:  fire highparkfire springs wildfire colorado 
+categoryTotal: 1000 for category: category:Colorado_w 
+f1: 0.912621359222804 recall: 0.846 precision: 0.9906323185
+ClusterQuery: 1 hits: 854 Query:  qld qldfloods flooding floods bigwet 
+categoryTotal: 1000 for category: category:Queensland 
+f1: 0.919093851121953 recall: 0.852 precision: 0.9976580796
+ClusterQuery: 2 hits: 870 Query:  bostonmarathon tsarnaev marathon boston prayforboston 
+categoryTotal: 1000 for category: category:Boston_bom 
+f1: 0.9304812834224598 recall: 0.87 precision: 1.0
+TotalHits: 2573 Total Docs:  3000 
+PosHits: 2568 NegHits: 10 PosScore: 7872.5230994820595 NegScore: 26.31949210166931 Fitness: 6507.1975873774745 
+***  TOTALS:   *****   f1list: [0.912621359222804, 0.919093851121953, 0.9304812834224598] averagef1: :0.9207321645890723  ** average precision: 0.9960967993666667 average recall: 0.856
+************************************************ 
+ 
+Fri Jun 16 19:20:29 BST 2017  ***** Job: 3 Gen: 419 PopSize: 512 Noclusters: 3  pathToIndex: indexes/crisis3FireBombFloodL6.6  *********** Fri Jun 16 19:20:29 BST 2017 ***************************************************** 
+ClusterQuery: 0 hits: 863 Query:  australia queensland qldfloods bigwet qld 
+categoryTotal: 1000 for category: category:Queensland 
+f1: 0.9264626945786366 recall: 0.863 precision: 1.0
+ClusterQuery: 1 hits: 854 Query:  fire highparkfire springs wildfire colorado 
+categoryTotal: 1000 for category: category:Colorado_w 
+f1: 0.912621359222804 recall: 0.846 precision: 0.9906323185
+ClusterQuery: 2 hits: 810 Query:  boston marathon bostonmarathon prayforboston bombing 
+categoryTotal: 1000 for category: category:Boston_bom 
+f1: 0.8950276243093923 recall: 0.81 precision: 1.0
+TotalHits: 2523 Total Docs:  3000 
+PosHits: 2519 NegHits: 8 PosScore: 7930.76267260313 NegScore: 21.624210238456726 Fitness: 6301.264360799749 
+***  TOTALS:   *****   f1list: [0.9264626945786366, 0.912621359222804, 0.8950276243093923] averagef1: :0.9113705593702776  ** average precision: 0.9968774395 average recall: 0.8396666666666667
+************************************************ 
+ 
+Fri Jun 16 19:24:52 BST 2017  ***** Job: 4 Gen: 419 PopSize: 512 Noclusters: 3  pathToIndex: indexes/crisis3FireBombFloodL6.6  *********** Fri Jun 16 19:24:52 BST 2017 ***************************************************** 
+ClusterQuery: 0 hits: 845 Query:  wildfires colorado springs highparkfire fire 
+categoryTotal: 1000 for category: category:Colorado_w 
+f1: 0.9073170731796683 recall: 0.837 precision: 0.9905325444
+ClusterQuery: 1 hits: 863 Query:  australia qld queensland bigwet qldfloods 
+categoryTotal: 1000 for category: category:Queensland 
+f1: 0.9264626945786366 recall: 0.863 precision: 1.0
+ClusterQuery: 2 hits: 870 Query:  prayforboston boston tsarnaev bostonmarathon marathon 
+categoryTotal: 1000 for category: category:Boston_bom 
+f1: 0.9304812834224598 recall: 0.87 precision: 1.0
+TotalHits: 2574 Total Docs:  3000 
+PosHits: 2570 NegHits: 8 PosScore: 7711.050229549408 NegScore: 21.624210238456726 Fitness: 6396.842616080027 
+***  TOTALS:   *****   f1list: [0.9073170731796683, 0.9264626945786366, 0.9304812834224598] averagef1: :0.9214203503935883  ** average precision: 0.9968441814666668 average recall: 0.8566666666666666
+************************************************ 
+ 

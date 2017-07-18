@@ -65,6 +65,10 @@ public class ClusterFit extends SimpleFitness {
 		}
 		return s
 	}
+	
+	public double getF (){
+		return baseFitness;
+	}
 
 	@TypeChecked(TypeCheckingMode.SKIP)
 	public void queryStats (int job, int gen, int popSize){

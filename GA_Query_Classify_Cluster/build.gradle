@@ -4,7 +4,7 @@ repositories { jcenter() }
 
 dependencies { 
 	
-	compile 'org.codehaus.groovy:groovy-all:2.4.11' 
+	compile 'org.codehaus.groovy:groovy-all:2.4.12' 
 
 	compile group: 'org.apache.lucene', name: 'lucene-core', version: '6.6.0'
 	compile group: 'org.apache.lucene', name: 'lucene-analyzers-common', version: '6.6.0'

@@ -27,9 +27,10 @@ enum IndexName {
 IndexName iName = IndexName.NG20
 
 final String r10DocsPath = /C:\Users\Laurie\Dataset\reuters-top10/
-final String NG20DocsPath = /C:\Users\Laurie\Dataset\20bydate/
+final String NG20DocsPath = /C:\Users\Laurie\Dataset\20NG3TestSpaceHockeyChristian/
+//    /C:\Users\Laurie\Dataset\20bydate/
 final String r10IndexPath = 'indexes/R10'
-final String NG20IndexPath = 'indexes/NG20'
+final String NG20IndexPath = 'indexes/NG20SpaceHockeyChristian'
 
 String docsPath, indexPath
 

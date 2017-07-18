@@ -29,7 +29,7 @@ class ClusterMain extends Evolve {
 			state = initialize(parameters, job);
 			state.output.systemMessage("Job: " + job);
 			state.job = new Object[1];
-			state.job[0] = new Integer(job);
+			state.job[0] = new Integer(job); 
 
 			if (NUMBER_OF_JOBS >= 1) {
 				final String jobFilePrefix = "job." + job;
