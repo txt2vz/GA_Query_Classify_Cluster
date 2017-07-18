@@ -14,6 +14,7 @@ dependencies {
 	//for some reason ecj23 not on maven: compile 'edu.gmu.cs:ecj:22'
 	//pick up ecj23 jar file  	//compile files('libs/ecj23.jar')
 	compile fileTree(dir: 'lib', include: ['*.jar']) 
+	//compile files('libs/ecj24.jar')
 }
 
 task(runClustering, dependsOn: 'classes', type: JavaExec) {
