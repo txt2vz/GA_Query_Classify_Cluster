@@ -11,63 +11,51 @@ dependencies {
 	
 	testCompile "org.spockframework:spock-core:1.0-groovy-2.4"	
 
-	//for some reason ecj23 not on maven: compile 'edu.gmu.cs:ecj:22'
-	//pick up ecj23 jar file  	//compile files('libs/ecj23.jar')
-	compile fileTree(dir: 'lib', include: ['*.jar']) 
-	//compile files('libs/ecj24.jar')
+	//for some reason ecj24 not on maven: compile 'edu.gmu.cs:ecj:22'
+	//pick up ecj23 jar file  
+	compile fileTree(dir: 'lib', include: ['*.jar'])	
 }
 
 task(runClustering, dependsOn: 'classes', type: JavaExec) {
 	main = 'cluster.ClusterMain'
 	classpath = sourceSets.main.runtimeClasspath
+	group = 'run'
+	description = 'Run clustering'
 }
 
 task(runClassifier, dependsOn: 'classes', type: JavaExec) {
 	main = 'classify.GAmainClassify'
 	classpath = sourceSets.main.runtimeClasspath
-}
-
-configure(runClassifier) {
 	group = 'run'
 	description = 'Run the classifier'
-}
-configure(runClustering) {
-	group = 'run'
-	description = 'Run clustering'
 }
 
 task buildIndex(type: JavaExec){
 	description "build lucene index"
 	main = 'index.BuildLuceneIndex'
 	classpath = sourceSets.main.runtimeClasspath
+	group 'buildIndex'	
 }
 
 task(indexCrisisData, dependsOn: 'classes', type: JavaExec) {
 	main = 'index.IndexCrisisClusterFromCSV'
 	classpath = sourceSets.main.runtimeClasspath
+	group 'buildIndex'
 }
 
 task(indexClassic, dependsOn: 'classes', type: JavaExec) {
 	main = 'index.IndexClassic'
 	classpath = sourceSets.main.runtimeClasspath
+	group 'buildIndex'
 }
 
 task(importantTerms, dependsOn: 'classes', type: JavaExec) {
 	main = 'index.ImportantTerms'
 	classpath = sourceSets.main.runtimeClasspath
+	group 'buildIndex'
 }
 
-configure(buildIndex) {
-	group = 'index'
-	description = 'Build Lucene index from dataset'
-}
-
-configure(indexClassic) {
-	group = 'index'
-	description = 'Index classic dataset'
-}
-
-configure(indexCrisisData) {
-	group = 'index'
-	description = 'Index crisis dataset'
-}
+//configure(runClustering) {
+//group = 'run'
+//description = 'Run clustering'
+//}
