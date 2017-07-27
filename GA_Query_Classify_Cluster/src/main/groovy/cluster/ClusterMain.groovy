@@ -13,8 +13,8 @@ class ClusterMain extends Evolve {
 	
 	// 'src/cfg/clusterGP.params'
 	 'src/cfg/clusterGA.params'
-	
-	private final int NUMBER_OF_JOBS = 4   
+
+	private final int NUMBER_OF_JOBS = 3
 
 	public ClusterMain(){  
 		EvolutionState state;	

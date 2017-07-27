@@ -2,6 +2,7 @@ package classify
 
 @groovy.transform.CompileStatic
 @groovy.transform.TypeChecked
+
 public class Effectiveness {
 
 	public static double precision(final int positiveMatch, final int negativeMatch) {
